@@ -102,7 +102,7 @@ All prices are per person in AUD, all-in — every flight from your front door t
 - **Sale check failed to verify:** Jetstar, Qantas and Virgin sale pages all returned **403 Forbidden** today — couldn't read routes/dates, so no sale is reported as live. Treat any Japan-sale chatter as unverified rumour needing a manual check.
 - Cheapest total = return BNE⇄Tokyo via Port Moresby ($1,120) + Tokyo→Sapporo hop ($100) + Sapporo→Tokyo hop ($127) = $1,347pp; folded together since the plan is Hokkaido-first then Tokyo, home from Tokyo.
 - Re-priced today at the same $1,347 as the baseline row — CSV row for 20 Jul kept, chart shows the single baseline point; movement/dip flags start once a second dated point lands.
-- **Email:** attempted send to Isaac via the Resend connector — outcome recorded with the daily notification; if it failed it's noted there and everything else (CSV, chart, report, commit) still completed.
-- CSV, chart.png and this report committed to the repo's main branch.
+- **Email NOT sent:** the Resend connector needs re-authorisation (token expired) — the daily HTML email to Isaac could not go out. Re-auth in claude.ai connector settings to restore it. Everything else (CSV, chart, report, commit, notification) completed as normal.
+- CSV, chart.png and this report committed to the repo (branch claude/zen-feynman-nxdrnh, mirroring main).
 </content>
 </invoke>
