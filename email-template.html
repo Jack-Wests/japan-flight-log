@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Japan trip watch</title>
+</head>
+<body style="margin:0;padding:0;background:#eef2f5;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#1a2733;">
+<div style="max-width:640px;margin:0 auto;padding:16px;">
+
+  <!-- ACTION BANNER (only shown on action days) -->
+  {{ACTION_BANNER}}
+
+  <!-- HEADER -->
+  <div style="background:{{HEADER_COLOR}};border-radius:14px 14px 0 0;padding:22px 24px;color:#ffffff;">
+    <div style="font-size:13px;letter-spacing:.5px;text-transform:uppercase;opacity:.9;">Brisbane → Japan snow trip · Feb 2027</div>
+    <div style="font-size:24px;font-weight:800;margin-top:6px;">{{VERDICT_EMOJI}} {{VERDICT_WORD}} — best ${{BEST_PP}}pp</div>
+    <div style="font-size:15px;margin-top:4px;opacity:.95;">All four lads: ${{ALL_FOUR}} &nbsp;·&nbsp; checked {{DATE}}</div>
+  </div>
+
+  <!-- BODY CARD -->
+  <div style="background:#ffffff;border-radius:0 0 14px 14px;padding:24px;box-shadow:0 1px 4px rgba(0,0,0,.06);">
+
+    <h2 style="font-size:18px;margin:0 0 10px;">📋 Today's snapshot</h2>
+    <p style="font-size:15px;line-height:1.6;margin:0 0 16px;">{{SNAPSHOT}}</p>
+
+    <table role="presentation" width="100%" style="border-collapse:collapse;margin:0 0 22px;font-size:14px;">
+      <tr>
+        <td style="padding:10px 12px;background:#f5f8fa;border-radius:8px;">📈 <strong>Since yesterday:</strong> {{SINCE_YESTERDAY}}</td>
+      </tr>
+      <tr><td style="height:6px;"></td></tr>
+      <tr>
+        <td style="padding:10px 12px;background:#f5f8fa;border-radius:8px;">📉 <strong>Since last week:</strong> {{SINCE_WEEK}}</td>
+      </tr>
+      <tr><td style="height:6px;"></td></tr>
+      <tr>
+        <td style="padding:10px 12px;background:#f5f8fa;border-radius:8px;">🎯 <strong>Distance from buy target ($1,000):</strong> {{DISTANCE_TARGET}}</td>
+      </tr>
+    </table>
+
+    <h2 style="font-size:18px;margin:0 0 12px;">✈️ Trip options</h2>
+    <p style="font-size:13px;color:#5b6b78;margin:0 0 12px;">All prices per person in AUD, all-in — every flight incl. the Sapporo⇄Tokyo hops and 1 checked 20kg bag each way.</p>
+    <div style="overflow-x:auto;">
+      <table role="presentation" width="100%" style="border-collapse:collapse;font-size:13px;min-width:520px;">
+        <thead>
+          <tr style="background:#1f3a4d;color:#fff;text-align:left;">
+            <th style="padding:9px 10px;">Option</th>
+            <th style="padding:9px 10px;">Getting there</th>
+            <th style="padding:9px 10px;">Getting home</th>
+            <th style="padding:9px 10px;">Total pp</th>
+            <th style="padding:9px 10px;">All 4</th>
+            <th style="padding:9px 10px;">Door-to-door</th>
+            <th style="padding:9px 10px;">Worth knowing</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{OPTIONS_ROWS}}
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:12px;color:#5b6b78;margin:12px 0 22px;line-height:1.5;">{{QF107_NOTE}}</p>
+
+    <h2 style="font-size:18px;margin:0 0 12px;">🗓️ Itineraries</h2>
+    {{ITINERARY}}
+
+    <h2 style="font-size:18px;margin:22px 0 12px;">📈 Price history</h2>
+    <img src="cid:chart" alt="Price history chart" style="width:100%;max-width:100%;border-radius:10px;border:1px solid #e3e9ee;">
+
+    <h2 style="font-size:18px;margin:22px 0 10px;">🔧 Nerd notes</h2>
+    <ul style="font-size:13px;color:#44555f;line-height:1.6;margin:0;padding-left:20px;">
+      {{NERD_NOTES}}
+    </ul>
+
+    <p style="font-size:12px;color:#93a3ad;margin:22px 0 0;text-align:center;">Daily automated flight watch · not booked, just watched.</p>
+  </div>
+</div>
+</body>
+</html>
