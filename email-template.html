@@ -1,0 +1,60 @@
+<div style="margin:0;padding:0;background:#f4f6f8;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#1a1a1a;">
+  <div style="max-width:640px;margin:0 auto;padding:16px;">
+
+    {{ACTION_BANNER}}
+
+    <div style="background:{{HEADER_BG}};border-radius:14px 14px 0 0;padding:22px 24px;color:#ffffff;">
+      <div style="font-size:13px;letter-spacing:.5px;text-transform:uppercase;opacity:.9;">Japan snow trip · daily flight check</div>
+      <div style="font-size:26px;font-weight:800;margin-top:6px;line-height:1.2;">{{VERDICT_EMOJI}} {{VERDICT_WORD}} — best ${{BEST_PP}}pp</div>
+      <div style="font-size:15px;margin-top:6px;opacity:.95;">{{DATE_LONG}} · ${{BEST_ALL4}} for all 4 lads</div>
+    </div>
+
+    <div style="background:#ffffff;padding:22px 24px;border:1px solid #e6eaee;border-top:none;">
+      <h2 style="font-size:17px;margin:0 0 10px;color:#0d47a1;">📋 Today's snapshot</h2>
+      <p style="font-size:15px;line-height:1.6;margin:0 0 14px;">{{SNAPSHOT}}</p>
+      <table role="presentation" width="100%" style="border-collapse:collapse;font-size:14px;">
+        <tr><td style="padding:6px 0;">📈 Since last check</td><td align="right" style="padding:6px 0;font-weight:700;">{{SINCE_YDAY}}</td></tr>
+        <tr><td style="padding:6px 0;border-top:1px solid #eef1f4;">📉 Since last week</td><td align="right" style="padding:6px 0;border-top:1px solid #eef1f4;font-weight:700;">{{SINCE_WEEK}}</td></tr>
+        <tr><td style="padding:6px 0;border-top:1px solid #eef1f4;">🎯 Distance from buy target ($1,000)</td><td align="right" style="padding:6px 0;border-top:1px solid #eef1f4;font-weight:700;">{{DISTANCE}}</td></tr>
+      </table>
+    </div>
+
+    <div style="background:#ffffff;padding:22px 24px;border:1px solid #e6eaee;border-top:none;">
+      <h2 style="font-size:17px;margin:0 0 12px;color:#0d47a1;">✈️ Trip options</h2>
+      <p style="font-size:13px;color:#556;margin:0 0 12px;">All prices per person in AUD, all-in — front door to the snow and back, incl. one 20kg checked bag each way.</p>
+      <div style="overflow-x:auto;">
+      <table role="presentation" width="100%" style="border-collapse:collapse;font-size:13px;min-width:520px;">
+        <thead>
+          <tr style="background:#f0f4f8;">
+            <th align="left" style="padding:10px 8px;border-bottom:2px solid #d6dde4;">Option</th>
+            <th align="left" style="padding:10px 8px;border-bottom:2px solid #d6dde4;">Getting there</th>
+            <th align="left" style="padding:10px 8px;border-bottom:2px solid #d6dde4;">Getting home</th>
+            <th align="right" style="padding:10px 8px;border-bottom:2px solid #d6dde4;">Total pp</th>
+            <th align="right" style="padding:10px 8px;border-bottom:2px solid #d6dde4;">All 4</th>
+            <th align="left" style="padding:10px 8px;border-bottom:2px solid #d6dde4;">Worth knowing</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{OPTIONS_ROWS}}
+        </tbody>
+      </table>
+      </div>
+    </div>
+
+    {{ITINERARIES}}
+
+    <div style="background:#ffffff;padding:22px 24px;border:1px solid #e6eaee;border-top:none;">
+      <h2 style="font-size:17px;margin:0 0 12px;color:#0d47a1;">📈 Price trend</h2>
+      <img src="cid:chart" alt="Best price per person over time" style="width:100%;max-width:592px;height:auto;border-radius:8px;border:1px solid #eef1f4;" />
+    </div>
+
+    <div style="background:#ffffff;padding:18px 24px;border:1px solid #e6eaee;border-top:none;border-radius:0 0 14px 14px;">
+      <h2 style="font-size:15px;margin:0 0 8px;color:#556;">🔧 Nerd notes</h2>
+      <ul style="font-size:13px;color:#556;line-height:1.6;margin:0;padding-left:18px;">
+        {{NERD_NOTES}}
+      </ul>
+      <p style="font-size:12px;color:#99a;margin:16px 0 0;">Auto-sent by the daily flight optimiser · targets and prices are estimates, confirm before booking.</p>
+    </div>
+
+  </div>
+</div>
