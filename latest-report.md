@@ -102,6 +102,6 @@ All prices are per person in AUD, all-in — every flight from your front door t
 - Prices from the Kiwi.com connector today, all AUD with 1 checked bag each way requested in-search. Cheapest = Brisbane⇄Tokyo return via Port Moresby ($1,114) + two domestic hops (Tokyo↔Sapporo, ~$125 each); the open-jaw "into Sapporo / home from Tokyo" came out ~$88pp dearer, so it's not the winner today.
 - **Sale check failed to verify:** Jetstar, Qantas and Virgin sale pages all returned **403 Forbidden** today — couldn't read routes/dates, so no sale is reported as live. A web search only turned up generic/older Japan-sale chatter with no Feb 2027 detail — treat as unverified rumour needing a manual check.
 - **Via-China carriers priced but uncompetitive:** China Eastern/Southern (via Shanghai/Guangzhou) came in at $3,133+pp return — far above the winners, so not shown as an option.
-- CSV, chart.png and this report committed to the repo's main branch; chart-email.png / chart-email.b64 regenerated for the email.
-- Chart bands show the public targets only (BUY ≤$1,000, WATCH $1,000–$1,200).
+- CSV, chart.png (public bands only: BUY ≤$1,000, WATCH $1,000–$1,200), this report and the email files committed and pushed to branch `claude/friendly-ptolemy-80lvqz` (the routine's log branch).
+- Daily HTML email sent to Isaac via Resend (id 2e54f61f). PNG embed skipped — the repo is private so Resend can't fetch chart.png by URL, and the base64 is too large to paste reliably in one call; the email carries a lightweight HTML trend instead and chart.png lives in the repo.
 - Only two readings so far (20 & 22 Jul) — not enough for a trend or a 14-day "rising with no dips" flag yet.

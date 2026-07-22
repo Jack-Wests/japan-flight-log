@@ -134,17 +134,78 @@ def itin_block(title, subtitle, rows):
     </div>"""
 
 
-ITINERARIES = (
-    itin_block("Option A — Cheapest", "Rusutsu base · 14 nights in Japan · hire car pickup/drop Sapporo (CTS)", ITIN_A)
-    + itin_block("Option B — Best value", "Rusutsu base · ~15 nights in Japan · nonstop in, hop to Sapporo", ITIN_B)
-    + itin_block("Option C — Fastest sensible", "Rusutsu base · 14 nights in Japan · Qantas direct into Sapporo", ITIN_C)
-)
+ITINERARIES = itin_block(
+    "Itinerary — shared plan (Rusutsu base, ~14 nights, hire car pickup/drop Sapporo CTS)",
+    "Hokkaido first, Tokyo last · 4 ski days at Rusutsu · Isaac's lessons the first 2 ski mornings · "
+    "2 full Snow Festival days + an Otaru evening. All three options run this same plan — only the "
+    "flight in differs (see the note under the table).",
+    ITIN_A,
+) + """
+    <div style="background:#ffffff;padding:0 24px 20px;border:1px solid #e6eaee;border-top:none;">
+      <table role="presentation" width="100%" style="border-collapse:collapse;font-size:13px;background:#f6f8fa;border-radius:8px;">
+        <tr><td style="padding:12px 14px;line-height:1.6;">
+          <strong>How the flight in changes the first days:</strong><br>
+          • <strong>Cheapest</strong> — as shown above (via Port Moresby, land Tokyo Wed 3 Feb 8:00pm, hop to Sapporo Thu 4 Feb).<br>
+          • <strong>Best value</strong> — identical plan, but a nonstop in: Brisbane Tue 2 Feb 10:30am → Tokyo 6:25pm, hop to Sapporo Wed 3 Feb (a day earlier on the snow).<br>
+          • <strong>Fastest sensible</strong> — fly straight into Sapporo on Qantas QF107 (Brisbane Wed 3 Feb 5:00am → Sapporo 6:00pm), skip the Tokyo-on-the-way-in night; Tokyo section at the end is unchanged.
+        </td></tr>
+      </table>
+    </div>"""
+
+TREND_BLOCK = """
+<p style="font-size:13px;color:#556;margin:0 0 12px;">Where each daily reading lands against the buy bands (scale $0–$1,500pp):</p>
+<table role="presentation" width="100%" style="border-collapse:collapse;">
+  <tr>
+    <td style="width:64px;"></td>
+    <td>
+      <table role="presentation" width="100%" style="border-collapse:collapse;height:14px;border-radius:4px;overflow:hidden;">
+        <tr>
+          <td style="width:66.7%;background:#c8e6c9;font-size:1px;line-height:14px;">&nbsp;</td>
+          <td style="width:13.3%;background:#ffe0b2;font-size:1px;line-height:14px;">&nbsp;</td>
+          <td style="width:20%;background:#ffcdd2;font-size:1px;line-height:14px;">&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+    <td style="width:64px;"></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td style="font-size:11px;color:#889;padding-top:2px;">
+      <span style="color:#2e7d32;">◀ BUY ≤$1,000</span> &nbsp;·&nbsp; <span style="color:#8d6e00;">WATCH</span> &nbsp;·&nbsp; <span style="color:#b23;">HOLD &gt;$1,200 ▶</span>
+    </td>
+    <td></td>
+  </tr>
+</table>
+
+<table role="presentation" width="100%" style="border-collapse:collapse;margin-top:14px;font-size:13px;">
+  <tr>
+    <td style="width:64px;color:#556;white-space:nowrap;">20 Jul</td>
+    <td>
+      <table role="presentation" width="100%" style="border-collapse:collapse;background:#eef1f4;border-radius:4px;">
+        <tr><td style="width:89.8%;background:#c62828;height:16px;border-radius:4px;font-size:1px;line-height:16px;">&nbsp;</td><td style="font-size:1px;">&nbsp;</td></tr>
+      </table>
+    </td>
+    <td style="width:64px;text-align:right;font-weight:700;white-space:nowrap;">$1,347</td>
+  </tr>
+  <tr>
+    <td style="width:64px;color:#556;white-space:nowrap;padding-top:8px;">22 Jul</td>
+    <td style="padding-top:8px;">
+      <table role="presentation" width="100%" style="border-collapse:collapse;background:#eef1f4;border-radius:4px;">
+        <tr><td style="width:90.9%;background:#c62828;height:16px;border-radius:4px;font-size:1px;line-height:16px;">&nbsp;</td><td style="font-size:1px;">&nbsp;</td></tr>
+      </table>
+    </td>
+    <td style="width:64px;text-align:right;font-weight:700;white-space:nowrap;padding-top:8px;">$1,364</td>
+  </tr>
+</table>
+<p style="font-size:12px;color:#889;margin:12px 0 0;">Both readings sit deep in the red HOLD zone — best price is $364 above the $1,000 buy target and has barely moved (↑$17 in two days). Full dated chart (chart.png) is saved in the trip repo.</p>
+"""
 
 NERD_NOTES = """
 <li>Prices via the Kiwi.com connector, AUD, incl. 1 checked bag each way. Cheapest = Brisbane⇄Tokyo return via Port Moresby + two Tokyo↔Sapporo hops.</li>
 <li>Sale check couldn't be verified — Jetstar, Qantas &amp; Virgin sale pages all returned 403 today; no live sale reported.</li>
 <li>Via-China carriers priced but uncompetitive ($3,133+pp return).</li>
 <li>Only two readings so far (20 &amp; 22 Jul) — not a trend yet.</li>
+<li>Chart shown as a lightweight HTML trend so it renders on every device; the full dated chart.png is in the repo (couldn't embed the PNG this run — the repo is private so it can't be pulled by URL).</li>
 """
 
 repl = {
@@ -161,6 +222,7 @@ repl = {
     "{{DISTANCE}}": DISTANCE,
     "{{OPTIONS_ROWS}}": OPTIONS_ROWS,
     "{{ITINERARIES}}": ITINERARIES,
+    "{{TREND_BLOCK}}": TREND_BLOCK,
     "{{NERD_NOTES}}": NERD_NOTES,
 }
 
