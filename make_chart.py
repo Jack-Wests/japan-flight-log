@@ -28,8 +28,10 @@ with open("prices.csv") as f:
         fastest.append(float(row["fastest_sensible_pp"]))
 
 
-def build(path):
-    fig, ax = plt.subplots(figsize=(10, 5.6), dpi=130)
+def build(path, compact=False):
+    figsize = (6.6, 3.7) if compact else (10, 5.6)
+    dpi = 90 if compact else 130
+    fig, ax = plt.subplots(figsize=figsize, dpi=dpi)
     fig.patch.set_facecolor("white")
     ax.set_facecolor("#fbfbfd")
 
@@ -89,7 +91,7 @@ def build(path):
 
 
 build("chart.png")
-build("chart-email.png")
+build("chart-email.png", compact=True)
 
 with open("chart-email.png", "rb") as f:
     b64 = base64.b64encode(f.read()).decode("ascii")
