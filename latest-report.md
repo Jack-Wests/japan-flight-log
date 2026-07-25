@@ -55,5 +55,6 @@ Recommended plan. Hire car picked up and dropped at Sapporo airport (CTS). Rusut
 - Sale check: Jetstar, Qantas and Virgin Australia deal pages **all returned 403 (blocked)** — could not verify any live sale today, so none is reported. Needs a manual eyeball if you want certainty.
 - Cheapest ($1,373) is the all-Tokyo return via Port Moresby ($1,117) plus internal hops Tokyo→Sapporo ($124) and Sapporo→Tokyo ($132); best-value open-jaw into Sapporo is $1 dearer but far nicer.
 - QF107 Sydney–Sapporo seasonal direct priced cleanly at $1,729pp for the flight in (with the BNE–SYD connection).
-- CSV updated, chart.png + chart-email.png regenerated (3 data points), report written — all committed to main.
+- CSV updated, chart.png + chart-email.png regenerated (3 data points), report written — all committed.
+- **Email NOT sent this run:** the attached Resend connector only exposes suppression-list tools (no send-email tool), so the daily HTML email to Isaac could not be delivered — needs the send capability re-enabled. No email-template.html exists in the repo either. Daily push notification still sent.
 - Only 3 data points over 5 days — no 14-day trend to flag yet.
