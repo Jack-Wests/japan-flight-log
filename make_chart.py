@@ -28,8 +28,8 @@ with open("prices.csv") as f:
         fastest.append(float(row["fastest_sensible_pp"]))
 
 
-def build(path):
-    fig, ax = plt.subplots(figsize=(10, 5.6), dpi=130)
+def build(path, figsize=(10, 5.6), dpi=130):
+    fig, ax = plt.subplots(figsize=figsize, dpi=dpi)
     fig.patch.set_facecolor("white")
     ax.set_facecolor("#fbfbfd")
 
@@ -89,7 +89,16 @@ def build(path):
 
 
 build("chart.png")
-build("chart-email.png")
+# Email copy is rendered compact and palette-quantised so its base64 stays small
+# enough to embed cleanly inside the email.
+build("chart-email.png", figsize=(6.4, 3.6), dpi=80)
+try:
+    from PIL import Image
+    img = Image.open("chart-email.png").convert("RGB")
+    img = img.quantize(colors=64, method=Image.MEDIANCUT)
+    img.save("chart-email.png", optimize=True)
+except Exception as e:  # pragma: no cover - Pillow optional
+    print("email chart quantise skipped:", e)
 
 with open("chart-email.png", "rb") as f:
     b64 = base64.b64encode(f.read()).decode("ascii")
