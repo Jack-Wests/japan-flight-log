@@ -28,8 +28,8 @@ with open("prices.csv") as f:
         fastest.append(float(row["fastest_sensible_pp"]))
 
 
-def build(path):
-    fig, ax = plt.subplots(figsize=(10, 5.6), dpi=130)
+def build(path, figsize=(10, 5.6), dpi=130):
+    fig, ax = plt.subplots(figsize=figsize, dpi=dpi)
     fig.patch.set_facecolor("white")
     ax.set_facecolor("#fbfbfd")
 
@@ -83,13 +83,15 @@ def build(path):
     ax.legend(loc="upper right", framealpha=0.9, fontsize=9)
 
     fig.tight_layout()
-    fig.savefig(path, dpi=130)
+    fig.savefig(path, dpi=dpi)
     plt.close(fig)
     return path
 
 
 build("chart.png")
-build("chart-email.png")
+# Email copy: smaller + lower dpi so the base64 payload stays compact enough
+# to inline as a cid attachment in one pass.
+build("chart-email.png", figsize=(6.0, 3.4), dpi=46)
 
 with open("chart-email.png", "rb") as f:
     b64 = base64.b64encode(f.read()).decode("ascii")
