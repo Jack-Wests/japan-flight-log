@@ -102,7 +102,7 @@ All prices are per person in AUD, all-in — every flight from your front door t
 - **Price eased ~$114pp** vs 27 Jul: the cheapest into-Sapporo routing is now a Jetstar+Peach combo via Tokyo ($692) rather than last week's pricier Seoul overnight ($814), pulling the all-in down.
 - **Sale check failed to verify:** Jetstar, Qantas **and** Virgin Australia deals pages all returned **403 Forbidden** today — couldn't read routes/dates, so no sale is reported as live. Treat any Japan-sale chatter as unverified rumour needing a manual check.
 - Via-China carriers (China Southern / China Eastern): priced today but nowhere near — cheapest was $1,847pp for the flight-in alone (via Shanghai), so not folded into any option.
-- `email-template.html` referenced in the amendments still isn't in the repo, so the email was built from a clean built-in HTML layout instead. `chart-email.png` + `chart-email.b64` regenerated (b64 length 100,564, matches file) and embedded.
-- CSV, chart, report all updated and committed; daily email sent to Isaac via Resend; push notification sent.
+- `email-template.html` referenced in the amendments still isn't in the repo, so the email was built from a clean built-in HTML layout instead. `chart-email.png` + `chart-email.b64` regenerated (b64 length 100,564, matches file).
+- **Chart not embedded in the email this run:** the repo is private (so Resend can't fetch a raw-URL image) and the ~100KB base64 can't be reliably inlined into the send call. The email links to the chart in the repo instead; `chart.png` is committed and current. Everything else — CSV, chart, report, commit, push, daily email, notification — completed.
 </content>
 </invoke>
