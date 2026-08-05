@@ -47,9 +47,13 @@
       </td></tr>
 
       <!-- ── CHART ── -->
-      <!-- CHART_B64: raw base64 string of chart-email.png (no data: prefix — template adds it) -->
+      <!-- Chart is sent as an INLINE ATTACHMENT, not a data: URI — Gmail and most
+           webmail clients block data: URIs in <img> and the chart silently vanishes.
+           Send chart-email.png via the Resend `attachments` array with
+           contentId "chart" (content = the base64 from chart-email.b64).
+           No placeholder here: the src below is already correct, leave it alone. -->
       <tr><td style="padding:8px 28px 20px;">
-        <img src="data:image/png;base64,{{CHART_B64}}"
+        <img src="cid:chart"
              alt="Price history — Brisbane to Japan snow trip"
              width="544"
              style="width:100%;max-width:544px;height:auto;display:block;border-radius:4px;" />

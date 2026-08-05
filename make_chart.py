@@ -29,6 +29,9 @@ with open("prices.csv") as f:
 
 
 def build(path, figsize=(10, 5.6), dpi=130):
+    # Font sizes are tuned for the 10in wide chart; scale them down for the
+    # narrower email copy so the title doesn't get clipped.
+    s = min(1.0, figsize[0] / 10.0)
     fig, ax = plt.subplots(figsize=figsize, dpi=dpi)
     fig.patch.set_facecolor("white")
     ax.set_facecolor("#fbfbfd")
@@ -44,9 +47,9 @@ def build(path, figsize=(10, 5.6), dpi=130):
     ax.axhline(BUY, color="#2e7d32", lw=1.2, ls="--", alpha=0.8)
     ax.axhline(WATCH, color="#f9a825", lw=1.2, ls="--", alpha=0.8)
     ax.text(0.012, BUY - 8, "  BUY zone  ≤ $1,000", transform=ax.get_yaxis_transform(),
-            va="top", ha="left", fontsize=9, color="#1b5e20", fontweight="bold")
+            va="top", ha="left", fontsize=9*s, color="#1b5e20", fontweight="bold")
     ax.text(0.012, WATCH - 8, "  WATCH  $1,000–$1,200", transform=ax.get_yaxis_transform(),
-            va="top", ha="left", fontsize=9, color="#8d6e00", fontweight="bold")
+            va="top", ha="left", fontsize=9*s, color="#8d6e00", fontweight="bold")
 
     # Fastest-sensible reference line (lighter).
     ax.plot(dates, fastest, "-o", color="#90a4ae", lw=1.6, ms=4,
@@ -57,30 +60,33 @@ def build(path, figsize=(10, 5.6), dpi=130):
             label="Best total pp", zorder=4)
 
     # Highlight today's / latest point.
-    ax.scatter([dates[-1]], [best[-1]], s=170, facecolor="#1565c0",
+    ax.scatter([dates[-1]], [best[-1]], s=170*s, facecolor="#1565c0",
                edgecolor="white", linewidth=2, zorder=6)
     ax.annotate(f"${best[-1]:,.0f}", (dates[-1], best[-1]),
                 textcoords="offset points", xytext=(0, 14), ha="center",
-                fontsize=11, fontweight="bold", color="#0d47a1")
+                fontsize=11*s, fontweight="bold", color="#0d47a1")
 
     ax.set_ylim(ymin, ymax)
     ax.set_title("Brisbane → Japan snow trip — best price per person (Feb 2027)",
-                 fontsize=14, fontweight="bold", pad=14)
-    ax.set_ylabel("AUD per person (all-in, incl. bags)", fontsize=11)
-    ax.set_xlabel("Date checked", fontsize=11)
+                 fontsize=14*s, fontweight="bold", pad=14*s)
+    ax.set_ylabel("AUD per person (all-in, incl. bags)", fontsize=11*s)
+    ax.set_xlabel("Date checked", fontsize=11*s)
 
     ax.xaxis.set_major_formatter(mdates.DateFormatter("%d %b %Y"))
     if len(dates) == 1:
         ax.margins(x=0.5)
         ax.set_xticks(dates)  # avoid repeated identical month ticks on a 1-point log
+    elif len(dates) <= 8:
+        ax.set_xticks(dates)  # one tick per check; AutoDateLocator overlaps them
     else:
         ax.xaxis.set_major_locator(mdates.AutoDateLocator())
+    ax.tick_params(labelsize=9.5*s)
     fig.autofmt_xdate(rotation=0, ha="center")
 
     ax.grid(True, axis="y", color="#e0e0e0", lw=0.8)
-    for s in ("top", "right"):
-        ax.spines[s].set_visible(False)
-    ax.legend(loc="upper right", framealpha=0.9, fontsize=9)
+    for spine in ("top", "right"):
+        ax.spines[spine].set_visible(False)
+    ax.legend(loc="upper right", framealpha=0.9, fontsize=9*s)
 
     fig.tight_layout()
     fig.savefig(path, dpi=dpi)
@@ -89,8 +95,17 @@ def build(path, figsize=(10, 5.6), dpi=130):
 
 
 build("chart.png")
-# Compact copy for the daily email — smaller so its base64 embeds cleanly.
-build("chart-email.png", figsize=(5.2, 3.0), dpi=26)
+
+# Email copy: full readable size, then palette-quantised. A line chart is mostly
+# flat colour, so quantising cuts the bytes far more than shrinking the image
+# does — and keeps it legible instead of a postage stamp.
+build("chart-email.png", figsize=(6.4, 3.6), dpi=100)
+
+from PIL import Image
+
+img = Image.open("chart-email.png").convert("RGB")
+img.quantize(colors=24, method=Image.MEDIANCUT).save(
+    "chart-email.png", optimize=True)
 
 with open("chart-email.png", "rb") as f:
     b64 = base64.b64encode(f.read()).decode("ascii")
