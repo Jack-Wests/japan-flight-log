@@ -2,6 +2,7 @@
 
 Daily flight + itinerary watch for the Brisbane → Hokkaido snow trip, Feb 2027.
 
+- **[CLAUDE.md](CLAUDE.md)** — context for Claude: who it's talking to, house rules
 - **[RUNBOOK.md](RUNBOOK.md)** — the daily run, in order. Start here.
 - `prices.csv` — append-only price log
 - `make_chart.py` — builds `chart.png` (full) and `chart-email.png` (email copy)
