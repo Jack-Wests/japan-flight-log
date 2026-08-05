@@ -30,9 +30,9 @@ Record two numbers:
 - `best_total_pp` — cheapest sensible combination, whatever the routing
 - `fastest_sensible_pp` — quickest routing that isn't silly money
 
-> These two are **not** the same as the three options in the email. The email's
-> "Fastest (Qantas)" row is the QF107 Sydney–Sapporo routing, which is usually far
-> dearer than `fastest_sensible_pp`. Don't conflate them.
+> `fastest_sensible_pp` is the quickest routing that still fits the budget — it is
+> the email's third table row. It is **not** the Qantas QF107 Sydney–Sapporo direct,
+> which usually costs close to double and belongs in the footnote, not a row.
 
 ## 2. Check for live airline sales
 
@@ -69,9 +69,9 @@ python3 render_email.py   # writes email.html + email.txt
 ```
 
 The delta rows, the price-log bars and the leak check are all computed — don't
-hand-write them. In particular **never write "since yesterday"**: the log is not
-reliably daily (there was a 9-day gap between 27 Jul and 5 Aug) and the script
-labels the comparison with what actually happened.
+hand-write them. Never hand-write "since yesterday": if step 0 was skipped the log
+will have holes in it, and the script labels the comparison with the gap that
+actually exists rather than assuming one.
 
 Do **not** rebuild the HTML from scratch. Rebuilding is why every email used to
 look different. If the layout needs changing, change `email-template.html`.
