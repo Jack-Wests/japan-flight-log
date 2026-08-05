@@ -34,7 +34,9 @@ Check for Jetstar/Qantas/Virgin/other Japan-relevant sales. You may only report 
 
 ## PRICE LOG + CHART
 
-Append today's date, best total pp, fastest-sensible pp, and verdict to `prices.csv`.
+**Before anything else, run `python3 sync_prices.py`.** Each scheduled run gets its own fresh branch off `main` and nothing merges back, so an un-synced checkout sees only a stale `prices.csv` and every trend number comes out wrong. This rebuilds the full log from all branches.
+
+Then append today's date, best total pp, fastest-sensible pp, and verdict to `prices.csv`.
 
 Regenerate the charts by running the script — do not hand-roll plotting code and do not change the sizes:
 
