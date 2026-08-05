@@ -17,7 +17,10 @@
     BEST_PP            "$1,350"
     BEST_ALL4          "$5,400"
     SNAPSHOT_PARA      one or more <p class-less paragraphs, style inline (see below)
-    DELTA_DAY_VALUE    "↑ $5"        DELTA_WEEK_VALUE  "no full week of history yet"
+    DELTA_1_LABEL      "Since last check (27 Jul)"   DELTA_1_VALUE  "↓ $65"
+    DELTA_2_LABEL      "Since a week ago (29 Jul)"   DELTA_2_VALUE  "no check that far back"
+                       (all four are computed from prices.csv by render_email.py —
+                        never write "since yesterday" unless a check actually ran yesterday)
     TARGET_DISTANCE    "$350 above"  BUY_TARGET        "$1,000"  (public target ONLY)
     OPTIONS_ROWS       <tr> rows for the trip-options table
     OPTIONS_FOOTNOTE   the italic note under the options table
@@ -51,12 +54,12 @@
     {{SNAPSHOT_PARA}}
     <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:16px;">
       <tr>
-        <td style="padding:11px 0;border-top:1px solid #e8ebf0;font-size:14px;color:#3d4757;">📈&nbsp; Since yesterday</td>
-        <td align="right" style="padding:11px 0;border-top:1px solid #e8ebf0;font-size:14px;font-weight:700;color:#1a202c;">{{DELTA_DAY_VALUE}}</td>
+        <td style="padding:11px 0;border-top:1px solid #e8ebf0;font-size:14px;color:#3d4757;">📈&nbsp; {{DELTA_1_LABEL}}</td>
+        <td align="right" style="padding:11px 0;border-top:1px solid #e8ebf0;font-size:14px;font-weight:700;color:#1a202c;">{{DELTA_1_VALUE}}</td>
       </tr>
       <tr>
-        <td style="padding:11px 0;border-top:1px solid #e8ebf0;font-size:14px;color:#3d4757;">📉&nbsp; Since last week</td>
-        <td align="right" style="padding:11px 0;border-top:1px solid #e8ebf0;font-size:14px;font-weight:700;color:#1a202c;">{{DELTA_WEEK_VALUE}}</td>
+        <td style="padding:11px 0;border-top:1px solid #e8ebf0;font-size:14px;color:#3d4757;">📉&nbsp; {{DELTA_2_LABEL}}</td>
+        <td align="right" style="padding:11px 0;border-top:1px solid #e8ebf0;font-size:14px;font-weight:700;color:#1a202c;">{{DELTA_2_VALUE}}</td>
       </tr>
       <tr>
         <td style="padding:11px 0;border-top:1px solid #e8ebf0;font-size:14px;color:#3d4757;">🎯&nbsp; Distance from buy target ({{BUY_TARGET}})</td>

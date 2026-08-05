@@ -27,8 +27,6 @@ RUN = {
     "verdict_headline": "🔴 HOLD — don't book yet",
     "best_pp": "$1,527",
     "best_all4": "$6,108",
-    "delta_day": "↓ $65",
-    "delta_week": "↓ $65 (vs 27 Jul — no daily check in between)",
     "target_distance": "$527 above",
     "snapshot": [
         "The cheapest way to get all four of you to the Hokkaido snow and home "
@@ -162,6 +160,61 @@ def price_log_rows():
     return "".join(out)
 
 
+def deltas():
+    """Work the two comparison rows out from prices.csv.
+
+    The log is not reliably daily — there was a 9-day gap between 27 Jul and
+    5 Aug — so never claim "since yesterday". Say which date is actually being
+    compared against, and say so plainly when there's nothing to compare to.
+    """
+    rows = list(csv.DictReader(open("prices.csv")))
+    today = datetime.strptime(rows[-1]["date"], "%Y-%m-%d")
+    now = float(rows[-1]["best_total_pp"])
+    prior = rows[:-1]
+
+    def move(then):
+        d = now - then
+        if d == 0:
+            return "no change"
+        return f'{"↑" if d > 0 else "↓"} ${abs(d):,.0f}'
+
+    def fmt(dt):
+        return dt.strftime("%-d %b")
+
+    # Row 1: the previous check, whenever that was.
+    if not prior:
+        l1, v1 = "Since last check", "first check — no history yet"
+    else:
+        prev = prior[-1]
+        pdt = datetime.strptime(prev["date"], "%Y-%m-%d")
+        gap = (today - pdt).days
+        when = "yesterday" if gap == 1 else f"{gap} days ago"
+        l1 = f"Since last check ({when}, {fmt(pdt)})"
+        v1 = move(float(prev["best_total_pp"]))
+
+    # Row 2: a longer view. Prefer the nearest check at least a week back, but if
+    # that's the same entry row 1 already used (gappy log), show the first check
+    # instead so the two rows never say the same thing twice.
+    week = [r for r in prior
+            if (today - datetime.strptime(r["date"], "%Y-%m-%d")).days >= 7]
+    pick, label = None, None
+    if week and (not prior or week[-1]["date"] != prior[-1]["date"]):
+        pick, label = week[-1], "Since a week back"
+    elif len(prior) > 1:
+        pick, label = prior[0], "Since the first check"
+
+    if pick:
+        pdt = datetime.strptime(pick["date"], "%Y-%m-%d")
+        l2 = f"{label} ({fmt(pdt)})"
+        v2 = move(float(pick["best_total_pp"]))
+    else:
+        l2, v2 = "Longer trend", "not enough history yet"
+
+    return l1, v1, l2, v2
+
+
+_d1l, _d1v, _d2l, _d2v = deltas()
+
 P = "margin:0 0 11px;font-size:14.5px;line-height:1.65;color:#2d3748;"
 
 VALUES = {
@@ -171,8 +224,8 @@ VALUES = {
     "BEST_PP": RUN["best_pp"],
     "BEST_ALL4": RUN["best_all4"],
     "BUY_TARGET": f"${BUY_TARGET:,}",
-    "DELTA_DAY_VALUE": RUN["delta_day"],
-    "DELTA_WEEK_VALUE": RUN["delta_week"],
+    "DELTA_1_LABEL": _d1l, "DELTA_1_VALUE": _d1v,
+    "DELTA_2_LABEL": _d2l, "DELTA_2_VALUE": _d2v,
     "TARGET_DISTANCE": RUN["target_distance"],
     "SNAPSHOT_PARA": "".join(f'<p style="{P}">{p}</p>' for p in RUN["snapshot"]),
     "OPTIONS_ROWS": options_rows(),
@@ -193,8 +246,9 @@ def build_text():
          strip(RUN["verdict_headline"]),
          f'Best all-in {RUN["best_pp"]} pp - {RUN["best_all4"]} for the four lads', ""]
     L += [strip(p) for p in RUN["snapshot"]] + [""]
-    L += [f'Since yesterday: {strip(RUN["delta_day"])}',
-          f'Since last week: {strip(RUN["delta_week"])}',
+    d1l, d1v, d2l, d2v = deltas()
+    L += [f'{d1l}: {d1v}',
+          f'{d2l}: {d2v}',
           f'Distance from buy target (${BUY_TARGET:,}): {RUN["target_distance"]}',
           "", "TRIP OPTIONS", ""]
     for label, there, home, pp, all4, note in RUN["options"]:
