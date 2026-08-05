@@ -1,14 +1,15 @@
 JAPAN SNOW TRIP - DAILY CHECK - Wed 5 Aug 2026
 
-🔴 HOLD — don't book yet
+🔴 HOLD — today's a bad day to book
 Best all-in $1,527 pp - $6,108 for the four lads
 
 The cheapest way to get all four of you to the Hokkaido snow and home again is $1,527 per person (~$6,108 for the four) — flying Brisbane→Tokyo on Jetstar, hopping up to Sapporo, and coming home through Port Moresby.
-It's drifting the right way — down $65 since the last check on 27 Jul — but still $527 clear of the $1,000 buy target. The real mover is the fastest-sensible price, which has collapsed to $1,859pp (was $2,507) now that direct Jetstar seats have opened up both ways.
-No verified airline sale is running (all the sale pages blocked us again today). Sit tight — nothing here is time-sensitive.
+But today is a bad day, not a good one: that's $173 dearer than yesterday ($1,354) and near the top of everything we've seen. Across 17 days of checks the price has run between $1,333 and $1,592, sitting around $1,352 most days.
+The one bright spot: the fastest-sensible price has collapsed to $1,859pp (it's been $2,300–$2,700 all month), so flying Jetstar direct home instead of the 20-hour Port Moresby route is cheaper today than it has been.
+No verified airline sale is running (all the sale pages blocked us again today). Nothing to do — if anything, today is the day not to book.
 
-Since last check (9 days ago, 27 Jul): ↓ $65
-Since the first check (20 Jul): ↑ $180
+Since last check (yesterday, 4 Aug): ↑ $173
+Since a week back (29 Jul): ↑ $25
 Distance from buy target ($1,000): $527 above
 
 TRIP OPTIONS
@@ -54,10 +55,23 @@ Best value is the same trip on the ground, but booked straight through to Sappor
 PRICE LOG
 
   Mon 20 Jul   $1,347
+  Tue 21 Jul   $1,340
+  Wed 22 Jul   $1,364
   Thu 23 Jul   $1,345
+  Fri 24 Jul   $1,352
+  Sat 25 Jul   $1,373
+  Sun 26 Jul   $1,350
   Mon 27 Jul   $1,592
+  Tue 28 Jul   $1,499
+  Wed 29 Jul   $1,502
+  Thu 30 Jul   $1,341
+  Fri 31 Jul   $1,333
+  Sat 1 Aug    $1,333
+  Sun 2 Aug    $1,478
+  Mon 3 Aug    $1,345
+  Tue 4 Aug    $1,354
   Wed 5 Aug    $1,527
 
-Full dated chart (chart.png) lives in the trip repo — four points so far, all sitting in the red HOLD band.
+Showing the last 10 checks; the chart above has all 17. Everything logged so far sits in the red HOLD band — the cheapest day yet was $1,333 on 31 Jul.
 
 Auto-sent daily flight watch · prices from Kiwi.com, AUD incl. 1 checked bag each way · no verified sale live today.

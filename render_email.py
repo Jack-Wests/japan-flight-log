@@ -25,7 +25,7 @@ BUY_TARGET = 1000
 RUN = {
     "date_iso": "2026-08-05",
     "date_human": "Wed 5 Aug 2026",
-    "verdict_headline": "🔴 HOLD — don't book yet",
+    "verdict_headline": "🔴 HOLD — today's a bad day to book",
     "best_pp": "$1,527",
     "best_all4": "$6,108",
     "target_distance": "$527 above",
@@ -33,12 +33,14 @@ RUN = {
         "The cheapest way to get all four of you to the Hokkaido snow and home "
         "again is <b>$1,527 per person (~$6,108 for the four)</b> — flying Brisbane→Tokyo "
         "on Jetstar, hopping up to Sapporo, and coming home through Port Moresby.",
-        "It's drifting the right way — <b>down $65</b> since the last check on 27 Jul — but "
-        "still $527 clear of the $1,000 buy target. The real mover is the fastest-sensible "
-        "price, which has collapsed to <b>$1,859pp</b> (was $2,507) now that direct Jetstar "
-        "seats have opened up both ways.",
+        "But today is a <b>bad day</b>, not a good one: that's <b>$173 dearer than yesterday</b> "
+        "($1,354) and near the top of everything we've seen. Across 17 days of checks the "
+        "price has run between <b>$1,333 and $1,592</b>, sitting around <b>$1,352</b> most days.",
+        "The one bright spot: the fastest-sensible price has collapsed to <b>$1,859pp</b> "
+        "(it's been $2,300–$2,700 all month), so flying Jetstar direct home instead of the "
+        "20-hour Port Moresby route is cheaper today than it has been.",
         "No verified airline sale is running (all the sale pages blocked us again today). "
-        "Sit tight — nothing here is time-sensitive.",
+        "Nothing to do — if anything, today is the day <i>not</i> to book.",
     ],
     "options": [
         # (label, getting there, getting home, pp, all4, worth knowing)
@@ -95,8 +97,8 @@ RUN = {
         "also the same trip — it just flies Jetstar direct home instead of routing through Port "
         "Moresby, turning a 20-hour trip back into about 9 hours for $332pp more.",
     "price_log_footnote":
-        "Full dated chart (chart.png) lives in the trip repo — four points so far, all sitting "
-        "in the red HOLD band.",
+        "Showing the last 10 checks; the chart above has all 17. Everything logged so far sits "
+        "in the red HOLD band — the cheapest day yet was $1,333 on 31 Jul.",
     "footer":
         "Auto-sent daily flight watch · prices from Kiwi.com, AUD incl. 1 checked bag each way "
         "· no verified sale live today.",
@@ -135,8 +137,9 @@ def itin_rows():
 
 def price_log_rows():
     """Bars straight from prices.csv, so they can't disagree with the log."""
-    rows = list(csv.DictReader(open("prices.csv")))
-    vals = [float(r["best_total_pp"]) for r in rows]
+    allrows = list(csv.DictReader(open("prices.csv")))
+    rows = allrows[-10:]                      # the chart above carries the full history
+    vals = [float(r["best_total_pp"]) for r in allrows]
     top = max(vals) * 1.06
     out = []
     for i, r in enumerate(rows):
