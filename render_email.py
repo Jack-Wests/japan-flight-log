@@ -10,6 +10,7 @@ bottom fails the render if it does.
 """
 import csv
 import re
+import subprocess
 from datetime import datetime
 
 TEMPLATE = "email-template.html"
@@ -55,18 +56,20 @@ RUN = {
          "<i>(via Port Moresby)</i>",
          "$1,535", "$6,140",
          "Booked straight to the snow — no Tokyo faff at the start. Only $8pp more"),
-        ("Fastest (Qantas)",
-         "✈️ Dep Brisbane (BNE) → Sydney, then 🛫 QF107 Dep Sydney (SYD) Wed 4 Feb 9:05am → "
-         "🛬 lands Sapporo (CTS) Wed 4 Feb 6:00pm <i>(Qantas QF107 direct Sydney–Sapporo)</i>",
+        ("Fastest sensible",
+         "✈️ Dep Brisbane (BNE) Tue 3 Feb 10:30am → 🛬 lands Tokyo (NRT) Tue 3 Feb 6:25pm "
+         "<i>(Jetstar direct)</i>, then next-morning hop to Sapporo (CTS) Wed 4 Feb",
          "✈️ Dep Tokyo (NRT) Mon 16 Feb 8:55pm → 🛬 lands Brisbane (BNE) Tue 17 Feb 6:45am "
-         "<i>(Jetstar direct)</i>",
-         "$2,976", "$11,904",
-         "Straight to the snow same day, no overnight — lands 6pm"),
+         "<i>(Jetstar direct — no Port Moresby)</i>",
+         "$1,859", "$7,436",
+         "Direct both ways, ~9h home instead of 20h. $332pp more than the cheapest"),
     ],
     "options_footnote":
-        "Qantas QF107 direct priced fine again today at <b>$1,664pp</b> for the flight in "
-        "(plus a $182pp Brisbane→Sydney hop). No date shift beyond our windows saved $100+ pp, "
-        "so all options stay put.",
+        "The Qantas QF107 Sydney–Sapporo direct was priced again today — <b>$1,664pp</b> for the "
+        "flight in, plus a $182pp Brisbane→Sydney hop, so <b>$2,976pp all-in ($11,904 for four)</b>. "
+        "It lands you on the snow at 6pm the same day with no overnight, but it's roughly double "
+        "the cheapest option, so it's not shown as a live pick. No date shift within ±3 days saved "
+        "$100+ pp, so all options stay put.",
     "itin_title": "Option A — Cheapest",
     "itin_subtitle": "Rusutsu base · 13 nights · hire car picked up &amp; dropped at Sapporo (CTS)",
     "itinerary": [
@@ -87,10 +90,10 @@ RUN = {
         ("Tue 17 Feb", "→ Brisbane", "Land Brisbane 9:40am"),
     ],
     "itin_footnote":
-        "<b>Option B (Best value)</b> is the same trip on the ground, but booked straight "
-        "through to Sapporo so you skip the overnight near Tokyo at the start. "
-        "<b>Option C (Fastest)</b> flies into Sapporo on the Qantas QF107 direct — lands 6pm "
-        "the same day, skis first, Tokyo at the end.",
+        "<b>Best value</b> is the same trip on the ground, but booked straight through to "
+        "Sapporo so you skip the overnight near Tokyo at the start. <b>Fastest sensible</b> is "
+        "also the same trip — it just flies Jetstar direct home instead of routing through Port "
+        "Moresby, turning a 20-hour trip back into about 9 hours for $332pp more.",
     "price_log_footnote":
         "Full dated chart (chart.png) lives in the trip repo — four points so far, all sitting "
         "in the red HOLD band.",
@@ -160,6 +163,17 @@ def price_log_rows():
     return "".join(out)
 
 
+def chart_branch():
+    """Branch the chart image is served from — read it from git rather than
+    hardcoding, so the URL still resolves whichever branch the run pushes to."""
+    try:
+        b = subprocess.run(["git", "rev-parse", "--abbrev-ref", "HEAD"],
+                           capture_output=True, text=True, check=True).stdout.strip()
+        return b if b and b != "HEAD" else "main"
+    except Exception:
+        return "main"
+
+
 def deltas():
     """Work the two comparison rows out from prices.csv.
 
@@ -220,6 +234,7 @@ P = "margin:0 0 11px;font-size:14.5px;line-height:1.65;color:#2d3748;"
 VALUES = {
     "DATE_HUMAN": RUN["date_human"],
     "DATE_ISO": RUN["date_iso"],
+    "CHART_BRANCH": chart_branch(),
     "VERDICT_HEADLINE": RUN["verdict_headline"],
     "BEST_PP": RUN["best_pp"],
     "BEST_ALL4": RUN["best_all4"],
