@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Japan Snow Trip — Flight Watch {{DATE_HEADER}}</title>
+</head>
+<body style="margin:0;padding:0;background:#f0f2f5;font-family:Arial,Helvetica,sans-serif;">
+<table width="100%" cellpadding="0" cellspacing="0" style="background:#f0f2f5;">
+  <tr><td align="center" style="padding:20px 10px;">
+    <table width="600" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:8px;max-width:600px;border:1px solid #dde1e7;">
+
+      <!-- ── HEADER ── -->
+      <tr><td style="background:#1565c0;padding:20px 28px;border-radius:8px 8px 0 0;">
+        <p style="margin:0;color:#bbdefb;font-size:12px;letter-spacing:1px;text-transform:uppercase;">🇯🇵 Japan Snow Trip · Daily Flight Watch</p>
+        <h1 style="margin:6px 0 0;color:#ffffff;font-size:20px;font-weight:bold;">{{DATE_HEADER}}</h1>
+      </td></tr>
+
+      <!-- ── VERDICT STRIP ── -->
+      <!-- VERDICT_COLOR: #c62828 = HOLD (red) · #e65100 = WATCH (amber) · #1b5e20 = BUY (green) -->
+      <tr><td style="background:{{VERDICT_COLOR}};padding:13px 28px;">
+        <p style="margin:0;font-size:17px;font-weight:bold;color:#ffffff;">{{VERDICT_LABEL}}</p>
+      </td></tr>
+
+      <!-- ── PRICE HERO ── -->
+      <tr><td style="padding:24px 28px 18px;border-bottom:1px solid #e8eaed;">
+        <table width="100%" cellpadding="0" cellspacing="0">
+          <tr>
+            <td width="50%" style="text-align:center;padding-right:12px;border-right:1px solid #e8eaed;">
+              <p style="margin:0;font-size:11px;color:#777;text-transform:uppercase;letter-spacing:1px;">Best price · per person</p>
+              <p style="margin:6px 0 4px;font-size:38px;font-weight:bold;color:#0d47a1;line-height:1;">{{BEST_PP}}</p>
+              <p style="margin:0;font-size:12px;color:#888;">all-in incl. bags</p>
+            </td>
+            <td width="50%" style="text-align:center;padding-left:12px;">
+              <p style="margin:0;font-size:11px;color:#777;text-transform:uppercase;letter-spacing:1px;">Total · all 4 lads</p>
+              <p style="margin:6px 0 4px;font-size:38px;font-weight:bold;color:#1565c0;line-height:1;">{{BEST_ALL4}}</p>
+              <p style="margin:0;font-size:12px;color:#888;">{{MOVEMENT}}</p>
+            </td>
+          </tr>
+        </table>
+      </td></tr>
+
+      <!-- ── SNAPSHOT ── -->
+      <!-- SNAPSHOT_PARA: one or more <p style="margin:0 0 10px;font-size:14px;line-height:1.65;color:#333;">...</p> blocks -->
+      <tr><td style="padding:20px 28px 8px;">
+        {{SNAPSHOT_PARA}}
+      </td></tr>
+
+      <!-- ── CHART ── -->
+      <!-- CHART_B64: raw base64 string of chart-email.png (no data: prefix — template adds it) -->
+      <tr><td style="padding:8px 28px 20px;">
+        <img src="data:image/png;base64,{{CHART_B64}}"
+             alt="Price history — Brisbane to Japan snow trip"
+             width="544"
+             style="width:100%;max-width:544px;height:auto;display:block;border-radius:4px;" />
+      </td></tr>
+
+      <!-- ── TRIP OPTIONS ── -->
+      <!-- OPTIONS_HTML: a condensed HTML table (3 options A/B/C). Use inline styles, no colspan trickery.
+           Suggested columns: Option · Route summary · pp · All 4 · Notes
+           Table style: width:100%;border-collapse:collapse;font-size:13px;
+           TH style: background:#e3f2fd;color:#0d47a1;padding:7px 8px;text-align:left;border-bottom:2px solid #1565c0;
+           TD style: padding:7px 8px;border-bottom:1px solid #e8eaed;vertical-align:top;
+           Cheapest row: background:#f1f8e9 (light green tint) -->
+      <tr><td style="padding:0 28px 24px;">
+        <h2 style="margin:0 0 10px;font-size:14px;font-weight:bold;color:#1565c0;border-bottom:2px solid #1565c0;padding-bottom:5px;">✈️ Trip options</h2>
+        {{OPTIONS_HTML}}
+      </td></tr>
+
+      <!-- ── NERD NOTES ── -->
+      <!-- NERD_NOTES_HTML: <ul style="margin:0;padding:0 0 0 18px;"> with <li style="margin-bottom:5px;font-size:12px;color:#555;line-height:1.5;">...</li> items -->
+      <tr><td style="background:#f8f9fa;padding:16px 28px;border-top:1px solid #e8eaed;">
+        <h3 style="margin:0 0 8px;font-size:11px;color:#777;text-transform:uppercase;letter-spacing:1px;">Nerd notes</h3>
+        {{NERD_NOTES_HTML}}
+      </td></tr>
+
+      <!-- ── FOOTER ── -->
+      <tr><td style="background:#1565c0;padding:12px 28px;border-radius:0 0 8px 8px;text-align:center;">
+        <p style="margin:0;color:#bbdefb;font-size:11px;">Automated daily check · Prices in AUD · 1 × 20 kg bag each way · BUY target ≤ $1,000</p>
+      </td></tr>
+
+    </table>
+  </td></tr>
+</table>
+</body>
+</html>
