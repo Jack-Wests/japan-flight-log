@@ -3,6 +3,23 @@
 The scheduled routine should follow these steps exactly. Most of the past
 breakage came from improvising instead of using the files already in here.
 
+## 0. Recover the price log first — do not skip
+
+```bash
+python3 sync_prices.py
+```
+
+Every scheduled run gets its **own fresh branch** off `main` and pushes there;
+nothing merges back. So a checkout only ever sees `main`'s stale `prices.csv`
+plus its own row, and the daily history looks like it has huge gaps when in fact
+every day was logged — just on a branch nobody reads again.
+
+On 5 Aug 2026 this had `main` sitting on 3 rows while 17 days were actually
+logged across ~20 abandoned branches. `sync_prices.py` walks every commit that
+touched `prices.csv` on every ref and rebuilds the full log. Run it **before**
+appending today's row, or today's chart and every "since last check" number will
+be computed against a log with holes in it.
+
 ## 1. Get the prices
 
 Kiwi.com connector. Brisbane → Hokkaido and home, Feb 2027, 4 people, one
@@ -98,3 +115,4 @@ Full write-up for the record.
 | Every email looks different | no template; HTML rebuilt each run | `email-template.html` + `render_email.py` |
 | Chart illegible | shrunk to 135×78 chasing payload size | quantise, don't shrink |
 | "Since yesterday" wrong | hardcoded label on a gappy log | computed in `render_email.py` |
+| Price log looks empty / gappy | every run pushes to its own branch, never merged | `sync_prices.py` at step 0 |

@@ -79,7 +79,9 @@ def build(path, figsize=(10, 5.6), dpi=130):
     elif len(dates) <= 8:
         ax.set_xticks(dates)  # one tick per check; AutoDateLocator overlaps them
     else:
-        ax.xaxis.set_major_locator(mdates.AutoDateLocator())
+        # Cap the tick count — the default packs them in tight enough to collide
+        # once the log runs to a couple of weeks.
+        ax.xaxis.set_major_locator(mdates.AutoDateLocator(maxticks=7))
     ax.tick_params(labelsize=9.5*s)
     fig.autofmt_xdate(rotation=0, ha="center")
 
