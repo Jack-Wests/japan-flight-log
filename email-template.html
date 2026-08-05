@@ -3,88 +3,134 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Japan Snow Trip — Flight Watch {{DATE_HEADER}}</title>
+  <title>Japan Snow Trip — Daily Check — {{DATE_HUMAN}}</title>
 </head>
-<body style="margin:0;padding:0;background:#f0f2f5;font-family:Arial,Helvetica,sans-serif;">
-<table width="100%" cellpadding="0" cellspacing="0" style="background:#f0f2f5;">
-  <tr><td align="center" style="padding:20px 10px;">
-    <table width="600" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:8px;max-width:600px;border:1px solid #dde1e7;">
+<!--
+  THE daily email layout. Do not rebuild this from scratch on a run — fill the
+  {{PLACEHOLDERS}} and send. Rebuilding is what made every email look different.
 
-      <!-- ── HEADER ── -->
-      <tr><td style="background:#1565c0;padding:20px 28px;border-radius:8px 8px 0 0;">
-        <p style="margin:0;color:#bbdefb;font-size:12px;letter-spacing:1px;text-transform:uppercase;">🇯🇵 Japan Snow Trip · Daily Flight Watch</p>
-        <h1 style="margin:6px 0 0;color:#ffffff;font-size:20px;font-weight:bold;">{{DATE_HEADER}}</h1>
-      </td></tr>
+  Placeholders:
+    DATE_HUMAN         "Sun 26 Jul 2026"
+    DATE_ISO           "2026-07-26"  (cache-buster on the chart URL — must change daily
+                                      or Gmail's image proxy serves yesterday's chart)
+    VERDICT_HEADLINE   "🔴 HOLD — don't book yet" / "🟢 BUY — call the lads"
+    BEST_PP            "$1,350"
+    BEST_ALL4          "$5,400"
+    SNAPSHOT_PARA      one or more <p class-less paragraphs, style inline (see below)
+    DELTA_DAY_VALUE    "↑ $5"        DELTA_WEEK_VALUE  "no full week of history yet"
+    TARGET_DISTANCE    "$350 above"  BUY_TARGET        "$1,000"  (public target ONLY)
+    OPTIONS_ROWS       <tr> rows for the trip-options table
+    OPTIONS_FOOTNOTE   the italic note under the options table
+    ITIN_TITLE         "Option A — Cheapest"
+    ITIN_SUBTITLE      "Rusutsu base · 14 nights · hire car picked up & dropped at Sapporo (CTS)"
+    ITIN_ROWS          <tr> rows for the day-by-day table
+    ITIN_FOOTNOTE      the note about Options B and C
+    PRICE_LOG_ROWS     <tr> bar rows for the price log
+    PRICE_LOG_FOOTNOTE the note under the bars
+    FOOTER_LINE        the grey sign-off line
 
-      <!-- ── VERDICT STRIP ── -->
-      <!-- VERDICT_COLOR: #c62828 = HOLD (red) · #e65100 = WATCH (amber) · #1b5e20 = BUY (green) -->
-      <tr><td style="background:{{VERDICT_COLOR}};padding:13px 28px;">
-        <p style="margin:0;font-size:17px;font-weight:bold;color:#ffffff;">{{VERDICT_LABEL}}</p>
-      </td></tr>
+  The private buy target must NEVER appear anywhere in this email.
+-->
+<body style="margin:0;padding:0;background:#eef1f6;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#eef1f6;">
+<tr><td align="center" style="padding:18px 10px 26px;">
+<table width="640" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:640px;">
 
-      <!-- ── PRICE HERO ── -->
-      <tr><td style="padding:24px 28px 18px;border-bottom:1px solid #e8eaed;">
-        <table width="100%" cellpadding="0" cellspacing="0">
-          <tr>
-            <td width="50%" style="text-align:center;padding-right:12px;border-right:1px solid #e8eaed;">
-              <p style="margin:0;font-size:11px;color:#777;text-transform:uppercase;letter-spacing:1px;">Best price · per person</p>
-              <p style="margin:6px 0 4px;font-size:38px;font-weight:bold;color:#0d47a1;line-height:1;">{{BEST_PP}}</p>
-              <p style="margin:0;font-size:12px;color:#888;">all-in incl. bags</p>
-            </td>
-            <td width="50%" style="text-align:center;padding-left:12px;">
-              <p style="margin:0;font-size:11px;color:#777;text-transform:uppercase;letter-spacing:1px;">Total · all 4 lads</p>
-              <p style="margin:6px 0 4px;font-size:38px;font-weight:bold;color:#1565c0;line-height:1;">{{BEST_ALL4}}</p>
-              <p style="margin:0;font-size:12px;color:#888;">{{MOVEMENT}}</p>
-            </td>
-          </tr>
-        </table>
-      </td></tr>
-
-      <!-- ── SNAPSHOT ── -->
-      <!-- SNAPSHOT_PARA: one or more <p style="margin:0 0 10px;font-size:14px;line-height:1.65;color:#333;">...</p> blocks -->
-      <tr><td style="padding:20px 28px 8px;">
-        {{SNAPSHOT_PARA}}
-      </td></tr>
-
-      <!-- ── CHART ── -->
-      <!-- Chart is sent as an INLINE ATTACHMENT, not a data: URI — Gmail and most
-           webmail clients block data: URIs in <img> and the chart silently vanishes.
-           Send chart-email.png via the Resend `attachments` array with
-           contentId "chart" (content = the base64 from chart-email.b64).
-           No placeholder here: the src below is already correct, leave it alone. -->
-      <tr><td style="padding:8px 28px 20px;">
-        <img src="cid:chart"
-             alt="Price history — Brisbane to Japan snow trip"
-             width="544"
-             style="width:100%;max-width:544px;height:auto;display:block;border-radius:4px;" />
-      </td></tr>
-
-      <!-- ── TRIP OPTIONS ── -->
-      <!-- OPTIONS_HTML: a condensed HTML table (3 options A/B/C). Use inline styles, no colspan trickery.
-           Suggested columns: Option · Route summary · pp · All 4 · Notes
-           Table style: width:100%;border-collapse:collapse;font-size:13px;
-           TH style: background:#e3f2fd;color:#0d47a1;padding:7px 8px;text-align:left;border-bottom:2px solid #1565c0;
-           TD style: padding:7px 8px;border-bottom:1px solid #e8eaed;vertical-align:top;
-           Cheapest row: background:#f1f8e9 (light green tint) -->
-      <tr><td style="padding:0 28px 24px;">
-        <h2 style="margin:0 0 10px;font-size:14px;font-weight:bold;color:#1565c0;border-bottom:2px solid #1565c0;padding-bottom:5px;">✈️ Trip options</h2>
-        {{OPTIONS_HTML}}
-      </td></tr>
-
-      <!-- ── NERD NOTES ── -->
-      <!-- NERD_NOTES_HTML: <ul style="margin:0;padding:0 0 0 18px;"> with <li style="margin-bottom:5px;font-size:12px;color:#555;line-height:1.5;">...</li> items -->
-      <tr><td style="background:#f8f9fa;padding:16px 28px;border-top:1px solid #e8eaed;">
-        <h3 style="margin:0 0 8px;font-size:11px;color:#777;text-transform:uppercase;letter-spacing:1px;">Nerd notes</h3>
-        {{NERD_NOTES_HTML}}
-      </td></tr>
-
-      <!-- ── FOOTER ── -->
-      <tr><td style="background:#1565c0;padding:12px 28px;border-radius:0 0 8px 8px;text-align:center;">
-        <p style="margin:0;color:#bbdefb;font-size:11px;">Automated daily check · Prices in AUD · 1 × 20 kg bag each way · BUY target ≤ $1,000</p>
-      </td></tr>
-
-    </table>
+  <!-- ══ HEADER ══ -->
+  <tr><td style="background:#166534;border-radius:12px;padding:20px 24px 22px;">
+    <p style="margin:0 0 8px;color:#a7dcb4;font-size:12px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;">Japan Snow Trip · Daily Check</p>
+    <h1 style="margin:0 0 10px;color:#ffffff;font-size:27px;font-weight:800;line-height:1.15;">{{VERDICT_HEADLINE}}</h1>
+    <p style="margin:0;color:#d6ecdc;font-size:14px;line-height:1.5;">{{DATE_HUMAN}} · Best all-in <b style="color:#ffffff;">{{BEST_PP}} pp</b> · <b style="color:#ffffff;">{{BEST_ALL4}}</b> for the four lads</p>
   </td></tr>
+
+  <tr><td style="height:14px;line-height:14px;font-size:0;">&nbsp;</td></tr>
+
+  <!-- ══ TODAY'S SNAPSHOT ══ -->
+  <tr><td style="background:#ffffff;border-radius:12px;padding:20px 24px 8px;">
+    <h2 style="margin:0 0 14px;font-size:17px;font-weight:700;color:#1a202c;">📋 Today's snapshot</h2>
+    {{SNAPSHOT_PARA}}
+    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:16px;">
+      <tr>
+        <td style="padding:11px 0;border-top:1px solid #e8ebf0;font-size:14px;color:#3d4757;">📈&nbsp; Since yesterday</td>
+        <td align="right" style="padding:11px 0;border-top:1px solid #e8ebf0;font-size:14px;font-weight:700;color:#1a202c;">{{DELTA_DAY_VALUE}}</td>
+      </tr>
+      <tr>
+        <td style="padding:11px 0;border-top:1px solid #e8ebf0;font-size:14px;color:#3d4757;">📉&nbsp; Since last week</td>
+        <td align="right" style="padding:11px 0;border-top:1px solid #e8ebf0;font-size:14px;font-weight:700;color:#1a202c;">{{DELTA_WEEK_VALUE}}</td>
+      </tr>
+      <tr>
+        <td style="padding:11px 0;border-top:1px solid #e8ebf0;font-size:14px;color:#3d4757;">🎯&nbsp; Distance from buy target ({{BUY_TARGET}})</td>
+        <td align="right" style="padding:11px 0;border-top:1px solid #e8ebf0;font-size:14px;font-weight:700;color:#1a202c;">{{TARGET_DISTANCE}}</td>
+      </tr>
+    </table>
+    <div style="height:12px;line-height:12px;font-size:0;">&nbsp;</div>
+  </td></tr>
+
+  <tr><td style="height:14px;line-height:14px;font-size:0;">&nbsp;</td></tr>
+
+  <!-- ══ TRIP OPTIONS ══ -->
+  <tr><td style="background:#ffffff;border-radius:12px;padding:20px 24px 22px;">
+    <h2 style="margin:0 0 6px;font-size:17px;font-weight:700;color:#1a202c;">✈️ Trip options</h2>
+    <p style="margin:0 0 14px;font-size:12.5px;color:#8a94a6;line-height:1.5;">All prices per person in AUD, all-in — every flight door-to-door including one 20kg checked bag each way.</p>
+    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;border-collapse:collapse;border:1px solid #e5e8ec;">
+      <tr>
+        <th style="background:#f3f5f8;padding:9px 10px;text-align:left;font-size:12.5px;font-weight:700;color:#3d4757;border-bottom:1px solid #e5e8ec;">Option</th>
+        <th style="background:#f3f5f8;padding:9px 10px;text-align:left;font-size:12.5px;font-weight:700;color:#3d4757;border-bottom:1px solid #e5e8ec;">Getting there</th>
+        <th style="background:#f3f5f8;padding:9px 10px;text-align:left;font-size:12.5px;font-weight:700;color:#3d4757;border-bottom:1px solid #e5e8ec;">Getting home</th>
+        <th style="background:#f3f5f8;padding:9px 10px;text-align:center;font-size:12.5px;font-weight:700;color:#3d4757;border-bottom:1px solid #e5e8ec;">Total pp</th>
+        <th style="background:#f3f5f8;padding:9px 10px;text-align:center;font-size:12.5px;font-weight:700;color:#3d4757;border-bottom:1px solid #e5e8ec;">All 4</th>
+        <th style="background:#f3f5f8;padding:9px 10px;text-align:left;font-size:12.5px;font-weight:700;color:#3d4757;border-bottom:1px solid #e5e8ec;">Worth knowing</th>
+      </tr>
+      {{OPTIONS_ROWS}}
+    </table>
+    <p style="margin:12px 0 0;font-size:12.5px;color:#5b6b8c;line-height:1.55;">{{OPTIONS_FOOTNOTE}}</p>
+  </td></tr>
+
+  <tr><td style="height:14px;line-height:14px;font-size:0;">&nbsp;</td></tr>
+
+  <!-- ══ ITINERARY ══ -->
+  <tr><td style="background:#ffffff;border-radius:12px;padding:20px 24px 22px;">
+    <h2 style="margin:0 0 6px;font-size:17px;font-weight:700;color:#1a202c;">🗓️ {{ITIN_TITLE}}</h2>
+    <p style="margin:0 0 14px;font-size:12.5px;color:#8a94a6;line-height:1.5;">{{ITIN_SUBTITLE}}</p>
+    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;border-collapse:collapse;border:1px solid #e5e8ec;">
+      <tr>
+        <th style="background:#f3f5f8;padding:9px 10px;text-align:left;font-size:12.5px;font-weight:700;color:#3d4757;border-bottom:1px solid #e5e8ec;">Date</th>
+        <th style="background:#f3f5f8;padding:9px 10px;text-align:left;font-size:12.5px;font-weight:700;color:#3d4757;border-bottom:1px solid #e5e8ec;">Location</th>
+        <th style="background:#f3f5f8;padding:9px 10px;text-align:left;font-size:12.5px;font-weight:700;color:#3d4757;border-bottom:1px solid #e5e8ec;">Plan</th>
+      </tr>
+      {{ITIN_ROWS}}
+    </table>
+    <p style="margin:12px 0 0;font-size:12.5px;color:#3d4757;line-height:1.6;">{{ITIN_FOOTNOTE}}</p>
+  </td></tr>
+
+  <tr><td style="height:14px;line-height:14px;font-size:0;">&nbsp;</td></tr>
+
+  <!-- ══ PRICE LOG ══ -->
+  <tr><td style="background:#ffffff;border-radius:12px;padding:20px 24px 22px;">
+    <h2 style="margin:0 0 6px;font-size:17px;font-weight:700;color:#1a202c;">📉 Price log</h2>
+    <p style="margin:0 0 14px;font-size:12.5px;color:#8a94a6;line-height:1.5;">Best total pp over time. 🟢 BUY ≤ $1,000 · 🟡 WATCH $1,000–$1,200 · 🔴 HOLD above $1,200.</p>
+
+    <!-- Chart is a hosted image, not a data: URI — Gmail blocks data: URIs in <img>.
+         The ?v= cache-buster is required: without it Gmail's proxy serves a stale chart. -->
+    <img src="https://raw.githubusercontent.com/Jack-Wests/japan-flight-log/claude/friendly-ptolemy-m4ml72/chart-email.png?v={{DATE_ISO}}"
+         alt="Best price per person over time"
+         width="592"
+         style="width:100%;max-width:592px;height:auto;display:block;border:1px solid #e5e8ec;border-radius:8px;margin-bottom:18px;" />
+
+    <!-- Bars repeat the same numbers in plain HTML, so the log still reads if images are off. -->
+    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+      {{PRICE_LOG_ROWS}}
+    </table>
+    <p style="margin:14px 0 0;font-size:12px;color:#8a94a6;line-height:1.55;">{{PRICE_LOG_FOOTNOTE}}</p>
+  </td></tr>
+
+  <!-- ══ FOOTER ══ -->
+  <tr><td style="padding:16px 24px 4px;text-align:center;">
+    <p style="margin:0;font-size:11.5px;color:#8a94a6;line-height:1.5;">{{FOOTER_LINE}}</p>
+  </td></tr>
+
+</table>
+</td></tr>
 </table>
 </body>
 </html>
