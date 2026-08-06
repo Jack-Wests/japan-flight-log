@@ -9,7 +9,9 @@ morning, flying Sapporo→Tokyo mid-trip, and coming home through Port Moresby.
 All four flights, all with a 20kg checked bag.
 
 That is basically **the same as yesterday** ($1,527 — up $6), and **$192 dearer
-than a week ago**. The good news buried in it: the *quick* way of doing the trip
+than a week ago**. Across 18 days of checks the price has run between $1,333
+(31 Jul) and $1,592 (27 Jul), so today sits near the top of the range without
+being a record. The good news buried in it: the *quick* way of doing the trip
 has come down a lot. The fastest sensible option is $1,622pp today, against
 $1,859 yesterday and $2,300–$2,700 for most of the past fortnight — so the gap
 between "cheap and slow" and "quick" has shrunk from hundreds of dollars to

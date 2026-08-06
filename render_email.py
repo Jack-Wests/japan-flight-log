@@ -109,8 +109,8 @@ RUN = {
         "at 8:45am — about 35 minutes quicker door-to-door for $89pp more.",
     "price_log_footnote":
         "Showing the last 10 checks; the chart above has all 18. Everything logged so far sits "
-        "in the red HOLD band — the cheapest day yet was $1,333 on 31 Jul, and today is the "
-        "dearest we've recorded.",
+        "in the red HOLD band — the cheapest day yet was $1,333 on 31 Jul and the dearest "
+        "$1,592 on 27 Jul, so today sits near the top of the range but isn't a record.",
     "footer":
         "Auto-sent daily flight watch · prices from Kiwi.com, AUD incl. 1 checked bag each way "
         "· no verified sale live today.",
