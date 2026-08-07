@@ -1,51 +1,54 @@
-# 🇯🇵 Japan Snow Trip — Flight & Itinerary Watch — Wed 5 Aug 2026
+# 🇯🇵 Japan Snow Trip — Flight & Itinerary Watch — Fri 7 Aug 2026
 
 ## 📋 Today's snapshot
 
-🔴 **HOLD.** The cheapest all-in way to get the four of you to the Hokkaido powder and home again is **$1,527 per person — $6,108 for all four lads**, flying Brisbane→Tokyo on Jetstar, hopping up to Sapporo, and coming home through Port Moresby. That's **down $65** since the last check on 27 Jul ($1,592), so it's drifting the right way but still a fair way north of where we'd want to click "book". The big mover today is the **fastest-sensible price**, which has collapsed to **$1,859pp** (was $2,507) now that direct Jetstar seats both ways have opened up. Nothing is time-sensitive — no airline sale could be confirmed today (all the deal pages blocked us). Sit tight.
+🔴 **HOLD.** The cheapest all-in way to get the four of you to the Hokkaido powder and home again is **$1,389 per person — $5,556 for all four lads**, flying Brisbane⇄Tokyo return through Port Moresby and hopping up to Sapporo and back. That's **down $144 on yesterday** ($1,533), so the weekend spike into the $1,500s has unwound — but it's still **$56 dearer than a week ago** ($1,333 on 31 Jul), and across the 19 checks logged so far the typical day is about $1,354, so today is only a shade better than ordinary. The genuinely good news is the **fastest-sensible price, now $1,526pp** — that has fallen for a third straight day (it was $2,715 a week ago), so the quick way over is no longer absurd money. No airline sale could be verified today — Jetstar, Qantas and Virgin all blocked us. Nothing to do; sit tight.
 
-📉 Since last week: ↓ $65 (vs $1,592 on 27 Jul — no daily entry in between)
+📈 Since last check (yesterday, 6 Aug): ↓ $144
 
-🎯 Distance from buy target ($1,000): **$527 above**
+📉 Since a week back (31 Jul): ↑ $56
+
+🎯 Distance from buy target ($1,000): **$389 above**
 
 ## ✈️ Trip options
 
 | Option | Getting there | Getting home | Total pp | All 4 lads | Door-to-door | Worth knowing |
 |---|---|---|---|---|---|---|
-| **A — Cheapest** | 🛫 Dep Brisbane (BNE) Tue 3 Feb 10:30am → 🛬 lands Tokyo (NRT) Tue 3 Feb 6:25pm (Jetstar direct), then hop up to Sapporo next morning | 🛫 Dep Tokyo (NRT) Mon 16 Feb 9:40pm → 🛬 lands Brisbane (BNE) Tue 17 Feb 9:40am (Air Niugini via Port Moresby) | **$1,527** | **$6,108** | There ~22h incl. overnight in Tokyo — **brutal** · Home 11h | Lowest all-in; comes home via Port Moresby; you sleep a night near Tokyo airport before the Sapporo hop |
-| **B — Best value** | 🛫 Dep Brisbane (BNE) Tue 3 Feb 10:30am → 🛬 lands Sapporo (CTS) Wed 4 Feb 8:40am (through ticket via Tokyo) | 🛫 Dep Tokyo (NRT) Mon 16 Feb 9:40pm → 🛬 lands Brisbane (BNE) Tue 17 Feb 9:40am (via Port Moresby) | **$1,535** | **$6,140** | There ~22h — **brutal** · Home 11h | Booked straight through to Sapporo — land on the snow, no Tokyo faff at the start. Only $8pp more than A |
-| **C — Fastest (Qantas comfort)** | 🛫 Dep Brisbane (BNE) → Sydney, then Qantas QF107 🛫 Dep Sydney (SYD) Wed 4 Feb 9:05am → 🛬 lands Sapporo (CTS) Wed 4 Feb 6:00pm (direct, same day) | 🛫 Dep Tokyo (NRT) Mon 16 Feb 8:55pm → 🛬 lands Brisbane (BNE) Tue 17 Feb 6:45am (Jetstar direct) | **$2,976** | **$11,904** | There ~14h, same day · Home ~9h | The comfy one: Qantas QF107 lands you in Sapporo at 6pm the SAME day, no overnight. But ~$1,450pp dearer |
+| **A — Cheapest** | 🛫 Dep Brisbane (BNE) Tue 2 Feb 2:40pm → 🛬 lands Tokyo (NRT) Wed 3 Feb 8:00pm *(Air Niugini via Port Moresby)*, then 🛫 Tokyo (HND) Thu 4 Feb 7:00am → 🛬 Sapporo (CTS) Thu 4 Feb 8:30am | 🛫 Dep Tokyo (NRT) Wed 17 Feb 9:40pm → 🛬 lands Brisbane (BNE) Thu 18 Feb 9:40am *(Air Niugini via Port Moresby)* | **$1,389** | **$5,556** | There 42h50m · Home 11h | **Long haul: 43h — brutal.** Two overnight stops, and the 20h one is Port Moresby, where you stay airside. Costs you a day of the trip |
+| **B — Best value** | 🛫 Dep Brisbane (BNE) Tue 2 Feb 11:55am → 🛬 lands Sapporo (CTS) Wed 3 Feb 3:50pm *(Jetstar to Seoul, then Osaka)* | 🛫 Dep Tokyo (NRT) Wed 17 Feb 9:40pm → 🛬 lands Brisbane (BNE) Thu 18 Feb 9:40am *(Air Niugini via Port Moresby)* | **$1,484** | **$5,936** | There 28h55m · Home 11h | Long haul: 29h, but the 12h Seoul stop is an overnight — get an airport hotel and sleep properly. $95pp more than A and you land a full day earlier |
+| **C — Fastest sensible** | 🛫 Dep Brisbane (BNE) Tue 2 Feb 10:30am → 🛬 lands Tokyo (NRT) Tue 2 Feb 6:25pm *(Jetstar direct)*, then 🛫 Tokyo (NRT) Wed 3 Feb 6:50am → 🛬 Sapporo (CTS) Wed 3 Feb 8:40am | 🛫 Dep Tokyo (NRT) Wed 17 Feb 9:40pm → 🛬 lands Brisbane (BNE) Thu 18 Feb 9:40am *(Air Niugini via Port Moresby)* | **$1,526** | **$6,104** | There 23h10m · Home 11h | Direct to Tokyo, one night at Narita, on the snow by breakfast. The 6:50am hop means a 4:30am alarm — the only rough bit |
 
-*Qantas seasonal direct as requested: **QF107 Sydney (SYD)→Sapporo (CTS) priced at $1,664pp** (10h55m, lands 6pm), plus $182pp Brisbane→Sydney on Qantas to feed it — folded into Option C above. All prices include one 20kg checked bag each way.*
+*Qantas seasonal direct as requested: **QF107 Sydney (SYD)→Sapporo (CTS) is $1,664pp** on its own (8h50m, lands 5:55pm same day). Adding the $137pp Brisbane→Sydney hop, the $141pp Sapporo→Tokyo leg and the $660pp flight home makes it **$2,602pp all-in — $10,408 for the four**, near enough to double Option A, so it doesn't get a row. All prices include one 20kg checked bag each way. No date shift within ±3 days saved $100pp or more — flying out 31 Jan was the best of them at $18pp cheaper, and it lands you before the Snow Festival even starts, so all options stay put.*
 
-## 🗓️ Option A itinerary — 13 nights (Rusutsu base)
+## 🗓️ Option A itinerary — 14 nights in Japan (Rusutsu base)
 
 | Day | Date | Location | Plan |
 |---|---|---|---|
-| 1 | Tue 3 Feb | ✈️ Brisbane → Tokyo | Fly out 10:30am, land Narita 6:25pm; overnight near the airport |
-| 2 | Wed 4 Feb | Tokyo → Sapporo | Morning hop to Sapporo (CTS), collect the hire car; **Snow Festival day 1** at Odori Park |
-| 3 | Thu 5 Feb | Sapporo / Otaru | **Snow Festival day 2**, then evening in **Otaru** — canal illuminations + sushi |
-| 4 | Fri 6 Feb | → Rusutsu | Drive ~2h to Rusutsu, check in, afternoon warm-up laps |
-| 5 | Sat 7 Feb | Rusutsu | **Ski day 1** — Isaac AM beginner lesson; lads ride powder |
-| 6 | Sun 8 Feb | Rusutsu | **Ski day 2** — Isaac AM lesson; lads on Mt Isola |
-| 7 | Mon 9 Feb | Rusutsu / Niseko | **Ski day 3** — day-trip to Niseko (45 min) |
-| 8 | Tue 10 Feb | Rusutsu | **Ski day 4** — tree runs, last big powder day |
-| 9 | Wed 11 Feb | → Sapporo | Drive back, drop the hire car at Sapporo (CTS); night out in Susukino |
-| 10 | Thu 12 Feb | Sapporo → Tokyo | Fly to Tokyo 9:35am→11:25am; afternoon in Shibuya |
-| 11 | Fri 13 Feb | Tokyo | Asakusa, Akihabara, teamLab Planets |
-| 12 | Sat 14 Feb | Tokyo | Day trip to Hakone *(this is the droppable day if you want an extra Rusutsu ski)* |
-| 13 | Sun 15 Feb | Tokyo | Tsukiji breakfast, shopping, last night out |
-| 14 | Mon 16 Feb | ✈️ Tokyo → home | Depart Narita 9:40pm |
-| 15 | Tue 17 Feb | 🛬 Brisbane | Land Brisbane 9:40am |
+| 1 | Tue 2 Feb | ✈️ Brisbane → Port Moresby | Fly out 2:40pm, land 5:50pm; overnight at the airport hotel |
+| 2 | Wed 3 Feb | Port Moresby → Tokyo | Long wait, fly 2:10pm, land Narita 8:00pm; across to a Haneda hotel |
+| 3 | Thu 4 Feb | Tokyo → Sapporo | Fly 7:00am, land Sapporo (CTS) 8:30am, collect the hire car; **Snow Festival day 1** at Odori Park |
+| 4 | Fri 5 Feb | Sapporo / Otaru | **Snow Festival day 2**, then evening in **Otaru** — canal illuminations and sushi |
+| 5 | Sat 6 Feb | → Rusutsu | Drive ~2h to Rusutsu, check in, afternoon warm-up laps |
+| 6 | Sun 7 Feb | Rusutsu | **Ski day 1** — Isaac AM beginner lesson; lads ride powder |
+| 7 | Mon 8 Feb | Rusutsu | **Ski day 2** — Isaac AM lesson; lads on Mt Isola |
+| 8 | Tue 9 Feb | Rusutsu / Niseko | **Ski day 3** — day-trip to Niseko (45 min) |
+| 9 | Wed 10 Feb | Rusutsu | **Ski day 4** — tree runs, last big powder day |
+| 10 | Thu 11 Feb | → Sapporo | Drive back, drop the hire car at Sapporo (CTS); Snow Festival final day, night out in Susukino |
+| 11 | Fri 12 Feb | Sapporo | Nijo Market breakfast, Mt Moiwa ropeway at dusk |
+| 12 | Sat 13 Feb | Sapporo → Tokyo | Fly 9:30am, land Haneda 11:10am; afternoon in Shibuya |
+| 13 | Sun 14 Feb | Tokyo | Asakusa, Akihabara, teamLab Planets |
+| 14 | Mon 15 Feb | Tokyo | Day trip to Hakone *(this is the droppable day if you want another Rusutsu ski)* |
+| 15 | Tue 16 Feb | Tokyo | Tsukiji breakfast, shopping, last night out |
+| 16 | Wed 17 Feb | ✈️ Tokyo → home | Depart Narita 9:40pm |
+| 17 | Thu 18 Feb | 🛬 Brisbane | Land Brisbane 9:40am |
 
-*Options B and C share this exact on-the-ground plan — only the flights in and out differ (B lands you straight in Sapporo; C flies you via Sydney on Qantas).*
+*Options B and C run the same plan on the ground — they just get you to Sapporo on **Wed 3 Feb instead of Thu 4 Feb**, so you gain a spare Sapporo day at the front before the Snow Festival opens. Everything from 4 Feb onward is identical.*
 
 ## 🔧 Nerd notes
 
-- **Data sources:** Kiwi.com connector for all live fares (per-person, 1 × 20kg checked bag each way included on every leg quoted); prices in AUD.
-- **Sale check — nothing confirmed LIVE.** Jetstar, Qantas and Virgin sale pages all returned **HTTP 403 (blocked)** — could not read them today, so no sale is being reported as current. A web search surfaced a Jetstar Japan "Super Star Sale" but it **ended 3 Aug** and only covers *domestic* Japan routes for Sep–Dec travel — irrelevant to our Feb 2027 dates. Treat any "sale" chatter as unverified until a page can be read.
-- **Cheapest legs today:** BNE→Tokyo direct Jetstar $628 · Tokyo→Sapporo Peach $101 · Sapporo→Tokyo Jetstar Japan $136 · Tokyo→Brisbane via Port Moresby $662 · direct Jetstar home $994.
-- **CSV, chart and this report** all regenerated and committed; `chart.png` shows the 4-point history with the green ≤$1,000 BUY zone and amber $1,000–$1,200 WATCH band.
-- **No 14-day rise:** the log has dipped and risen ($1,347 → $1,592 → $1,527), so no "everything only going up" warning.
-- **Email sent** to the lads (Resend id 0aaa5615). Two caveats: (1) `email-template.html` is missing from the repo, so the email used a clean fallback layout (same content, proper tables); (2) the full-size chart's base64 was too large to embed reliably, so the email chart was shrunk to a compact copy — its byte integrity couldn't be re-confirmed against the source before send, so the inline chart may not render on every client. The authoritative chart is `chart.png` in the repo. Per the one-email-per-run rule, no correction email was sent.
-- **Run hiccup:** a mid-response server error and an output-token cutoff interrupted this run; it was resumed and all steps (CSV, chart, report, email, commit) completed.
+- **Data sources:** Kiwi.com connector for every fare, AUD, per person, one 20kg checked bag each way included on all legs quoted. No manual bag-fee estimates were needed today.
+- **Sale check — nothing verified LIVE.** Jetstar, Qantas and Virgin sale pages all returned **HTTP 403 (blocked)**, so none could be read today. No sale is being reported as current; treat any sale chatter as unverified rumour needing a manual check.
+- **All-in accounting:** totals fold in the internal Sapporo⇄Tokyo legs, not just the international ones — Tokyo→Sapporo $128 (4 Feb) and Sapporo→Tokyo $141 (13 Feb). Cheapest legs today: BNE⇄Tokyo return via Port Moresby $1,120 · BNE→Sapporo one-way $683 · Tokyo→BNE one-way $660 · BNE→Sydney $137.
+- **Via-Asia routings checked and not competitive:** cheapest via Hong Kong, Singapore, China, Malaysia or the Philippines was $1,109 one-way into Sapporo (Cathay via Hong Kong), against $683 on the Seoul/Osaka routing — so no long-layover Asian stopover earns a row today.
+- **Price log recovered first:** `sync_prices.py` pulled the history back to 18 rows before today's was added (19 total). Today's $1,389 is not a record low — it sits just above the middle of the series, which runs $1,333–$1,592.
+- **No 14-day rise:** the log dips and rises repeatedly, so there is no "everything only going up" warning to give. CSV, both charts and this report regenerated and committed.
