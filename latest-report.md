@@ -99,4 +99,5 @@
 - **Cheapest legs today:** Brisbane⇄Tokyo return via Port Moresby $1,119 · Brisbane→Sapporo one ticket $724 · Brisbane→Tokyo Jetstar direct one-way $656 · Tokyo→Sapporo hop $101–128 · Sapporo→Tokyo hop $140 · Tokyo→Brisbane one-way $660.
 - **Price log recovered first** with `sync_prices.py` — it pulled in 3 rows that lived only on earlier run branches, so the log now holds 21 checks rather than the 18 this checkout started with. Every trend number above is computed against the full log.
 - **No 14-day rise:** the log has dipped and risen repeatedly ($1,533 → $1,389 → $1,516 → $1,387 in the last four checks), so there's no "only going up" warning to give.
+- **Email sent** to the lads before this line was added (Resend id `4d53b25f`), after the push, so the hosted chart resolves. One email, no follow-up.
 - **CSV, both charts, this report and the email** were all regenerated and committed before sending. `matplotlib` and `pillow` weren't installed in this container and were installed before running `make_chart.py`.
