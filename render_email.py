@@ -282,7 +282,7 @@ def build_text():
         L += [f'{label} - {pp} pp / {all4} for four',
               f'  There: {strip(there)}',
               f'  Home:  {strip(home)}',
-              f'  {note}', ""]
+              f'  {strip(note)}', ""]
     L += [strip(RUN["options_footnote"]), "",
           RUN["itin_title"].upper(), strip(RUN["itin_subtitle"]), ""]
     for date, loc, plan in RUN["itinerary"]:
