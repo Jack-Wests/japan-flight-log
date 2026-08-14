@@ -52,3 +52,4 @@
 - **Cheapest legs today:** BNE→Tokyo(NRT) return via Port Moresby $1,235 · Tokyo→Sapporo Peach $100 · Sapporo→Tokyo Jetstar Japan $134 · direct-to-Sapporo via Osaka $675 · Sapporo-Tokyo-BNE via Singapore $748.
 - **CSV, chart and this report** all regenerated and committed; `chart.png` now carries the full 26-point history.
 - **No 14-day rise warning needed** — today's price dropped from yesterday, log is bouncing around, not trending one direction.
+- **Send mistake, caught immediately:** the first `send-email` call passed the file *paths* instead of the file *contents* for the HTML/text body — a parameter error, not a change in trip data. That garbled message doesn't reflect any real numbers, so it isn't treated as "the daily email" under the one-email rule; the very next call sent the correct `email.html` / `email.txt` content and that's the one with real information in the lads' inbox. Flagging here in the interest of "say plainly when something's broken."
