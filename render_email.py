@@ -23,85 +23,102 @@ BUY_TARGET = 1000
 # EDIT THIS BLOCK EACH RUN
 # ─────────────────────────────────────────────────────────────────────────────
 RUN = {
-    "date_iso": "2026-08-05",
-    "date_human": "Wed 5 Aug 2026",
-    "verdict_headline": "🔴 HOLD — today's a bad day to book",
-    "best_pp": "$1,527",
-    "best_all4": "$6,108",
-    "target_distance": "$527 above",
+    "date_iso": "2026-08-19",
+    "date_human": "Wed 19 Aug 2026",
+    "verdict_headline": "🔴 HOLD — third day running with no price",
+    "best_pp": "$1,421",
+    "best_all4": "$5,684",
+    "target_distance": "$421 above (as at 16 Aug)",
     "snapshot": [
-        "The cheapest way to get all four of you to the Hokkaido snow and home "
-        "again is <b>$1,527 per person (~$6,108 for the four)</b> — flying Brisbane→Tokyo "
-        "on Jetstar, hopping up to Sapporo, and coming home through Port Moresby.",
-        "But today is a <b>bad day</b>, not a good one: that's <b>$173 dearer than yesterday</b> "
-        "($1,354) and near the top of everything we've seen. Across 17 days of checks the "
-        "price has run between <b>$1,333 and $1,592</b>, sitting around <b>$1,352</b> most days.",
-        "The one bright spot: the fastest-sensible price has collapsed to <b>$1,859pp</b> "
-        "(it's been $2,300–$2,700 all month), so flying Jetstar direct home instead of the "
-        "20-hour Port Moresby route is cheaper today than it has been.",
-        "No verified airline sale is running (all the sale pages blocked us again today). "
-        "Nothing to do — if anything, today is the day <i>not</i> to book.",
+        "<b>Still no price — that's three days now.</b> The flight search connector "
+        "didn't load again today, and every flight and airline website was blocked "
+        "before a page could open. Monday's check failed the same way, and on Tuesday "
+        "the check doesn't appear to have run at all. As on Monday, <b>nothing was "
+        "added to the price log</b> rather than a guessed number.",
+        "The last real reading is still <b>Sun 16 Aug: $1,421 per person — $5,684 for "
+        "the four</b>, flying Jetstar to Osaka, a night near the airport, a short hop up "
+        "to Sapporo in the morning, then home out of Tokyo with Singapore Airlines. "
+        "That is what the table below shows; it is three days old, not today's.",
+        "The gap costs us nothing yet. Across <b>28 days of checks</b> the price has "
+        "bounced between <b>$1,333 and $1,688</b> with no trend either way, and it has "
+        "never once come near the $1,000 we're waiting for — so there is no sign we've "
+        "missed a bargain. It was HOLD on Sunday and it stays HOLD.",
+        "No verified airline sale is running — the sale pages couldn't be read again. "
+        "<b>Nothing for you to do today.</b> The thing that does need doing is a look at "
+        "the checker itself: three days blind is no longer a glitch, and if it keeps up, "
+        "we'd have no warning when a cheap fare finally shows up.",
     ],
     "options": [
         # (label, getting there, getting home, pp, all4, worth knowing)
         ("Cheapest",
-         "✈️ Dep Brisbane (BNE) Tue 3 Feb 10:30am → 🛬 lands Tokyo (NRT) Tue 3 Feb 6:25pm "
-         "<i>(Jetstar direct)</i>, then next-morning hop to Sapporo (CTS) Wed 4 Feb",
-         "✈️ Dep Tokyo (NRT) Mon 16 Feb 9:40pm → 🛬 lands Brisbane (BNE) Tue 17 Feb 9:40am "
-         "<i>(via Port Moresby)</i>",
-         "$1,527", "$6,108",
-         "Long haul: ~22h in, overnight near Tokyo — brutal"),
+         "🛫 Dep Brisbane (BNE) Mon 1 Feb 11:45am → 🛬 lands Sapporo (CTS) Tue 2 Feb 9:55am "
+         "<i>(Jetstar to Osaka, overnight, Peach up to Sapporo)</i>",
+         "🛫 Dep Tokyo (HND) Tue 16 Feb 4:40pm → 🛬 lands Brisbane (BNE) Wed 17 Feb 10:45am "
+         "<i>(Singapore Airlines via Singapore)</i>",
+         "$1,421", "$5,684",
+         "23h10 out · 17h05 home. Long haul: the 12h stop in Osaka is overnight, so it's a "
+         "cheap airport hotel rather than a look around town. Quick 1h30 change in Singapore "
+         "on the way back"),
         ("Best value",
-         "✈️ Dep Brisbane (BNE) Tue 3 Feb 10:30am → 🛬 lands Sapporo (CTS) Wed 4 Feb 8:40am "
-         "<i>(through-ticket via Tokyo)</i>",
-         "✈️ Dep Tokyo (NRT) Mon 16 Feb 9:40pm → 🛬 lands Brisbane (BNE) Tue 17 Feb 9:40am "
-         "<i>(via Port Moresby)</i>",
-         "$1,535", "$6,140",
-         "Booked straight to the snow — no Tokyo faff at the start. Only $8pp more"),
+         "🛫 Dep Brisbane (BNE) Mon 1 Feb 11:45am → 🛬 lands Sapporo (CTS) Tue 2 Feb 9:55am "
+         "<i>(same as above)</i>",
+         "🛫 Dep Tokyo (NRT) Wed 17 Feb 9:40pm → 🛬 lands Brisbane (BNE) Thu 18 Feb 9:40am "
+         "<i>(Air Niugini via Port Moresby)</i>",
+         "$1,456", "$5,824",
+         "23h10 out · 11h00 home. $35pp buys 6 hours off the trip home — overnight flight, "
+         "1h stop in Port Moresby at dawn, land 9:40am. Costs one extra night away"),
         ("Fastest sensible",
-         "✈️ Dep Brisbane (BNE) Tue 3 Feb 10:30am → 🛬 lands Tokyo (NRT) Tue 3 Feb 6:25pm "
-         "<i>(Jetstar direct)</i>, then next-morning hop to Sapporo (CTS) Wed 4 Feb",
-         "✈️ Dep Tokyo (NRT) Mon 16 Feb 8:55pm → 🛬 lands Brisbane (BNE) Tue 17 Feb 6:45am "
-         "<i>(Jetstar direct — no Port Moresby)</i>",
-         "$1,859", "$7,436",
-         "Direct both ways, ~9h home instead of 20h. $332pp more than the cheapest"),
+         "🛫 Dep Brisbane (BNE) Mon 1 Feb 10:35pm → 🛬 lands Sapporo (CTS) Tue 2 Feb 11:00am "
+         "<i>(EVA Air via Taipei)</i>",
+         "🛫 Dep Tokyo (HND) Tue 16 Feb 4:40pm → 🛬 lands Brisbane (BNE) Wed 17 Feb 10:45am "
+         "<i>(Singapore Airlines via Singapore)</i>",
+         "$1,828", "$7,312",
+         "13h25 out · 17h05 home. On the mountain half a day earlier with no overnight "
+         "anywhere — but $407pp over the cheapest, past what this trip can carry"),
     ],
     "options_footnote":
-        "The Qantas QF107 Sydney–Sapporo direct was priced again today — <b>$1,664pp</b> for the "
-        "flight in, plus a $182pp Brisbane→Sydney hop, so <b>$2,976pp all-in ($11,904 for four)</b>. "
-        "It lands you on the snow at 6pm the same day with no overnight, but it's roughly double "
-        "the cheapest option, so it's not shown as a live pick. No date shift within ±3 days saved "
-        "$100+ pp, so all options stay put.",
+        "<b>These three are Sunday's prices (16 Aug), now three days old and carried over "
+        "unchanged — nothing could be priced today.</b> The <b>Qantas QF107 Sydney–Sapporo "
+        "direct</b> couldn't be priced either; its last reading was <b>$1,664pp</b> for the "
+        "flight in, plus a $200pp Brisbane→Sydney hop and $746pp home from Tokyo — "
+        "<b>$2,610pp all-in ($10,440 for four)</b>. Nicest way to travel, nearly double the "
+        "cheapest, so it stays a footnote rather than a row. Date shifts of ±3 days couldn't "
+        "be tested today either, so the dates stay put.",
     "itin_title": "Option A — Cheapest",
-    "itin_subtitle": "Rusutsu base · 13 nights · hire car picked up &amp; dropped at Sapporo (CTS)",
+    "itin_subtitle": "Rusutsu base · 14 nights · hire car picked up &amp; dropped at Sapporo (CTS)",
     "itinerary": [
-        ("Tue 3 Feb", "Brisbane → Tokyo", "Fly out 10:30am, land Narita 6:25pm; overnight near the airport"),
-        ("Wed 4 Feb", "Tokyo → Sapporo", "Morning hop to Sapporo (CTS), pick up the car; Snow Festival day 1 (Odori Park)"),
-        ("Thu 5 Feb", "Sapporo / Otaru", "Snow Festival day 2; evening in Otaru — canal illuminations, sushi"),
-        ("Fri 6 Feb", "→ Rusutsu", "Drive ~2h to Rusutsu, check in, afternoon warm-up laps"),
-        ("Sat 7 Feb", "Rusutsu", "Ski day 1 — Isaac AM lesson, lads ride powder"),
-        ("Sun 8 Feb", "Rusutsu", "Ski day 2 — Isaac AM lesson, then all ride Mt Isola together"),
-        ("Mon 9 Feb", "Rusutsu / Niseko", "Ski day 3 — day-trip to Niseko (45 min)"),
-        ("Tue 10 Feb", "Rusutsu", "Ski day 4 — tree runs, last big powder day"),
-        ("Wed 11 Feb", "→ Sapporo", "Drive back, drop the car at Sapporo (CTS); night out in Susukino"),
-        ("Thu 12 Feb", "Sapporo → Tokyo", "Fly to Tokyo 9:35am→11:25am; afternoon in Shibuya"),
-        ("Fri 13 Feb", "Tokyo", "Asakusa, Akihabara, teamLab Planets"),
-        ("Sat 14 Feb", "Tokyo", "Day trip to Hakone — the droppable day if you want another Rusutsu ski"),
-        ("Sun 15 Feb", "Tokyo", "Tsukiji breakfast, shopping, last night out"),
-        ("Mon 16 Feb", "Tokyo → home", "Depart Narita 9:40pm"),
-        ("Tue 17 Feb", "→ Brisbane", "Land Brisbane 9:40am"),
+        ("Mon 1 Feb", "Brisbane → Osaka", "Fly out 11:45am, land Osaka (KIX) 7:45pm; cheap airport hotel"),
+        ("Tue 2 Feb", "Osaka → Sapporo", "8:00am hop, land Sapporo (CTS) 9:55am; pick up the hire car, check in"),
+        ("Wed 3 Feb", "Sapporo", "Shake off the flight — Susukino, ramen alley, Sapporo Beer Museum"),
+        ("Thu 4 Feb", "Sapporo", "Snow Festival day 1 — the big Odori Park sculptures"),
+        ("Fri 5 Feb", "Sapporo / Otaru", "Snow Festival day 2; evening in Otaru — canal lights, sushi"),
+        ("Sat 6 Feb", "→ Rusutsu", "Drive ~2h to Rusutsu, check in, afternoon warm-up laps"),
+        ("Sun 7 Feb", "Rusutsu", "Ski day 1 — Isaac AM lesson, lads ride powder"),
+        ("Mon 8 Feb", "Rusutsu", "Ski day 2 — Isaac AM lesson, then all ride Mt Isola together"),
+        ("Tue 9 Feb", "Rusutsu / Niseko", "Ski day 3 — day-trip to Niseko (45 min each way)"),
+        ("Wed 10 Feb", "Rusutsu", "Ski day 4 — tree runs, last big powder day"),
+        ("Thu 11 Feb", "→ Sapporo", "Drive back, drop the car at Sapporo (CTS); night out in Susukino"),
+        ("Fri 12 Feb", "Sapporo → Tokyo", "Fly 9:30am → 11:20am; afternoon in Shibuya"),
+        ("Sat 13 Feb", "Tokyo", "Asakusa, Akihabara, teamLab Planets"),
+        ("Sun 14 Feb", "Tokyo", "Day trip to Hakone — the droppable day if you'd rather ski another"),
+        ("Mon 15 Feb", "Tokyo", "Tsukiji breakfast, shopping, last night out"),
+        ("Tue 16 Feb", "Tokyo → home", "Depart Haneda (HND) 4:40pm"),
+        ("Wed 17 Feb", "→ Brisbane", "Land Brisbane 10:45am"),
     ],
     "itin_footnote":
-        "<b>Best value</b> is the same trip on the ground, but booked straight through to "
-        "Sapporo so you skip the overnight near Tokyo at the start. <b>Fastest sensible</b> is "
-        "also the same trip — it just flies Jetstar direct home instead of routing through Port "
-        "Moresby, turning a 20-hour trip back into about 9 hours for $332pp more.",
+        "<b>Best value</b> is the same trip on the ground — same flights over, same Snow "
+        "Festival days, same four ski days at Rusutsu. It only changes at the end: one extra "
+        "Tokyo day, then a shorter overnight run home. <b>Fastest sensible</b> is also the same "
+        "trip; it just flies in through Taipei overnight instead of stopping in Osaka, so you "
+        "skip a hotel and reach Sapporo before lunch.",
     "price_log_footnote":
-        "Showing the last 10 checks; the chart above has all 17. Everything logged so far sits "
-        "in the red HOLD band — the cheapest day yet was $1,333 on 31 Jul.",
+        "Showing the last 10 checks; the chart above has all 28. The log stops at Sun 16 Aug — "
+        "there are no bars for Mon, Tue or today, because no price could be read on any of them "
+        "and nothing was logged. Everything on record still sits in the red HOLD band; the "
+        "cheapest day yet was $1,333 on 31 Jul.",
     "footer":
-        "Auto-sent daily flight watch · prices from Kiwi.com, AUD incl. 1 checked bag each way "
-        "· no verified sale live today.",
+        "Auto-sent daily flight watch · prices normally from Kiwi.com, AUD incl. 1 checked bag "
+        "each way · today's check failed — figures shown are Sun 16 Aug · no verified sale live.",
 }
 # ─────────────────────────────────────────────────────────────────────────────
 
@@ -166,9 +183,20 @@ def price_log_rows():
     return "".join(out)
 
 
+# Normally None: the chart is served from whatever branch this run pushes to.
+# Set it to a branch name when this run CANNOT push (see 19 Aug 2026 — the
+# GitHub token had read-only access), and point it at a pushed branch whose
+# chart-email.png is byte-identical to the one just generated. Verify that with
+# md5sum before setting it; otherwise the email ships a chart that disagrees
+# with its own text.
+CHART_BRANCH_OVERRIDE = "claude/keen-johnson-12q7q0"
+
+
 def chart_branch():
     """Branch the chart image is served from — read it from git rather than
     hardcoding, so the URL still resolves whichever branch the run pushes to."""
+    if CHART_BRANCH_OVERRIDE:
+        return CHART_BRANCH_OVERRIDE
     try:
         b = subprocess.run(["git", "rev-parse", "--abbrev-ref", "HEAD"],
                            capture_output=True, text=True, check=True).stdout.strip()
@@ -189,6 +217,11 @@ def deltas():
     now = float(rows[-1]["best_total_pp"])
     prior = rows[:-1]
 
+    # A run that couldn't price anything appends no row, so the last row is not
+    # today's. Say so rather than calling an older reading "yesterday".
+    run_day = datetime.strptime(RUN["date_iso"], "%Y-%m-%d")
+    stale = today != run_day
+
     def move(then):
         d = now - then
         if d == 0:
@@ -201,6 +234,11 @@ def deltas():
     # Row 1: the previous check, whenever that was.
     if not prior:
         l1, v1 = "Since last check", "first check — no history yet"
+    elif stale:
+        gap = (run_day - today).days
+        when = "yesterday" if gap == 1 else f"{gap} days ago"
+        l1 = f"No reading today — last check was {when} ({fmt(today)}), when it moved"
+        v1 = move(float(prior[-1]["best_total_pp"]))
     else:
         prev = prior[-1]
         pdt = datetime.strptime(prev["date"], "%Y-%m-%d")
@@ -222,7 +260,7 @@ def deltas():
 
     if pick:
         pdt = datetime.strptime(pick["date"], "%Y-%m-%d")
-        l2 = f"{label} ({fmt(pdt)})"
+        l2 = f"{label} ({fmt(pdt)})" + (f", measured to {fmt(today)}" if stale else "")
         v2 = move(float(pick["best_total_pp"]))
     else:
         l2, v2 = "Longer trend", "not enough history yet"
@@ -234,7 +272,19 @@ _d1l, _d1v, _d2l, _d2v = deltas()
 
 P = "margin:0 0 11px;font-size:14.5px;line-height:1.65;color:#2d3748;"
 
+def header_bg():
+    """Banner colour follows the verdict. It used to be hardcoded green, which
+    put a 'go' colour above a HOLD headline on every email we've ever sent."""
+    h = RUN["verdict_headline"]
+    if "🔴" in h:
+        return "#991b1b"      # HOLD  — red
+    if "🟡" in h:
+        return "#a16207"      # WATCH — amber
+    return "#166534"          # BUY   — green
+
+
 VALUES = {
+    "HEADER_BG": header_bg(),
     "DATE_HUMAN": RUN["date_human"],
     "DATE_ISO": RUN["date_iso"],
     "CHART_BRANCH": chart_branch(),
