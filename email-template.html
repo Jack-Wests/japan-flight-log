@@ -31,6 +31,9 @@
     PRICE_LOG_ROWS     <tr> bar rows for the price log
     PRICE_LOG_FOOTNOTE the note under the bars
     FOOTER_LINE        the grey sign-off line
+    WARNINGS_BLOCK     the "something's wrong with today's check" banner, or empty.
+                       Built by render_email.py from RUN["warnings"] plus automatic
+                       checks — do not hand-write it.
 
   The private buy target must NEVER appear anywhere in this email.
 -->
@@ -47,6 +50,12 @@
   </td></tr>
 
   <tr><td style="height:14px;line-height:14px;font-size:0;">&nbsp;</td></tr>
+
+  <!-- ══ SOMETHING'S WRONG BANNER ══
+       Empty on a healthy run. render_email.py fills this when the run couldn't be
+       trusted — a dead price search, a stale log, an unregenerated chart. Jack does
+       not read the session chat, so a broken run has to say so HERE or not at all. -->
+  {{WARNINGS_BLOCK}}
 
   <!-- ══ TODAY'S SNAPSHOT ══ -->
   <tr><td style="background:#ffffff;border-radius:12px;padding:20px 24px 8px;">

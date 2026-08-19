@@ -68,6 +68,16 @@ Edit the `RUN` block at the top of `render_email.py`, then:
 python3 render_email.py   # writes email.html + email.txt
 ```
 
+**If anything went wrong this run, put it in `RUN["warnings"]`.** Each entry becomes
+a bullet in an amber banner directly under the headline, and the same lines go into
+the plain-text part. Jack does not read the session chat — a problem mentioned only
+there, or only in a push notification, does not reach him. The email is the channel.
+
+`render_email.py` also raises the banner by itself when it can tell the run misfired:
+today's row missing from the log, the same best price three or more checks running,
+or a chart older than the log. That last one is the failure that actually shipped —
+four identical prices went out under a confident red headline before anyone noticed.
+
 The delta rows, the price-log bars and the leak check are all computed — don't
 hand-write them. Never hand-write "since yesterday": if step 0 was skipped the log
 will have holes in it, and the script labels the comparison with the gap that
@@ -116,4 +126,5 @@ Full write-up for the record.
 | Chart illegible | shrunk to 135×78 chasing payload size | quantise, don't shrink |
 | "Since yesterday" wrong | hardcoded label on a gappy log | computed in `render_email.py` |
 | Price log looks empty / gappy | every run pushes to its own branch, never merged | `sync_prices.py` at step 0 |
+| Same price emailed 4 days running, nobody told | broken run reused old numbers; the only warning was in the session chat, which nobody reads | banner in the email itself — `RUN["warnings"]` + the automatic checks in `render_email.py` |
 | Send rejected: "idempotency key already used" | an earlier run the same day already hit the send endpoint | don't retry with a fresh key on your own — that's a second email. Record it and ask. Retry only if the earlier run is known to have been broken |

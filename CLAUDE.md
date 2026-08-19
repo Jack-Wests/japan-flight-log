@@ -14,6 +14,10 @@ the answer is.
 - **Say plainly when something's broken.** Don't soften it into "you may wish
   to consider". If a number is wrong or a claim of mine turned out wrong, lead
   with that.
+- **He doesn't read the session chat** unless he's come to change something. A
+  problem written only into the chat — or only into a push notification — never
+  reaches him. If a run is broken or a number is doubtful, it goes in the **email**,
+  via `RUN["warnings"]` in `render_email.py`. See RUNBOOK.md step 5.
 - **A question is not a complaint.** "why is it doing X" usually means they
   want to understand X, not that they want it changed.
 - **Don't ask permission for ordinary work.** Reading, fixing, testing,

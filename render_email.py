@@ -9,6 +9,7 @@ logged numbers. The private buy target must never appear here; a check at the
 bottom fails the render if it does.
 """
 import csv
+import os
 import re
 import subprocess
 from datetime import datetime
@@ -25,6 +26,12 @@ BUY_TARGET = 1000
 RUN = {
     "date_iso": "2026-08-19",
     "date_human": "Wed 19 Aug 2026",
+    # Anything that went wrong on this run and makes the numbers below less than
+    # trustworthy — a dead flight search, a connector that wouldn't answer, prices
+    # carried over from a previous day. Each string becomes a bullet in a banner at
+    # the top of the email. Leave [] on a clean run and no banner is drawn.
+    # Jack does not read the session chat: if it isn't in here, he never finds out.
+    "warnings": [],
     "verdict_headline": "🔴 HOLD — one of the dearer days we've seen",
     "best_pp": "$1,612",
     "best_all4": "$6,448",
@@ -186,6 +193,73 @@ def chart_branch():
         return "main"
 
 
+def auto_warnings():
+    """Spot a broken run from its own output, without being told.
+
+    A run that can't reach the flight search has, more than once, quietly written
+    the previous day's number into the log and sent a confident red headline on top
+    of it. Four identical days went out before anyone noticed. These checks read the
+    files the run just produced and say so in the email instead.
+    """
+    out = []
+    rows = list(csv.DictReader(open("prices.csv")))
+
+    # 1. Today's row missing, or logged under someone else's date.
+    if not rows:
+        out.append("The price log is empty — today's check never got written down.")
+    elif rows[-1]["date"] != RUN["date_iso"]:
+        out.append(
+            f'The newest row in the price log is <b>{rows[-1]["date"]}</b>, not today. '
+            "Today's check may not have been logged, so the trend numbers below are "
+            "comparing against the wrong days.")
+
+    # 2. The same price several days running. Real fares move by a few dollars a day;
+    #    an exact repeat across three checks means a failed search reusing old numbers.
+    same = 1
+    for a, b in zip(reversed(rows), reversed(rows[:-1])):
+        if a["best_total_pp"] == b["best_total_pp"]:
+            same += 1
+        else:
+            break
+    if same >= 3:
+        out.append(
+            f'The best price has been <b>exactly the same for {same} checks running</b>. '
+            "Real fares move most days, so this usually means the flight search failed "
+            "and an old number was copied forward. <b>Worth a reply telling me to look.</b>")
+
+    # 3. Chart older than the log it's meant to be drawing.
+    try:
+        if os.path.getmtime("chart-email.png") < os.path.getmtime("prices.csv"):
+            out.append(
+                "The chart image is older than the price log — it was not rebuilt this "
+                "run, so the graph below is missing the newest days.")
+    except OSError:
+        out.append("The chart image is missing — the graph below will not load.")
+
+    return out
+
+
+def warnings_block():
+    """The banner. Empty string on a clean run, so nothing is drawn."""
+    items = auto_warnings() + list(RUN.get("warnings", []))
+    if not items:
+        return ""
+    bullets = "".join(
+        f'<tr><td style="padding:3px 0 3px 0;font-size:13.5px;line-height:1.6;'
+        f'color:#7c2d12;">• {w}</td></tr>' for w in items)
+    return (
+        '<tr><td style="background:#fef3c7;border-radius:12px;border-left:5px solid #d97706;'
+        'padding:16px 20px 16px 18px;">'
+        '<p style="margin:0 0 8px;font-size:15px;font-weight:800;color:#7c2d12;">'
+        '⚠️ Don\'t trust today\'s numbers yet</p>'
+        '<p style="margin:0 0 8px;font-size:13.5px;line-height:1.6;color:#7c2d12;">'
+        'Something went wrong on this run, so the prices below may be stale or plain '
+        'wrong — read the headline with that in mind:</p>'
+        f'<table width="100%" cellpadding="0" cellspacing="0" border="0">{bullets}</table>'
+        '</td></tr>'
+        '<tr><td style="height:14px;line-height:14px;font-size:0;">&nbsp;</td></tr>')
+
+
 def deltas():
     """Work the two comparison rows out from prices.csv.
 
@@ -264,6 +338,7 @@ VALUES = {
     "PRICE_LOG_ROWS": price_log_rows(),
     "PRICE_LOG_FOOTNOTE": RUN["price_log_footnote"],
     "FOOTER_LINE": RUN["footer"],
+    "WARNINGS_BLOCK": warnings_block(),
 }
 
 def build_text():
@@ -272,6 +347,11 @@ def build_text():
     L = [f'JAPAN SNOW TRIP - DAILY CHECK - {RUN["date_human"]}', "",
          strip(RUN["verdict_headline"]),
          f'Best all-in {RUN["best_pp"]} pp - {RUN["best_all4"]} for the four lads', ""]
+    problems = auto_warnings() + list(RUN.get("warnings", []))
+    if problems:
+        L += ["*** DON'T TRUST TODAY'S NUMBERS YET ***",
+              "Something went wrong on this run, so the prices below may be stale:"]
+        L += [f'  - {strip(w)}' for w in problems] + [""]
     L += [strip(p) for p in RUN["snapshot"]] + [""]
     d1l, d1v, d2l, d2v = deltas()
     L += [f'{d1l}: {d1v}',
