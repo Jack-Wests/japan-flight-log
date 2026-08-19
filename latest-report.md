@@ -79,4 +79,5 @@ door-to-door instead of 17.
 - The price log was rebuilt with `sync_prices.py` before logging: 17 rows on this checkout, 28 after recovery, 29 with today's row.
 - Cheapest routings today all run Brisbane→Osaka on Jetstar. Nothing via China Southern, China Eastern, KL or Manila came near the top of an unfiltered price search; the cheapest way home is via Singapore.
 - Fastest-sensible is logged as $1,666 (was $1,828 on 16 Aug) — the Port Moresby overnight return is what makes it quick, not expensive.
-- CSV, both charts, this report and the email were all committed and pushed before the email went out.
+- **The email did not send from this run.** Resend rejected it: the send key for 19 Aug had already been used and accepted earlier today, which means today's email almost certainly already went to Isaac from an earlier run. Sending again would have been a second, differently-worded email on the same day, so it was not retried. `email.html` and `email.txt` for today are built and committed if it needs sending by hand.
+- CSV, both charts, this report and the email files were all committed and pushed.

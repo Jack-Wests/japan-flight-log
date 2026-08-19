@@ -116,3 +116,4 @@ Full write-up for the record.
 | Chart illegible | shrunk to 135×78 chasing payload size | quantise, don't shrink |
 | "Since yesterday" wrong | hardcoded label on a gappy log | computed in `render_email.py` |
 | Price log looks empty / gappy | every run pushes to its own branch, never merged | `sync_prices.py` at step 0 |
+| Send rejected: "idempotency key already used" | a run earlier the same day already sent today's email | do **not** retry with a new key — that's a second email. Record it and stop |
