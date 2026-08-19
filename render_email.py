@@ -24,7 +24,7 @@ BUY_TARGET = 1000
 # ─────────────────────────────────────────────────────────────────────────────
 RUN = {
     "date_iso": "2026-08-19",
-    "date_human": "Thu 19 Aug 2026",
+    "date_human": "Wed 19 Aug 2026",
     "verdict_headline": "🔴 HOLD — one of the dearer days we've seen",
     "best_pp": "$1,612",
     "best_all4": "$6,448",

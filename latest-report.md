@@ -1,4 +1,4 @@
-# Japan snow trip — daily check, Thu 19 Aug 2026
+# Japan snow trip — daily check, Wed 19 Aug 2026
 
 ## 📋 Today's snapshot
 
