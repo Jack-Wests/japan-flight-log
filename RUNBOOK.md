@@ -116,3 +116,26 @@ Full write-up for the record.
 | Chart illegible | shrunk to 135×78 chasing payload size | quantise, don't shrink |
 | "Since yesterday" wrong | hardcoded label on a gappy log | computed in `render_email.py` |
 | Price log looks empty / gappy | every run pushes to its own branch, never merged | `sync_prices.py` at step 0 |
+| No price could be read at all | Kiwi connector's tools don't register, and the sandbox blocks every flight site | log **no row** — never invent one; see below |
+| `git push` fails 403 | the GitHub token had read-only rights on the repo | check `permissions.push` via the API before assuming it's network; reconnect GitHub |
+| Every HOLD email looked "green" | banner colour was hardcoded `#166534` | `header_bg()` picks it from the verdict |
+
+## When a run can't get prices
+
+It has happened three days running (17–19 Aug 2026). Two independent faults:
+
+1. **The Kiwi.com connector reports connected and enabled, but its tools never
+   appear** — `search-flight` is absent from the tool list entirely.
+2. **The sandbox's network policy blocks every flight and airline site** —
+   kiwi.com, skyscanner, jetstar, qantas, virgin, expedia, kayak, Google
+   Flights all return `403 CONNECT tunnel failed`.
+
+Fault 2 cannot be fixed from inside a run. Fault 1 is the one that matters,
+because the Kiwi connector runs on Kiwi's servers, not in this sandbox — when
+it works it is unaffected by the egress block.
+
+**Do not invent a number.** Append no row to `prices.csv`. `deltas()` in
+`render_email.py` already handles a run whose date is newer than the last
+logged row, and labels the comparison honestly instead of saying "yesterday".
+Say plainly in the email that there is no price today and that the figures
+shown are carried over, with their date.

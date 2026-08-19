@@ -189,7 +189,7 @@ def price_log_rows():
 # chart-email.png is byte-identical to the one just generated. Verify that with
 # md5sum before setting it; otherwise the email ships a chart that disagrees
 # with its own text.
-CHART_BRANCH_OVERRIDE = "claude/keen-johnson-12q7q0"
+CHART_BRANCH_OVERRIDE = None
 
 
 def chart_branch():
