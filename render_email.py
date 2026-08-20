@@ -23,82 +23,89 @@ BUY_TARGET = 1000
 # EDIT THIS BLOCK EACH RUN
 # ─────────────────────────────────────────────────────────────────────────────
 RUN = {
-    "date_iso": "2026-08-05",
-    "date_human": "Wed 5 Aug 2026",
-    "verdict_headline": "🔴 HOLD — today's a bad day to book",
-    "best_pp": "$1,527",
-    "best_all4": "$6,108",
-    "target_distance": "$527 above",
+    "date_iso": "2026-08-20",
+    "date_human": "Thu 20 Aug 2026",
+    "verdict_headline": "🔴 HOLD — cheaper than yesterday, still not close",
+    "best_pp": "$1,485",
+    "best_all4": "$5,941",
+    "target_distance": "$485 above",
     "snapshot": [
-        "The cheapest way to get all four of you to the Hokkaido snow and home "
-        "again is <b>$1,527 per person (~$6,108 for the four)</b> — flying Brisbane→Tokyo "
-        "on Jetstar, hopping up to Sapporo, and coming home through Port Moresby.",
-        "But today is a <b>bad day</b>, not a good one: that's <b>$173 dearer than yesterday</b> "
-        "($1,354) and near the top of everything we've seen. Across 17 days of checks the "
-        "price has run between <b>$1,333 and $1,592</b>, sitting around <b>$1,352</b> most days.",
-        "The one bright spot: the fastest-sensible price has collapsed to <b>$1,859pp</b> "
-        "(it's been $2,300–$2,700 all month), so flying Jetstar direct home instead of the "
-        "20-hour Port Moresby route is cheaper today than it has been.",
-        "No verified airline sale is running (all the sale pages blocked us again today). "
-        "Nothing to do — if anything, today is the day <i>not</i> to book.",
+        "The cheapest way to get all four of you to the Hokkaido snow and home again is "
+        "<b>$1,485 per person (~$5,941 for the four)</b> — flying Brisbane→Tokyo return with "
+        "Air Niugini through Port Moresby, plus the two hops up to Sapporo and back.",
+        "That's <b>down $127 on yesterday</b> ($1,612), which is a decent one-day move, but it's "
+        "still nearly $500 clear of the target. Across 30 days of checks the price has run "
+        "between <b>$1,333 and $1,688</b>, so today sits mid-pack — better than the last week, "
+        "nowhere near a low.",
+        "The catch on the cheapest option is a <b>20-hour overnight stuck in Port Moresby</b> on the "
+        "way over — 30h20m door to door. Paying $165pp more swaps that for a 12-hour daytime stop "
+        "in Ho Chi Minh City you can actually leave the airport for.",
+        "No airline sale could be verified today — the Jetstar, Qantas and Virgin deal pages all "
+        "refused to load. Nothing time-sensitive. Sit tight.",
     ],
     "options": [
         # (label, getting there, getting home, pp, all4, worth knowing)
         ("Cheapest",
-         "✈️ Dep Brisbane (BNE) Tue 3 Feb 10:30am → 🛬 lands Tokyo (NRT) Tue 3 Feb 6:25pm "
-         "<i>(Jetstar direct)</i>, then next-morning hop to Sapporo (CTS) Wed 4 Feb",
-         "✈️ Dep Tokyo (NRT) Mon 16 Feb 9:40pm → 🛬 lands Brisbane (BNE) Tue 17 Feb 9:40am "
-         "<i>(via Port Moresby)</i>",
-         "$1,527", "$6,108",
-         "Long haul: ~22h in, overnight near Tokyo — brutal"),
+         "🛫 Dep Brisbane (BNE) Tue 2 Feb 2:40pm → 🛬 lands Tokyo (NRT) Wed 3 Feb 8:00pm "
+         "<i>(Air Niugini, overnight in Port Moresby)</i>, then Tokyo (HND) → Sapporo (CTS) "
+         "Thu 4 Feb 3:50pm–5:20pm",
+         "🛫 Dep Tokyo (NRT) Wed 17 Feb 9:40pm → 🛬 lands Brisbane (BNE) Thu 18 Feb 9:40am "
+         "<i>(Air Niugini via Port Moresby)</i>",
+         "$1,485", "$5,941",
+         "Long haul: 30h20m there, 20h of it stuck overnight in Port Moresby — brutal. "
+         "The 11h flight home is the fastest of the lot"),
         ("Best value",
-         "✈️ Dep Brisbane (BNE) Tue 3 Feb 10:30am → 🛬 lands Sapporo (CTS) Wed 4 Feb 8:40am "
-         "<i>(through-ticket via Tokyo)</i>",
-         "✈️ Dep Tokyo (NRT) Mon 16 Feb 9:40pm → 🛬 lands Brisbane (BNE) Tue 17 Feb 9:40am "
-         "<i>(via Port Moresby)</i>",
-         "$1,535", "$6,140",
-         "Booked straight to the snow — no Tokyo faff at the start. Only $8pp more"),
+         "🛫 Dep Brisbane (BNE) Wed 3 Feb 11:40pm → 🛬 lands Tokyo (HND) Fri 5 Feb 1:00am "
+         "<i>(VietJet via Ho Chi Minh City)</i>, then Tokyo (HND) → Sapporo (CTS) Fri 5 Feb",
+         "🛫 Dep Tokyo (NRT) Tue 16 Feb 10:00am → 🛬 lands Brisbane (BNE) Wed 17 Feb 7:15am "
+         "<i>(Singapore Airlines via Singapore)</i>",
+         "$1,650", "$6,602",
+         "26h20m there — but 12h15m of it is daytime in Ho Chi Minh City, easily long enough "
+         "to get into town. Downside: lands Tokyo at 1am, so you wait out the night at the airport"),
         ("Fastest sensible",
-         "✈️ Dep Brisbane (BNE) Tue 3 Feb 10:30am → 🛬 lands Tokyo (NRT) Tue 3 Feb 6:25pm "
-         "<i>(Jetstar direct)</i>, then next-morning hop to Sapporo (CTS) Wed 4 Feb",
-         "✈️ Dep Tokyo (NRT) Mon 16 Feb 8:55pm → 🛬 lands Brisbane (BNE) Tue 17 Feb 6:45am "
-         "<i>(Jetstar direct — no Port Moresby)</i>",
-         "$1,859", "$7,436",
-         "Direct both ways, ~9h home instead of 20h. $332pp more than the cheapest"),
+         "🛫 Dep Brisbane (BNE) Tue 2 Feb 8:40am → 🛬 lands Tokyo (HND) Tue 2 Feb 10:50pm "
+         "<i>(Korean Air via Seoul)</i>, then Tokyo (HND) → Sapporo (CTS) Wed 3 Feb 8:00am–9:30am",
+         "🛫 Dep Tokyo (NRT) Wed 17 Feb 9:40pm → 🛬 lands Brisbane (BNE) Thu 18 Feb 9:40am "
+         "<i>(Air Niugini via Port Moresby)</i>",
+         "$1,780", "$7,121",
+         "14h10m there, 11h home — half the travel time of the cheapest, and you're on the "
+         "snow a day earlier. $295pp more"),
     ],
     "options_footnote":
-        "The Qantas QF107 Sydney–Sapporo direct was priced again today — <b>$1,664pp</b> for the "
-        "flight in, plus a $182pp Brisbane→Sydney hop, so <b>$2,976pp all-in ($11,904 for four)</b>. "
-        "It lands you on the snow at 6pm the same day with no overnight, but it's roughly double "
-        "the cheapest option, so it's not shown as a live pick. No date shift within ±3 days saved "
-        "$100+ pp, so all options stay put.",
+        "The Qantas Sydney–Sapporo direct (QF107, dep Sydney 9:05am, lands Sapporo 5:55pm the same "
+        "day) prices at <b>$1,670pp for that one leg</b>, plus $132pp to get Brisbane→Sydney first, "
+        "plus $746pp home from Tokyo and the $135pp Sapporo→Tokyo hop — <b>$2,683pp all-in "
+        "($10,731 for the four)</b>. Nearly double the cheapest, so it doesn't get a row. No date "
+        "shift within ±3 days of the windows saved $100pp or more, so all three options stay put.",
     "itin_title": "Option A — Cheapest",
-    "itin_subtitle": "Rusutsu base · 13 nights · hire car picked up &amp; dropped at Sapporo (CTS)",
+    "itin_subtitle": "Rusutsu base · 14 nights in Japan · hire car picked up &amp; dropped at Sapporo (CTS)",
     "itinerary": [
-        ("Tue 3 Feb", "Brisbane → Tokyo", "Fly out 10:30am, land Narita 6:25pm; overnight near the airport"),
-        ("Wed 4 Feb", "Tokyo → Sapporo", "Morning hop to Sapporo (CTS), pick up the car; Snow Festival day 1 (Odori Park)"),
-        ("Thu 5 Feb", "Sapporo / Otaru", "Snow Festival day 2; evening in Otaru — canal illuminations, sushi"),
-        ("Fri 6 Feb", "→ Rusutsu", "Drive ~2h to Rusutsu, check in, afternoon warm-up laps"),
-        ("Sat 7 Feb", "Rusutsu", "Ski day 1 — Isaac AM lesson, lads ride powder"),
-        ("Sun 8 Feb", "Rusutsu", "Ski day 2 — Isaac AM lesson, then all ride Mt Isola together"),
-        ("Mon 9 Feb", "Rusutsu / Niseko", "Ski day 3 — day-trip to Niseko (45 min)"),
-        ("Tue 10 Feb", "Rusutsu", "Ski day 4 — tree runs, last big powder day"),
-        ("Wed 11 Feb", "→ Sapporo", "Drive back, drop the car at Sapporo (CTS); night out in Susukino"),
-        ("Thu 12 Feb", "Sapporo → Tokyo", "Fly to Tokyo 9:35am→11:25am; afternoon in Shibuya"),
-        ("Fri 13 Feb", "Tokyo", "Asakusa, Akihabara, teamLab Planets"),
-        ("Sat 14 Feb", "Tokyo", "Day trip to Hakone — the droppable day if you want another Rusutsu ski"),
-        ("Sun 15 Feb", "Tokyo", "Tsukiji breakfast, shopping, last night out"),
-        ("Mon 16 Feb", "Tokyo → home", "Depart Narita 9:40pm"),
-        ("Tue 17 Feb", "→ Brisbane", "Land Brisbane 9:40am"),
+        ("Tue 2 Feb", "Brisbane → Port Moresby", "Fly out 2:40pm, land 5:50pm; overnight at the airport hotel"),
+        ("Wed 3 Feb", "Port Moresby → Tokyo", "Depart 2:10pm, land Narita 8:00pm; overnight near the airport"),
+        ("Thu 4 Feb", "Tokyo → Sapporo", "Morning in Tokyo, afternoon hop to Sapporo (CTS), pick up the car; Snow Festival by night at Odori Park"),
+        ("Fri 5 Feb", "Sapporo / Otaru", "Snow Festival day 2 — ice sculptures at Susukino; evening in Otaru, canal lights and sushi"),
+        ("Sat 6 Feb", "→ Rusutsu", "Drive ~2h to Rusutsu, check in, afternoon warm-up laps"),
+        ("Sun 7 Feb", "Rusutsu", "Ski day 1 — Isaac AM lesson, lads ride powder"),
+        ("Mon 8 Feb", "Rusutsu", "Ski day 2 — Isaac AM lesson, then all ride Mt Isola together"),
+        ("Tue 9 Feb", "Rusutsu / Niseko", "Ski day 3 — day-trip to Niseko (45 min up the road)"),
+        ("Wed 10 Feb", "Rusutsu", "Ski day 4 — tree runs, last big powder day"),
+        ("Thu 11 Feb", "→ Sapporo", "Drive back, drop the car at Sapporo (CTS); night out in Susukino"),
+        ("Fri 12 Feb", "Sapporo", "Nijo market breakfast, Sapporo Beer Museum, Mt Moiwa ropeway at dusk"),
+        ("Sat 13 Feb", "Sapporo → Tokyo", "Fly 8:30am → Haneda 10:10am; afternoon in Shibuya"),
+        ("Sun 14 Feb", "Tokyo", "Asakusa, Akihabara, teamLab Planets"),
+        ("Mon 15 Feb", "Tokyo", "Day trip to Hakone — the droppable day if you'd rather have another Rusutsu ski"),
+        ("Tue 16 Feb", "Tokyo", "Tsukiji breakfast, shopping, last night out in Shinjuku"),
+        ("Wed 17 Feb", "Tokyo → home", "Last morning, depart Narita 9:40pm"),
+        ("Thu 18 Feb", "→ Brisbane", "Land Brisbane 9:40am"),
     ],
     "itin_footnote":
-        "<b>Best value</b> is the same trip on the ground, but booked straight through to "
-        "Sapporo so you skip the overnight near Tokyo at the start. <b>Fastest sensible</b> is "
-        "also the same trip — it just flies Jetstar direct home instead of routing through Port "
-        "Moresby, turning a 20-hour trip back into about 9 hours for $332pp more.",
+        "<b>Best value</b> is the same Rusutsu trip on the ground — it just starts a day later, "
+        "swaps the Port Moresby overnight for a day in Ho Chi Minh City, and comes home a day "
+        "earlier via Singapore. <b>Fastest sensible</b> is the same trip again, leaving a day "
+        "sooner so you're skiing earlier and cutting the trip over from 30 hours to 14.",
     "price_log_footnote":
-        "Showing the last 10 checks; the chart above has all 17. Everything logged so far sits "
-        "in the red HOLD band — the cheapest day yet was $1,333 on 31 Jul.",
+        "Showing the last 10 checks; the chart above has all 30. Everything logged so far sits in "
+        "the red HOLD band — the cheapest day yet was $1,333 on 31 Jul and again on 1 Aug.",
     "footer":
         "Auto-sent daily flight watch · prices from Kiwi.com, AUD incl. 1 checked bag each way "
         "· no verified sale live today.",
