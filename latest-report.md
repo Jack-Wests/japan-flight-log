@@ -74,3 +74,4 @@
 - **Trip-length rule bit today.** Several cheaper-looking pairings (e.g. $1,522 flying into Sapporo) run to 15 nights and were dropped for breaking the 12–14 night rule. The Tokyo return wins partly because a return fare beat two one-ways.
 - **Date shifts checked and rejected:** 29–31 Jan out and 19–21 Feb home both returned zero results under the $100pp saving threshold, so no shift is proposed.
 - **CSV, both charts and this report** regenerated and committed; `matplotlib` had to be reinstalled in this container first. Log now holds 37 checks after `sync_prices.py` recovered 19 rows scattered across old run branches. No 14-day rising streak — the log has dipped repeatedly (36-day range $1,333–$1,688).
+- **Email sent** to the lads from the repo template, one email, after the push so the hosted chart resolves (Resend id `3db425bc`). Rendered and eyeballed in headless Chromium before sending; leak check passed.
