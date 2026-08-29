@@ -269,7 +269,17 @@ VALUES = {
 
 def build_text():
     """Plain-text twin of the email — required alongside the HTML part."""
-    strip = lambda s: re.sub(r"<[^>]+>", "", s).replace("&amp;", "&")
+    def strip(s):
+        """Drop tags and decode the few entities the RUN block uses.
+
+        Every RUN string that can carry markup must go through this — a <b> in a
+        "worth knowing" note used to land verbatim in the plain-text part.
+        """
+        s = re.sub(r"<[^>]+>", "", s)
+        for ent, ch in (("&nbsp;", " "), ("&amp;", "&"), ("&mdash;", "—"),
+                        ("&ndash;", "–"), ("&lt;", "<"), ("&gt;", ">")):
+            s = s.replace(ent, ch)
+        return re.sub(r"[ \t]{2,}", " ", s).strip()
     L = [f'JAPAN SNOW TRIP - DAILY CHECK - {RUN["date_human"]}', "",
          strip(RUN["verdict_headline"]),
          f'Best all-in {RUN["best_pp"]} pp - {RUN["best_all4"]} for the four lads', ""]
@@ -283,7 +293,7 @@ def build_text():
         L += [f'{label} - {pp} pp / {all4} for four',
               f'  There: {strip(there)}',
               f'  Home:  {strip(home)}',
-              f'  {note}', ""]
+              f'  {strip(note)}', ""]
     L += [strip(RUN["options_footnote"]), "",
           RUN["itin_title"].upper(), strip(RUN["itin_subtitle"]), ""]
     for date, loc, plan in RUN["itinerary"]:
