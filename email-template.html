@@ -21,7 +21,7 @@
     DELTA_2_LABEL      "Since a week ago (29 Jul)"   DELTA_2_VALUE  "no check that far back"
                        (all four are computed from prices.csv by render_email.py —
                         never write "since yesterday" unless a check actually ran yesterday)
-    TARGET_DISTANCE    "$350 above"  BUY_TARGET        "$1,000"  (public target ONLY)
+    TARGET_DISTANCE    "$113 above"  BUY_TARGET        "$1,350"  (public target ONLY)
     OPTIONS_ROWS       <tr> rows for the trip-options table
     OPTIONS_FOOTNOTE   the italic note under the options table
     ITIN_TITLE         "Option A — Cheapest"
@@ -111,7 +111,7 @@
   <!-- ══ PRICE LOG ══ -->
   <tr><td style="background:#ffffff;border-radius:12px;padding:20px 24px 22px;">
     <h2 style="margin:0 0 6px;font-size:17px;font-weight:700;color:#1a202c;">📉 Price log</h2>
-    <p style="margin:0 0 14px;font-size:12.5px;color:#8a94a6;line-height:1.5;">Best total pp over time. 🟢 BUY ≤ $1,000 · 🟡 WATCH $1,000–$1,200 · 🔴 HOLD above $1,200.</p>
+    <p style="margin:0 0 14px;font-size:12.5px;color:#8a94a6;line-height:1.5;">Best total pp over time. 🟢 BUY ≤ {{BUY_TARGET}} · 🟡 WATCH {{BUY_TARGET}}–{{WATCH_CEILING}} · 🔴 HOLD above {{WATCH_CEILING}}.</p>
 
     <!-- Chart is a hosted image, not a data: URI — Gmail blocks data: URIs in <img>.
          The ?v= cache-buster is required: without it Gmail's proxy serves a stale chart. -->

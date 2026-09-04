@@ -49,7 +49,7 @@ date,best_total_pp,fastest_sensible_pp,verdict
 2026-08-05,1527,1859,HOLD
 ```
 
-Verdict bands (public): 🟢 ≤ $1,000 BUY · 🟡 $1,000–$1,200 WATCH · 🔴 > $1,200 HOLD.
+Verdict bands (public): 🟢 ≤ $1,350 BUY · 🟡 $1,350–$1,500 WATCH · 🔴 > $1,500 HOLD.
 
 ## 4. Rebuild the charts
 

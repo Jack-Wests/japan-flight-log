@@ -44,7 +44,7 @@ Regenerate the charts by running the script — do not hand-roll plotting code a
 python3 make_chart.py     # pip install matplotlib pillow if missing
 ```
 
-It writes `chart.png` (full size) and `chart-email.png` (the email copy). The chart's shaded bands are the PUBLIC ones — green BUY ≤ $1,000, amber WATCH $1,000–$1,200 — and **the private target must never appear on the chart, in the CSV, in the report, or in the email.**
+It writes `chart.png` (full size) and `chart-email.png` (the email copy). The chart's shaded bands are the PUBLIC ones — green BUY ≤ $1,350, amber WATCH $1,350–$1,500 — and **the private target must never appear on the chart, in the CSV, in the report, or in the email.**
 
 Also write the COMPLETE report below to `latest-report.md`. Commit and push everything to this routine's working branch, message `log: <date> $<best>`. If the CSV shows 14+ days rising with no dips, say so in the snapshot.
 
@@ -54,7 +54,7 @@ Also write the COMPLETE report below to `latest-report.md`. Commit and push ever
 
 ### 📋 Today's snapshot
 
-3–5 plain-English sentences: verdict (🟢 ≤$1,000pp = "CALL THE LADS — book Option X" · 🟡 $1,000–$1,200 WATCH · 🔴 >$1,200 HOLD), best total per person AND for all 4 lads, movement vs the price log (or "no history yet"), anything time-sensitive.
+3–5 plain-English sentences: verdict (🟢 ≤$1,350pp = "CALL THE LADS — book Option X" · 🟡 $1,350–$1,500 WATCH · 🔴 >$1,500 HOLD), best total per person AND for all 4 lads, movement vs the price log (or "no history yet"), anything time-sensitive.
 
 Then show these three quick summary lines (omit any that can't yet be calculated):
 
@@ -99,7 +99,7 @@ Then end the report — nothing after.
 
 **2. TWO PRICE TARGETS — public $1,000, real private target $800.**
 
-- PUBLIC (everything the mates can see: the email, both charts, `latest-report.md`, the CSV verdict, and anything committed to the repo): the buy target is **$1,000**. Bands: 🟢 ≤$1,000 = BUY / "CALL THE LADS" · 🟡 $1,000–$1,200 = WATCH · 🔴 >$1,200 = HOLD. The "🎯 Distance from buy target" line uses $1,000. **Never write $800 anywhere except the push notification** — not in the chart, not in a code comment, not in a commit message.
+- PUBLIC (everything the mates can see: the email, both charts, `latest-report.md`, the CSV verdict, and anything committed to the repo): the buy target is **$1,350**. Bands: 🟢 ≤$1,350 = BUY / "CALL THE LADS" · 🟡 $1,350–$1,500 = WATCH · 🔴 >$1,500 = HOLD. The "🎯 Distance from buy target" line uses $1,350. **Never write the real private target anywhere except the push notification** — not in the chart, not in a code comment, not in a commit message.
 - PRIVATE (the daily push notification only): always also state the distance from the real $800 target. If the best price drops ≤$1,000, say "public BUY zone hit — the email is telling the lads to book". If it drops ≤$800, lead with "REAL $800 target hit — book".
 
 **3. ONE EMAIL PER RUN — no corrections, ever.** Build the email by editing the `RUN` block in `render_email.py` and running it; it fills `email-template.html` and writes `email.html` / `email.txt`. Do **not** rebuild the email HTML from scratch and do not restructure the template — improvising the HTML is what made every daily email look different. Do **not** embed the chart as base64 or a `data:` URI; Gmail blocks those. The chart is a hosted image and the template already points at it correctly. Send exactly one email. If anything is broken, fix it BEFORE sending or record it in Nerd Notes — never send a follow-up "corrected" email.
