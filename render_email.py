@@ -12,6 +12,7 @@ import csv
 import re
 import subprocess
 from datetime import datetime
+from html import unescape
 
 TEMPLATE = "email-template.html"
 OUT = "email.html"
@@ -266,7 +267,10 @@ VALUES = {
 
 def build_text():
     """Plain-text twin of the email — required alongside the HTML part."""
-    strip = lambda s: re.sub(r"<[^>]+>", "", s).replace("&amp;", "&")
+    # Drop tags, then turn entities back into real characters — the RUN block is
+    # written as HTML, so &mdash; and friends would otherwise ship as literal
+    # text in the plain-text part.
+    strip = lambda s: unescape(re.sub(r"<[^>]+>", "", s))
     L = [f'JAPAN SNOW TRIP - DAILY CHECK - {RUN["date_human"]}', "",
          strip(RUN["verdict_headline"]),
          f'Best all-in {RUN["best_pp"]} pp - {RUN["best_all4"]} for the four lads', ""]
@@ -277,14 +281,14 @@ def build_text():
           f'Distance from buy target (${BUY_TARGET:,}): {RUN["target_distance"]}',
           "", "TRIP OPTIONS", ""]
     for label, there, home, pp, all4, note in RUN["options"]:
-        L += [f'{label} - {pp} pp / {all4} for four',
+        L += [f'{label} - {pp} pp - all 4: {strip(all4)}',
               f'  There: {strip(there)}',
               f'  Home:  {strip(home)}',
-              f'  {note}', ""]
+              f'  {strip(note)}', ""]
     L += [strip(RUN["options_footnote"]), "",
           RUN["itin_title"].upper(), strip(RUN["itin_subtitle"]), ""]
     for date, loc, plan in RUN["itinerary"]:
-        L.append(f'  {date:<12} {loc:<20} {plan}')
+        L.append(f'  {date:<12} {strip(loc):<20} {strip(plan)}')
     L += ["", strip(RUN["itin_footnote"]), "", "PRICE LOG", ""]
     for r in csv.DictReader(open("prices.csv")):
         d = datetime.strptime(r["date"], "%Y-%m-%d").strftime("%a %-d %b")
