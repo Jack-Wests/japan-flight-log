@@ -296,15 +296,19 @@ for k, v in VALUES.items():
 
 left = set(re.findall(r"\{\{(\w+)\}\}", html))
 assert not left, f"unfilled placeholders: {sorted(left)}"
-# Check the visible text only — CSS like font-weight:800 is not a leak.
+# Check the visible text only — CSS like font-weight:800 is not a leak. Strip
+# thousands separators first so "$1,200" can't sneak the private target past
+# a check that only looks for the bare digits.
 visible = re.sub(r"<[^>]+>", " ", html)
-assert not re.search(r"(?<![\d,])1200(?![\d,])", visible), \
+visible_digits = re.sub(r"(?<=\d)[,\s](?=\d)", "", visible)
+assert not re.search(r"(?<!\d)1200(?!\d)", visible_digits), \
     "private buy target leaked into the email"
 
 open(OUT, "w").write(html)
 print(f"wrote {OUT} ({len(html):,} chars) — placeholders filled, private target absent")
 
 text = build_text()
-assert not re.search(r"(?<![\d,])1200(?![\d,])", text), "private buy target leaked into the text part"
+text_digits = re.sub(r"(?<=\d)[,\s](?=\d)", "", text)
+assert not re.search(r"(?<!\d)1200(?!\d)", text_digits), "private buy target leaked into the text part"
 open("email.txt", "w").write(text)
 print(f"wrote email.txt ({len(text):,} chars)")
