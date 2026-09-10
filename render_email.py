@@ -17,88 +17,96 @@ TEMPLATE = "email-template.html"
 OUT = "email.html"
 
 # Public target only. The real target lives in the push notification, nowhere else.
-BUY_TARGET = 1000
+BUY_TARGET = 1350
 
 # ─────────────────────────────────────────────────────────────────────────────
 # EDIT THIS BLOCK EACH RUN
 # ─────────────────────────────────────────────────────────────────────────────
 RUN = {
-    "date_iso": "2026-08-05",
-    "date_human": "Wed 5 Aug 2026",
-    "verdict_headline": "🔴 HOLD — today's a bad day to book",
-    "best_pp": "$1,527",
-    "best_all4": "$6,108",
-    "target_distance": "$527 above",
+    "date_iso": "2026-09-10",
+    "date_human": "Thu 10 Sep 2026",
+    "verdict_headline": "🟡 WATCH — normal range, sit tight",
+    "best_pp": "$1,420",
+    "best_all4": "$5,679",
+    "target_distance": "$70 above",
     "snapshot": [
         "The cheapest way to get all four of you to the Hokkaido snow and home "
-        "again is <b>$1,527 per person (~$6,108 for the four)</b> — flying Brisbane→Tokyo "
-        "on Jetstar, hopping up to Sapporo, and coming home through Port Moresby.",
-        "But today is a <b>bad day</b>, not a good one: that's <b>$173 dearer than yesterday</b> "
-        "($1,354) and near the top of everything we've seen. Across 17 days of checks the "
-        "price has run between <b>$1,333 and $1,592</b>, sitting around <b>$1,352</b> most days.",
-        "The one bright spot: the fastest-sensible price has collapsed to <b>$1,859pp</b> "
-        "(it's been $2,300–$2,700 all month), so flying Jetstar direct home instead of the "
-        "20-hour Port Moresby route is cheaper today than it has been.",
-        "No verified airline sale is running (all the sale pages blocked us again today). "
-        "Nothing to do — if anything, today is the day <i>not</i> to book.",
+        "again is <b>$1,420 per person (~$5,679 for the four, ~$4,260 for three)</b> — "
+        "Brisbane→Tokyo return on Air Niugini through Port Moresby, plus cheap hops up to "
+        "Sapporo and back. But that's a slog getting in (about 20 hours parked in Port "
+        "Moresby), so the one I'd actually book is the <b>best-value $1,514pp</b>: fly "
+        "straight into Sapporo and home from Tokyo on Singapore Airlines — only $94pp more "
+        "and no Port Moresby.",
+        "Today is <b>down $15 on yesterday</b> and <b>down $134 on a week ago</b> — the "
+        "price has drifted back to the cheaper end of normal. But $1,420 is still $70 above "
+        "the $1,350 buy line, so it's a watch, not a call-the-lads. A dip under $1,350 has "
+        "happened before and will probably come again; no need to move today.",
+        "No airline sale could be verified today — the sale pages and comparison sites were "
+        "all blocked, and the Jetstar 'cheap Japan' chatter online is old 2026-travel stuff, "
+        "nothing confirmed for Feb 2027. So nothing time-sensitive.",
+        "One thing worth doing even before flights: it's <b>just under 5 months</b> to "
+        "departure and Feb is peak Snow Festival — beds at Rusutsu get fewer and dearer the "
+        "longer you wait, so it's worth locking accommodation soon.",
     ],
     "options": [
         # (label, getting there, getting home, pp, all4, worth knowing)
         ("Cheapest",
-         "✈️ Dep Brisbane (BNE) Tue 3 Feb 10:30am → 🛬 lands Tokyo (NRT) Tue 3 Feb 6:25pm "
-         "<i>(Jetstar direct)</i>, then next-morning hop to Sapporo (CTS) Wed 4 Feb",
-         "✈️ Dep Tokyo (NRT) Mon 16 Feb 9:40pm → 🛬 lands Brisbane (BNE) Tue 17 Feb 9:40am "
-         "<i>(via Port Moresby)</i>",
-         "$1,527", "$6,108",
-         "Long haul: ~22h in, overnight near Tokyo — brutal"),
+         "✈️ Dep Brisbane (BNE) Tue 2 Feb 2:40pm → 🛬 lands Tokyo (NRT) Wed 3 Feb 8:00pm "
+         "<i>(Air Niugini via Port Moresby)</i>, then Tokyo→Sapporo (CTS) hop next morning",
+         "✈️ Dep Tokyo (NRT) Wed 17 Feb 9:40pm → 🛬 lands Brisbane (BNE) Thu 18 Feb 9:40am "
+         "<i>(Air Niugini via Port Moresby)</i>",
+         "$1,420", "$5,679",
+         "Long haul: ~20h stuck in Port Moresby airport (can't leave), then a Sapporo hop. Cheapest, but brutal getting in"),
         ("Best value",
-         "✈️ Dep Brisbane (BNE) Tue 3 Feb 10:30am → 🛬 lands Sapporo (CTS) Wed 4 Feb 8:40am "
-         "<i>(through-ticket via Tokyo)</i>",
-         "✈️ Dep Tokyo (NRT) Mon 16 Feb 9:40pm → 🛬 lands Brisbane (BNE) Tue 17 Feb 9:40am "
-         "<i>(via Port Moresby)</i>",
-         "$1,535", "$6,140",
-         "Booked straight to the snow — no Tokyo faff at the start. Only $8pp more"),
+         "✈️ Dep Brisbane (BNE) Tue 2 Feb 6:10pm → 🛬 lands Sapporo (CTS) Wed 3 Feb 4:15pm "
+         "<i>(Singapore Airlines via Singapore + Osaka)</i>",
+         "✈️ Dep Tokyo (NRT) Tue 16 Feb 6:50pm → 🛬 lands Brisbane (BNE) Wed 17 Feb 4:55pm "
+         "<i>(Singapore Airlines via Singapore)</i>",
+         "$1,514", "$6,056",
+         "Straight to the snow, proper airline. 1:30am change in Singapore + ~6h in Osaka. Only $94pp more, skips Port Moresby"),
         ("Fastest sensible",
-         "✈️ Dep Brisbane (BNE) Tue 3 Feb 10:30am → 🛬 lands Tokyo (NRT) Tue 3 Feb 6:25pm "
-         "<i>(Jetstar direct)</i>, then next-morning hop to Sapporo (CTS) Wed 4 Feb",
-         "✈️ Dep Tokyo (NRT) Mon 16 Feb 8:55pm → 🛬 lands Brisbane (BNE) Tue 17 Feb 6:45am "
-         "<i>(Jetstar direct — no Port Moresby)</i>",
-         "$1,859", "$7,436",
-         "Direct both ways, ~9h home instead of 20h. $332pp more than the cheapest"),
+         "✈️ Dep Brisbane (BNE) Wed 3 Feb 12:50am → 🛬 lands Sapporo (CTS) Wed 3 Feb 4:00pm "
+         "<i>(Cathay Pacific via Hong Kong)</i>",
+         "✈️ Dep Tokyo (NRT) Wed 17 Feb 9:40pm → 🛬 lands Brisbane (BNE) Thu 18 Feb 9:40am "
+         "<i>(Air Niugini via Port Moresby)</i>",
+         "$1,621", "$6,485",
+         "Quickest realistic — one stop in Hong Kong. Pre-dawn Port Moresby change coming home. $201pp more than cheapest"),
     ],
     "options_footnote":
-        "The Qantas QF107 Sydney–Sapporo direct was priced again today — <b>$1,664pp</b> for the "
-        "flight in, plus a $182pp Brisbane→Sydney hop, so <b>$2,976pp all-in ($11,904 for four)</b>. "
-        "It lands you on the snow at 6pm the same day with no overnight, but it's roughly double "
-        "the cheapest option, so it's not shown as a live pick. No date shift within ±3 days saved "
-        "$100+ pp, so all options stay put.",
+        "The <b>Qantas QF107 Sydney–Sapporo direct</b> priced at <b>$1,742pp</b> for the flight "
+        "in (nonstop, ~11h), plus ~$170pp for a Brisbane→Sydney hop and a night in Sydney first "
+        "(it leaves at 9am) — so <b>~$1,912pp all-in (~$7,648 for four)</b>, roughly double the "
+        "cheapest. Quick and comfy, but not real money for this trip, so no table row. No date "
+        "shift within ±3 days saved $100+ pp, so all options stay on the planned dates.",
     "itin_title": "Option A — Cheapest",
-    "itin_subtitle": "Rusutsu base · 13 nights · hire car picked up &amp; dropped at Sapporo (CTS)",
+    "itin_subtitle": "Rusutsu base · 14 nights in Japan · hire car picked up &amp; dropped at Sapporo (CTS)",
     "itinerary": [
-        ("Tue 3 Feb", "Brisbane → Tokyo", "Fly out 10:30am, land Narita 6:25pm; overnight near the airport"),
-        ("Wed 4 Feb", "Tokyo → Sapporo", "Morning hop to Sapporo (CTS), pick up the car; Snow Festival day 1 (Odori Park)"),
-        ("Thu 5 Feb", "Sapporo / Otaru", "Snow Festival day 2; evening in Otaru — canal illuminations, sushi"),
-        ("Fri 6 Feb", "→ Rusutsu", "Drive ~2h to Rusutsu, check in, afternoon warm-up laps"),
-        ("Sat 7 Feb", "Rusutsu", "Ski day 1 — Isaac AM lesson, lads ride powder"),
-        ("Sun 8 Feb", "Rusutsu", "Ski day 2 — Isaac AM lesson, then all ride Mt Isola together"),
-        ("Mon 9 Feb", "Rusutsu / Niseko", "Ski day 3 — day-trip to Niseko (45 min)"),
-        ("Tue 10 Feb", "Rusutsu", "Ski day 4 — tree runs, last big powder day"),
-        ("Wed 11 Feb", "→ Sapporo", "Drive back, drop the car at Sapporo (CTS); night out in Susukino"),
-        ("Thu 12 Feb", "Sapporo → Tokyo", "Fly to Tokyo 9:35am→11:25am; afternoon in Shibuya"),
-        ("Fri 13 Feb", "Tokyo", "Asakusa, Akihabara, teamLab Planets"),
-        ("Sat 14 Feb", "Tokyo", "Day trip to Hakone — the droppable day if you want another Rusutsu ski"),
-        ("Sun 15 Feb", "Tokyo", "Tsukiji breakfast, shopping, last night out"),
-        ("Mon 16 Feb", "Tokyo → home", "Depart Narita 9:40pm"),
-        ("Tue 17 Feb", "→ Brisbane", "Land Brisbane 9:40am"),
+        ("Tue 2 Feb", "Brisbane → Pt Moresby", "Fly out BNE 2:40pm; long layover in Port Moresby (overnight in transit)"),
+        ("Wed 3 Feb", "→ Tokyo", "Land Narita 8:00pm; overnight near the airport"),
+        ("Thu 4 Feb", "Tokyo → Sapporo", "Morning hop to Sapporo (CTS), pick up the car; Snow Festival day 1 (Odori Park)"),
+        ("Fri 5 Feb", "Sapporo / Otaru", "Snow Festival day 2; evening in Otaru — canal illuminations, sushi"),
+        ("Sat 6 Feb", "→ Rusutsu", "Drive ~2h to Rusutsu, check in, afternoon warm-up laps"),
+        ("Sun 7 Feb", "Rusutsu", "Ski day 1 — Isaac AM lesson, lads ride powder"),
+        ("Mon 8 Feb", "Rusutsu", "Ski day 2 — Isaac AM lesson, then all ride Mt Isola together"),
+        ("Tue 9 Feb", "Rusutsu / Niseko", "Ski day 3 — day-trip to Niseko (45 min)"),
+        ("Wed 10 Feb", "Rusutsu", "Ski day 4 — tree runs, last big powder day"),
+        ("Thu 11 Feb", "→ Sapporo", "Drive back, drop the car at Sapporo (CTS); night out in Susukino"),
+        ("Fri 12 Feb", "Sapporo → Tokyo", "Fly to Tokyo (HND) in the morning; afternoon in Shibuya"),
+        ("Sat 13 Feb", "Tokyo", "Asakusa, Akihabara, teamLab Planets"),
+        ("Sun 14 Feb", "Tokyo", "Day trip to Hakone — the droppable day if you'd rather a 5th ski day"),
+        ("Mon 15 Feb", "Tokyo", "Tsukiji breakfast, shopping, last big night out"),
+        ("Tue 16 Feb", "Tokyo", "Spare day — Nikko or more Tokyo"),
+        ("Wed 17 Feb", "Tokyo → home", "Depart Narita 9:40pm"),
+        ("Thu 18 Feb", "→ Brisbane", "Land Brisbane 9:40am"),
     ],
     "itin_footnote":
-        "<b>Best value</b> is the same trip on the ground, but booked straight through to "
-        "Sapporo so you skip the overnight near Tokyo at the start. <b>Fastest sensible</b> is "
-        "also the same trip — it just flies Jetstar direct home instead of routing through Port "
-        "Moresby, turning a 20-hour trip back into about 9 hours for $332pp more.",
+        "<b>Best value</b> and <b>Fastest sensible</b> are the same trip on the ground — same "
+        "Rusutsu ski days, same Snow Festival and Otaru, same Tokyo tail. They just skip the "
+        "Tokyo overnight on arrival and land you straight in Sapporo on 3 Feb; best value flies "
+        "home a day earlier (16 Feb, lands 17 Feb).",
     "price_log_footnote":
-        "Showing the last 10 checks; the chart above has all 17. Everything logged so far sits "
-        "in the red HOLD band — the cheapest day yet was $1,333 on 31 Jul.",
+        "Showing the last 10 checks; the chart above has all 51. The cheapest day yet was "
+        "$1,333 (31 Jul &amp; 1 Aug); today's $1,420 sits in the amber WATCH band.",
     "footer":
         "Auto-sent daily flight watch · prices from Kiwi.com, AUD incl. 1 checked bag each way "
         "· no verified sale live today.",
@@ -146,7 +154,7 @@ def price_log_rows():
         latest = i == len(rows) - 1
         v = float(r["best_total_pp"])
         pct = max(4, round(v / top * 100))
-        colour = "#1565c0" if latest else ("#c0392b" if v > 1200 else
+        colour = "#1565c0" if latest else ("#c0392b" if v > 1500 else
                                            "#f9a825" if v > BUY_TARGET else "#2e7d32")
         label = datetime.strptime(r["date"], "%Y-%m-%d").strftime("%a %-d %b")
         lstyle = ("font-size:12.5px;padding:5px 10px 5px 0;white-space:nowrap;" +
@@ -297,13 +305,13 @@ left = set(re.findall(r"\{\{(\w+)\}\}", html))
 assert not left, f"unfilled placeholders: {sorted(left)}"
 # Check the visible text only — CSS like font-weight:800 is not a leak.
 visible = re.sub(r"<[^>]+>", " ", html)
-assert not re.search(r"(?<![\d,])800(?![\d,])", visible), \
+assert not re.search(r"(?<![\d,])(?:800|1,?200)(?![\d,])", visible), \
     "private buy target leaked into the email"
 
 open(OUT, "w").write(html)
 print(f"wrote {OUT} ({len(html):,} chars) — placeholders filled, private target absent")
 
 text = build_text()
-assert not re.search(r"(?<![\d,])800(?![\d,])", text), "private buy target leaked into the text part"
+assert not re.search(r"(?<![\d,])(?:800|1,?200)(?![\d,])", text), "private buy target leaked into the text part"
 open("email.txt", "w").write(text)
 print(f"wrote email.txt ({len(text):,} chars)")
