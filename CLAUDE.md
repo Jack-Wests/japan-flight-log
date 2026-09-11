@@ -2,7 +2,7 @@
 
 ## Who you're talking to
 
-Jack — a uni student, not a programmer. Assume no knowledge of git, Python,
+Isaac — a uni student, not a programmer. Assume no knowledge of git, Python,
 HTML or email plumbing, and don't assume a question is technical just because
 the answer is.
 
@@ -23,19 +23,25 @@ the answer is.
 
 ## The trip (context for judgement calls)
 
-Four uni students, Brisbane → Hokkaido, Feb 2027. Whole-trip budget is about
-**$2,500pp including flights**, so flights realistically cap at **~$1,500pp**;
-$1,300 is worth a look, $1,000 gets booked immediately. Optimise for cheapest.
-Long layovers are fine — 20h is acceptable, ~30h is okay if the stopover is
-long enough to leave the airport. A comfortable option at double the price is
-not a real option.
+Four uni students, Brisbane → Hokkaido, Feb 2027. The whole-trip budget is about
+**$3,000pp including flights** (stretched from $2,500 once non-flight costs were
+properly estimated). Flights realistically cap at **~$1,500pp**.
+
+51 days of price data (Jul–Sep 2026) show the cheapest all-in fare has ranged
+from $1,333 to $1,688, with a median of ~$1,485 and a trend of +$18/week. The
+floor is rising as cheap fare classes sell out into Snow Festival peak week.
+
+**Itinerary shape:** fly into Sapporo (CTS) Feb 2–3, Sapporo Snow Festival
+2 days, drive to Furano for 7 nights (ski + chill), drive back via Jozankei
+onsen + Otaru Snow Light Path on Feb 13, fly CTS→TYO Feb 14, Tokyo 2–3 days,
+fly home from TYO Feb 16–17. ~13 nights total.
 
 ## Non-negotiable
 
-- **Public buy target is $1,000. The real private target is $800.** $800 goes
-  in the push notification and nowhere else — not the email, charts, CSV,
-  report, code comments, or commit messages. `render_email.py` fails the build
-  if it appears in visible email text.
+- **Buy target is $1,430. One set of bands, no private target.** The old
+  $1,000/$800 targets were based on a 2024 anomaly that won't repeat. 51 days
+  of data establish the realistic floor at ~$1,350. $1,430 is a genuine dip;
+  below that = book on the spot. $1,430–$1,500 = WATCH. Above $1,500 = HOLD.
 - **This repo is public.** Anything committed is readable by anyone, including
   every past version in the history.
 - **One email per run. Never a "corrected" follow-up.** Fix it before sending
@@ -60,9 +66,7 @@ mode already hit. The short version of the expensive ones:
 
 ## Token cost
 
-A past run burned ~7× the usual budget on retry loops: two failed sends with a
-giant payload, five rounds of resizing a chart to fix a problem resizing could
-never fix, and rebuilding HTML that a template already had. Before iterating on
+A past run burned ~7× the usual budget on retry loops. Before iterating on
 something more than twice, stop and check the assumption underneath it.
 
 Preview an email by rendering `email.html` with headless Chromium and looking at

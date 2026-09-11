@@ -16,8 +16,8 @@ from datetime import datetime
 TEMPLATE = "email-template.html"
 OUT = "email.html"
 
-# Public target only. The real target lives in the push notification, nowhere else.
-BUY_TARGET = 1000
+# One target: $1,430. No private target.
+BUY_TARGET = 1430
 
 # ─────────────────────────────────────────────────────────────────────────────
 # EDIT THIS BLOCK EACH RUN
@@ -146,7 +146,7 @@ def price_log_rows():
         latest = i == len(rows) - 1
         v = float(r["best_total_pp"])
         pct = max(4, round(v / top * 100))
-        colour = "#1565c0" if latest else ("#c0392b" if v > 1200 else
+        colour = "#1565c0" if latest else ("#c0392b" if v > 1500 else
                                            "#f9a825" if v > BUY_TARGET else "#2e7d32")
         label = datetime.strptime(r["date"], "%Y-%m-%d").strftime("%a %-d %b")
         lstyle = ("font-size:12.5px;padding:5px 10px 5px 0;white-space:nowrap;" +
@@ -295,15 +295,9 @@ for k, v in VALUES.items():
 
 left = set(re.findall(r"\{\{(\w+)\}\}", html))
 assert not left, f"unfilled placeholders: {sorted(left)}"
-# Check the visible text only — CSS like font-weight:800 is not a leak.
-visible = re.sub(r"<[^>]+>", " ", html)
-assert not re.search(r"(?<![\d,])800(?![\d,])", visible), \
-    "private buy target leaked into the email"
-
 open(OUT, "w").write(html)
-print(f"wrote {OUT} ({len(html):,} chars) — placeholders filled, private target absent")
+print(f"wrote {OUT} ({len(html):,} chars) — placeholders filled")
 
 text = build_text()
-assert not re.search(r"(?<![\d,])800(?![\d,])", text), "private buy target leaked into the text part"
 open("email.txt", "w").write(text)
 print(f"wrote email.txt ({len(text):,} chars)")

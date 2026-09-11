@@ -49,7 +49,7 @@ date,best_total_pp,fastest_sensible_pp,verdict
 2026-08-05,1527,1859,HOLD
 ```
 
-Verdict bands (public): 🟢 ≤ $1,000 BUY · 🟡 $1,000–$1,200 WATCH · 🔴 > $1,200 HOLD.
+Verdict bands: 🟢 ≤ $1,430 BUY · 🟡 $1,430–$1,500 WATCH · 🔴 > $1,500 HOLD.
 
 ## 4. Rebuild the charts
 
@@ -96,8 +96,8 @@ Resend, one email per run, no correction emails.
 
 ## 8. Push notification
 
-This is the only place the **private** buy target may appear. Never in the
-email, the report, `prices.csv`, the chart, or any file in this repo.
+Summarise the day's result. Same $1,430 target as the email and chart — no
+separate private target.
 
 ## 9. Update `latest-report.md`
 
