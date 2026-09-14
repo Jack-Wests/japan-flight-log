@@ -277,7 +277,7 @@ def build_text():
     L += [strip(RUN["options_footnote"]), "",
           RUN["itin_title"].upper(), strip(RUN["itin_subtitle"]), ""]
     for date, loc, plan in RUN["itinerary"]:
-        L.append(f'  {date:<12} {loc:<20} {plan}')
+        L.append(f'  {date:<12} {strip(loc):<20} {strip(plan)}')
     L += ["", strip(RUN["itin_footnote"]), "", "PRICE LOG", ""]
     for r in csv.DictReader(open("prices.csv")):
         d = datetime.strptime(r["date"], "%Y-%m-%d").strftime("%a %-d %b")
