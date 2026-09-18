@@ -33,8 +33,8 @@ RUN = {
         "The cheapest all-in way to get the four of you to the Hokkaido snow and home again "
         "has dipped to <b>$1,427 per person</b> — that's <b>$5,709 for the four</b>, or "
         "<b>$4,282 for three</b> if Hugh sits it out. That's just inside the green buy zone "
-        "(≤$1,430) for the first time in weeks, so on the numbers alone this is a "
-        "<b>book-it</b> day.",
+        "(≤$1,430) — the last time it dipped this low was <b>$1,420 on 10 Sep</b> — so on the "
+        "numbers alone this is a <b>book-it</b> day.",
         "But read the fine print before you call the lads: that $1,427 is the <b>rough "
         "routing</b> — Air Niugini both ways, a ~29-hour trip over that includes an overnight "
         "<i>stuck inside Port Moresby airport</i> (you can't leave). The comfortable version — "
@@ -104,10 +104,10 @@ RUN = {
         "Air run gets you in on Tue 3 Feb as shown. The ryokan variant (leave Furano a day "
         "early, sleep at Jozankei on the 12th) uses the same flight dates.",
     "price_log_footnote":
-        "Showing the last 10 checks; the chart above has all 58. Today's $1,427 is the first "
-        "time the cheapest has closed inside the green BUY zone (≤$1,430) in weeks — but it's "
-        "on the rough Port Moresby routing (see options). All-time low $1,333 (31 Jul); high "
-        "$1,688 (10 Aug).",
+        "Showing the last 10 checks; the chart above has all 58. Today's $1,427 is back inside "
+        "the green BUY zone (≤$1,430) — the log has only dipped there a handful of times "
+        "(last was $1,420 on 10 Sep) — and it's on the rough Port Moresby routing (see "
+        "options). All-time low $1,333 (31 Jul); high $1,688 (10 Aug).",
     "footer":
         "Auto-sent daily flight watch · prices from Kiwi.com, AUD incl. 1 checked bag each way "
         "· no verified airline sale live today.",

@@ -5,7 +5,8 @@
 🟢 **BUY zone — but a lopsided one.** The cheapest all-in way to get the four of
 you to the Hokkaido snow and home again has dipped to **$1,427 per person** —
 **$5,709 for the four**, or **$4,282 for three** if Hugh sits it out. That's just
-inside the green buy zone (≤$1,430) for the first time in weeks.
+inside the green buy zone (≤$1,430) — the last time it dipped this low was $1,420
+on 10 Sep.
 
 **Read the fine print before you call the lads:** that $1,427 is the *rough*
 routing — Air Niugini both ways, a ~29-hour trip over that includes an overnight
