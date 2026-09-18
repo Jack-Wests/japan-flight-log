@@ -102,3 +102,5 @@ early, sleep at Jozankei on the 12th) uses the same flight dates.*
   $1,000/$1,200 bands — corrected to the current $1,430/$1,500 bands.
 - **CSV, chart, report, email** committed and pushed to the working branch before
   the email was sent (so the hosted chart image resolves in the inbox).
+- **Email delivered** to isaacdique1@gmail.com via Resend (id 01a0b26d-33dd-725a-981a-f8d0d8cb82be).
+  One email this run, no correction follow-up.
