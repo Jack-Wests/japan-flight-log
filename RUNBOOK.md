@@ -24,9 +24,10 @@ be computed against a log with holes in it.
 
 Kiwi.com remains the primary connector. The project-scoped `skyscanner` MCP is
 the mandatory independent cross-check described in the routine prompt. It is
-configured in `.mcp.json` and started by `tools/start_skyscanner_mcp.sh`; the
-launcher pins the third-party server to a known commit and installs it into an
-isolated cache outside this repo.
+configured in `.mcp.json` and started by `tools/start_skyscanner_mcp.sh`.
+The exact third-party runtime source is vendored under
+`vendor/mcp-skyscanner/`, pinned to known upstream commits, so a run does not
+need to clone another repository or initialise a submodule.
 
 Brisbane → Hokkaido and home, Feb 2027, 4 people, one 20 kg checked bag per
 person each way, all-in AUD, per person.
@@ -131,5 +132,5 @@ Full write-up for the record.
 | Chart illegible | shrunk to 135×78 chasing payload size | quantise, don't shrink |
 | "Since yesterday" wrong | hardcoded label on a gappy log | computed in `render_email.py` |
 | Price log looks empty / gappy | every run pushes to its own branch, never merged | `sync_prices.py` at step 0 |
-| Skyscanner MCP is missing / won't start | bootstrap, dependency or network failure | run `bash tools/start_skyscanner_mcp.sh --check`; see `SKYSCANNER-MCP.md` |
+| Skyscanner MCP is missing / won't start | local dependency/bootstrap failure | run `bash tools/start_skyscanner_mcp.sh --check`; see `SKYSCANNER-MCP.md` |
 | Skyscanner returns `BannedWithCaptcha` | upstream reverse-engineered client was blocked | retry once only, then use Kiwi + web and note it in Nerd Notes |
