@@ -9,23 +9,38 @@ fully verified, bag-inclusive total is better.
 Claude Code reads the project-scoped `.mcp.json` in the repo root and launches
 `tools/start_skyscanner_mcp.sh`.
 
-The launcher deliberately does **not** copy third-party Skyscanner code into this
-repo. On first use it:
+The runtime source for the MCP is copied directly into this repository at
+`vendor/mcp-skyscanner/`. That is intentionally simpler and more reliable than
+cloning another repository during every fresh Claude Routine session.
 
-1. clones `shadyvb/mcp-skyscanner` into the user's cache;
-2. pins it to commit `331352f41dc2bd3623680a91889c67822c3a96e6`;
-3. initialises its nested `vendor/skyscanner` submodule;
-4. creates an isolated Python virtual environment;
-5. installs the upstream requirements; and
-6. starts the MCP server over stdio.
+The vendored snapshot is pinned to:
 
-Later launches reuse the cache while still enforcing the pinned commit.
+- MCP wrapper: `shadyvb/mcp-skyscanner@331352f41dc2bd3623680a91889c67822c3a96e6`
+- Skyscanner client: `irrisolto/skyscanner@cb0946b2f6107128ee7968ec4525e4f167dd4945`
 
-The MCP is configured for:
+The second commit is the exact submodule commit referenced by the pinned MCP
+wrapper. Only the source required to run airport/flight search is copied; large
+APK artefacts and examples are deliberately omitted.
 
-- locale: `en-AU`
-- currency: `AUD`
-- market: `AU`
+The local `mcp_server.py` has one project-specific modification: the real
+`SkyScanner()` client is created lazily on the first tool call instead of while
+the MCP process is starting. The upstream client performs PerimeterX network
+setup in its constructor, and the first live Routine test showed that eager
+startup could close the MCP connection before Claude finished its handshake.
+
+The MCP is configured for `en-AU`, `AUD`, and market `AU`.
+
+## What still happens at runtime
+
+The launcher creates/reuses an isolated Python virtual environment in the user
+cache and installs these packages if they are missing:
+
+- `fastmcp`
+- `curl_cffi`
+- `typeguard`
+- `orjson`
+
+It does **not** clone GitHub repositories or initialise git submodules.
 
 ## Quick setup check
 
@@ -38,52 +53,52 @@ bash tools/start_skyscanner_mcp.sh --check
 Expected result:
 
 ```text
-Skyscanner MCP bootstrap OK
+Skyscanner MCP local copy OK
 ```
 
-This verifies the clone, nested submodule and Python dependencies. It does not
-perform a live fare search.
+This checks the Python dependencies and syntax of the local MCP/client. It does
+not make a live Skyscanner request.
 
-In Claude Code, `/mcp` should show a connected server named `skyscanner` with
-`search_airports` and `search_flights`.
+## Network access required
 
-## Network access required by a cloud routine
+For first-time Python package installation:
 
-If the routine uses restricted outbound networking, the MCP bootstrap/search
-needs these hosts available:
+- `pypi.org`
+- `files.pythonhosted.org`
 
-- `github.com` — clone the pinned MCP source and nested submodule
-- `pypi.org` and `files.pythonhosted.org` — install Python dependencies
-- `www.skyscanner.net` — airport and flight search endpoints
-- `collector-pxrf8vapwa.perimeterx.net` — upstream client's PerimeterX mobile challenge
+For live Skyscanner searches:
 
-If the bootstrap check works but live searches fail, check the last two hosts
-first.
+- `www.skyscanner.net`
+- `collector-pxrf8vapwa.perimeterx.net`
+
+A live-search problem should now be returned by the Skyscanner tool instead of
+closing the MCP connection during session initialisation.
 
 ## Important limitations
 
-This is an unofficial, experimental MCP. Its upstream README says the client is
-reverse-engineered, may violate Skyscanner's terms, and is not intended for
-commercial/production use. Treat it as a second research source, not as a
-single point of failure.
+This remains an unofficial, experimental integration. The upstream MCP README
+states that the underlying client is reverse-engineered, may violate
+Skyscanner's terms, and is not intended for commercial/production use.
 
-The MCP exposes flight-search prices but no checked-baggage input. A Skyscanner
-headline price must therefore **never** be treated as this project's final
-all-in price until the required 20 kg+ checked bag has been verified or added.
+The MCP does not guarantee that its headline fare includes the project's
+required checked 20 kg+ bag. A Skyscanner fare must therefore be verified or
+adjusted to the same all-in basis as Kiwi before it can enter the table or price
+log.
 
-Known upstream errors include:
+Known upstream errors include `BannedWithCaptcha`, `Timeout`, `InvalidDate`
+and `AirportNotFound`. Retry one failed Skyscanner search at most once, then
+continue with Kiwi + web and record the failure in Nerd Notes.
 
-- `BannedWithCaptcha` — Skyscanner/PerimeterX blocked the request
-- `Timeout` — the polling search exhausted its retries
-- `InvalidDate`
-- `AirportNotFound`
+## Third-party licensing and provenance
 
-For the daily routine: retry one failed Skyscanner search at most once, then
-continue with Kiwi and the existing web checks and record the failure in Nerd
-Notes. Do not burn the run on repeated MCP retries.
+The copied source remains third-party code. The MCP wrapper declares GPL-3.0
+and the vendored Skyscanner client is GPL-3.0. The full GPL text is preserved
+at `vendor/mcp-skyscanner/LICENSE-GPL-3.0.md`; exact source commits and the
+local modification are documented in
+`vendor/mcp-skyscanner/THIRD_PARTY_NOTICE.md`.
 
-## Updating the pin
+## Updating the copy
 
-Do not silently track upstream `main`. To upgrade, review the upstream diff,
-test the new commit, then change `UPSTREAM_COMMIT` in
-`tools/start_skyscanner_mcp.sh` deliberately.
+Do not silently track either upstream `main`. Review a specific upstream
+commit, replace the vendored files deliberately, update the commit hashes in
+`THIRD_PARTY_NOTICE.md`, and run the MCP check before merging.
