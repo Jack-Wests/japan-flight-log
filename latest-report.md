@@ -98,3 +98,5 @@ Jozankei, leave Furano a day earlier) uses the same flight dates.*
   $1,000–$1,200" (retired targets). Corrected in `email-template.html` to the current
   $1,430 / $1,500 bands. The chart image (`make_chart.py`) already used the right bands.
 - **CSV, both charts, this report and the email** all regenerated and committed.
+- **Email sent** to isaacdique1@gmail.com via Resend (id 01a0ba2e-ea40-73ee-b843-d748a3c433f5),
+  HTML + plain-text parts, after the push so the hosted chart resolves. One email, no correction.
