@@ -1,43 +1,23 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Self-contained launcher for the project-scoped Skyscanner MCP server.
-# Third-party code and its Python environment live outside the repository.
-# Keep all setup chatter on stderr: stdout belongs to the MCP stdio protocol.
+# Launch the vendored Skyscanner MCP copy committed with this repo.
+# Only Python packages are installed at runtime; no git clone or submodule work
+# is needed in a Claude Routine session.
 
-UPSTREAM_REPO="https://github.com/shadyvb/mcp-skyscanner.git"
-UPSTREAM_COMMIT="331352f41dc2bd3623680a91889c67822c3a96e6"
+SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_ROOT="$(cd -- "${SCRIPT_DIR}/.." && pwd)"
+MCP_DIR="${PROJECT_ROOT}/vendor/mcp-skyscanner"
 CACHE_BASE="${XDG_CACHE_HOME:-${HOME}/.cache}/japan-flight-log/skyscanner-mcp"
-MCP_DIR="${CACHE_BASE}/source"
 VENV_DIR="${CACHE_BASE}/venv"
 
 log() {
   printf '[skyscanner-mcp] %s\n' "$*" >&2
 }
 
-ensure_source() {
+ensure_venv() {
   mkdir -p "$CACHE_BASE"
 
-  if [[ ! -d "$MCP_DIR/.git" ]]; then
-    log "cloning pinned MCP source"
-    rm -rf "$MCP_DIR"
-    git clone --quiet --recursive "$UPSTREAM_REPO" "$MCP_DIR" >&2
-  fi
-
-  local current=""
-  current="$(git -C "$MCP_DIR" rev-parse HEAD 2>/dev/null || true)"
-  if [[ "$current" != "$UPSTREAM_COMMIT" ]]; then
-    log "checking out pinned MCP commit ${UPSTREAM_COMMIT:0:12}"
-    git -C "$MCP_DIR" fetch --quiet origin "$UPSTREAM_COMMIT" >&2
-    git -C "$MCP_DIR" checkout --quiet --detach "$UPSTREAM_COMMIT" >&2
-  fi
-
-  # The MCP repository itself vendors the reverse-engineered Skyscanner client
-  # as a git submodule, so recursive initialisation is required.
-  git -C "$MCP_DIR" submodule update --init --recursive --quiet >&2
-}
-
-ensure_venv() {
   if [[ ! -x "$VENV_DIR/bin/python" ]]; then
     log "creating isolated Python environment"
     rm -rf "$VENV_DIR"
@@ -53,19 +33,13 @@ ensure_venv() {
   fi
 }
 
-ensure_source
 ensure_venv
 
 if [[ "${1:-}" == "--check" ]]; then
-  "$VENV_DIR/bin/python" - <<'PY'
-import importlib.util
-
-for package in ("fastmcp", "curl_cffi", "typeguard", "orjson"):
-    if importlib.util.find_spec(package) is None:
-        raise SystemExit(f"missing dependency: {package}")
-
-print("Skyscanner MCP bootstrap OK")
-PY
+  "$VENV_DIR/bin/python" -m py_compile \
+    "$MCP_DIR/mcp_server.py" \
+    "$MCP_DIR/vendor/skyscanner/skyscanner/"*.py
+  printf 'Skyscanner MCP local copy OK\n'
   exit 0
 fi
 
