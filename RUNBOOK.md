@@ -131,5 +131,6 @@ Full write-up for the record.
 | Chart illegible | shrunk to 135×78 chasing payload size | quantise, don't shrink |
 | "Since yesterday" wrong | hardcoded label on a gappy log | computed in `render_email.py` |
 | Price log looks empty / gappy | every run pushes to its own branch, never merged | `sync_prices.py` at step 0 |
-| Skyscanner MCP is missing / won't start | bootstrap, dependency or network failure | run `bash tools/start_skyscanner_mcp.sh --check`; see `SKYSCANNER-MCP.md` |
+| Skyscanner MCP is missing / won't start | bootstrap or dependency failure | run `bash tools/start_skyscanner_mcp.sh --check`; see `SKYSCANNER-MCP.md` |
+| Skyscanner shows `CONNECTION_CLOSED` at session start | MCP process exited before handshake; the local lazy-start shim is intended to prevent the upstream client's eager network setup from doing this | confirm the run has the current `main`, then run the launcher check once; if it persists, record it and continue with Kiwi + web |
 | Skyscanner returns `BannedWithCaptcha` | upstream reverse-engineered client was blocked | retry once only, then use Kiwi + web and note it in Nerd Notes |

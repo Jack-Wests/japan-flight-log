@@ -10,6 +10,9 @@ UPSTREAM_COMMIT="331352f41dc2bd3623680a91889c67822c3a96e6"
 CACHE_BASE="${XDG_CACHE_HOME:-${HOME}/.cache}/japan-flight-log/skyscanner-mcp"
 MCP_DIR="${CACHE_BASE}/source"
 VENV_DIR="${CACHE_BASE}/venv"
+SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_ROOT="$(cd -- "${SCRIPT_DIR}/.." && pwd)"
+LAZY_SERVER="${PROJECT_ROOT}/tools/skyscanner_mcp_lazy.py"
 
 log() {
   printf '[skyscanner-mcp] %s\n' "$*" >&2
@@ -66,7 +69,9 @@ for package in ("fastmcp", "curl_cffi", "typeguard", "orjson"):
 
 print("Skyscanner MCP bootstrap OK")
 PY
+  "$VENV_DIR/bin/python" -m py_compile "$LAZY_SERVER"
   exit 0
 fi
 
-exec "$VENV_DIR/bin/python" "$MCP_DIR/mcp_server.py"
+export SKYSCANNER_MCP_SOURCE="$MCP_DIR"
+exec "$VENV_DIR/bin/python" "$LAZY_SERVER"

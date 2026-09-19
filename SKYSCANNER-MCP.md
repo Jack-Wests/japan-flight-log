@@ -17,7 +17,16 @@ repo. On first use it:
 3. initialises its nested `vendor/skyscanner` submodule;
 4. creates an isolated Python virtual environment;
 5. installs the upstream requirements; and
-6. starts the MCP server over stdio.
+6. starts the MCP server over stdio through `tools/skyscanner_mcp_lazy.py`.
+
+The local lazy-start shim is deliberate. The pinned upstream server normally
+constructs its `SkyScanner()` client while the MCP process is starting. That
+constructor immediately performs PerimeterX network setup; if that request is
+blocked or slow, Claude sees `CONNECTION_CLOSED` before it can call any MCP
+tool. The shim leaves the upstream server code pinned and unchanged, but delays
+creation of the real Skyscanner client until the first `search_airports` or
+`search_flights` call. A network/CAPTCHA failure can then be returned as a tool
+error instead of killing the whole MCP connection.
 
 Later launches reuse the cache while still enforcing the pinned commit.
 
@@ -41,8 +50,8 @@ Expected result:
 Skyscanner MCP bootstrap OK
 ```
 
-This verifies the clone, nested submodule and Python dependencies. It does not
-perform a live fare search.
+This verifies the clone, nested submodule, Python dependencies, and syntax of
+the local lazy-start shim. It does not perform a live fare search.
 
 In Claude Code, `/mcp` should show a connected server named `skyscanner` with
 `search_airports` and `search_flights`.
@@ -58,7 +67,8 @@ needs these hosts available:
 - `collector-pxrf8vapwa.perimeterx.net` — upstream client's PerimeterX mobile challenge
 
 If the bootstrap check works but live searches fail, check the last two hosts
-first.
+first. A live-search failure should now appear as a Skyscanner tool error rather
+than closing the MCP connection during session initialisation.
 
 ## Important limitations
 
