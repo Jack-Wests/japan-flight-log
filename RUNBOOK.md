@@ -20,10 +20,25 @@ touched `prices.csv` on every ref and rebuilds the full log. Run it **before**
 appending today's row, or today's chart and every "since last check" number will
 be computed against a log with holes in it.
 
-## 1. Get the prices
+## 1. Get the prices — Kiwi + Skyscanner
 
-Kiwi.com connector. Brisbane → Hokkaido and home, Feb 2027, 4 people, one
-20 kg checked bag per person each way, all-in AUD, per person.
+Kiwi.com remains the primary connector. The project-scoped `skyscanner` MCP is
+the mandatory independent cross-check described in the routine prompt. It is
+configured in `.mcp.json` and started by `tools/start_skyscanner_mcp.sh`; the
+launcher pins the third-party server to a known commit and installs it into an
+isolated cache outside this repo.
+
+Brisbane → Hokkaido and home, Feb 2027, 4 people, one 20 kg checked bag per
+person each way, all-in AUD, per person.
+
+Skyscanner headline fares are **not automatically bag-inclusive**. Verify the
+checked-bag allowance or add the current airline bag fee before a Skyscanner
+option can become the logged or emailed total.
+
+If Skyscanner returns `BannedWithCaptcha`, times out, or fails to start, retry
+that search at most once, record the failure in Nerd Notes, and continue with
+Kiwi + the normal web checks. Never let an MCP failure prevent the rest of the
+daily run.
 
 Record two numbers:
 
@@ -116,3 +131,5 @@ Full write-up for the record.
 | Chart illegible | shrunk to 135×78 chasing payload size | quantise, don't shrink |
 | "Since yesterday" wrong | hardcoded label on a gappy log | computed in `render_email.py` |
 | Price log looks empty / gappy | every run pushes to its own branch, never merged | `sync_prices.py` at step 0 |
+| Skyscanner MCP is missing / won't start | bootstrap, dependency or network failure | run `bash tools/start_skyscanner_mcp.sh --check`; see `SKYSCANNER-MCP.md` |
+| Skyscanner returns `BannedWithCaptcha` | upstream reverse-engineered client was blocked | retry once only, then use Kiwi + web and note it in Nerd Notes |
