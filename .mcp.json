@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "skyscanner": {
+      "type": "stdio",
+      "command": "bash",
+      "args": [
+        "${CLAUDE_PROJECT_DIR:-.}/tools/start_skyscanner_mcp.sh"
+      ],
+      "env": {
+        "SKYSCANNER_LOCALE": "en-AU",
+        "SKYSCANNER_CURRENCY": "AUD",
+        "SKYSCANNER_MARKET": "AU",
+        "PYTHONUNBUFFERED": "1"
+      }
+    }
+  }
+}
