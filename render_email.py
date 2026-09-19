@@ -23,85 +23,107 @@ BUY_TARGET = 1430
 # EDIT THIS BLOCK EACH RUN
 # ─────────────────────────────────────────────────────────────────────────────
 RUN = {
-    "date_iso": "2026-08-05",
-    "date_human": "Wed 5 Aug 2026",
-    "verdict_headline": "🔴 HOLD — today's a bad day to book",
-    "best_pp": "$1,527",
-    "best_all4": "$6,108",
-    "target_distance": "$527 above",
+    "date_iso": "2026-09-19",
+    "date_human": "Sat 19 Sep 2026",
+    "verdict_headline": "🔴 HOLD — but a live sale ends in 2 days",
+    "best_pp": "$1,612",
+    "best_all4": "$6,447",
+    "target_distance": "$182 above",
+    # Action banner: red box above the header. Empty string "" on non-action days.
+    "action_banner":
+        '<tr><td style="background:#b91c1c;border-radius:12px;padding:16px 20px;">'
+        '<p style="margin:0;color:#ffffff;font-size:15px;font-weight:800;line-height:1.4;">'
+        '🚨 ACTION TODAY: Qantas Japan sale ends Monday 21 Sep — 2 days away</p>'
+        '<p style="margin:7px 0 0;color:#fee2e2;font-size:13px;line-height:1.55;">'
+        'It’s advertising <b style="color:#fff;">Sydney→Sapporo direct and Brisbane→Tokyo from '
+        '$1,349 return</b> — that’s <b style="color:#fff;">under</b> our $1,430 buy target. '
+        'The search engines can’t see these fares (Kiwi shows the same Qantas flights at '
+        '$1,600–2,200), so the sale price only shows up on '
+        '<b style="color:#fff;">qantas.com</b> itself. Worth a look <b style="color:#fff;">today</b>: '
+        'search Brisbane or Sydney to Tokyo/Sapporo, travelling Feb 2027. If it lands under '
+        '$1,430 all-in, that’s a book-on-the-spot.</p>'
+        '</td></tr>'
+        '<tr><td style="height:14px;line-height:14px;font-size:0;">&nbsp;</td></tr>',
+    "action_text":
+        "*** ACTION TODAY: Qantas Japan sale ends Monday 21 Sep (2 days away). It's advertising "
+        "Sydney->Sapporo direct and Brisbane->Tokyo from $1,349 return - under our $1,430 buy "
+        "target. The search engines can't see these fares (Kiwi shows the same Qantas flights at "
+        "$1,600-2,200), so check qantas.com directly today: Brisbane or Sydney to Tokyo/Sapporo, "
+        "travelling Feb 2027. If it lands under $1,430 all-in, book on the spot. ***",
     "snapshot": [
-        "The cheapest way to get all four of you to the Hokkaido snow and home "
-        "again is <b>$1,527 per person (~$6,108 for the four)</b> — flying Brisbane→Tokyo "
-        "on Jetstar, hopping up to Sapporo, and coming home through Port Moresby.",
-        "But today is a <b>bad day</b>, not a good one: that's <b>$173 dearer than yesterday</b> "
-        "($1,354) and near the top of everything we've seen. Across 17 days of checks the "
-        "price has run between <b>$1,333 and $1,592</b>, sitting around <b>$1,352</b> most days.",
-        "The one bright spot: the fastest-sensible price has collapsed to <b>$1,859pp</b> "
-        "(it's been $2,300–$2,700 all month), so flying Jetstar direct home instead of the "
-        "20-hour Port Moresby route is cheaper today than it has been.",
-        "No verified airline sale is running (all the sale pages blocked us again today). "
-        "Nothing to do — if anything, today is the day <i>not</i> to book.",
+        "The cheapest way the search engines can find to get all four of you into the Hokkaido "
+        "snow and home from Tokyo is <b>$1,612 per person</b> — about <b>$6,447 for the four</b>, "
+        "or <b>$4,835 if it ends up being just the three of you</b>. That’s a "
+        "<b>🔴 HOLD</b>: it’s above the $1,500 line, so on the normal booking sites today is a "
+        "dear day.",
+        "<b>But there’s a real opportunity the search sites can’t see.</b> Qantas has a Japan "
+        "sale on that <b>ends this Monday (21 Sep) — 2 days away</b>, advertising "
+        "Sydney→Sapporo direct and Brisbane→Tokyo from <b>$1,349 return</b>, which is below our "
+        "$1,430 buy target. Kiwi still prices those same Qantas flights at $1,600–2,200, so the "
+        "only place to get the sale fare is <b>qantas.com directly</b> — worth a look today.",
+        "On the searchable price, yesterday’s <b>$1,427</b> (a rare BUY day) has already bounced "
+        "<b>$185 back into the red</b> — exactly how the last few sub-$1,430 dips behaved, gone "
+        "in a day. Across 59 days of checks the cheapest fare has run <b>$1,333–$1,709</b>.",
+        "We’re about <b>4½ months</b> out, and roughly <b>4 weeks</b> from the mid-October "
+        "book-by deadline. Nothing forces a booking on the search-engine price today — but if "
+        "the Qantas sale genuinely lands under $1,430 all-in, don’t wait.",
     ],
     "options": [
         # (label, getting there, getting home, pp, all4, worth knowing)
         ("Cheapest",
-         "✈️ Dep Brisbane (BNE) Tue 3 Feb 10:30am → 🛬 lands Tokyo (NRT) Tue 3 Feb 6:25pm "
-         "<i>(Jetstar direct)</i>, then next-morning hop to Sapporo (CTS) Wed 4 Feb",
-         "✈️ Dep Tokyo (NRT) Mon 16 Feb 9:40pm → 🛬 lands Brisbane (BNE) Tue 17 Feb 9:40am "
-         "<i>(via Port Moresby)</i>",
-         "$1,527", "$6,108",
-         "Long haul: ~22h in, overnight near Tokyo — brutal"),
+         "🛫 Dep Brisbane (BNE) Tue 2 Feb 8:40am → 🛬 lands Tokyo (HND) Tue 2 Feb 10:50pm "
+         "<i>(via Seoul, Korean Air)</i>, then next day Tokyo→Sapporo (CTS), lands Wed 3 Feb 10:05pm",
+         "🛫 Sapporo (CTS)→Tokyo Sat 14 Feb 8:00am, then 🛫 Dep Tokyo (NRT) Tue 16 Feb 6:50pm → "
+         "🛬 lands Brisbane (BNE) Wed 17 Feb 4:55pm <i>(via Singapore)</i>",
+         "$1,612", "$6,447",
+         "Cheapest, but you lose day one to Tokyo + a domestic hop each end. Long haul: ~21h in"),
         ("Best value",
-         "✈️ Dep Brisbane (BNE) Tue 3 Feb 10:30am → 🛬 lands Sapporo (CTS) Wed 4 Feb 8:40am "
-         "<i>(through-ticket via Tokyo)</i>",
-         "✈️ Dep Tokyo (NRT) Mon 16 Feb 9:40pm → 🛬 lands Brisbane (BNE) Tue 17 Feb 9:40am "
-         "<i>(via Port Moresby)</i>",
-         "$1,535", "$6,140",
-         "Booked straight to the snow — no Tokyo faff at the start. Only $8pp more"),
-        ("Fastest sensible",
-         "✈️ Dep Brisbane (BNE) Tue 3 Feb 10:30am → 🛬 lands Tokyo (NRT) Tue 3 Feb 6:25pm "
-         "<i>(Jetstar direct)</i>, then next-morning hop to Sapporo (CTS) Wed 4 Feb",
-         "✈️ Dep Tokyo (NRT) Mon 16 Feb 8:55pm → 🛬 lands Brisbane (BNE) Tue 17 Feb 6:45am "
-         "<i>(Jetstar direct — no Port Moresby)</i>",
-         "$1,859", "$7,436",
-         "Direct both ways, ~9h home instead of 20h. $332pp more than the cheapest"),
+         "🛫 Dep Brisbane (BNE) Wed 3 Feb 12:50am → 🛬 lands Sapporo (CTS) Wed 3 Feb 2:50pm "
+         "<i>(one stop in Hong Kong, Cathay)</i>",
+         "🛫 Sapporo (CTS)→Tokyo Sat 14 Feb 8:00am, then 🛫 Dep Tokyo (NRT) Tue 16 Feb 6:50pm → "
+         "🛬 lands Brisbane (BNE) Wed 17 Feb 4:55pm <i>(via Singapore)</i>",
+         "$1,702", "$6,809",
+         "Straight to the snow — lands Sapporo mid-afternoon day one, only one domestic hop. $90pp more"),
     ],
     "options_footnote":
-        "The Qantas QF107 Sydney–Sapporo direct was priced again today — <b>$1,664pp</b> for the "
-        "flight in, plus a $182pp Brisbane→Sydney hop, so <b>$2,976pp all-in ($11,904 for four)</b>. "
-        "It lands you on the snow at 6pm the same day with no overnight, but it's roughly double "
-        "the cheapest option, so it's not shown as a live pick. No date shift within ±3 days saved "
-        "$100+ pp, so all options stay put.",
-    "itin_title": "Option A — Cheapest",
-    "itin_subtitle": "Rusutsu base · 13 nights · hire car picked up &amp; dropped at Sapporo (CTS)",
+        "<b>Fastest sensible</b> today is ~<b>$1,930pp ($7,720 for four)</b> — Brisbane→Sapporo "
+        "via Hong Kong (~15h) in and Tokyo→Brisbane via Hong Kong (~15½h) home, both Cathay, so "
+        "about 15–16h each way instead of 21h+. It’s $318pp above the cheapest, so it "
+        "doesn’t earn its own row. The <b>Qantas QF107 Sydney→Sapporo direct</b> prices at "
+        "<b>$1,668pp one-way</b> on Kiwi (plus a ~$180 Brisbane→Sydney hop) — but the current "
+        "Qantas sale advertises that same route at <b>$1,349 return</b>, so the sale is the only "
+        "place the direct flight is affordable. No date shift within ±3 days saved $100+pp.",
+    "itin_title": "Option A — Best value (fly into Sapporo, home from Tokyo)",
+    "itin_subtitle": "Furano base · ~13 nights · hire car picked up &amp; dropped at Sapporo (CTS)",
     "itinerary": [
-        ("Tue 3 Feb", "Brisbane → Tokyo", "Fly out 10:30am, land Narita 6:25pm; overnight near the airport"),
-        ("Wed 4 Feb", "Tokyo → Sapporo", "Morning hop to Sapporo (CTS), pick up the car; Snow Festival day 1 (Odori Park)"),
-        ("Thu 5 Feb", "Sapporo / Otaru", "Snow Festival day 2; evening in Otaru — canal illuminations, sushi"),
-        ("Fri 6 Feb", "→ Rusutsu", "Drive ~2h to Rusutsu, check in, afternoon warm-up laps"),
-        ("Sat 7 Feb", "Rusutsu", "Ski day 1 — Isaac AM lesson, lads ride powder"),
-        ("Sun 8 Feb", "Rusutsu", "Ski day 2 — Isaac AM lesson, then all ride Mt Isola together"),
-        ("Mon 9 Feb", "Rusutsu / Niseko", "Ski day 3 — day-trip to Niseko (45 min)"),
-        ("Tue 10 Feb", "Rusutsu", "Ski day 4 — tree runs, last big powder day"),
-        ("Wed 11 Feb", "→ Sapporo", "Drive back, drop the car at Sapporo (CTS); night out in Susukino"),
-        ("Thu 12 Feb", "Sapporo → Tokyo", "Fly to Tokyo 9:35am→11:25am; afternoon in Shibuya"),
-        ("Fri 13 Feb", "Tokyo", "Asakusa, Akihabara, teamLab Planets"),
-        ("Sat 14 Feb", "Tokyo", "Day trip to Hakone — the droppable day if you want another Rusutsu ski"),
-        ("Sun 15 Feb", "Tokyo", "Tsukiji breakfast, shopping, last night out"),
-        ("Mon 16 Feb", "Tokyo → home", "Depart Narita 9:40pm"),
-        ("Tue 17 Feb", "→ Brisbane", "Land Brisbane 9:40am"),
+        ("Wed 3 Feb", "Brisbane → Sapporo", "Fly out 12:50am, land Sapporo (CTS) 2:50pm; pick up the hire car, check into Sapporo"),
+        ("Thu 4 Feb", "Sapporo", "Snow Festival day 1 — Odori Park (festival runs 4–11 Feb)"),
+        ("Fri 5 Feb", "Sapporo", "Snow Festival day 2; evening bar-hop through Susukino"),
+        ("Sat 6 Feb", "→ Furano", "Drive ~2.5h to Furano, settle into the lodge"),
+        ("Sun 7 Feb", "Furano", "Ski day 1 — Isaac's beginner lesson in the morning, lads on the powder"),
+        ("Mon 8 Feb", "Furano", "Ski day 2 — Isaac's beginner lesson AM, then all ride together"),
+        ("Tue 9 Feb", "Biei / Blue Pond", "Rest day — Blue Pond and the Biei snow country"),
+        ("Wed 10 Feb", "Furano", "Ski day 3"),
+        ("Thu 11 Feb", "Asahikawa", "Rest day — Asahikawa Zoo penguin parade"),
+        ("Fri 12 Feb", "Furano", "Ski day 4 — last big powder day"),
+        ("Sat 13 Feb", "Furano → Otaru → Sapporo", "Drive back; Jozankei day-use onsen soak, then Otaru Snow Light Path (its last night, runs 6–13 Feb); sleep in Sapporo"),
+        ("Sun 14 Feb", "Sapporo → Tokyo", "Drop the car at Sapporo (CTS); fly CTS→Tokyo 8:00am; afternoon in Tokyo"),
+        ("Mon 15 Feb", "Tokyo", "Shibuya, Asakusa, teamLab — full day in the city"),
+        ("Tue 16 Feb", "Tokyo → home", "Last morning in Tokyo; depart Tokyo (NRT) 6:50pm"),
+        ("Wed 17 Feb", "→ Brisbane", "Land Brisbane (BNE) 4:55pm"),
     ],
     "itin_footnote":
-        "<b>Best value</b> is the same trip on the ground, but booked straight through to "
-        "Sapporo so you skip the overnight near Tokyo at the start. <b>Fastest sensible</b> is "
-        "also the same trip — it just flies Jetstar direct home instead of routing through Port "
-        "Moresby, turning a 20-hour trip back into about 9 hours for $332pp more.",
+        "<b>Cheapest ($1,612pp)</b> is the same trip on the ground — it just flies into Tokyo and "
+        "hops up to Sapporo the next day (so you lose your first day to travel) and comes home the "
+        "same way, for $90pp less. The <b>ryokan overnight variant</b> (leave Furano a day earlier "
+        "and sleep at Jozankei) uses the same flight dates.",
     "price_log_footnote":
-        "Showing the last 10 checks; the chart above has all 17. Everything logged so far sits "
-        "in the red HOLD band — the cheapest day yet was $1,333 on 31 Jul.",
+        "Showing the last 10 checks; the chart above has all 59. Yesterday’s $1,427 was only the "
+        "second BUY day we’ve ever logged and it lasted a single day. Cheapest ever was $1,333 "
+        "(31 Jul).",
     "footer":
         "Auto-sent daily flight watch · prices from Kiwi.com, AUD incl. 1 checked bag each way "
-        "· no verified sale live today.",
+        "· LIVE Qantas Japan sale ends Mon 21 Sep — check qantas.com.",
 }
 # ─────────────────────────────────────────────────────────────────────────────
 
@@ -238,6 +260,7 @@ VALUES = {
     "DATE_HUMAN": RUN["date_human"],
     "DATE_ISO": RUN["date_iso"],
     "CHART_BRANCH": chart_branch(),
+    "ACTION_BANNER": RUN.get("action_banner", ""),
     "VERDICT_HEADLINE": RUN["verdict_headline"],
     "BEST_PP": RUN["best_pp"],
     "BEST_ALL4": RUN["best_all4"],
@@ -260,9 +283,11 @@ VALUES = {
 def build_text():
     """Plain-text twin of the email — required alongside the HTML part."""
     strip = lambda s: re.sub(r"<[^>]+>", "", s).replace("&amp;", "&")
-    L = [f'JAPAN SNOW TRIP - DAILY CHECK - {RUN["date_human"]}', "",
-         strip(RUN["verdict_headline"]),
-         f'Best all-in {RUN["best_pp"]} pp - {RUN["best_all4"]} for the four lads', ""]
+    L = [f'JAPAN SNOW TRIP - DAILY CHECK - {RUN["date_human"]}', ""]
+    if RUN.get("action_text"):
+        L += [strip(RUN["action_text"]), ""]
+    L += [strip(RUN["verdict_headline"]),
+          f'Best all-in {RUN["best_pp"]} pp - {RUN["best_all4"]} for the four lads', ""]
     L += [strip(p) for p in RUN["snapshot"]] + [""]
     d1l, d1v, d2l, d2v = deltas()
     L += [f'{d1l}: {d1v}',
