@@ -51,6 +51,32 @@ Using the Kiwi connector, price these per person in AUD INCLUDING 1 checked 20kg
 
 Include via-China carriers (China Southern/China Eastern) and via-Singapore/KL/Manila routings — cheap long-layover options are actively wanted, not a fallback. Compute door-to-door time for every option; over 20h = label "long haul: XXh" but note if a layover is long enough to leave the airport.
 
+### A2) SKYSCANNER SEARCH (mandatory independent cross-check)
+
+Use the project-scoped `skyscanner` MCP on EVERY run as a second independent flight source alongside Kiwi. Skyscanner does NOT replace Kiwi.
+
+1. Search economy for **4 adults** first so the result reflects availability for the actual group. If the returned price field is not unambiguously a per-person amount, cross-check the same search with **1 adult** before calculating a per-person figure. Never guess whether a raw Skyscanner price is per-person or party-total.
+
+2. Cross-check every Kiwi itinerary that has a realistic chance of appearing in the final table by searching the same airport pair(s) and travel date(s) on Skyscanner.
+
+3. Independently search both trip structures:
+   - **Fly into Sapporo, home from Tokyo:** Brisbane (BNE) → Sapporo (CTS) for the outbound, then both Tokyo (NRT) → Brisbane (BNE) and Tokyo (HND) → Brisbane (BNE) for the flight home.
+   - **Brisbane ⇄ Tokyo + domestic Hokkaido flights:** search BNE⇄NRT and BNE⇄HND for the international return, plus Tokyo (NRT/HND) → Sapporo (CTS) and Sapporo (CTS) → Tokyo (NRT/HND) on the required dates.
+
+4. Skyscanner is point-to-point. For an itinerary built from multiple tickets, sum **every required flight** before comparing it with Kiwi. NEVER report a component/leg fare as though it were the trip total.
+
+5. Apply exactly the same date windows and ±3-day/$100 rule from section A. Do not broaden the dates just because Skyscanner has a cheaper fare outside the permitted window.
+
+6. **BAGGAGE:** the MCP does not guarantee that its headline fare includes the required checked 20kg+ bag. Verify baggage with the airline/current web source or add the current bag charge. A Skyscanner fare may enter the table or price log only after it is converted to the same all-in basis as Kiwi.
+
+7. A Skyscanner itinerary may become cheapest, best-value, or fastest-sensible if its final all-in total is genuinely better and the itinerary is usable/bookable. Do not favour Kiwi merely because it was searched first.
+
+8. If Kiwi and Skyscanner materially disagree on the same itinerary, investigate rather than averaging them. Prefer the currently verifiable/bookable all-in figure and mention the discrepancy briefly in Nerd Notes.
+
+9. If Skyscanner returns `BannedWithCaptcha`, `Timeout`, `AirportNotFound`, `InvalidDate`, fails to start, or returns unusable data, retry that individual search at most **once**. Then continue the run with Kiwi + web sources. Record the failure in Nerd Notes. Never invent, extrapolate, or reuse a stale Skyscanner price.
+
+10. In Nerd Notes, state whether Skyscanner was successfully checked and whether today's winning fare came from Kiwi, Skyscanner, or another source.
+
 ### B) BUDGET CARRIER WEB SEARCH (Kiwi misses these on sale — check EVERY run)
 Search the web for current fares on EACH of these individually:
 - "Jetstar Brisbane Tokyo February 2027 fare" (also try Cairns and Gold Coast origins)
