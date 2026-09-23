@@ -20,7 +20,7 @@ import os
 import subprocess
 import sys
 
-HEADER = "date,best_total_pp,fastest_sensible_pp,verdict"
+HEADER = "date,best_total_pp,best_comfortable_pp,fastest_sensible_pp,verdict"
 PATH = "prices.csv"
 
 
@@ -59,8 +59,11 @@ def main(write=True):
     if len(rows) < existing:
         sys.exit(f"refusing to shrink {PATH}: rebuilt {len(rows)} < existing {existing}")
 
+    # Rows logged before v3 have no comfortable column; comfortable = total then.
     out = [HEADER] + [
-        f'{r["date"]},{r["best_total_pp"]},{r["fastest_sensible_pp"]},{r["verdict"]}'
+        f'{r["date"]},{r["best_total_pp"]},'
+        f'{(r.get("best_comfortable_pp") or "").strip() or r["best_total_pp"]},'
+        f'{r["fastest_sensible_pp"]},{r["verdict"]}'
         for _, r in sorted(rows.items())
     ]
     if write:
