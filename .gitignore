@@ -1,0 +1,4 @@
+
+# Python bytecode from the vendored Skyscanner MCP
+__pycache__/
+*.pyc
