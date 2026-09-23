@@ -65,7 +65,7 @@ date,best_total_pp,fastest_sensible_pp,verdict
 2026-08-05,1527,1859,HOLD
 ```
 
-Verdict bands: 🟢 ≤ $1,430 BUY · 🟡 $1,430–$1,500 WATCH · 🔴 > $1,500 HOLD.
+Verdict bands: 🟢 ≤ $1,500 BUY · 🟡 $1,500–$1,600 WATCH · 🔴 > $1,600 HOLD.
 
 ## 4. Rebuild the charts
 
@@ -112,7 +112,7 @@ Resend, one email per run, no correction emails.
 
 ## 8. Push notification
 
-Summarise the day's result. Same $1,430 target as the email and chart — no
+Summarise the day's result. Same $1,500 target as the email and chart — no
 separate private target.
 
 ## 9. Update `latest-report.md`

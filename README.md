@@ -13,4 +13,4 @@ Daily flight + itinerary watch for the Brisbane → Hokkaido snow trip, Feb 2027
 - `render_email.py` — fills the template, writes `email.html` / `email.txt`
 - `latest-report.md` — the most recent full write-up
 
-Public buy target: **$1,430 pp**. Bands: 🟢 ≤ $1,430 BUY · 🟡 $1,430–$1,500 WATCH · 🔴 > $1,500 HOLD.
+Public buy target: **$1,500 pp** (comfortable routing). Bands: 🟢 ≤ $1,500 BUY · 🟡 $1,500–$1,600 WATCH · 🔴 > $1,600 HOLD.

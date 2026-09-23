@@ -38,10 +38,12 @@ fly home from TYO Feb 16–17. ~13 nights total.
 
 ## Non-negotiable
 
-- **Buy target is $1,430. One set of bands, no private target.** The old
-  $1,000/$800 targets were based on a 2024 anomaly that won't repeat. 51 days
-  of data establish the realistic floor at ~$1,350. $1,430 is a genuine dip;
-  below that = book on the spot. $1,430–$1,500 = WATCH. Above $1,500 = HOLD.
+- **Buy target is $1,500 (comfortable routing). One set of bands, no private
+  target.** The old $1,000/$800 targets were based on a 2024 anomaly that won't
+  repeat. The bands are set against the cheapest *comfortable* option — no
+  forced-overnight costs hidden from the fare; a Singapore overnight counts as
+  free. $1,500 is a genuine dip; below that = book on the spot.
+  $1,500–$1,600 = WATCH. Above $1,600 = HOLD.
 - **This repo is public.** Anything committed is readable by anyone, including
   every past version in the history.
 - **One email per run. Never a "corrected" follow-up.** Fix it before sending

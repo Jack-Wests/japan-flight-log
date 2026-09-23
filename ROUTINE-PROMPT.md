@@ -21,22 +21,51 @@ FIRST, EVERY RUN: read RUNBOOK.md in the repo and follow it. It is the source of
 
 **Total: ~13 nights.** The ryokan overnight variant (leave Furano a day earlier, sleep at Jozankei) uses the same flight dates.
 
+---
+
+## ROUTING QUALITY — what counts as bookable
+
+### The overnight-cost rule (applies to ALL routings, not just one airline)
+A layover that forces an overnight — anywhere — isn't free. If a routing requires the group to leave the airport and stay in a hotel (because the connection is 8h+ overnight, or the next flight is the following day), the real cost of that overnight must be **added to the fare before comparing**:
+- Hotel (budget, per person share for a room sleeping 3–4)
+- Visa or entry fee if the transit country requires one
+- Airport↔hotel transport
+
+**Don't show the bare fare as the cheapest option if it hides an overnight cost.** Either add the real cost and show the adjusted total, or note it clearly: "add ~$X pp for the forced overnight in [city]."
+
+A **short airside connection** (a few hours, staying in the terminal, no overnight) is fine regardless of the airport — that's just a normal transit.
+
+### Singapore layovers are a positive, not a cost
+Isaac's partner lives in Singapore. A long Singapore layover (8h+ — enough to leave Changi and get into town) or an overnight in Singapore is **free accommodation and actively wanted**. Australians don't need a visa for Singapore. Changi is 20 minutes from the city.
+
+So where a Port Moresby or Manila overnight adds $150–400pp to the real cost, a Singapore overnight adds **$0** and is a perk. When a Singapore Airlines or Scoot routing via Singapore has a long layover or overnight:
+- **Don't penalise it** — treat the overnight cost as $0 in the comparison.
+- **Call it out as a positive** in the "Worth knowing" column: "overnight in Singapore — Isaac sees his partner, free stay."
+- If two options are close in price and one routes via Singapore with a long layover, **prefer the Singapore one** even if it's slightly more expensive (up to ~$50pp more).
+
+### What "comfortable" means for the verdict
+The daily **verdict** is based on the cheapest **comfortable** option — meaning: no forced overnight at an airport with real costs hidden from the fare. Singapore overnights count as comfortable (cost = $0). Short airside connections anywhere count as comfortable.
+
+---
+
 ## BUDGET REALITY — this drives every judgement call
 
-Four uni students. Whole-trip budget is about **$3,000 per person including flights** (stretch from $2,500 — the non-flight costs are too tight at $2,500). Flights realistically can't go above **~$1,500pp** or the trip doesn't happen.
+Four uni students. Whole-trip budget is about **$3,000 per person including flights**. Food budget is $55/day (tested on a previous Japan trip). Non-flight costs come to roughly $1,400–$1,600pp for 13 nights, so flights need to land around $1,400–$1,500pp to close the budget.
 
-**51 days of price data** (20 Jul – 10 Sep 2026) show the cheapest all-in fare has ranged from $1,333 to $1,688, with a median of $1,485 and a trend of about +$18/week. Sub-$1,350 hasn't appeared since early August. The floor is rising — cheap fare classes are selling out as Snow Festival approaches.
+### Decision bands — based on comfortable routing only
 
-### Decision bands — ONE set, no private target
-- 🟢 **≤ $1,430pp = BUY** — "CALL THE LADS — book on the spot." This is a genuine dip. In the last 5 weeks, dips below $1,430 have lasted exactly one day.
-- 🟡 **$1,430–$1,500pp = WATCH** — normal range. A dip might come, but if it's mid-October or later, treat this as a buy.
-- 🔴 **> $1,500pp = HOLD** — dear side, wait. But if it's November or later, book anyway under $1,550.
-- 🎯 **"Distance from buy target" line uses $1,430.**
-- ⏰ **Hard deadline: mid-October 2026.** If we haven't booked by then, book whatever's under $1,500 on the next available day.
+| Band | Comfortable price pp | Action |
+|---|---|---|
+| 🟢 BUY | **≤ $1,500** | "CALL THE LADS — book on the spot." Genuine dip for a comfortable routing |
+| 🟡 WATCH | $1,500–$1,600 | Normal range for comfortable options. If mid-Oct or later, treat as a buy |
+| 🔴 HOLD | > $1,600 | Dear side, wait. But if Nov+, book anyway under $1,650 |
 
-Optimise hard for **cheapest**. Long layovers are fine. ~20h door-to-door is perfectly acceptable, especially on the way over. Up to ~30h is tolerable IF the stopover is long enough (roughly 8h+) to leave the airport and look around — say so explicitly when it is ("11h in Singapore — long enough to get into town"). Overnight airport sleeps and 3am connections are a genuine negative; call those out.
+- 🎯 **"Distance from buy target" line uses $1,500** (comfortable routing).
+- ⏰ **Hard deadline: mid-October 2026.** If not booked by then, book whatever comfortable option is under $1,600 on the next available day.
 
-The three table rows should be cheapest, best value, and fastest sensible — all three within reach of the budget. "Fastest sensible" only gets a row if it's within $250pp of the cheapest; otherwise mention it in one line under the table alongside the Qantas QF107 price. Don't burn a row on a premium option nobody can afford.
+Optimise hard for **cheapest comfortable**. Long layovers are fine. ~20h door-to-door is perfectly acceptable, especially on the way over. Up to ~30h is tolerable IF the stopover is long enough (roughly 8h+) to leave the airport and look around — say so explicitly when it is ("11h in Singapore — long enough to get into town and see Isaac's partner"). Overnight airport sleeps and 3am connections are a genuine negative; call those out.
+
+The three table rows should be cheapest comfortable, best value comfortable, and fastest sensible — all within reach of the budget. "Fastest sensible" only gets a row if it's within $250pp of the cheapest comfortable; otherwise mention it in one line under the table alongside the Qantas QF107 price.
 
 ---
 
@@ -48,6 +77,7 @@ Using the Kiwi connector, price these per person in AUD INCLUDING 1 checked 20kg
 1. **Fly into Sapporo (CTS)** arriving 2–5 Feb 2027 by any routing, **home from Tokyo (NRT/HND)** departing 14–18 Feb. Also price the Qantas Sydney–Sapporo seasonal direct (QF107, with a Brisbane–Sydney connection added), or state why it couldn't be priced. Via Sydney or Cairns routings are normal and welcome.
 2. **Brisbane ⇄ Tokyo return** (arrive 2–4 Feb, depart 14–18 Feb) **plus** cheapest Tokyo→Sapporo on 3–5 Feb and Sapporo→Tokyo around 13–14 Feb — always fold these into the total.
 3. Date shifts up to ±3 days beyond windows only if they save ≥$100pp — state the shift explicitly.
+4. **Actively search Singapore Airlines and Scoot routings via Singapore** — these are preferred if price-competitive (see routing quality above).
 
 Include via-China carriers (China Southern/China Eastern) and via-Singapore/KL/Manila routings — cheap long-layover options are actively wanted, not a fallback. Compute door-to-door time for every option; over 20h = label "long haul: XXh" but note if a layover is long enough to leave the airport.
 
@@ -97,13 +127,26 @@ If any web result shows a one-way fare under $500 for the right dates, calculate
 
 ## PRICE LOG + CHART
 
-Append today's date, best total pp, fastest-sensible pp, and verdict to `prices.csv`. Regenerate the charts by running the script:
+Append today's row to `prices.csv` with this header:
+
+```
+date,best_total_pp,best_comfortable_pp,fastest_sensible_pp,verdict
+```
+
+- `best_total_pp` — absolute cheapest regardless of routing (may include forced-overnight fares at bare price)
+- `best_comfortable_pp` — cheapest option that passes the routing quality rules above (no hidden overnight costs; Singapore overnight = $0). **This is the number the verdict is based on.**
+- `fastest_sensible_pp` — quickest routing within budget
+- `verdict` — based on `best_comfortable_pp` against the decision bands
+
+If the cheapest overall IS comfortable, `best_total_pp` and `best_comfortable_pp` will be the same number.
+
+Regenerate the charts:
 
 ```bash
 python3 make_chart.py        # pip install matplotlib pillow if missing
 ```
 
-It writes `chart.png` (full size) and `chart-email.png` (the email copy). The chart's shaded bands are: **green BUY ≤ $1,430, amber WATCH $1,430–$1,500, red HOLD > $1,500.**
+The chart should plot `best_comfortable_pp` as the **main line** with shaded bands: **green BUY ≤ $1,500, amber WATCH $1,500–$1,600, red HOLD > $1,600.** Plot `best_total_pp` as a lighter/dotted reference line so the gap is visible.
 
 Also write the COMPLETE report below to `latest-report.md`. Commit and push everything to this routine's working branch, message `"log: <date> $<best>"`. If the CSV shows 14+ days rising with no dips, say so in the snapshot.
 
@@ -115,35 +158,40 @@ Also write the COMPLETE report below to `latest-report.md`. Commit and push ever
 **🚨 ACTION NEEDED TODAY: <one line>** — bold, first line of the report.
 
 ### 📋 Today's snapshot
-3–5 plain-English sentences: verdict (🟢 ≤$1,430pp = "CALL THE LADS — book today" · 🟡 $1,430–$1,500 = WATCH — normal range, a dip might come · 🔴 >$1,500 = HOLD — dear side, wait), best total per person, for all 4, AND for 3 (in case Hugh can't come), movement vs the price log (or "no history yet"), anything time-sensitive (including deadline proximity).
+3–5 plain-English sentences: verdict based on the **comfortable** price (🟢 ≤$1,500pp = "CALL THE LADS — book today" · 🟡 $1,500–$1,600 = WATCH — normal range, a dip might come · 🔴 >$1,600 = HOLD — dear side, wait), best comfortable total per person, for all 4, AND for 3, movement vs the price log, anything time-sensitive (including deadline proximity).
 
 Then show these lines:
 
-⏳ Booking countdown: <X> months until departure (Feb 2). If it's October or later, say: "We're past the mid-October deadline — book on the next day under $1,500."
+⏳ Booking countdown: <X> months until departure (Feb 2). <X> weeks to the mid-Oct deadline. If it's October or later, say: "We're past the mid-October deadline — book on the next comfortable day under $1,600."
 
-📈 Since last check (<N> days ago, <date>): ↑/↓ $X — the log is NOT reliably daily; never write "since yesterday" unless a check genuinely ran yesterday
+📈 Since last check (<N> days ago, <date>): ↑/↓ $X (comfortable price)
 
-📉 Since a week back (<date>): ↑/↓ $X (or "no check that far back yet")
+📉 Since a week back (<date>): ↑/↓ $X (comfortable price)
 
-🎯 Distance from buy target ($1,430): $X above or $X below
+🎯 Distance from buy target ($1,500 comfortable): $X above or $X below
 
-📊 All-time range across all checks: $<low> – $<high>
+💰 Cheapest any-routing today: $X (reference only — may include forced-overnight fares)
+
+📊 All-time comfortable range: $<low> – $<high>
 
 If genuinely ambiguous, end with "ESCALATE — discuss in main chat".
 
 ### ✈️ Trip options
-One markdown table, one row per option (cheapest, best-value, fastest sensible if within $250pp of cheapest):
+One markdown table. **All rows must be comfortable routings.** The three rows: cheapest comfortable, best value comfortable, fastest sensible (if within $250pp of cheapest comfortable).
 
 | Option | Getting there | Getting home | Total pp | All 4 | All 3 | Door-to-door | Worth knowing |
 
-All-in prices only. "Worth knowing" = one plain phrase ("long haul: 28h via Port Moresby — brutal" / "lands 4pm, easy day").
+All-in prices only. "Worth knowing" = one plain phrase. For Singapore layovers: "overnight in Singapore — Isaac sees his partner, free stay." For forced overnights elsewhere: "add ~$Xpp for overnight in [city]."
 
-Under the table, in one line each: the Qantas QF107 price, and the fastest-sensible option if it was too expensive for a table row.
+Under the table, in one line each:
+- Cheapest forced-overnight fare (if different from cheapest comfortable): "Cheapest if you'd overnight in [city]: $X — not recommended, real cost ~$X after hotel/visa."
+- Qantas QF107 price.
+- Fastest-sensible option if too expensive for a table row.
 
-If any BUDGET CARRIER WEB SEARCH (section B above) found a competitive fare, it MUST appear as a table row.
+If any BUDGET CARRIER WEB SEARCH (section B) found a competitive fare, it MUST appear as a table row.
 
 ### FLIGHT TIMES
-Every "Getting there" / "Getting home" cell must show departure date + local time and landing date + local time for both directions, e.g. "🛫 Dep Brisbane (BNE) Mon 2 Feb 6:10pm → 🛬 lands Sapporo (CTS) Tue 3 Feb 4:15pm".
+Every "Getting there" / "Getting home" cell must show departure date + local time and landing date + local time, e.g. "🛫 Dep Brisbane (BNE) Mon 2 Feb 6:10pm → 🛬 lands Sapporo (CTS) Tue 3 Feb 4:15pm".
 
 ### 🗓️ Option A itinerary (repeat per option that has a table row)
 
@@ -159,7 +207,7 @@ One row per day, departure day first, landing in Brisbane last. One-line plans. 
 - Hire car pickup/drop Sapporo (CTS)
 
 ### 🔧 Nerd notes (troubleshooting only)
-Max 8 short bullets: data sources used, whether CSV/chart/report committed (if not, why), searches returning nothing, manual bag-fee estimates, blocked pages, budget carrier search results even if not competitive (so we know they were checked). No tables, no JSON, no code.
+Max 8 short bullets: data sources used (Kiwi, Skyscanner, web), whether CSV/chart/report committed (if not, why), searches returning nothing, manual bag-fee estimates, blocked pages, budget carrier search results even if not competitive, overnight-cost adjustments applied, Singapore routing availability. No tables, no JSON, no code.
 
 ---
 

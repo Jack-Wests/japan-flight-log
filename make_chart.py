@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Regenerate chart.png (and the email copy) from the full prices.csv price log.
 
-Best-total-per-person line over time, with a green BUY zone (<=$1,430),
-amber WATCH band ($1,430-$1,500), and a marker on today's (latest) point.
+Best-total-per-person line over time, with a green BUY zone (<=$1,500),
+amber WATCH band ($1,500-$1,600), and a marker on today's (latest) point.
 
 One set of targets — no private target. Also writes chart-email.png and its
 base64 (chart-email.b64) for embedding in the daily email.
@@ -16,8 +16,8 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 
-BUY = 1430    # buy target — CALL THE LADS at or below this
-WATCH = 1500  # watch ceiling — HOLD above this
+BUY = 1500    # buy target — CALL THE LADS at or below this
+WATCH = 1600  # watch ceiling — HOLD above this
 
 dates, best, fastest = [], [], []
 with open("prices.csv") as f:
@@ -45,9 +45,9 @@ def build(path, figsize=(10, 5.6), dpi=130):
     ax.axhspan(BUY, WATCH, color="#f9a825", alpha=0.16, zorder=0)
     ax.axhline(BUY, color="#2e7d32", lw=1.2, ls="--", alpha=0.8)
     ax.axhline(WATCH, color="#f9a825", lw=1.2, ls="--", alpha=0.8)
-    ax.text(0.012, BUY - 8, "  BUY zone  ≤ $1,430", transform=ax.get_yaxis_transform(),
+    ax.text(0.012, BUY - 8, "  BUY zone  ≤ $1,500", transform=ax.get_yaxis_transform(),
             va="top", ha="left", fontsize=9*s, color="#1b5e20", fontweight="bold")
-    ax.text(0.012, WATCH - 8, "  WATCH  $1,430–$1,500", transform=ax.get_yaxis_transform(),
+    ax.text(0.012, WATCH - 8, "  WATCH  $1,500–$1,600", transform=ax.get_yaxis_transform(),
             va="top", ha="left", fontsize=9*s, color="#8d6e00", fontweight="bold")
 
     # Fastest-sensible reference line (lighter).

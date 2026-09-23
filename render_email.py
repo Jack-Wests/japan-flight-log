@@ -16,8 +16,8 @@ from datetime import datetime
 TEMPLATE = "email-template.html"
 OUT = "email.html"
 
-# One target: $1,430. No private target.
-BUY_TARGET = 1430
+# One target: $1,500. No private target.
+BUY_TARGET = 1500
 
 # ─────────────────────────────────────────────────────────────────────────────
 # EDIT THIS BLOCK EACH RUN
@@ -146,7 +146,7 @@ def price_log_rows():
         latest = i == len(rows) - 1
         v = float(r["best_total_pp"])
         pct = max(4, round(v / top * 100))
-        colour = "#1565c0" if latest else ("#c0392b" if v > 1500 else
+        colour = "#1565c0" if latest else ("#c0392b" if v > 1600 else
                                            "#f9a825" if v > BUY_TARGET else "#2e7d32")
         label = datetime.strptime(r["date"], "%Y-%m-%d").strftime("%a %-d %b")
         lstyle = ("font-size:12.5px;padding:5px 10px 5px 0;white-space:nowrap;" +
