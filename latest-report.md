@@ -1,18 +1,18 @@
-# 🇯🇵 Japan Snow Trip — Flight & Itinerary Watch — Wed 23 Sep 2026
+# 🇯🇵 Japan Snow Trip — Flight & Itinerary Watch — Wed 23 Sep 2026 (afternoon re-check)
 
 ### 📋 Today's snapshot
 
-🟡 **WATCH: normal range, a dip might come.** The cheapest comfortable way to get you into the Hokkaido snow and home is **$1,587 per person. That's $6,348 for all four, or $4,761 for three** if Hugh buys separately. You'd fly Singapore Airlines to Osaka, take a Skymark hop to Sapporo, hop back to Tokyo after the ski, and fly Singapore Airlines home from Tokyo. That's $23 up on yesterday ($1,564) and $87 over the $1,500 buy price. Singapore Airlines is cheap today, and every option below uses it at least one way. The mid-October deadline is about 3 weeks away. After that, the rule is to book the first comfortable day under $1,600, and today's price would already qualify.
+🟡 **WATCH: normal range, a dip might come.** The cheapest comfortable way to get you into the Hokkaido snow and home is **$1,533 per person. That's $6,132 for all four, or $4,599 for three** if Hugh buys separately. You'd fly Singapore Airlines to Osaka and hop up to Sapporo, hop back to Tokyo after the ski, and fly Air Niugini home from Tokyo overnight with a 1-hour change in Port Moresby (no hotel). That's $31 down on yesterday ($1,564) and just $33 over the $1,500 buy price. This morning's check said $1,587 because it used Singapore Airlines both ways. The Air Niugini flight home is $55 cheaper, and its Port Moresby stop is a quick plane swap, not an overnight. The mid-October deadline is about 3 weeks away. After that, book the first comfortable day under $1,600, and today's price would already qualify.
 
-⏳ Booking countdown: ~4 months (131 days) until departure (Feb 2). ~3 weeks to the mid-Oct deadline.
+⏳ Booking countdown: ~4 months (132 days) until departure (Feb 2). ~3 weeks to the mid-Oct deadline.
 
-📈 Since last check (1 day ago, 22 Sep): ↑ $23 (comfortable price)
+📈 Since last check (1 day ago, 22 Sep): ↓ $31 (comfortable price)
 
-📉 Since a week back (16 Sep): ↑ $153 (comfortable price)
+📉 Since a week back (16 Sep): ↑ $99 (comfortable price)
 
-🎯 Distance from buy target ($1,500 comfortable): $87 above
+🎯 Distance from buy target ($1,500 comfortable): $33 above
 
-💰 Cheapest any-routing today: ~$1,455 (Air Niugini with a forced Port Moresby overnight — reference only)
+💰 Cheapest any-routing today: ~$1,470 (Air Niugini with a forced Port Moresby overnight on the way over — reference only)
 
 📊 All-time comfortable range: $1,333 – $1,709
 
@@ -20,15 +20,16 @@
 
 | Option | Getting there | Getting home | Total pp | All 4 | All 3 | Door-to-door | Worth knowing |
 |---|---|---|---|---|---|---|---|
-| **Cheapest** | 🛫 Dep Brisbane (BNE) Mon 1 Feb 6:10pm → 🛬 lands Sapporo (CTS) Tue 2 Feb 7:15pm *(Singapore Airlines via Singapore to Osaka (KIX), ferry to Kobe (UKB), Skymark to Sapporo)* | 🛫 Sapporo (CTS) Sun 14 Feb 8:10am → Tokyo (HND) 9:55am; then 🛫 Dep Tokyo (NRT) Tue 16 Feb 6:50pm → 🛬 lands Brisbane (BNE) Wed 17 Feb 4:55pm *(Singapore Airlines via Singapore)* | **$1,587** | $6,348 | $4,761 | ~26h over · ~21h home | 9h daytime stop in Osaka with a 30-min ferry (~$19 included); 1:20–7:05am wait in Singapore on the way home |
-| **Best value** | 🛫 Dep Brisbane (BNE) Tue 2 Feb 6:10pm → 🛬 lands Sapporo (CTS) Wed 3 Feb 7:40pm *(Singapore Airlines via Singapore to Osaka (KIX), Peach to Sapporo)* | Same as Cheapest | **$1,641** | $6,564 | $4,923 | ~26.5h over · ~21h home | Overnight in Singapore (12:05–8:25am): Isaac sees his partner, free stay. $54pp more |
-| **Fastest sensible** | 🛫 Dep Brisbane (BNE) Tue 2 Feb 12:50am (Mon night) → 🛬 lands Sapporo (CTS) Tue 2 Feb 2:50pm *(Cathay Pacific via Hong Kong)* | Same as Cheapest | **$1,729** | $6,916 | $5,187 | ~15h over · ~21h home | Quickest way in with one short change; $142pp more |
+| **Cheapest** | 🛫 Dep Brisbane (BNE) Mon 1 Feb 6:10pm → 🛬 lands Sapporo (CTS) Tue 2 Feb 7:15pm *(Singapore Airlines via Singapore to Osaka (KIX), ferry to Kobe (UKB), Skymark to Sapporo)* | 🛫 Sapporo (CTS) Sun 14 Feb 8:10am → Tokyo (HND) 9:55am; then 🛫 Dep Tokyo (NRT) Wed 17 Feb 9:40pm → 🛬 lands Brisbane (BNE) Thu 18 Feb 9:40am *(Air Niugini via Port Moresby)* | **$1,533** | $6,132 | $4,599 | ~26h over · 11h home | 9h daytime stop in Osaka with a 30-min ferry (~$19 included); 5:30am 1-hour plane change in Port Moresby, no hotel |
+| **Best value** | 🛫 Dep Brisbane (BNE) Tue 2 Feb 6:10pm → 🛬 lands Sapporo (CTS) Wed 3 Feb 7:40pm *(Singapore Airlines via Singapore to Osaka (KIX), Peach to Sapporo)* | Same as Cheapest | **$1,585** | $6,340 | $4,755 | ~26.5h over · 11h home | Overnight in Singapore (12:05–8:25am): Isaac sees his partner, free stay. $52pp more |
+| **Fastest sensible** | 🛫 Dep Brisbane (BNE) Tue 2 Feb 12:50am (Mon night) → 🛬 lands Sapporo (CTS) Tue 2 Feb 2:50pm *(Cathay Pacific via Hong Kong)* | Same as Cheapest | **$1,674** | $6,696 | $5,022 | 15h over · 11h home | Quickest way in, one short change; $141pp more |
 
 All prices are per person, all-in, with a 20kg checked bag each way and the $125 Sapporo→Tokyo hop.
-- In between: $1,599pp is the Cheapest routing with a direct Peach hop from Osaka (KIX) instead of the Kobe ferry. It's 20h over with no airport change.
-- Cheapest if you'd overnight in Port Moresby: ~$1,455. Not recommended: the real cost is ~$1,655 after the hotel and transfers.
-- Qantas QF107 Sydney–Sapporo direct: $1,737pp one way from Sydney, about $1,900pp with the Brisbane–Sydney flight. That's just to get there.
-- Fastest both ways (Cathay over, Singapore Airlines home from Haneda in 17h): $1,890pp. That's $303 over the cheapest, so it doesn't get a table row.
+- Singapore Airlines home instead (Tue 16 Feb 6:50pm from Narita, lands Wed 17 Feb 4:55pm): $55pp more, $1,588 total. The 1:20–7:05am Singapore wait is too short to leave the airport.
+- Air Niugini risk: the Port Moresby change is only an hour. If it's missed, the next Brisbane flight is 2pm the same day.
+- Cheapest if you'd overnight in Port Moresby (on the way over): ~$1,470. Not recommended: the real cost is ~$1,670 after the hotel and transfers.
+- Qantas QF107 Sydney–Sapporo direct: $1,737pp one way from Sydney, ~$1,900pp with the Brisbane–Sydney flight. That's just to get there.
+- Brisbane ⇄ Tokyo return + Tokyo→Sapporo hop (Jetstar over, Singapore Airlines home): ~$1,680pp. That's dearer than flying into Sapporo.
 
 ### 🗓️ Option A itinerary — Cheapest (Furano base)
 
@@ -49,24 +50,19 @@ All prices are per person, all-in, with a 20kg checked bag each way and the $125
 | 13 | Sat 13 Feb | → Jozankei → Otaru → Sapporo | Day-use onsen, then the Otaru Snow Light Path on its last evening; sleep in Sapporo |
 | 14 | Sun 14 Feb | Sapporo → Tokyo | Drop the car at Sapporo (CTS); fly 8:10am, land Haneda 9:55am |
 | 15 | Mon 15 Feb | Tokyo | Asakusa, Akihabara, teamLab |
-| 16 | Tue 16 Feb | Tokyo → home | Fly out of Narita 6:50pm |
-| 17 | Wed 17 Feb | → Brisbane | Change planes in Singapore 1:20–7:05am; land Brisbane 4:55pm |
+| 16 | Tue 16 Feb | Tokyo | Shinjuku, Harajuku, or a Kamakura/Hakone day trip |
+| 17 | Wed 17 Feb | Tokyo → home | Last day in Tokyo; fly out of Narita 9:40pm |
+| 18 | Thu 18 Feb | → Brisbane | Change planes in Port Moresby 5:30–6:30am; land Brisbane 9:40am |
 
-**Option B (Best value)** is the same, but:
-- Tue 2 Feb: fly out 6:10pm.
-- Wed 3 Feb: overnight in Singapore (Isaac with his partner), fly on at 8:25am, land Sapporo 7:40pm and pick up the car.
-- From Thu 4 Feb (Snow Festival day 1) onwards, everything is identical.
+**Option B (Best value)** is the same, but you leave Tue 2 Feb and overnight in Singapore (Isaac with his partner). You land in Sapporo Wed 3 Feb at 7:40pm, and everything from Snow Festival day 1 onwards is identical.
 
-**Option C (Fastest sensible)** is the same, but:
-- Tue 2 Feb: leave Brisbane at 12:50am (Monday night), land Sapporo 2:50pm and pick up the car.
-- From Wed 3 Feb onwards, everything is identical.
+**Option C (Fastest sensible)** is the same, but you leave just after midnight Mon night and land in Sapporo at 2:50pm Tue 2 Feb.
 
 ### 🔧 Nerd notes
-- Prices came from Kiwi.com. Today's winning fare is a Kiwi combination of separate tickets: SQ266/SQ618 to Osaka + Skymark BC177 from Kobe, Skymark BC706 CTS→HND, and SQ11/SQ265 NRT→BNE. Kiwi's prices include the bag. A ~$19 Kobe ferry allowance is added by hand.
-- Skyscanner failed on all 4 attempts (2 searches, each retried once) with the same `UnknownError: 'redirect_to'` (KeyError). So there was no independent cross-check today.
-- An earlier run today (02:58 UTC, old rules) had logged $1,634. I replaced that row with this run's result under the new comfortable-routing rules.
-- Fixed: `sync_prices.py` was still writing the old 4-column log and dropping `best_comfortable_pp`. It now keeps the column (older rows fall back to the total).
-- Fixed: the email template's price-log caption still showed the old $1,000/$1,200 bands. It now shows $1,500/$1,600.
-- Budget carriers: web searches for Jetstar, Scoot, AirAsia and China Southern found no Feb 2027 one-way fare under $500. On Kiwi, Scoot only appears via SQ+TR to Haneda at 1am ($849 one way), so it's not competitive.
-- Sales: the Qantas Asia Red Tail Sale (15–21 Sep) has ended. The Jetstar Get Onboard sale ended 24 Aug. The Jetstar deals page returned 503. No verified live sale.
-- Overnight adjustment: Port Moresby outbound (Air Niugini, ~20h on the ground) was costed at +~$200pp. Singapore overnights were treated as $0.
+- Isaac asked for a manual re-run on 23 Sep. It replaces this morning's 23 Sep log row ($1,455 / $1,587 / $1,729) with $1,470 / $1,533 / $1,674. The winning fare came from Kiwi.
+- Skyscanner failed on both BNE→CTS and NRT→BNE (4 adults), the same error ("redirect_to") each time. It was retried once and then skipped, so it was not cross-checked today.
+- The Air Niugini NRT→POM→BNE return (PX55/PX3) is one ticket with a 1h airside change. It's counted as comfortable. Only the outbound POM routing forces an overnight (+~$200 hotel/transfers).
+- The Kobe ferry (~$19) was added manually to the Cheapest option. All Kiwi fares include 1 checked bag.
+- Budget carriers: Jetstar BNE–NRT direct shows on Kiwi (bag included) but only in the dearer Tokyo-return structure. Scoot/AirAsia/China Southern searches turned up no Feb 2027 fare under $500 one way.
+- Sales: the Qantas Asia sale ended 21 Sep. The Jetstar Japan sale (25–28 Sep) is domestic Japan only. No live OzBargain Japan deal from Australia.
+- The CSV, chart and this report are committed to the working branch before the email is sent.
