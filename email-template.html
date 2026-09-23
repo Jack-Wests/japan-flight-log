@@ -75,17 +75,8 @@
   <tr><td style="background:#ffffff;border-radius:12px;padding:20px 24px 22px;">
     <h2 style="margin:0 0 6px;font-size:17px;font-weight:700;color:#1a202c;">✈️ Trip options</h2>
     <p style="margin:0 0 14px;font-size:12.5px;color:#8a94a6;line-height:1.5;">All prices per person in AUD, all-in — every flight door-to-door including one 20kg checked bag each way.</p>
-    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;border-collapse:collapse;border:1px solid #e5e8ec;">
-      <tr>
-        <th style="background:#f3f5f8;padding:9px 10px;text-align:left;font-size:12.5px;font-weight:700;color:#3d4757;border-bottom:1px solid #e5e8ec;">Option</th>
-        <th style="background:#f3f5f8;padding:9px 10px;text-align:left;font-size:12.5px;font-weight:700;color:#3d4757;border-bottom:1px solid #e5e8ec;">Getting there</th>
-        <th style="background:#f3f5f8;padding:9px 10px;text-align:left;font-size:12.5px;font-weight:700;color:#3d4757;border-bottom:1px solid #e5e8ec;">Getting home</th>
-        <th style="background:#f3f5f8;padding:9px 10px;text-align:center;font-size:12.5px;font-weight:700;color:#3d4757;border-bottom:1px solid #e5e8ec;">Total pp</th>
-        <th style="background:#f3f5f8;padding:9px 10px;text-align:center;font-size:12.5px;font-weight:700;color:#3d4757;border-bottom:1px solid #e5e8ec;">All 4</th>
-        <th style="background:#f3f5f8;padding:9px 10px;text-align:left;font-size:12.5px;font-weight:700;color:#3d4757;border-bottom:1px solid #e5e8ec;">Worth knowing</th>
-      </tr>
-      {{OPTIONS_ROWS}}
-    </table>
+    <!-- One card per option (built by render_email.py) — stacks cleanly on a phone. -->
+    {{OPTIONS_ROWS}}
     <p style="margin:12px 0 0;font-size:12.5px;color:#5b6b8c;line-height:1.55;">{{OPTIONS_FOOTNOTE}}</p>
   </td></tr>
 

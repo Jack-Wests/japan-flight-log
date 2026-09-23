@@ -140,3 +140,5 @@ Full write-up for the record.
 | Price log looks empty / gappy | every run pushes to its own branch, never merged | `sync_prices.py` at step 0 |
 | Skyscanner MCP is missing / won't start | local dependency/bootstrap failure | run `bash tools/start_skyscanner_mcp.sh --check`; see `SKYSCANNER-MCP.md` |
 | Skyscanner returns `BannedWithCaptcha` | upstream reverse-engineered client was blocked | retry once only, then use Kiwi + web and note it in Nerd Notes |
+| Email looks too wide / fine on "phone" preview | headless Chromium can't open a window under 500px, so a `--window-size=390` screenshot is really a cropped 500px page | preview phone width with Playwright's mobile viewport (`is_mobile=True`, 390 wide) and check `scrollWidth` |
+| Email wider than a phone screen | six-column options table | options are stacked cards (`options_rows()`); don't go back to a wide table |

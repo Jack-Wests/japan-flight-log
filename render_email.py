@@ -154,17 +154,28 @@ TH_TD = "padding:9px 10px;font-size:12.5px;color:#3d4757;line-height:1.5;border-
 
 
 def options_rows():
+    """One stacked card per option. Cards, not a six-column table: a wide table
+    forces the whole email wider than a phone screen."""
+    lab = "margin:0 0 2px;font-size:11px;font-weight:700;color:#8a94a6;letter-spacing:0.6px;text-transform:uppercase;"
+    body = "margin:0 0 10px;font-size:13px;color:#3d4757;line-height:1.5;"
     out = []
     for label, there, home, pp, all4, note in RUN["options"]:
         out.append(
-            f'<tr>'
-            f'<td style="{TH_TD}font-weight:700;color:#1a202c;">{label}</td>'
-            f'<td style="{TH_TD}">{there}</td>'
-            f'<td style="{TH_TD}">{home}</td>'
-            f'<td style="{TH_TD}text-align:center;font-weight:700;color:#1a202c;white-space:nowrap;">{pp}</td>'
-            f'<td style="{TH_TD}text-align:center;white-space:nowrap;">{all4}</td>'
-            f'<td style="{TH_TD}">{note}</td>'
-            f'</tr>')
+            f'<table width="100%" cellpadding="0" cellspacing="0" border="0" '
+            f'style="width:100%;border:1px solid #e5e8ec;border-radius:8px;margin:0 0 12px;">'
+            f'<tr><td style="background:#f3f5f8;padding:10px 12px;border-bottom:1px solid #e5e8ec;'
+            f'border-radius:8px 8px 0 0;font-size:14.5px;font-weight:700;color:#1a202c;">{label}</td>'
+            f'<td align="right" style="background:#f3f5f8;padding:10px 12px;border-bottom:1px solid #e5e8ec;'
+            f'border-radius:8px 8px 0 0;white-space:nowrap;">'
+            f'<span style="font-size:17px;font-weight:800;color:#1a202c;">{pp}</span>'
+            f'<span style="font-size:12px;color:#5b6b8c;"> pp</span></td></tr>'
+            f'<tr><td colspan="2" style="padding:10px 12px 2px;">'
+            f'<p style="{body}font-size:12.5px;color:#5b6b8c;">All 4: <b style="color:#1a202c;">'
+            f'{all4.replace("<br>", "</b> · ")}</p>'
+            f'<p style="{lab}">Getting there</p><p style="{body}">{there}</p>'
+            f'<p style="{lab}">Getting home</p><p style="{body}">{home}</p>'
+            f'<p style="{lab}">Worth knowing</p><p style="{body}">{note}</p>'
+            f'</td></tr></table>')
     return "".join(out)
 
 
