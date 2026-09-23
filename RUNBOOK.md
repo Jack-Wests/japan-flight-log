@@ -73,6 +73,9 @@ Verdict bands: 🟢 ≤ $1,500 BUY · 🟡 $1,500–$1,600 WATCH · 🔴 > $1,60
 python3 make_chart.py     # writes chart.png + chart-email.png
 ```
 
+The purple dotted line at $1,430 is the retired buy target, kept on purpose
+at Isaac's request. Leave it in.
+
 Never hand-tune sizes here. The email chart is deliberately 640×360 and
 palette-quantised — big enough to read, small enough to serve.
 

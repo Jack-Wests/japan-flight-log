@@ -44,6 +44,10 @@ fly home from TYO Feb 16–17. ~13 nights total.
   forced-overnight costs hidden from the fare; a Singapore overnight counts as
   free. $1,500 is a genuine dip; below that = book on the spot.
   $1,500–$1,600 = WATCH. Above $1,600 = HOLD.
+- **Keep the old $1,430 line on the chart.** Isaac asked (23 Sep 2026) for the
+  retired $1,430 buy target to stay visible as a purple dotted line, so the
+  goalposts can't quietly move. It's a record, not a second target: no shading,
+  no verdict based on it. `make_chart.py` draws it — don't remove it.
 - **This repo is public.** Anything committed is readable by anyone, including
   every past version in the history.
 - **One email per run. Never a "corrected" follow-up.** Fix it before sending

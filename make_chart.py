@@ -7,7 +7,10 @@ marker on today's (latest) point. The absolute-cheapest (any-routing) total is
 drawn as a lighter dotted reference so the gap to comfortable is visible — for
 rows logged before comfortable was tracked separately the two lines overlap.
 
-One set of targets — no private target. Also writes chart-email.png and its
+One set of targets — no private target. The retired $1,430 buy target is drawn
+as a plain dotted reference line on Isaac's request (23 Sep 2026), so the chart
+shows how far the goalposts have moved. It is history, not a band: never shade
+it, and never base a verdict on it. Also writes chart-email.png and its
 base64 (chart-email.b64) for embedding in the daily email.
 """
 import base64
@@ -21,6 +24,9 @@ import matplotlib.dates as mdates
 
 BUY = 1500    # buy target — CALL THE LADS at or below this
 WATCH = 1600  # watch ceiling — HOLD above this
+OLD_BUY = 1430  # retired buy target (Sep 2026) — reference line only, keep it
+# White backing so band labels stay readable where the price line crosses them.
+LABEL_BOX = dict(boxstyle="round,pad=0.15", facecolor="white", edgecolor="none", alpha=0.85)
 
 dates, total, comfortable = [], [], []
 with open("prices.csv") as f:
@@ -44,7 +50,7 @@ def build(path, figsize=(10, 5.6), dpi=130):
 
     # Y range gives headroom around the data and always shows the buy/watch bands.
     ymax = max(max(total), max(comfortable), WATCH) * 1.06
-    ymin = min(min(comfortable), min(total), BUY) - 120
+    ymin = min(min(comfortable), min(total), BUY, OLD_BUY) - 120
     ymin = max(0, ymin)
 
     # Shaded decision bands.
@@ -53,9 +59,15 @@ def build(path, figsize=(10, 5.6), dpi=130):
     ax.axhline(BUY, color="#2e7d32", lw=1.2, ls="--", alpha=0.8)
     ax.axhline(WATCH, color="#f9a825", lw=1.2, ls="--", alpha=0.8)
     ax.text(0.012, BUY - 8, "  BUY zone  ≤ $1,500", transform=ax.get_yaxis_transform(),
-            va="top", ha="left", fontsize=9*s, color="#1b5e20", fontweight="bold")
+            va="top", ha="left", fontsize=9*s, color="#1b5e20", fontweight="bold", bbox=LABEL_BOX, zorder=7)
     ax.text(0.012, WATCH - 8, "  WATCH  $1,500–$1,600", transform=ax.get_yaxis_transform(),
-            va="top", ha="left", fontsize=9*s, color="#8d6e00", fontweight="bold")
+            va="top", ha="left", fontsize=9*s, color="#8d6e00", fontweight="bold", bbox=LABEL_BOX, zorder=7)
+
+    # Retired target — kept visible on purpose so the old goalpost stays on record.
+    ax.axhline(OLD_BUY, color="#6a1b9a", lw=1.3, ls=":", alpha=0.9, zorder=2)
+    ax.text(0.012, OLD_BUY + 6, "  Old buy target $1,430 (retired 23 Sep)",
+            transform=ax.get_yaxis_transform(), va="bottom", ha="left",
+            fontsize=8.5*s, color="#6a1b9a", fontweight="bold", bbox=LABEL_BOX, zorder=7)
 
     # Cheapest any-routing total — lighter dotted reference (may include
     # forced-overnight fares). Overlaps the comfortable line where they're equal.
