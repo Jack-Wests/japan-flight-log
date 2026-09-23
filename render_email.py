@@ -84,6 +84,35 @@ RUN = {
         "$1,737pp one way from Sydney, about $1,900pp with the Brisbane–Sydney flight. That's just to "
         "get there, so it's not a live pick. <b>Fastest both ways</b> (Cathay over, Singapore Airlines "
         "from Haneda home in 17h) is $1,890pp, $303 over the cheapest. No date shift saved $100+pp.",
+    # Door-to-door timeline per table row, drawn as bars in the email.
+    # Each leg is a list of (kind, minutes, label). kind: "fly" = in the air,
+    # "wait" = stopover/transfer, "sg" = Singapore stop long enough to leave the
+    # airport (free stay with Isaac's partner). Minutes must add up to the
+    # door-to-door time quoted in the table.
+    "journeys": [
+        ("Cheapest", {
+            "there": [("fly", 475, "Brisbane → Singapore"), ("wait", 85, "Singapore"),
+                      ("fly", 365, "Singapore → Osaka"),
+                      ("wait", 530, "Osaka, ferry to Kobe airport"),
+                      ("fly", 110, "Kobe → Sapporo")],
+            "home": [("fly", 450, "Tokyo → Singapore"), ("wait", 345, "Singapore, 1:20–7:05am"),
+                     ("fly", 470, "Singapore → Brisbane")],
+        }),
+        ("Best value", {
+            "there": [("fly", 475, "Brisbane → Singapore"),
+                      ("sg", 500, "Singapore overnight, 12:05–8:25am"),
+                      ("fly", 365, "Singapore → Osaka"), ("wait", 135, "Osaka"),
+                      ("fly", 115, "Osaka → Sapporo")],
+            "home": [("fly", 450, "Tokyo → Singapore"), ("wait", 345, "Singapore, 1:20–7:05am"),
+                     ("fly", 470, "Singapore → Brisbane")],
+        }),
+        ("Fastest sensible", {
+            "there": [("fly", 510, "Brisbane → Hong Kong"), ("wait", 110, "Hong Kong"),
+                      ("fly", 280, "Hong Kong → Sapporo")],
+            "home": [("fly", 450, "Tokyo → Singapore"), ("wait", 345, "Singapore, 1:20–7:05am"),
+                     ("fly", 470, "Singapore → Brisbane")],
+        }),
+    ],
     "itin_title": "Option A — Cheapest (Furano base)",
     "itin_subtitle": "15 nights · hire car picked up &amp; dropped at Sapporo (CTS)",
     "itinerary": [
@@ -137,6 +166,65 @@ def options_rows():
             f'<td style="{TH_TD}">{note}</td>'
             f'</tr>')
     return "".join(out)
+
+
+# Journey bars: flying / waiting / Singapore stop. Colours checked for
+# colourblind separation; every bar also has a written breakdown underneath, so
+# nothing relies on colour alone.
+SEG_COLOUR = {"fly": "#1565c0", "wait": "#e0913a", "sg": "#12a37f"}
+SEG_WORD = {"fly": "✈️", "wait": "wait", "sg": "🇸🇬 stop"}
+
+
+def hm(mins):
+    return f"{mins // 60}h{mins % 60:02d}" if mins % 60 else f"{mins // 60}h"
+
+
+def journey_block():
+    legs = [leg for _, j in RUN["journeys"] for leg in j.values()]
+    longest = max(sum(m for _, m, _ in leg) for leg in legs)
+    out = []
+    for name, j in RUN["journeys"]:
+        out.append(f'<p style="margin:16px 0 6px;font-size:13.5px;font-weight:700;color:#1a202c;">{name}</p>')
+        for which, leg in (("There", j["there"]), ("Home", j["home"])):
+            total = sum(m for _, m, _ in leg)
+            cells = []
+            for kind, m, _ in leg:
+                w = max(1, round(m / longest * 100, 1))
+                cells.append(f'<td style="width:{w}%;background:{SEG_COLOUR[kind]};height:18px;'
+                             f'line-height:18px;font-size:0;border-right:2px solid #ffffff;">&nbsp;</td>')
+            rest = round(100 - total / longest * 100, 1)
+            if rest > 0.5:
+                cells.append(f'<td style="width:{rest}%;font-size:0;">&nbsp;</td>')
+            detail = " · ".join(
+                f'{SEG_WORD[k]} {hm(m)} {label}' for k, m, label in leg)
+            out.append(
+                f'<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr>'
+                f'<td style="width:44px;font-size:12px;color:#5b6b8c;padding:0 8px 0 0;white-space:nowrap;">{which}</td>'
+                f'<td style="padding:0;"><table width="100%" cellpadding="0" cellspacing="0" border="0" '
+                f'style="border-radius:4px;overflow:hidden;"><tr>{"".join(cells)}</tr></table></td>'
+                f'<td style="width:52px;font-size:12.5px;font-weight:700;color:#1a202c;text-align:right;'
+                f'padding:0 0 0 8px;white-space:nowrap;">{hm(total)}</td></tr></table>'
+                f'<p style="margin:3px 0 8px 52px;font-size:11.5px;color:#5b6b8c;line-height:1.45;">{detail}</p>')
+    legend = " &nbsp; ".join(
+        f'<span style="display:inline-block;width:10px;height:10px;background:{SEG_COLOUR[k]};'
+        f'border-radius:2px;vertical-align:middle;"></span>&nbsp;{t}'
+        for k, t in (("fly", "In the air"), ("wait", "Waiting / changing planes"),
+                     ("sg", "Singapore stop, can leave the airport")))
+    return (f'<p style="margin:0 0 4px;font-size:12px;color:#3d4757;">{legend}</p>'
+            + "".join(out))
+
+
+def journey_text():
+    L = []
+    for name, j in RUN["journeys"]:
+        L.append(name)
+        for which, leg in (("There", j["there"]), ("Home", j["home"])):
+            total = sum(m for _, m, _ in leg)
+            parts = " | ".join(
+                f'{"flying" if k == "fly" else "waiting"} {hm(m)} {label}' for k, m, label in leg)
+            L.append(f"  {which} {hm(total)}: {parts}")
+    return L
+
 
 
 def itin_rows():
@@ -264,6 +352,7 @@ VALUES = {
     "SNAPSHOT_PARA": "".join(f'<p style="{P}">{p}</p>' for p in RUN["snapshot"]),
     "OPTIONS_ROWS": options_rows(),
     "OPTIONS_FOOTNOTE": RUN["options_footnote"],
+    "JOURNEY_BLOCK": journey_block(),
     "ITIN_TITLE": RUN["itin_title"],
     "ITIN_SUBTITLE": RUN["itin_subtitle"],
     "ITIN_ROWS": itin_rows(),
@@ -290,7 +379,8 @@ def build_text():
               f'  There: {strip(there)}',
               f'  Home:  {strip(home)}',
               f'  {note}', ""]
-    L += [strip(RUN["options_footnote"]), "",
+    L += [strip(RUN["options_footnote"]), "", "HOW LONG EACH TRIP TAKES", ""] + journey_text() + [""]
+    L += [
           RUN["itin_title"].upper(), strip(RUN["itin_subtitle"]), ""]
     for date, loc, plan in RUN["itinerary"]:
         L.append(f'  {date:<12} {strip(loc):<20} {strip(plan)}')

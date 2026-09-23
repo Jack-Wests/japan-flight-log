@@ -91,6 +91,16 @@
 
   <tr><td style="height:14px;line-height:14px;font-size:0;">&nbsp;</td></tr>
 
+  <!-- ══ JOURNEY BARS ══ — door-to-door, to scale, one bar per direction per option.
+       Built by render_email.py from RUN["journeys"]. -->
+  <tr><td style="background:#ffffff;border-radius:12px;padding:20px 24px 14px;">
+    <h2 style="margin:0 0 6px;font-size:17px;font-weight:700;color:#1a202c;">⏱️ How long each trip takes</h2>
+    <p style="margin:0 0 12px;font-size:12.5px;color:#8a94a6;line-height:1.5;">Door-to-door, drawn to the same scale. Longer bar = longer trip.</p>
+    {{JOURNEY_BLOCK}}
+  </td></tr>
+
+  <tr><td style="height:14px;line-height:14px;font-size:0;">&nbsp;</td></tr>
+
   <!-- ══ ITINERARY ══ -->
   <tr><td style="background:#ffffff;border-radius:12px;padding:20px 24px 22px;">
     <h2 style="margin:0 0 6px;font-size:17px;font-weight:700;color:#1a202c;">🗓️ {{ITIN_TITLE}}</h2>

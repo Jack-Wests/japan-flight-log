@@ -81,7 +81,10 @@ palette-quantised — big enough to read, small enough to serve.
 
 ## 5. Render the email
 
-Edit the `RUN` block at the top of `render_email.py`, then:
+Edit the `RUN` block at the top of `render_email.py` — including `journeys`, the
+door-to-door breakdown (flying / waiting / Singapore stop, in minutes) for each
+table row. It draws the "How long each trip takes" bars, so the minutes for each
+leg must add up to the door-to-door time in the table. Then:
 
 ```bash
 python3 render_email.py   # writes email.html + email.txt
