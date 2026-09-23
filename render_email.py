@@ -394,7 +394,7 @@ def build_text():
           f'Distance from buy target (${BUY_TARGET:,}): {RUN["target_distance"]}',
           "", "TRIP OPTIONS", ""]
     for label, there, home, pp, all4, note in RUN["options"]:
-        L += [f'{label} - {pp} pp / {strip(all4.replace("<br>", " · "))} for four',
+        L += [f'{label} - {pp} pp / all 4: {strip(all4.replace("<br>", " · "))}',
               f'  There: {strip(there)}',
               f'  Home:  {strip(home)}',
               f'  {note}', ""]
