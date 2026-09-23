@@ -102,7 +102,7 @@ RUN = {
             "there": ("2027-02-01 18:10", [
                 ("fly", 475, "Brisbane → Singapore"), ("wait", 85, "Singapore"),
                 ("fly", 365, "Singapore → Osaka"),
-                ("wait", 530, "Osaka, ferry to Kobe airport"),
+                ("wait", 530, "Osaka + ferry to Kobe airport"),
                 ("fly", 110, "Kobe → Sapporo")]),
             "home": ("2027-02-17 22:40", [
                 ("fly", 410, "Tokyo → Port Moresby"), ("wait", 60, "Port Moresby"),
@@ -194,8 +194,8 @@ def options_rows():
     return "".join(out)
 
 
-# Journey bars: one row per part of the trip (Gantt style), so each piece of
-# text sits directly under its own bar. Times are Brisbane time (AEST) so you
+# Journey bars: one bar per leg; each coloured piece is numbered and the
+# numbered lines underneath say what it is. Times are Brisbane time (AEST) so you
 # can see which bits fall in the middle of the night. Colours checked for
 # colourblind separation; every row is labelled, so nothing relies on colour.
 SEG_COLOUR = {"fly": "#1565c0", "wait": "#e0913a", "sg": "#12a37f"}
@@ -234,42 +234,56 @@ def segments(leg):
 
 
 def journey_block():
+    """One bar per leg (There / Home, total on the right), like the original.
+    Each coloured piece carries a number (plus its length when there's room);
+    the numbered lines under the bar say what each piece is, in Brisbane time."""
     legs = [leg for _, j in RUN["journeys"] for leg in j.values()]
     longest = max(sum(m for _, m, _ in leg[1]) for leg in legs)
-    track = "background:#f1f3f6;font-size:0;"
+    px = 300                               # bar width on a phone
     out = []
     for name, j in RUN["journeys"]:
-        out.append(f'<p style="margin:20px 0 2px;font-size:14px;font-weight:700;color:#1a202c;">{name}</p>')
-        for which, leg in (("Getting there", j["there"]), ("Getting home", j["home"])):
+        out.append(f'<p style="margin:18px 0 2px;font-size:14px;font-weight:700;color:#1a202c;">{name}</p>')
+        for which, leg in (("There", j["there"]), ("Home", j["home"])):
             segs = list(segments(leg))
             total = sum(s[1] for s in segs)
+            bar, lines = "", []
+            for n, (kind, m, label, st, en, off) in enumerate(segs, 1):
+                w = m / longest * 100
+                tag = f"{n} · {hm(m)}" if w / 100 * px >= 48 else str(n)
+                bar += (f'<td align="center" style="width:{w:.1f}%;background:{SEG_COLOUR[kind]};height:24px;'
+                        f'font-size:11px;font-weight:700;color:#ffffff;white-space:nowrap;overflow:hidden;'
+                        f'border-right:2px solid #ffffff;">{tag}</td>')
+                moon = " 🌙" if night_mins(st, m) >= 60 else ""
+                lines.append(
+                    f'<span style="display:inline-block;min-width:15px;height:15px;line-height:15px;'
+                    f'border-radius:8px;background:{SEG_COLOUR[kind]};color:#ffffff;font-size:10px;'
+                    f'font-weight:700;text-align:center;">{n}</span>&nbsp; {SEG_WORD[kind]} {label} · '
+                    f'{hm(m)} <span style="color:#5b6b8c;">· {when(st)} → {when(en, st)}{moon}</span>')
+            rest = 100 - total / longest * 100
+            if rest > 0.5:
+                bar += f'<td style="width:{rest:.1f}%;font-size:0;">&nbsp;</td>'
             out.append(
-                f'<p style="margin:16px 0 2px;font-size:12.5px;color:#3d4757;"><b>{which} · {hm(total)}</b>'
-                f' <span style="color:#8a94a6;">· {when(segs[0][3])} → {when(segs[-1][4])}</span></p>')
-            for kind, m, label, st, en, off in segs:
-                lead = round(off / longest * 100, 1)
-                w = max(1.5, round(m / longest * 100, 1))
-                tail = round(100 - lead - w, 1)
-                cells = (f'<td style="width:{lead}%;{track}">&nbsp;</td>' if lead > 0 else "")
-                cells += (f'<td style="width:{w}%;background:{SEG_COLOUR[kind]};height:12px;'
-                          f'line-height:12px;font-size:0;border-radius:3px;">&nbsp;</td>')
-                cells += (f'<td style="width:{tail}%;{track}">&nbsp;</td>' if tail > 0 else "")
-                moon = " · 🌙" if night_mins(st, m) >= 60 else ""
-                out.append(
-                    f'<table width="100%" cellpadding="0" cellspacing="0" border="0" '
-                    f'style="margin:11px 0 0;border-radius:3px;"><tr>{cells}</tr></table>'
-                    f'<p style="margin:2px 0 0;font-size:12px;color:#3d4757;line-height:1.4;">'
-                    f'{SEG_WORD[kind]} <b>{label}</b> · {hm(m)}'
-                    f' <span style="color:#5b6b8c;">· {when(st)} → {when(en, st)}{moon}</span></p>')
+                f'<table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:10px 0 3px;"><tr>'
+                f'<td style="font-size:12.5px;font-weight:700;color:#3d4757;">{which}</td>'
+                f'<td align="right" style="font-size:13px;font-weight:700;color:#1a202c;">{hm(total)}</td></tr></table>'
+                f'<table width="100%" cellpadding="0" cellspacing="0" border="0" style="table-layout:fixed;'
+                f'border-radius:4px;overflow:hidden;"><tr>{bar}</tr></table>'
+                f'<p style="margin:5px 0 0;font-size:11.5px;color:#3d4757;line-height:1.75;">'
+                + "<br>".join(lines) + '</p>')
     legend = " &nbsp; ".join(
         f'<span style="display:inline-block;width:10px;height:10px;background:{SEG_COLOUR[k]};'
         f'border-radius:2px;vertical-align:middle;"></span>&nbsp;{t}'
         for k, t in (("fly", "In the air"), ("wait", "Waiting / changing planes"),
                      ("sg", "Singapore stop, can leave the airport")))
     return (f'<p style="margin:0 0 4px;font-size:12px;color:#3d4757;">{legend}</p>'
-            f'<p style="margin:0;font-size:12px;color:#5b6b8c;">All times are <b>Brisbane time (AEST)</b>. '
-            f'🌙 = at least an hour of it falls between 10pm and 6am Brisbane time.</p>'
+            f'<p style="margin:0;font-size:12px;color:#5b6b8c;">Numbers on the bar match the lines under it. '
+            f'Times are <b>Brisbane time (AEST)</b>; 🌙 = at least an hour of it is between 10pm and 6am Brisbane time.</p>'
             + "".join(out))
+
+
+def when_short(dt, prev):
+    """'2:05am', with the weekday added when the day has changed."""
+    return clock(dt) if dt.date() == prev.date() else f'{dt.strftime("%a")} {clock(dt)}'
 
 
 def journey_text():

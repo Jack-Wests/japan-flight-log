@@ -39,7 +39,7 @@ Cheapest
     flying 7h55 Brisbane → Singapore: Mon 1 Feb 6:10pm -> Tue 2 Feb 2:05am (night)
     waiting 1h25 Singapore: Tue 2 Feb 2:05am -> 3:30am (night)
     flying 6h05 Singapore → Osaka: Tue 2 Feb 3:30am -> 9:35am (night)
-    waiting 8h50 Osaka, ferry to Kobe airport: Tue 2 Feb 9:35am -> 6:25pm
+    waiting 8h50 Osaka + ferry to Kobe airport: Tue 2 Feb 9:35am -> 6:25pm
     flying 1h50 Kobe → Sapporo: Tue 2 Feb 6:25pm -> 8:15pm
   Home 11h: Wed 17 Feb 10:40pm -> Thu 18 Feb 9:40am
     flying 6h50 Tokyo → Port Moresby: Wed 17 Feb 10:40pm -> Thu 18 Feb 5:30am (night)
