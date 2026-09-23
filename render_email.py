@@ -286,14 +286,14 @@ def build_text():
           f'Distance from buy target (${BUY_TARGET:,}): {RUN["target_distance"]}',
           "", "TRIP OPTIONS", ""]
     for label, there, home, pp, all4, note in RUN["options"]:
-        L += [f'{label} - {pp} pp / {all4} for four',
+        L += [f'{label} - {pp} pp / {strip(all4.replace("<br>", " · "))} for four',
               f'  There: {strip(there)}',
               f'  Home:  {strip(home)}',
               f'  {note}', ""]
     L += [strip(RUN["options_footnote"]), "",
           RUN["itin_title"].upper(), strip(RUN["itin_subtitle"]), ""]
     for date, loc, plan in RUN["itinerary"]:
-        L.append(f'  {date:<12} {loc:<20} {plan}')
+        L.append(f'  {date:<12} {strip(loc):<20} {strip(plan)}')
     L += ["", strip(RUN["itin_footnote"]), "", "PRICE LOG", ""]
     for r in csv.DictReader(open("prices.csv")):
         d = datetime.strptime(r["date"], "%Y-%m-%d").strftime("%a %-d %b")
