@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
 """Regenerate chart.png (and the email copy) from the full prices.csv price log.
 
-Best-total-per-person line over time, with a green BUY zone (<=$1,500),
-amber WATCH band ($1,500-$1,600), and a marker on today's (latest) point.
+Comfortable-price-per-person line over time (the number the verdict is based
+on), with a green BUY zone (<=$1,500), amber WATCH band ($1,500-$1,600), and a
+marker on today's (latest) point. The absolute-cheapest (any-routing) total is
+drawn as a lighter dotted reference so the gap to comfortable is visible — for
+rows logged before comfortable was tracked separately the two lines overlap.
 
 One set of targets — no private target. Also writes chart-email.png and its
 base64 (chart-email.b64) for embedding in the daily email.
@@ -19,12 +22,16 @@ import matplotlib.dates as mdates
 BUY = 1500    # buy target — CALL THE LADS at or below this
 WATCH = 1600  # watch ceiling — HOLD above this
 
-dates, best, fastest = [], [], []
+dates, total, comfortable = [], [], []
 with open("prices.csv") as f:
     for row in csv.DictReader(f):
         dates.append(datetime.strptime(row["date"], "%Y-%m-%d"))
-        best.append(float(row["best_total_pp"]))
-        fastest.append(float(row["fastest_sensible_pp"]))
+        t = float(row["best_total_pp"])
+        # best_comfortable_pp was added in v3; fall back to the total for any
+        # older row (or a blank cell) so the chart never crashes on a hand edit.
+        c = row.get("best_comfortable_pp") or ""
+        comfortable.append(float(c) if c.strip() else t)
+        total.append(t)
 
 
 def build(path, figsize=(10, 5.6), dpi=130):
@@ -36,8 +43,8 @@ def build(path, figsize=(10, 5.6), dpi=130):
     ax.set_facecolor("#fbfbfd")
 
     # Y range gives headroom around the data and always shows the buy/watch bands.
-    ymax = max(max(best), max(fastest), WATCH) * 1.08
-    ymin = min(min(best), BUY) - 150
+    ymax = max(max(total), max(comfortable), WATCH) * 1.06
+    ymin = min(min(comfortable), min(total), BUY) - 120
     ymin = max(0, ymin)
 
     # Shaded decision bands.
@@ -50,18 +57,19 @@ def build(path, figsize=(10, 5.6), dpi=130):
     ax.text(0.012, WATCH - 8, "  WATCH  $1,500–$1,600", transform=ax.get_yaxis_transform(),
             va="top", ha="left", fontsize=9*s, color="#8d6e00", fontweight="bold")
 
-    # Fastest-sensible reference line (lighter).
-    ax.plot(dates, fastest, "-o", color="#90a4ae", lw=1.6, ms=4,
-            label="Fastest sensible pp", zorder=3)
+    # Cheapest any-routing total — lighter dotted reference (may include
+    # forced-overnight fares). Overlaps the comfortable line where they're equal.
+    ax.plot(dates, total, "--o", color="#90a4ae", lw=1.5, ms=3.5,
+            label="Cheapest any-routing pp", zorder=3)
 
-    # Best-total line (hero).
-    ax.plot(dates, best, "-o", color="#1565c0", lw=2.6, ms=6,
-            label="Best total pp", zorder=4)
+    # Best-comfortable line (hero) — the number the verdict is based on.
+    ax.plot(dates, comfortable, "-o", color="#1565c0", lw=2.6, ms=6,
+            label="Best comfortable pp", zorder=4)
 
-    # Highlight today's / latest point.
-    ax.scatter([dates[-1]], [best[-1]], s=170*s, facecolor="#1565c0",
+    # Highlight today's / latest comfortable point.
+    ax.scatter([dates[-1]], [comfortable[-1]], s=170*s, facecolor="#1565c0",
                edgecolor="white", linewidth=2, zorder=6)
-    ax.annotate(f"${best[-1]:,.0f}", (dates[-1], best[-1]),
+    ax.annotate(f"${comfortable[-1]:,.0f}", (dates[-1], comfortable[-1]),
                 textcoords="offset points", xytext=(0, 14), ha="center",
                 fontsize=11*s, fontweight="bold", color="#0d47a1")
 

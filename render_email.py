@@ -19,6 +19,13 @@ OUT = "email.html"
 # One target: $1,500. No private target.
 BUY_TARGET = 1500
 
+
+def cpp(row):
+    """Comfortable price for a log row — the number the verdict is based on.
+    Falls back to best_total_pp for rows logged before v3 added the column."""
+    c = (row.get("best_comfortable_pp") or "").strip()
+    return float(c) if c else float(row["best_total_pp"])
+
 # ─────────────────────────────────────────────────────────────────────────────
 # EDIT THIS BLOCK EACH RUN
 # ─────────────────────────────────────────────────────────────────────────────
@@ -139,12 +146,12 @@ def price_log_rows():
     """Bars straight from prices.csv, so they can't disagree with the log."""
     allrows = list(csv.DictReader(open("prices.csv")))
     rows = allrows[-10:]                      # the chart above carries the full history
-    vals = [float(r["best_total_pp"]) for r in allrows]
+    vals = [cpp(r) for r in allrows]
     top = max(vals) * 1.06
     out = []
     for i, r in enumerate(rows):
         latest = i == len(rows) - 1
-        v = float(r["best_total_pp"])
+        v = cpp(r)
         pct = max(4, round(v / top * 100))
         colour = "#1565c0" if latest else ("#c0392b" if v > 1600 else
                                            "#f9a825" if v > BUY_TARGET else "#2e7d32")
@@ -186,7 +193,7 @@ def deltas():
     """
     rows = list(csv.DictReader(open("prices.csv")))
     today = datetime.strptime(rows[-1]["date"], "%Y-%m-%d")
-    now = float(rows[-1]["best_total_pp"])
+    now = cpp(rows[-1])
     prior = rows[:-1]
 
     def move(then):
@@ -207,7 +214,7 @@ def deltas():
         gap = (today - pdt).days
         when = "yesterday" if gap == 1 else f"{gap} days ago"
         l1 = f"Since last check ({when}, {fmt(pdt)})"
-        v1 = move(float(prev["best_total_pp"]))
+        v1 = move(cpp(prev))
 
     # Row 2: a longer view. Prefer the nearest check at least a week back, but if
     # that's the same entry row 1 already used (gappy log), show the first check
@@ -223,7 +230,7 @@ def deltas():
     if pick:
         pdt = datetime.strptime(pick["date"], "%Y-%m-%d")
         l2 = f"{label} ({fmt(pdt)})"
-        v2 = move(float(pick["best_total_pp"]))
+        v2 = move(cpp(pick))
     else:
         l2, v2 = "Longer trend", "not enough history yet"
 
@@ -281,7 +288,7 @@ def build_text():
     L += ["", strip(RUN["itin_footnote"]), "", "PRICE LOG", ""]
     for r in csv.DictReader(open("prices.csv")):
         d = datetime.strptime(r["date"], "%Y-%m-%d").strftime("%a %-d %b")
-        L.append(f'  {d:<12} ${float(r["best_total_pp"]):,.0f}')
+        L.append(f'  {d:<12} ${cpp(r):,.0f}')
     L += ["", strip(RUN["price_log_footnote"]), "", strip(RUN["footer"])]
     return "\n".join(L)
 
