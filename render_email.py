@@ -30,67 +30,62 @@ def cpp(row):
 # EDIT THIS BLOCK EACH RUN
 # ─────────────────────────────────────────────────────────────────────────────
 RUN = {
-    "date_iso": "2026-09-23",
-    "date_human": "Wed 23 Sep 2026",
-    "verdict_headline": "🟡 WATCH — normal range, a dip might come",
-    "best_pp": "$1,533",
-    "best_all4": "$6,132",
-    "target_distance": "$33 above",
+    "date_iso": "2026-09-24",
+    "date_human": "Thu 24 Sep 2026",
+    "verdict_headline": "🔴 HOLD — dear side, wait (only just)",
+    "best_pp": "$1,602",
+    "best_all4": "$6,408",
+    "target_distance": "$102 above",
     "snapshot": [
         "The cheapest comfortable way to get you to the Hokkaido snow and home again is "
-        "<b>$1,533 per person — $6,132 for all four, or $4,599 for three</b> if Hugh buys "
-        "separately. You'd fly Singapore Airlines to Osaka and hop up to Sapporo, hop back to Tokyo "
-        "after the ski, then fly <b>Air Niugini home from Tokyo</b> overnight with a 1-hour change "
-        "in Port Moresby. No hotel, and you're home in 11 hours.",
-        "That's <b>WATCH</b>, but only <b>$33 above the $1,500 buy price</b>. It's $31 down on "
-        "yesterday's $1,564. Most of the drop is the flight home: Air Niugini is $55 cheaper than "
-        "Singapore Airlines, and its Port Moresby change is a quick plane swap at 5:30am, not an "
-        "overnight. Earlier checks treated anything via Port Moresby as a forced overnight, which is "
-        "only true of the flight <i>over</i>. Today's first check (this morning) had $1,587 because "
-        "it used Singapore Airlines both ways.",
-        "If you'd put up with a forced overnight in Port Moresby on the way over, it's ~$1,470 "
-        "before the hotel, but ~$1,670 once you add it. Not recommended.",
-        "⏳ About 4 months (132 days) until departure. <b>About 3 weeks to the mid-October "
-        "deadline</b>. After that, book the first comfortable day under $1,600, and today's "
-        "$1,533 would already qualify. No airline sale is live: Qantas's Asia sale ended on 21 Sep.",
+        "<b>$1,602 per person — $6,408 for all four, or $4,806 for three</b> if Hugh buys "
+        "separately. You'd fly Singapore Airlines to Osaka, take a short ferry to Kobe and hop up to Sapporo, "
+        "hop back to Tokyo after the ski, then fly <b>Singapore Airlines home from Tokyo</b>.",
+        "That's <b>HOLD</b>, but only by $2: the HOLD line is $1,600. It's <b>$102 above the $1,500 buy price</b> "
+        "and $69 up on yesterday's $1,533. Nearly all of the rise is the flight over, which went up about $80. "
+        "The flight home got cheaper: Singapore Airlines is now $11 under Air Niugini.",
+        "The comfortable price has bounced between $1,427 and $1,674 over the last fortnight, so this is a "
+        "wobble, not a steady climb. A dip back under $1,600 is quite possible.",
+        "⏳ About 4 months (131 days) until departure. <b>3 weeks to the mid-October deadline</b>. After that, "
+        "book the first comfortable day under $1,600. Today would just miss. No airline sale covers your dates: "
+        "Qantas's Asia sale ended 21 Sep, and China Southern's $907 Tokyo fare only covers late February onwards.",
     ],
     "options": [
         # (label, getting there, getting home, pp, all4, worth knowing)
         ("Cheapest",
          "🛫 Dep Brisbane (BNE) Mon 1 Feb 6:10pm → 🛬 lands Sapporo (CTS) Tue 2 Feb 7:15pm "
          "<i>(Singapore Airlines via Singapore to Osaka (KIX), ferry to Kobe (UKB), Skymark to Sapporo)</i>",
-         "🛫 Sapporo (CTS) Sun 14 Feb 8:10am → Tokyo (HND) 9:55am, then Dep Tokyo (NRT) Wed 17 Feb "
-         "9:40pm → 🛬 lands Brisbane (BNE) Thu 18 Feb 9:40am <i>(Air Niugini via Port Moresby, 1h change)</i>",
-         "$1,533", "$6,132<br><span style=\"color:#8a94a6;\">3 of you: $4,599</span>",
-         "~26h over (9h daytime stop in Osaka, bags and a 30-min ferry, ~$19 included) · 11h home "
-         "on an overnight flight, 5:30am plane change in Port Moresby, no hotel"),
+         "🛫 Sapporo (CTS) Sun 14 Feb 8:10am → Tokyo (HND) 9:55am, then Dep Tokyo (NRT) Tue 16 Feb "
+         "6:50pm → 🛬 lands Brisbane (BNE) Wed 17 Feb 4:55pm <i>(Singapore Airlines via Singapore)</i>",
+         "$1,602", "$6,408<br><span style=\"color:#8a94a6;\">3 of you: $4,806</span>",
+         "~26h over (9h daytime stop in Osaka with a 30-min ferry, ~$19 included) · 21h home with a "
+         "1:20–7:05am wait inside Changi airport (too short to leave)"),
         ("Best value",
          "🛫 Dep Brisbane (BNE) Tue 2 Feb 6:10pm → 🛬 lands Sapporo (CTS) Wed 3 Feb 7:40pm "
          "<i>(Singapore Airlines via Singapore to Osaka (KIX), Peach to Sapporo)</i>",
-         "Same as Cheapest: Sapporo → Tokyo Sun 14 Feb, Air Niugini home from Tokyo (NRT) Wed 17 Feb "
-         "9:40pm → lands Brisbane Thu 18 Feb 9:40am",
-         "$1,585", "$6,340<br><span style=\"color:#8a94a6;\">3 of you: $4,755</span>",
-         "Overnight in Singapore (12:05–8:25am): Isaac sees his partner, free stay. $52pp more"),
+         "Same as Cheapest: Sapporo → Tokyo Sun 14 Feb, Singapore Airlines home from Tokyo (NRT) Tue 16 Feb "
+         "6:50pm → lands Brisbane Wed 17 Feb 4:55pm",
+         "$1,663", "$6,652<br><span style=\"color:#8a94a6;\">3 of you: $4,989</span>",
+         "Overnight in Singapore (12:05–8:25am): Isaac sees his partner, free stay. $61pp more"),
         ("Fastest sensible",
          "🛫 Dep Brisbane (BNE) Tue 2 Feb 12:50am (Mon night) → 🛬 lands Sapporo (CTS) Tue 2 Feb "
          "2:50pm <i>(Cathay Pacific via Hong Kong)</i>",
-         "Same as Cheapest: Sapporo → Tokyo Sun 14 Feb, Air Niugini home from Tokyo (NRT) Wed 17 Feb "
-         "9:40pm → lands Brisbane Thu 18 Feb 9:40am",
-         "$1,674", "$6,696<br><span style=\"color:#8a94a6;\">3 of you: $5,022</span>",
-         "15h over with one short Hong Kong change. $141pp more than the cheapest"),
+         "🛫 Sapporo (CTS) Sun 14 Feb 8:10am → Tokyo (HND) 9:55am, then Dep Tokyo (NRT) Wed 17 Feb "
+         "9:40pm → 🛬 lands Brisbane (BNE) Thu 18 Feb 9:40am <i>(Air Niugini via Port Moresby, 1h change)</i>",
+         "$1,751", "$7,004<br><span style=\"color:#8a94a6;\">3 of you: $5,253</span>",
+         "15h over with one short Hong Kong change, 11h home. $149pp more than the cheapest"),
     ],
     "options_footnote":
         "Prices are per person, all-in, with a 20kg checked bag each way and the $125 Sapporo→Tokyo hop "
-        "on 14 Feb. <b>Prefer Singapore Airlines home?</b> Tue 16 Feb 6:50pm from Narita, landing "
-        "Brisbane Wed 17 Feb 4:55pm, is $55pp more ($1,588 total). It has a 1:20–7:05am wait in "
-        "Singapore, which isn't long enough to leave the airport. One thing to watch on Air Niugini: the "
-        "Port Moresby change is only an hour. If it's missed, the next flight to Brisbane is 2pm the same day. "
-        "<b>Cheapest if you'd overnight in Port Moresby:</b> ~$1,470pp (flying out via Port Moresby with a night there). "
-        "Not recommended: it's ~$1,670 once you add a hotel and transfers. <b>Qantas QF107 Sydney–Sapporo direct:</b> "
-        "$1,737pp one way from Sydney, about $1,900pp with the Brisbane–Sydney flight. That's just to "
-        "get there, so it's not a live pick. <b>Brisbane ⇄ Tokyo return plus a Tokyo→Sapporo hop</b> "
-        "(Jetstar over, Singapore Airlines home) comes to ~$1,680pp, so it's dearer than flying into Sapporo. "
-        "No date shift saved $100+pp.",
+        "on 14 Feb. <b>Prefer Air Niugini home?</b> Wed 17 Feb 9:40pm from Narita, landing Brisbane Thu 18 Feb "
+        "9:40am, is only $11pp more ($1,613 total). It takes 11 hours instead of 21 and gives you an extra day in Tokyo. The Port "
+        "Moresby change is only an hour, and if it's missed the next Brisbane flight is 2pm. "
+        "<b>Cheapest if you'd overnight in Port Moresby:</b> ~$1,451pp (Air Niugini to and from Tokyo plus both Sapporo hops, "
+        "with a night in Port Moresby on the way over). Not recommended: it's ~$1,650 once you add a hotel and transfers. "
+        "<b>Qantas QF107 Sydney–Sapporo direct:</b> $1,737pp one way from Sydney, about $1,890pp with the "
+        "Brisbane–Sydney flight. That's just to get there. <b>Brisbane ⇄ Tokyo return plus the Sapporo hops</b> "
+        "(China Airlines via Taipei) comes to ~$1,609pp, but it lands in Narita at 6:30pm and relies on a tight "
+        "late connection from Haneda. No date shift saved $100+pp.",
     # Door-to-door timeline per table row, drawn as bars in the email.
     # Each leg is (departure in Brisbane time/AEST "YYYY-MM-DD HH:MM", segments);
     # each segment is (kind, minutes, label). kind: "fly" = in the air,
@@ -104,9 +99,9 @@ RUN = {
                 ("fly", 365, "Singapore → Osaka"),
                 ("wait", 530, "Osaka, ferry to Kobe airport"),
                 ("fly", 110, "Kobe → Sapporo")]),
-            "home": ("2027-02-17 22:40", [
-                ("fly", 410, "Tokyo → Port Moresby"), ("wait", 60, "Port Moresby"),
-                ("fly", 190, "Port Moresby → Brisbane")]),
+            "home": ("2027-02-16 19:50", [
+                ("fly", 450, "Tokyo → Singapore"), ("wait", 345, "Singapore (airport)"),
+                ("fly", 470, "Singapore → Brisbane")]),
         }),
         ("Best value", {
             "there": ("2027-02-02 18:10", [
@@ -114,9 +109,9 @@ RUN = {
                 ("sg", 500, "Singapore overnight"),
                 ("fly", 365, "Singapore → Osaka"), ("wait", 135, "Osaka"),
                 ("fly", 115, "Osaka → Sapporo")]),
-            "home": ("2027-02-17 22:40", [
-                ("fly", 410, "Tokyo → Port Moresby"), ("wait", 60, "Port Moresby"),
-                ("fly", 190, "Port Moresby → Brisbane")]),
+            "home": ("2027-02-16 19:50", [
+                ("fly", 450, "Tokyo → Singapore"), ("wait", 345, "Singapore (airport)"),
+                ("fly", 470, "Singapore → Brisbane")]),
         }),
         ("Fastest sensible", {
             "there": ("2027-02-02 00:50", [
@@ -128,9 +123,9 @@ RUN = {
         }),
     ],
     "itin_title": "Option A — Cheapest (Furano base)",
-    "itin_subtitle": "15 nights on the ground · hire car picked up &amp; dropped at Sapporo (CTS)",
+    "itin_subtitle": "14 nights on the ground · hire car picked up &amp; dropped at Sapporo (CTS)",
     "itinerary": [
-        ("Mon 1 Feb", "Brisbane → Singapore", "Fly out 6:10pm, change planes in Singapore around midnight"),
+        ("Mon 1 Feb", "Brisbane → Singapore", "Fly out 6:10pm, change planes in Singapore just after midnight"),
         ("Tue 2 Feb", "Osaka → Sapporo", "Land Osaka 8:35am, day in Osaka, ferry to Kobe, land Sapporo 7:15pm, pick up the car"),
         ("Wed 3 Feb", "Sapporo", "Recovery day: ramen alley, Sapporo Beer Museum, Tanukikoji arcade"),
         ("Thu 4 Feb", "Sapporo", "<b>Snow Festival day 1</b>: Odori Park on opening day"),
@@ -145,18 +140,17 @@ RUN = {
         ("Sat 13 Feb", "→ Jozankei → Otaru → Sapporo", "Day-use onsen at Jozankei, then the <b>Otaru Snow Light Path</b> on its last evening; sleep in Sapporo"),
         ("Sun 14 Feb", "Sapporo → Tokyo", "Drop the car at Sapporo (CTS), fly 8:10am, land Haneda 9:55am; Shibuya"),
         ("Mon 15 Feb", "Tokyo", "Asakusa, Akihabara, teamLab"),
-        ("Tue 16 Feb", "Tokyo", "Shinjuku, Harajuku, day trip option to Kamakura or Hakone"),
-        ("Wed 17 Feb", "Tokyo → home", "Last day in Tokyo, fly out of Narita 9:40pm"),
-        ("Thu 18 Feb", "→ Brisbane", "Change planes in Port Moresby 5:30–6:30am, land Brisbane 9:40am"),
+        ("Tue 16 Feb", "Tokyo → home", "Shinjuku/Harajuku morning, fly out of Narita 6:50pm"),
+        ("Wed 17 Feb", "→ Brisbane", "Wait in Changi 1:20–7:05am, land Brisbane 4:55pm"),
     ],
     "itin_footnote":
         "<b>Best value</b> is the same trip, but you leave Tue 2 Feb and spend the night in "
         "Singapore (Isaac with his partner, the others in town). You land in Sapporo Wed 3 Feb at 7:40pm, "
         "so there's one less Sapporo night and you still make the first Snow Festival day. "
-        "<b>Fastest sensible</b> leaves just after midnight Mon night and lands in Sapporo at 2:50pm Tue 2 Feb, "
-        "an afternoon earlier than the cheapest. Everything after that is the same.",
+        "<b>Fastest sensible</b> leaves just after midnight Mon night and lands in Sapporo at 2:50pm Tue 2 Feb. "
+        "It flies home a day later (Wed 17 Feb, Air Niugini), so you get a third Tokyo day.",
     "price_log_footnote":
-        "Showing the last 10 checks; the chart above has all 63. Since 23 Sep the line tracks the "
+        "Showing the last 10 checks; the chart above has all 64. Since 23 Sep the line tracks the "
         "cheapest <i>comfortable</i> price (no hidden forced overnights). Earlier days logged the "
         "cheapest price with any routing. Comfortable range so far: $1,333–$1,709.",
     "footer":
