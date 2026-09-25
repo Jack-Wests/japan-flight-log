@@ -48,6 +48,11 @@ fly home from TYO Feb 16–17. ~13 nights total.
   retired $1,430 buy target to stay visible as a purple dotted line, so the
   goalposts can't quietly move. It's a record, not a second target: no shading,
   no verdict based on it. `make_chart.py` draws it — don't remove it.
+- **The "How long each trip takes" bars are settled (25 Sep 2026).** One bar per
+  leg, There/Home in bold black, hours inside each piece, one line of detail
+  underneath in each piece's colour, 🛏️ on overnight layovers. Isaac rejected
+  one-row-per-piece, numbered pieces, stacked labels and AEST timestamps. Don't
+  redesign it unless he asks.
 - **This repo is public.** Anything committed is readable by anyone, including
   every past version in the history.
 - **One email per run. Never a "corrected" follow-up.** Fix it before sending
