@@ -17,6 +17,19 @@ from .types import (
 from .errors import AttemptsExhaustedIncompleteResponse, BannedWithCaptcha, GenericError
 
 # TODO aggiungere scraping da qualsiasi (tipo Milano)
+
+def _captcha_url(req):
+    """Where the 403 bot-check page points. Skyscanner's bot protection
+    answers in two shapes ({"redirect_to": ...} or {"action": "captcha", ...});
+    either way this is a captcha ban, not an unknown crash."""
+    try:
+        body = req.json()
+    except Exception:
+        body = {}
+    if body.get("redirect_to"):
+        return "https://www.skyscanner.net" + body["redirect_to"]
+    return f"https://www.skyscanner.net (bot check: {body.get('action', 'blocked')})"
+
 class SkyScanner:
     """
     A client for interacting with the Skyscanner flight and car rental APIs.
@@ -171,7 +184,7 @@ class SkyScanner:
         )
         if req.status_code == 403:
             raise BannedWithCaptcha(
-                "https://www.skyscanner.net" + req.json()["redirect_to"]
+                _captcha_url(req)
             )
         data = orjson.loads(req.content)
 
@@ -240,7 +253,7 @@ class SkyScanner:
         )
         if req.status_code == 403:
             raise BannedWithCaptcha(
-                "https://www.skyscanner.net" + req.json()["redirect_to"]
+                _captcha_url(req)
             )
 
         if req.status_code != 200:
@@ -284,7 +297,7 @@ class SkyScanner:
         req = self.session.get(url, params=params)
         if req.status_code == 403:
             raise BannedWithCaptcha(
-                "https://www.skyscanner.net" + req.json()["redirect_to"]
+                _captcha_url(req)
             )
 
         if req.status_code != 200:
@@ -422,7 +435,7 @@ class SkyScanner:
         )
         if req.status_code == 403:
             raise BannedWithCaptcha(
-                "https://www.skyscanner.net" + req.json()["redirect_to"]
+                _captcha_url(req)
             )
         if req.status_code != 200:
             raise GenericError(

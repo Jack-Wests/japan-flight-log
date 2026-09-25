@@ -24,7 +24,12 @@ because they are not required to run this MCP.
 `mcp_server.py` is modified so `SkyScanner()` is instantiated lazily on the
 first tool call rather than during MCP process startup. This avoids performing
 PerimeterX/Skyscanner network I/O before Claude completes the MCP stdio
-handshake. No other intended behavioural change is made.
+handshake.
+
+`vendor/skyscanner/skyscanner/skyscanner.py` is modified (25 Sep 2026) so a 403
+bot-check reply without a `redirect_to` field still raises `BannedWithCaptcha`
+instead of crashing with `KeyError: 'redirect_to'`. No other intended
+behavioural change is made.
 
 The original source is experimental and reverse-engineered; see
 `UPSTREAM-README.md` for its disclaimer.

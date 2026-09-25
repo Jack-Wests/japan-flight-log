@@ -86,7 +86,11 @@ door-to-door breakdown (flying / waiting / Singapore stop, in minutes) for each
 table row, plus each leg's departure time in **Brisbane time (AEST)**. It draws the
 "How long each trip takes" bars (hours written inside each piece, and a 🛏️ on
 any layover that runs through the night, worked out from the departure time). The minutes for each leg must add up
-to the door-to-door time in the table; the clock times are worked out from them. Then:
+to the door-to-door time in the table; the clock times are worked out from them.
+Each piece's label must **start with the place it starts from** ("Singapore",
+"Osaka, ferry to Kobe airport", "Tokyo → Seoul"): the local clock time printed
+under the bar comes from `PLACE_TZ` in `render_email.py`, and the render stops
+with an error if a place is missing — add it (hours ahead of Brisbane in Feb). Then:
 
 ```bash
 python3 render_email.py   # writes email.html + email.txt
@@ -141,6 +145,7 @@ Full write-up for the record.
 | "Since yesterday" wrong | hardcoded label on a gappy log | computed in `render_email.py` |
 | Price log looks empty / gappy | every run pushes to its own branch, never merged | `sync_prices.py` at step 0 |
 | Skyscanner MCP is missing / won't start | local dependency/bootstrap failure | run `bash tools/start_skyscanner_mcp.sh --check`; see `SKYSCANNER-MCP.md` |
-| Skyscanner returns `BannedWithCaptcha` | upstream reverse-engineered client was blocked | retry once only, then use Kiwi + web and note it in Nerd Notes |
+| Skyscanner "connection timed out after 30000ms" at session start | first launch built its Python environment with pip (~30s), right at Claude Code's 30s MCP start limit | fixed 25 Sep: launcher uses `uv` (~2s) and `.claude/settings.json` sets `MCP_TIMEOUT` to 120s |
+| Skyscanner returns `BannedWithCaptcha` (used to show as `KeyError: 'redirect_to'`) | Skyscanner's bot protection blocks the cloud machine's IP with a captcha; confirmed 25 Sep with plain curl too | not fixable from our side; retry once only, then use Kiwi + web and note it in Nerd Notes |
 | Email looks too wide / fine on "phone" preview | headless Chromium can't open a window under 500px, so a `--window-size=390` screenshot is really a cropped 500px page | preview phone width with Playwright's mobile viewport (`is_mobile=True`, 390 wide) and check `scrollWidth` |
 | Email wider than a phone screen | six-column options table | options are stacked cards (`options_rows()`); don't go back to a wide table |

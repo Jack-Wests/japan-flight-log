@@ -204,6 +204,23 @@ SEG_WORD = {"fly": "✈️", "wait": "wait", "sg": "🇸🇬 stop"}
 NIGHT = (22, 8)          # 10pm–8am Brisbane time counts as sleep time, for 🛏️
 
 
+# Hours ahead of Brisbane (AEST) in February, for printing each piece's local
+# start time. Each journey label starts with the place the piece starts from.
+PLACE_TZ = {"Brisbane": 0, "Cairns": 0, "Gold Coast": 0, "Sydney": 1, "Melbourne": 1,
+            "Port Moresby": 0, "Singapore": -2, "Kuala Lumpur": -2, "Hong Kong": -2,
+            "Taipei": -2, "Manila": -2, "Guangzhou": -2, "Shanghai": -2, "Denpasar": -2,
+            "Bangkok": -3, "Seoul": -1, "Tokyo": -1, "Osaka": -1, "Kobe": -1, "Sapporo": -1}
+
+
+def local_clock(label, t):
+    """Local time where this piece starts, e.g. '12:05am' for a Singapore wait."""
+    place = next((p for p in sorted(PLACE_TZ, key=len, reverse=True) if label.startswith(p)), None)
+    if place is None:
+        raise SystemExit(f"journey label {label!r} doesn't start with a place in PLACE_TZ — add it")
+    lt = t + timedelta(hours=PLACE_TZ[place])
+    return lt.strftime("%I:%M%p").lstrip("0").lower()
+
+
 def hm(mins):
     return f"{mins // 60}h{mins % 60:02d}" if mins % 60 else f"{mins // 60}h"
 
@@ -228,6 +245,16 @@ def overnight(kind, st, m):
     return kind in ("wait", "sg") and m >= 240 and night_mins(st, m) >= m / 2
 
 
+def min_w(mins, px=210):
+    """Narrowest % of the bar that still fits this piece's hours at 9px."""
+    return (5.4 * len(hm(mins)) + 5) / px * 100
+
+
+def leg_end_place(segs):
+    """The place a leg lands, from its last flight's label ('Kobe → Sapporo')."""
+    return segs[-1][2].split("→")[-1].strip()
+
+
 def journey_block():
     legs = [leg for _, j in RUN["journeys"] for leg in j.values()]
     longest = max(sum(m for _, m, _ in leg[1]) for leg in legs)
@@ -240,17 +267,28 @@ def journey_block():
             segs = list(segments(leg))
             total = sum(s[1] for s in segs)
             cells, detail = [], []
-            for kind, m, label, st, en, off in segs:
-                w = max(1, round(m / longest * 100, 1))
+            leg_w = total / longest * 100
+            # Every piece is labelled, so short pieces get a minimum width that
+            # fits their hours at the small font; the long pieces give it up.
+            need = [min_w(s[1]) for s in segs]
+            nat = [s[1] / total * leg_w for s in segs]
+            bumped = [max(n, q) for n, q in zip(nat, need)]
+            spare = sum(n for n, q in zip(nat, need) if n > q)
+            squeeze = (leg_w - sum(q for n, q in zip(nat, need) if n <= q)) / spare if spare else 1
+            widths = [q if n <= q else n * squeeze for n, q in zip(nat, need)]
+            for (kind, m, label, st, en, off), w in zip(segs, widths):
+                w = round(w, 1)
                 bed = " 🛏️" if overnight(kind, st, m) else ""
-                txt = hm(m) + bed
-                if w / 100 * px < 7 * len(hm(m)) + (18 if bed else 6):
-                    txt = hm(m) if w / 100 * px >= 7 * len(hm(m)) + 6 else "&nbsp;"
+                txt = hm(m) + (bed if w / 100 * px >= 7 * len(hm(m)) + 18 else "")
+                fs = "10.5px" if w / 100 * px >= 6.2 * len(hm(m)) + 6 else "9px"
                 cells.append(f'<td align="center" style="width:{w}%;background:{SEG_COLOUR[kind]};height:20px;'
-                             f'line-height:20px;font-size:10.5px;font-weight:700;color:#ffffff;white-space:nowrap;'
-                             f'overflow:hidden;border-right:2px solid #ffffff;">{txt}</td>')
-                detail.append(f'<span style="color:{SEG_TEXT[kind]};">{SEG_WORD[kind]} {hm(m)} {label}{bed}</span>')
-            rest = round(100 - total / longest * 100, 1)
+                             f'line-height:20px;font-size:{fs};font-weight:700;color:#ffffff;white-space:nowrap;'
+                             f'overflow:hidden;letter-spacing:-0.2px;border-right:2px solid #ffffff;">{txt}</td>')
+                detail.append(f'<span style="color:{SEG_TEXT[kind]};"><b>{local_clock(label, st)}</b> '
+                              f'{SEG_WORD[kind]} {hm(m)} {label}{bed}</span>')
+            last = segs[-1]
+            detail.append(f'<span style="color:#1a202c;">lands <b>{local_clock(leg_end_place(segs), last[4])}</b></span>')
+            rest = round(100 - leg_w, 1)
             if rest > 0.5:
                 cells.append(f'<td style="width:{rest}%;font-size:0;">&nbsp;</td>')
             out.append(
@@ -280,9 +318,9 @@ def journey_text():
             segs = list(segments(leg))
             total = sum(s[1] for s in segs)
             parts = " | ".join(
-                f'{"flying" if k == "fly" else "waiting"} {hm(m)} {label}'
+                f'{local_clock(label, st)} {"flying" if k == "fly" else "waiting"} {hm(m)} {label}'
                 f'{" (overnight stop)" if overnight(k, st, m) else ""}'
-                for k, m, label, st, en, off in segs)
+                for k, m, label, st, en, off in segs) + f" | lands {local_clock(leg_end_place(segs), segs[-1][4])}"
             L.append(f"  {which} {hm(total)}: {parts}")
     return L
 

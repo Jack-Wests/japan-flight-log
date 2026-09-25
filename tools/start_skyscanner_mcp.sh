@@ -18,18 +18,34 @@ log() {
 ensure_venv() {
   mkdir -p "$CACHE_BASE"
 
+  # uv (preinstalled on Claude's cloud machines) builds this in a few seconds;
+  # plain pip takes ~30s, which is as long as Claude Code waits for an MCP
+  # server to start, so every fresh session used to time out on first launch.
+  local uv=""
+  uv="$(command -v uv || true)"
+  [[ -z "$uv" && -x "${HOME}/.local/bin/uv" ]] && uv="${HOME}/.local/bin/uv"
+
   if [[ ! -x "$VENV_DIR/bin/python" ]]; then
     log "creating isolated Python environment"
     rm -rf "$VENV_DIR"
-    python3 -m venv "$VENV_DIR" >&2
+    if [[ -n "$uv" ]]; then
+      "$uv" venv --quiet --python "$(command -v python3)" "$VENV_DIR" >&2
+    else
+      python3 -m venv "$VENV_DIR" >&2
+    fi
   fi
 
   if ! "$VENV_DIR/bin/python" -c 'import fastmcp, curl_cffi, typeguard, orjson' >/dev/null 2>&1; then
     log "installing MCP Python dependencies"
-    "$VENV_DIR/bin/python" -m pip install \
-      --disable-pip-version-check \
-      --quiet \
-      -r "$MCP_DIR/requirements.txt" >&2
+    if [[ -n "$uv" ]]; then
+      "$uv" pip install --quiet --python "$VENV_DIR/bin/python" \
+        -r "$MCP_DIR/requirements.txt" >&2
+    else
+      "$VENV_DIR/bin/python" -m pip install \
+        --disable-pip-version-check \
+        --quiet \
+        -r "$MCP_DIR/requirements.txt" >&2
+    fi
   fi
 }
 
