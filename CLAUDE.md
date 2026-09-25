@@ -56,6 +56,10 @@ fly home from TYO Feb 16–17. ~13 nights total.
   every-piece labels added at Isaac's request, 25 Sep evening.) Isaac rejected
   one-row-per-piece, numbered pieces, stacked labels and AEST timestamps. Don't
   redesign it unless he asks.
+- **The email as sent on 26 Sep 2026 is the approved layout.** Isaac called it
+  "perfection". Keep its structure and tone: plain-English snapshot, stacked option
+  cards with check-it-yourself links, the footnote of alternatives, journey bars,
+  itinerary, price log. Change the numbers each day, not the shape.
 - **This repo is public.** Anything committed is readable by anyone, including
   every past version in the history.
 - **One email per run. Never a "corrected" follow-up.** Fix it before sending
