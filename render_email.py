@@ -78,6 +78,16 @@ RUN = {
          "$1,742", "$6,968<br><span style=\"color:#8a94a6;\">3 of you: $5,226</span>",
          "15h over, one short Hong Kong change · 11h home, one ticket. $193pp more than the cheapest"),
     ],
+    # Each flight in each option, for the "check it yourself" links:
+    # (from, to, "YYYY-MM-DD"), one per separate flight/ticket, in order.
+    "check_links": {
+        "Cheapest": [("BNE", "KIX", "2027-02-01"), ("UKB", "CTS", "2027-02-02"),
+                     ("CTS", "HND", "2027-02-14"), ("NRT", "BNE", "2027-02-16")],
+        "Best value": [("BNE", "KIX", "2027-02-01"), ("KIX", "CTS", "2027-02-02"),
+                       ("CTS", "HND", "2027-02-14"), ("NRT", "BNE", "2027-02-16")],
+        "Fastest sensible": [("BNE", "CTS", "2027-02-02"), ("CTS", "HND", "2027-02-14"),
+                             ("NRT", "BNE", "2027-02-17")],
+    },
     "options_footnote":
         "Prices are per person, all-in, with a 20kg checked bag each way and the $114 Air Do "
         "Sapporo→Tokyo hop on 14 Feb. <b>Rather not change tickets in Seoul?</b> Singapore Airlines "
@@ -168,6 +178,46 @@ RUN = {
 TH_TD = "padding:9px 10px;font-size:12.5px;color:#3d4757;line-height:1.5;border-bottom:1px solid #eef0f3;vertical-align:top;"
 
 
+# Airport codes → names for the check links. Add any new airport here.
+AIRPORT = {"BNE": "Brisbane", "OOL": "Gold Coast", "CNS": "Cairns", "SYD": "Sydney",
+           "MEL": "Melbourne", "CTS": "Sapporo", "NRT": "Tokyo Narita", "HND": "Tokyo Haneda",
+           "KIX": "Osaka Kansai", "ITM": "Osaka Itami", "UKB": "Kobe", "SIN": "Singapore",
+           "HKG": "Hong Kong", "TPE": "Taipei", "ICN": "Seoul", "POM": "Port Moresby",
+           "MNL": "Manila", "KUL": "Kuala Lumpur", "CAN": "Guangzhou", "PVG": "Shanghai"}
+
+
+def sky_url(frm, to, date, adults=1):
+    """Skyscanner results page for one flight on one day, 1 adult so the prices
+    line up with the email's per-person figures."""
+    d = datetime.strptime(date, "%Y-%m-%d").strftime("%y%m%d")
+    return (f"https://www.skyscanner.com.au/transport/flights/{frm.lower()}/{to.lower()}/{d}/"
+            f"?adultsv2={adults}&cabinclass=economy&rtn=0&preferdirects=false")
+
+
+def gf_url(frm, to, date):
+    """Google Flights results for the same flight, in AUD."""
+    q = f"Flights from {frm} to {to} on {date} one way economy"
+    return "https://www.google.com/travel/flights?hl=en-AU&curr=AUD&q=" + q.replace(" ", "%20")
+
+
+def flight_name(frm, to, date):
+    if frm not in AIRPORT or to not in AIRPORT:
+        raise SystemExit(f"check_links: add {frm if frm not in AIRPORT else to} to AIRPORT")
+    day = datetime.strptime(date, "%Y-%m-%d")
+    return f"{AIRPORT[frm]} → {AIRPORT[to]}, {day.strftime('%a')} {day.day} {day.strftime('%b')}"
+
+
+def check_links_html(label):
+    rows = []
+    a = "color:#1565c0;font-weight:600;text-decoration:underline;"
+    for frm, to, date in RUN.get("check_links", {}).get(label, []):
+        rows.append(f'<p style="margin:0 0 6px;font-size:12.5px;color:#3d4757;line-height:1.5;">'
+                    f'{flight_name(frm, to, date)}<br>'
+                    f'<a href="{sky_url(frm, to, date)}" style="{a}">Skyscanner</a>'
+                    f' &nbsp;·&nbsp; <a href="{gf_url(frm, to, date)}" style="{a}">Google Flights</a></p>')
+    return "".join(rows)
+
+
 def options_rows():
     """One stacked card per option. Cards, not a six-column table: a wide table
     forces the whole email wider than a phone screen."""
@@ -190,7 +240,10 @@ def options_rows():
             f'<p style="{lab}">Getting there</p><p style="{body}">{there}</p>'
             f'<p style="{lab}">Getting home</p><p style="{body}">{home}</p>'
             f'<p style="{lab}">Worth knowing</p><p style="{body}">{note}</p>'
-            f'</td></tr></table>')
+            + (f'<p style="{lab}">Check each flight yourself</p>{check_links_html(label)}'
+               f'<div style="height:6px;line-height:6px;font-size:0;">&nbsp;</div>'
+               if RUN.get("check_links", {}).get(label) else "")
+            + f'</td></tr></table>')
     return "".join(out)
 
 
@@ -477,7 +530,12 @@ def build_text():
         L += [f'{label} - {pp} pp / all 4: {strip(all4.replace("<br>", " · "))}',
               f'  There: {strip(there)}',
               f'  Home:  {strip(home)}',
-              f'  {note}', ""]
+              f'  {note}']
+        for frm, to, date in RUN.get("check_links", {}).get(label, []):
+            L += [f'  Check {flight_name(frm, to, date)}:',
+                  f'    Skyscanner: {sky_url(frm, to, date)}',
+                  f'    Google Flights: {gf_url(frm, to, date)}']
+        L += [""]
     L += [strip(RUN["options_footnote"]), "", "HOW LONG EACH TRIP TAKES", ""] + journey_text() + [""]
     L += [
           RUN["itin_title"].upper(), strip(RUN["itin_subtitle"]), ""]

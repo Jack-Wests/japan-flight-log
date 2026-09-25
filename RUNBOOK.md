@@ -50,6 +50,28 @@ Record two numbers:
 > the email's third table row. It is **not** the Qantas QF107 Sydney–Sapporo direct,
 > which usually costs close to double and belongs in the footnote, not a row.
 
+### 1b. Google Flights cross-check (SerpApi)
+
+Skyscanner blocks the cloud machine, so Google Flights via SerpApi is the
+automatic second source. Once today's table options are picked, run it on the
+cheapest option's flights (one argument per separate flight, same as
+`check_links` below):
+
+```bash
+python3 serp_check.py BNE-KIX-2027-02-01 UKB-CTS-2027-02-02 CTS-HND-2027-02-14 NRT-BNE-2027-02-16
+```
+
+- Needs `SERPAPI_KEY` in the cloud environment's variables. If it isn't set the
+  script says so and exits; note "Google Flights check skipped (no key)" in Nerd
+  Notes and carry on.
+- The free plan has a small monthly allowance, so the script checks at most 4
+  flights per run (`SERPAPI_MAX_PER_RUN`) and keeps a few searches spare.
+  Spend them on the cheapest option first.
+- Google's price usually **excludes the checked bag** on budget airlines. Add the
+  bag before comparing with Kiwi. If Google is genuinely cheaper all-in for a
+  usable flight, use it and say so. If they disagree a lot, say which one is
+  right in Nerd Notes, the same way as for Skyscanner.
+
 ## 2. Check for live airline sales
 
 Jetstar / Qantas / Virgin deal pages. They frequently return **HTTP 403** — if a
@@ -95,6 +117,12 @@ with an error if a place is missing — add it (hours ahead of Brisbane in Feb).
 ```bash
 python3 render_email.py   # writes email.html + email.txt
 ```
+
+Also fill `check_links`: for every table option, one `(from, to, date)` per
+separate flight (e.g. the Singapore Airlines ticket to Osaka, then the Kobe →
+Sapporo hop). The email turns each into "Skyscanner · Google Flights" links set
+to that exact route and day, so Isaac can check the price himself. New airports
+go in `AIRPORT` in `render_email.py`.
 
 The delta rows, the price-log bars and the leak check are all computed — don't
 hand-write them. Never hand-write "since yesterday": if step 0 was skipped the log

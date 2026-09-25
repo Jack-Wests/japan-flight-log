@@ -17,16 +17,49 @@ Cheapest - $1,549 pp / all 4: $6,196 · 3 of you: $4,647
   There: 🛫 Dep Brisbane (BNE) Mon 1 Feb 6:10pm → 🛬 lands Sapporo (CTS) Tue 2 Feb 7:15pm (Singapore Airlines via Singapore to Osaka (KIX), ferry to Kobe (UKB), Skymark to Sapporo)
   Home:  🛫 Sapporo (CTS) Sun 14 Feb 8:00am → Tokyo (HND) 9:35am (Air Do), then Dep Tokyo (NRT) Tue 16 Feb 1:25pm → 🛬 lands Brisbane (BNE) Wed 17 Feb 8:00am (Parata Air to Seoul, Jetstar overnight to Brisbane)
   ~26h over (9h daytime stop in Osaka, 30-min ferry ~$19 included) · 17.5h home with a 5h Seoul change on two tickets: collect bags and check in again (K-ETA ~$12 included)
+  Check Brisbane → Osaka Kansai, Mon 1 Feb:
+    Skyscanner: https://www.skyscanner.com.au/transport/flights/bne/kix/270201/?adultsv2=1&cabinclass=economy&rtn=0&preferdirects=false
+    Google Flights: https://www.google.com/travel/flights?hl=en-AU&curr=AUD&q=Flights%20from%20BNE%20to%20KIX%20on%202027-02-01%20one%20way%20economy
+  Check Kobe → Sapporo, Tue 2 Feb:
+    Skyscanner: https://www.skyscanner.com.au/transport/flights/ukb/cts/270202/?adultsv2=1&cabinclass=economy&rtn=0&preferdirects=false
+    Google Flights: https://www.google.com/travel/flights?hl=en-AU&curr=AUD&q=Flights%20from%20UKB%20to%20CTS%20on%202027-02-02%20one%20way%20economy
+  Check Sapporo → Tokyo Haneda, Sun 14 Feb:
+    Skyscanner: https://www.skyscanner.com.au/transport/flights/cts/hnd/270214/?adultsv2=1&cabinclass=economy&rtn=0&preferdirects=false
+    Google Flights: https://www.google.com/travel/flights?hl=en-AU&curr=AUD&q=Flights%20from%20CTS%20to%20HND%20on%202027-02-14%20one%20way%20economy
+  Check Tokyo Narita → Brisbane, Tue 16 Feb:
+    Skyscanner: https://www.skyscanner.com.au/transport/flights/nrt/bne/270216/?adultsv2=1&cabinclass=economy&rtn=0&preferdirects=false
+    Google Flights: https://www.google.com/travel/flights?hl=en-AU&curr=AUD&q=Flights%20from%20NRT%20to%20BNE%20on%202027-02-16%20one%20way%20economy
 
 Best value - $1,558 pp / all 4: $6,232 · 3 of you: $4,674
   There: 🛫 Dep Brisbane (BNE) Mon 1 Feb 6:10pm → 🛬 lands Sapporo (CTS) Tue 2 Feb 2:30pm (Singapore Airlines via Singapore to Osaka (KIX), Peach to Sapporo)
   Home:  Same as Cheapest: Sapporo → Tokyo Sun 14 Feb, then Tokyo (NRT) Tue 16 Feb 1:25pm → lands Brisbane Wed 17 Feb 8:00am via Seoul
   $9pp more, no ferry: in Sapporo 5 hours sooner (21h over)
+  Check Brisbane → Osaka Kansai, Mon 1 Feb:
+    Skyscanner: https://www.skyscanner.com.au/transport/flights/bne/kix/270201/?adultsv2=1&cabinclass=economy&rtn=0&preferdirects=false
+    Google Flights: https://www.google.com/travel/flights?hl=en-AU&curr=AUD&q=Flights%20from%20BNE%20to%20KIX%20on%202027-02-01%20one%20way%20economy
+  Check Osaka Kansai → Sapporo, Tue 2 Feb:
+    Skyscanner: https://www.skyscanner.com.au/transport/flights/kix/cts/270202/?adultsv2=1&cabinclass=economy&rtn=0&preferdirects=false
+    Google Flights: https://www.google.com/travel/flights?hl=en-AU&curr=AUD&q=Flights%20from%20KIX%20to%20CTS%20on%202027-02-02%20one%20way%20economy
+  Check Sapporo → Tokyo Haneda, Sun 14 Feb:
+    Skyscanner: https://www.skyscanner.com.au/transport/flights/cts/hnd/270214/?adultsv2=1&cabinclass=economy&rtn=0&preferdirects=false
+    Google Flights: https://www.google.com/travel/flights?hl=en-AU&curr=AUD&q=Flights%20from%20CTS%20to%20HND%20on%202027-02-14%20one%20way%20economy
+  Check Tokyo Narita → Brisbane, Tue 16 Feb:
+    Skyscanner: https://www.skyscanner.com.au/transport/flights/nrt/bne/270216/?adultsv2=1&cabinclass=economy&rtn=0&preferdirects=false
+    Google Flights: https://www.google.com/travel/flights?hl=en-AU&curr=AUD&q=Flights%20from%20NRT%20to%20BNE%20on%202027-02-16%20one%20way%20economy
 
 Fastest sensible - $1,742 pp / all 4: $6,968 · 3 of you: $5,226
   There: 🛫 Dep Brisbane (BNE) Tue 2 Feb 12:50am (Mon night) → 🛬 lands Sapporo (CTS) Tue 2 Feb 2:50pm (Cathay Pacific via Hong Kong)
   Home:  🛫 Sapporo (CTS) Sun 14 Feb 8:00am → Tokyo (HND) 9:35am, then Dep Tokyo (NRT) Wed 17 Feb 9:40pm → 🛬 lands Brisbane (BNE) Thu 18 Feb 9:40am (Air Niugini via Port Moresby, 1h change)
   15h over, one short Hong Kong change · 11h home, one ticket. $193pp more than the cheapest
+  Check Brisbane → Sapporo, Tue 2 Feb:
+    Skyscanner: https://www.skyscanner.com.au/transport/flights/bne/cts/270202/?adultsv2=1&cabinclass=economy&rtn=0&preferdirects=false
+    Google Flights: https://www.google.com/travel/flights?hl=en-AU&curr=AUD&q=Flights%20from%20BNE%20to%20CTS%20on%202027-02-02%20one%20way%20economy
+  Check Sapporo → Tokyo Haneda, Sun 14 Feb:
+    Skyscanner: https://www.skyscanner.com.au/transport/flights/cts/hnd/270214/?adultsv2=1&cabinclass=economy&rtn=0&preferdirects=false
+    Google Flights: https://www.google.com/travel/flights?hl=en-AU&curr=AUD&q=Flights%20from%20CTS%20to%20HND%20on%202027-02-14%20one%20way%20economy
+  Check Tokyo Narita → Brisbane, Wed 17 Feb:
+    Skyscanner: https://www.skyscanner.com.au/transport/flights/nrt/bne/270217/?adultsv2=1&cabinclass=economy&rtn=0&preferdirects=false
+    Google Flights: https://www.google.com/travel/flights?hl=en-AU&curr=AUD&q=Flights%20from%20NRT%20to%20BNE%20on%202027-02-17%20one%20way%20economy
 
 Prices are per person, all-in, with a 20kg checked bag each way and the $114 Air Do Sapporo→Tokyo hop on 14 Feb. Rather not change tickets in Seoul? Singapore Airlines home (Tue 16 Feb 6:50pm from Narita, lands Brisbane Wed 17 Feb 4:55pm) is one ticket and $43pp more ($1,592 total). The 1:20–7:05am wait in Singapore isn't long enough to leave the airport. Singapore overnight on the way over (12:05–8:25am in Singapore, Isaac sees his partner, free stay, landing Sapporo Tue 2 Feb 8:50pm) is $1,619, $70 more than the cheapest. That's more than the ~$50 we'd pay extra for a Singapore stop. Cheapest if you'd overnight in Osaka: $1,548pp (a 14-hour daytime stop in Singapore, then a night at Osaka airport). Not recommended: it's ~$1,608 once you add a hotel. Qantas QF107 Sydney–Sapporo direct: $1,737pp one way from Sydney, before the Brisbane–Sydney flight. That's just to get there. Brisbane ⇄ Tokyo return plus a Tokyo→Sapporo hop (Jetstar over, Seoul home) is ~$1,600pp plus a night in Tokyo. No date shift saved $100+pp.
 
