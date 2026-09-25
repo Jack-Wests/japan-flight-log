@@ -102,20 +102,20 @@ RUN = {
             "there": ("2027-02-01 18:10", [
                 ("fly", 475, "Brisbane → Singapore"), ("wait", 85, "Singapore"),
                 ("fly", 365, "Singapore → Osaka"),
-                ("wait", 530, "Osaka + ferry to Kobe airport"),
+                ("wait", 530, "Osaka, ferry to Kobe airport"),
                 ("fly", 110, "Kobe → Sapporo")]),
             "home": ("2027-02-17 22:40", [
-                ("fly", 410, "Tokyo → Port Moresby"), ("wait", 60, "Port Moresby"),
+                ("fly", 410, "Tokyo → Port Moresby"), ("wait", 60, "Port Moresby, 5:30–6:30am"),
                 ("fly", 190, "Port Moresby → Brisbane")]),
         }),
         ("Best value", {
             "there": ("2027-02-02 18:10", [
                 ("fly", 475, "Brisbane → Singapore"),
-                ("sg", 500, "Singapore overnight"),
+                ("sg", 500, "Singapore overnight, 12:05–8:25am"),
                 ("fly", 365, "Singapore → Osaka"), ("wait", 135, "Osaka"),
                 ("fly", 115, "Osaka → Sapporo")]),
             "home": ("2027-02-17 22:40", [
-                ("fly", 410, "Tokyo → Port Moresby"), ("wait", 60, "Port Moresby"),
+                ("fly", 410, "Tokyo → Port Moresby"), ("wait", 60, "Port Moresby, 5:30–6:30am"),
                 ("fly", 190, "Port Moresby → Brisbane")]),
         }),
         ("Fastest sensible", {
@@ -123,7 +123,7 @@ RUN = {
                 ("fly", 510, "Brisbane → Hong Kong"), ("wait", 110, "Hong Kong"),
                 ("fly", 280, "Hong Kong → Sapporo")]),
             "home": ("2027-02-17 22:40", [
-                ("fly", 410, "Tokyo → Port Moresby"), ("wait", 60, "Port Moresby"),
+                ("fly", 410, "Tokyo → Port Moresby"), ("wait", 60, "Port Moresby, 5:30–6:30am"),
                 ("fly", 190, "Port Moresby → Brisbane")]),
         }),
     ],
@@ -194,29 +194,18 @@ def options_rows():
     return "".join(out)
 
 
-# Journey bars: one bar per leg with each piece's length written inside it
-# (where it fits), and one line of detail underneath with Brisbane (AEST)
-# times so you can see which bits fall in the middle of the night. Colours
-# checked for colourblind separation; the detail line means nothing relies
-# on colour alone.
+# Journey bars: flying / waiting / Singapore stop, hours written inside each
+# piece where it fits. Colours checked for colourblind separation; every bar
+# also has a written breakdown underneath (in the matching colour), so
+# nothing relies on colour alone.
 SEG_COLOUR = {"fly": "#1565c0", "wait": "#e0913a", "sg": "#12a37f"}
+SEG_TEXT = {"fly": "#1565c0", "wait": "#b8660f", "sg": "#0c8a69"}   # same hues, dark enough to read
 SEG_WORD = {"fly": "✈️", "wait": "wait", "sg": "🇸🇬 stop"}
-NIGHT = (22, 6)          # 10pm–6am Brisbane time counts as sleep time
+NIGHT = (22, 8)          # 10pm–8am Brisbane time counts as sleep time, for 🛏️
 
 
 def hm(mins):
     return f"{mins // 60}h{mins % 60:02d}" if mins % 60 else f"{mins // 60}h"
-
-
-def clock(dt):
-    return dt.strftime("%-I:%M%p").lower().replace(":00", "")
-
-
-def when(dt, prev=None):
-    """'Mon 1 Feb 6:10pm', or just '2:05am' when it's the same day as prev."""
-    if prev is not None and prev.date() == dt.date():
-        return clock(dt)
-    return f'{dt.strftime("%a %-d %b")} {clock(dt)}'
 
 
 def night_mins(start, mins):
@@ -234,71 +223,69 @@ def segments(leg):
         t, off = end, off + m
 
 
+def overnight(kind, st, m):
+    """A layover long enough to sleep through: 4h+ and mostly 10pm–8am."""
+    return kind in ("wait", "sg") and m >= 240 and night_mins(st, m) >= m / 2
+
+
 def journey_block():
-    """The original layout (There / Home, one bar, total on the right, one line
-    of detail underneath), with each piece's length written inside the bar
-    where it fits and Brisbane (AEST) times in the detail line."""
     legs = [leg for _, j in RUN["journeys"] for leg in j.values()]
     longest = max(sum(m for _, m, _ in leg[1]) for leg in legs)
-    px = 220                               # bar width on a phone, for fitting the length
+    px = 210                               # bar width on a phone, for fitting the hours
     out = []
-    for name, j in RUN["journeys"]:
-        out.append(f'<p style="margin:16px 0 6px;font-size:13.5px;font-weight:700;color:#1a202c;">{name}</p>')
+    for i, (name, j) in enumerate(RUN["journeys"]):
+        out.append(f'<p style="margin:{0 if i == 0 else 30}px 0 8px;font-size:14px;font-weight:700;'
+                   f'color:#1a202c;">{name}</p>')
         for which, leg in (("There", j["there"]), ("Home", j["home"])):
             segs = list(segments(leg))
             total = sum(s[1] for s in segs)
             cells, detail = [], []
             for kind, m, label, st, en, off in segs:
                 w = max(1, round(m / longest * 100, 1))
-                txt = hm(m) if w / 100 * px >= 7 * len(hm(m)) + 6 else "&nbsp;"
+                bed = " 🛏️" if overnight(kind, st, m) else ""
+                txt = hm(m) + bed
+                if w / 100 * px < 7 * len(hm(m)) + (18 if bed else 6):
+                    txt = hm(m) if w / 100 * px >= 7 * len(hm(m)) + 6 else "&nbsp;"
                 cells.append(f'<td align="center" style="width:{w}%;background:{SEG_COLOUR[kind]};height:20px;'
                              f'line-height:20px;font-size:10.5px;font-weight:700;color:#ffffff;white-space:nowrap;'
                              f'overflow:hidden;border-right:2px solid #ffffff;">{txt}</td>')
-                start = when(st) if off == 0 else when_short(st, segs[0][3] if off else st)
-                moon = " 🌙" if night_mins(st, m) >= 60 else ""
-                detail.append(f'{SEG_WORD[kind]} {hm(m)} {label} '
-                              f'<span style="color:#8a94a6;">({start}–{when_short(en, st)}{moon})</span>')
+                detail.append(f'<span style="color:{SEG_TEXT[kind]};">{SEG_WORD[kind]} {hm(m)} {label}{bed}</span>')
             rest = round(100 - total / longest * 100, 1)
             if rest > 0.5:
                 cells.append(f'<td style="width:{rest}%;font-size:0;">&nbsp;</td>')
             out.append(
                 f'<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr>'
-                f'<td style="width:44px;font-size:12px;color:#5b6b8c;padding:0 8px 0 0;white-space:nowrap;">{which}</td>'
+                f'<td style="width:44px;font-size:13px;font-weight:700;color:#1a202c;padding:0 8px 0 0;'
+                f'white-space:nowrap;">{which}</td>'
                 f'<td style="padding:0;"><table width="100%" cellpadding="0" cellspacing="0" border="0" '
                 f'style="border-radius:4px;overflow:hidden;table-layout:fixed;"><tr>{"".join(cells)}</tr></table></td>'
                 f'<td style="width:52px;font-size:12.5px;font-weight:700;color:#1a202c;text-align:right;'
                 f'padding:0 0 0 8px;white-space:nowrap;">{hm(total)}</td></tr></table>'
-                f'<p style="margin:3px 0 8px 52px;font-size:11.5px;color:#5b6b8c;line-height:1.45;">'
-                + " · ".join(detail) + '</p>')
+                f'<p style="margin:4px 0 16px 52px;font-size:11.5px;line-height:1.45;color:#5b6b8c;">'
+                + ' <span style="color:#8a94a6;">·</span> '.join(detail) + '</p>')
     legend = " &nbsp; ".join(
         f'<span style="display:inline-block;width:10px;height:10px;background:{SEG_COLOUR[k]};'
         f'border-radius:2px;vertical-align:middle;"></span>&nbsp;{t}'
         for k, t in (("fly", "In the air"), ("wait", "Waiting / changing planes"),
                      ("sg", "Singapore stop, can leave the airport")))
-    return (f'<p style="margin:0 0 4px;font-size:12px;color:#3d4757;">{legend}</p>'
-            f'<p style="margin:0 0 4px;font-size:12px;color:#5b6b8c;">Times in brackets are '
-            f'<b>Brisbane time (AEST)</b>. 🌙 = at least an hour of it is between 10pm and 6am Brisbane time.</p>'
+    return (f'<p style="margin:0 0 18px;font-size:12px;color:#3d4757;">{legend} &nbsp; 🛏️&nbsp;Overnight stop</p>'
             + "".join(out))
 
 
-def when_short(dt, prev):
-    """'2:05am', with the weekday added when the day has changed."""
-    return clock(dt) if dt.date() == prev.date() else f'{dt.strftime("%a")} {clock(dt)}'
-
-
 def journey_text():
-    L = ["All times Brisbane time (AEST). (night) = at least an hour between 10pm and 6am."]
+    L = []
     for name, j in RUN["journeys"]:
         L.append(name)
         for which, leg in (("There", j["there"]), ("Home", j["home"])):
             segs = list(segments(leg))
             total = sum(s[1] for s in segs)
-            L.append(f"  {which} {hm(total)}: {when(segs[0][3])} -> {when(segs[-1][4])}")
-            for kind, m, label, st, en, _ in segs:
-                word = {"fly": "flying", "wait": "waiting", "sg": "Singapore stop"}[kind]
-                night = " (night)" if night_mins(st, m) >= 60 else ""
-                L.append(f"    {word} {hm(m)} {label}: {when(st)} -> {when(en, st)}{night}")
+            parts = " | ".join(
+                f'{"flying" if k == "fly" else "waiting"} {hm(m)} {label}'
+                f'{" (overnight stop)" if overnight(k, st, m) else ""}'
+                for k, m, label, st, en, off in segs)
+            L.append(f"  {which} {hm(total)}: {parts}")
     return L
+
 
 
 def itin_rows():

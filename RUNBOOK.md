@@ -84,8 +84,8 @@ palette-quantised — big enough to read, small enough to serve.
 Edit the `RUN` block at the top of `render_email.py` — including `journeys`, the
 door-to-door breakdown (flying / waiting / Singapore stop, in minutes) for each
 table row, plus each leg's departure time in **Brisbane time (AEST)**. It draws the
-"How long each trip takes" bars (length written inside each piece) with AEST
-clock times and a 🌙 on anything overnight in Brisbane. The minutes for each leg must add up
+"How long each trip takes" bars (hours written inside each piece, and a 🛏️ on
+any layover that runs through the night, worked out from the departure time). The minutes for each leg must add up
 to the door-to-door time in the table; the clock times are worked out from them. Then:
 
 ```bash

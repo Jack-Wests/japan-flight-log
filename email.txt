@@ -33,38 +33,15 @@ Prices are per person, all-in, with a 20kg checked bag each way and the $125 Sap
 
 HOW LONG EACH TRIP TAKES
 
-All times Brisbane time (AEST). (night) = at least an hour between 10pm and 6am.
 Cheapest
-  There 26h05: Mon 1 Feb 6:10pm -> Tue 2 Feb 8:15pm
-    flying 7h55 Brisbane → Singapore: Mon 1 Feb 6:10pm -> Tue 2 Feb 2:05am (night)
-    waiting 1h25 Singapore: Tue 2 Feb 2:05am -> 3:30am (night)
-    flying 6h05 Singapore → Osaka: Tue 2 Feb 3:30am -> 9:35am (night)
-    waiting 8h50 Osaka + ferry to Kobe airport: Tue 2 Feb 9:35am -> 6:25pm
-    flying 1h50 Kobe → Sapporo: Tue 2 Feb 6:25pm -> 8:15pm
-  Home 11h: Wed 17 Feb 10:40pm -> Thu 18 Feb 9:40am
-    flying 6h50 Tokyo → Port Moresby: Wed 17 Feb 10:40pm -> Thu 18 Feb 5:30am (night)
-    waiting 1h Port Moresby: Thu 18 Feb 5:30am -> 6:30am
-    flying 3h10 Port Moresby → Brisbane: Thu 18 Feb 6:30am -> 9:40am
+  There 26h05: flying 7h55 Brisbane → Singapore | waiting 1h25 Singapore | flying 6h05 Singapore → Osaka | waiting 8h50 Osaka, ferry to Kobe airport | flying 1h50 Kobe → Sapporo
+  Home 11h: flying 6h50 Tokyo → Port Moresby | waiting 1h Port Moresby, 5:30–6:30am | flying 3h10 Port Moresby → Brisbane
 Best value
-  There 26h30: Tue 2 Feb 6:10pm -> Wed 3 Feb 8:40pm
-    flying 7h55 Brisbane → Singapore: Tue 2 Feb 6:10pm -> Wed 3 Feb 2:05am (night)
-    Singapore stop 8h20 Singapore overnight: Wed 3 Feb 2:05am -> 10:25am (night)
-    flying 6h05 Singapore → Osaka: Wed 3 Feb 10:25am -> 4:30pm
-    waiting 2h15 Osaka: Wed 3 Feb 4:30pm -> 6:45pm
-    flying 1h55 Osaka → Sapporo: Wed 3 Feb 6:45pm -> 8:40pm
-  Home 11h: Wed 17 Feb 10:40pm -> Thu 18 Feb 9:40am
-    flying 6h50 Tokyo → Port Moresby: Wed 17 Feb 10:40pm -> Thu 18 Feb 5:30am (night)
-    waiting 1h Port Moresby: Thu 18 Feb 5:30am -> 6:30am
-    flying 3h10 Port Moresby → Brisbane: Thu 18 Feb 6:30am -> 9:40am
+  There 26h30: flying 7h55 Brisbane → Singapore | waiting 8h20 Singapore overnight, 12:05–8:25am (overnight stop) | flying 6h05 Singapore → Osaka | waiting 2h15 Osaka | flying 1h55 Osaka → Sapporo
+  Home 11h: flying 6h50 Tokyo → Port Moresby | waiting 1h Port Moresby, 5:30–6:30am | flying 3h10 Port Moresby → Brisbane
 Fastest sensible
-  There 15h: Tue 2 Feb 12:50am -> Tue 2 Feb 3:50pm
-    flying 8h30 Brisbane → Hong Kong: Tue 2 Feb 12:50am -> 9:20am (night)
-    waiting 1h50 Hong Kong: Tue 2 Feb 9:20am -> 11:10am
-    flying 4h40 Hong Kong → Sapporo: Tue 2 Feb 11:10am -> 3:50pm
-  Home 11h: Wed 17 Feb 10:40pm -> Thu 18 Feb 9:40am
-    flying 6h50 Tokyo → Port Moresby: Wed 17 Feb 10:40pm -> Thu 18 Feb 5:30am (night)
-    waiting 1h Port Moresby: Thu 18 Feb 5:30am -> 6:30am
-    flying 3h10 Port Moresby → Brisbane: Thu 18 Feb 6:30am -> 9:40am
+  There 15h: flying 8h30 Brisbane → Hong Kong | waiting 1h50 Hong Kong | flying 4h40 Hong Kong → Sapporo
+  Home 11h: flying 6h50 Tokyo → Port Moresby | waiting 1h Port Moresby, 5:30–6:30am | flying 3h10 Port Moresby → Brisbane
 
 OPTION A — CHEAPEST (FURANO BASE)
 15 nights on the ground · hire car picked up & dropped at Sapporo (CTS)
