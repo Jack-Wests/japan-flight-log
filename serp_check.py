@@ -11,9 +11,11 @@ It prints Google's cheapest few options for each flight (per person, AUD,
 airlines (Jetstar, Peach, Scoot, Parata...), so add the bag before comparing
 with Kiwi's all-in price.
 
-Needs the SERPAPI_KEY environment variable (set in the Claude cloud
-environment settings, never in this public repo). Without it, it says so and
-exits cleanly so the rest of the daily run carries on. Every flight costs one
+The key lives in the Claude cloud environment's "API credentials" (host
+serpapi.com, header Authorization, prefix Bearer): the proxy adds it to each
+request, so this script never sees it. A SERPAPI_KEY environment variable also
+works as a fallback. The key never goes in this public repo. With no working
+key it says so and exits cleanly so the rest of the daily run carries on. Every flight costs one
 search from the monthly allowance; SERPAPI_MAX_PER_RUN (default 4) caps it,
 and it stops early if the account is nearly out of searches.
 """
@@ -21,6 +23,7 @@ import json
 import os
 import sys
 import urllib.parse
+import urllib.error
 import urllib.request
 
 API = "https://serpapi.com/search.json"
@@ -28,9 +31,19 @@ ACCOUNT = "https://serpapi.com/account.json"   # free to call, doesn't use a sea
 KEEP_SPARE = 5                                  # leave a few for a manual re-run
 
 
+class NoKey(Exception):
+    pass
+
+
 def get(url, params):
-    with urllib.request.urlopen(url + "?" + urllib.parse.urlencode(params), timeout=60) as r:
-        return json.load(r)
+    try:
+        with urllib.request.urlopen(url + "?" + urllib.parse.urlencode(params), timeout=60) as r:
+            return json.load(r)
+    except urllib.error.HTTPError as e:
+        body = e.read().decode("utf-8", "replace")
+        if e.code == 401 or "api key" in body.lower():
+            raise NoKey(body.strip()[:200])
+        raise
 
 
 def hhmm(t):
@@ -53,15 +66,17 @@ def describe(opt):
 
 def main(args):
     key = os.environ.get("SERPAPI_KEY", "").strip()
-    if not key:
-        print("SerpApi: SERPAPI_KEY not set, Google Flights cross-check skipped.")
-        return
+    auth = {"api_key": key} if key else {}    # else the proxy adds the credential header
     if not args:
         sys.exit(__doc__)
     cap = int(os.environ.get("SERPAPI_MAX_PER_RUN", "4"))
 
     try:
-        left = get(ACCOUNT, {"api_key": key}).get("total_searches_left")
+        left = get(ACCOUNT, auth).get("total_searches_left")
+    except NoKey:
+        print("SerpApi: no working key (add it under API credentials in the cloud "
+              "environment settings), Google Flights cross-check skipped.")
+        return
     except Exception as e:                      # account check is a nicety, not a blocker
         left = None
         print(f"SerpApi: couldn't read the account balance ({e}); carrying on.")
@@ -76,7 +91,10 @@ def main(args):
         try:
             data = get(API, {"engine": "google_flights", "departure_id": frm, "arrival_id": to,
                              "outbound_date": date, "type": 2, "adults": 1, "currency": "AUD",
-                             "hl": "en", "gl": "au", "api_key": key})
+                             "hl": "en", "gl": "au", **auth})
+        except NoKey:
+            print("SerpApi: no working key, Google Flights cross-check skipped.")
+            return
         except Exception as e:
             print(f"\n{frm}→{to} {date}: request failed ({e})")
             continue

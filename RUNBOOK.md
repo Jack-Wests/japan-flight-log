@@ -61,9 +61,11 @@ cheapest option's flights (one argument per separate flight, same as
 python3 serp_check.py BNE-KIX-2027-02-01 UKB-CTS-2027-02-02 CTS-HND-2027-02-14 NRT-BNE-2027-02-16
 ```
 
-- Needs `SERPAPI_KEY` in the cloud environment's variables. If it isn't set the
-  script says so and exits; note "Google Flights check skipped (no key)" in Nerd
-  Notes and carry on.
+- The key is stored under **API credentials** in the cloud environment settings
+  (site `serpapi.com`, header `Authorization`, prefix `Bearer`), so the run
+  never sees it. A `SERPAPI_KEY` environment variable also works. With no working
+  key the script says so and exits; note "Google Flights check skipped (no key)"
+  in Nerd Notes and carry on.
 - The free plan has a small monthly allowance, so the script checks at most 4
   flights per run (`SERPAPI_MAX_PER_RUN`) and keeps a few searches spare.
   Spend them on the cheapest option first.
