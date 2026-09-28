@@ -62,3 +62,4 @@ Best value is the same trip without the ferry (Osaka→Sapporo 12:35pm, lands 2:
 - The Kobe ferry (~$19) and Korea's K-ETA (~$12, needed because the free pass for Australians ends 31 Dec 2026) were added by hand.
 - Sales: no verified live sale. The Qantas Asia sale ended 21 Sep. The Jetstar "Return for Free" OzBargain posts are from January. Scoot's Everywhere Sale sells from Singapore. China Southern for our dates is $2,174pp return on Kiwi (the $907 OzBargain fare doesn't cover them). Nothing on Jetstar, Scoot or AirAsia under $500 one way with a bag.
 - The CSV, charts and this report were committed and pushed to the working branch before the email was sent.
+- Email sent via Resend at the end of the run (id 01a0e5ea…). Its plain-text version lists only the last 10 price-log rows; email.txt in the repo has all 68.
