@@ -63,3 +63,4 @@ Best value is the same trip without the ferry (Osaka→Sapporo 12:35pm, lands 2:
 - The Kobe ferry (~$19) and Korea's K-ETA (~$12, needed because the free pass for Australians ends 31 Dec 2026) were added by hand. The QF107 price ($1,742) is from this morning's search.
 - Sales: no verified live sale. The Qantas Asia sale ended 21 Sep. No new OzBargain Japan post covering Feb 2027 from Brisbane. China Southern for our dates was $2,174pp return on Kiwi this morning.
 - The CSV, charts and this report were committed and pushed to the working branch before the email was sent.
+- Re-check email sent via Resend (id 01a0e736…). Its plain-text version is shortened (no itinerary, timelines or price log); email.txt in the repo has the full text. The chart link uses the same ?v=2026-09-28 as this morning, so Gmail may show this morning's chart ($1,530 instead of $1,532 on the last point).
