@@ -62,3 +62,4 @@ Best value is the same trip without the ferry (Osaka→Sapporo 12:35pm, lands 2:
 - The Kobe ferry (~$19) and Korea's K-ETA (~$12, needed because the free pass for Australians ends 31 Dec 2026) were added by hand.
 - Sales: no verified live sale. The China Southern $907 Brisbane–Tokyo return on OzBargain (13 Sep, ends 14 Oct) only covers departures 20–28 Feb 2027, not our dates. The Qantas Asia sale ended 21 Sep. The newest Jetstar OzBargain post (28 Sep) is a round-the-world fare, not relevant. Nothing on Scoot, AirAsia or China Southern under $500 one way for our dates.
 - The CSV, charts and this report were committed and pushed to the working branch before the email was sent.
+- Email sent via Resend (id 01a0eb10…). Its plain-text version is shortened (no itinerary, timelines or price log); email.txt in the repo has the full text.
