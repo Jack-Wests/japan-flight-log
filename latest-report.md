@@ -12,7 +12,7 @@
 
 🎯 Distance from buy target ($1,500 comfortable): $30 above
 
-💰 Cheapest any-routing today: $1,530 (same as the comfortable pick; nothing cheaper with a forced overnight)
+💰 Cheapest any-routing today: $1,496 (corrected after the email went out; the email said $1,530). Jetstar from Gold Coast via Cairns to Osaka, a forced night in Osaka, then Peach to Sapporo next morning. Reference only: ~$1,560–1,580 real cost after the hotel and getting to Gold Coast airport.
 
 📊 All-time comfortable range: $1,333 – $1,709
 
@@ -28,7 +28,7 @@ All prices are per person for four seats booked together, all-in, with a 20kg ba
 - Rather not change tickets in Seoul? Singapore Airlines home on one ticket (Narita Tue 16 Feb 10:00am → Brisbane Wed 17 Feb 7:15am): $1,729, $199pp more.
 - Singapore Airlines home with a 20h Singapore stop (Narita Tue 16 Feb 6:50pm, all of Wed 17 Feb in Singapore, Isaac sees his partner, free stay; lands Brisbane Thu 18 Feb 7:15am): $1,673, $143 more.
 - Singapore overnight on the way over (12:05–8:25am in Singapore, free stay; lands Osaka 3:30pm, then the ferry and Air Do to Sapporo, landing 8:50pm Tue 2 Feb): ~$1,604, $74 more. Both Singapore options are past the ~$50 extra we'd pay for a Singapore stop.
-- Cheapest with a forced overnight: nothing cheaper than the comfortable pick today (Jetstar direct to Osaka + a night there + Peach next morning is ~$722 just to reach Sapporo, before the hotel).
+- Cheapest if you'd overnight in Osaka: $1,496 (Jetstar Gold Coast → Cairns → Osaka Mon 1 Feb 6:40am, lands 7pm; Peach to Sapporo 7:20am Tue 2 Feb). Not recommended: real cost ~$1,560–1,580 after a hotel and getting to Gold Coast airport.
 - Qantas QF107 Sydney–Sapporo direct: $1,742pp one way from Sydney (Kiwi), before the Brisbane–Sydney flight. That's just to get there.
 
 ### 🗓️ Option A itinerary — Cheapest (Furano base)
@@ -63,3 +63,4 @@ Best value is the same trip without the ferry (Osaka→Sapporo 12:35pm, lands 2:
 - Sales: no verified live sale. The China Southern $907 Brisbane–Tokyo return on OzBargain (13 Sep, ends 14 Oct) only covers departures 20–28 Feb 2027, not our dates. The Qantas Asia sale ended 21 Sep. The newest Jetstar OzBargain post (28 Sep) is a round-the-world fare, not relevant. Nothing on Scoot, AirAsia or China Southern under $500 one way for our dates.
 - The CSV, charts and this report were committed and pushed to the working branch before the email was sent.
 - Email sent via Resend (id 01a0eb10…). Its plain-text version is shortened (no itinerary, timelines or price log); email.txt in the repo has the full text.
+- Follow-up check (same day, after the email): searched Brisbane ⇄ Tokyo return + Hokkaido flights (~$1,626 at best, with a tight Narita→Haneda dash), leaving 29–31 Jan (cheapest $705.50 to Sapporo vs today's $679.75), flying home 14–15 Feb and 18–20 Feb (nothing under the $722.50 Seoul flight), and from Gold Coast. No cheaper comfortable option exists; $1,530 stands. The Gold Coast search turned up a cheaper forced-overnight fare, so today's any-routing figure in the log was corrected from $1,530 to $1,496.
