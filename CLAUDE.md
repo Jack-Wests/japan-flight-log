@@ -69,6 +69,9 @@ mode already hit. The short version of the expensive ones:
 - **Never rebuild the email HTML from scratch.** Edit `render_email.py`'s `RUN`
   block and run it. Improvising the HTML each run is why every email used to
   look different.
+- **Do every search in `search_checklist.py`, every run, and log each one.** The
+  email won't build until they're all logged. Re-pricing yesterday's trip isn't a
+  search.
 - **Run `sync_prices.py` before reading `prices.csv`.** Each scheduled run gets
   its own branch and nothing merges back, so an unsynced checkout sees a stale
   log and every trend number comes out wrong.

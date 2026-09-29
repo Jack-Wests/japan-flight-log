@@ -22,6 +22,19 @@ be computed against a log with holes in it.
 
 ## 1. Get the prices — Kiwi + Skyscanner
 
+**Every search in `search_checklist.py` is compulsory, every run.** Run
+`python3 search_checklist.py` to see the list, and after each search log it:
+
+```bash
+python3 search_checklist.py log kiwi-china done "CZ BNE→HND \$979pp — dearer"
+```
+
+`render_email.py` will not build the email until all of today's searches are
+logged (`done`, or `blocked`/`failed` with the reason). Don't re-price
+yesterday's trip and call it a day: on 29 Sep that skipped the Gold Coast,
+Brisbane ⇄ Tokyo and date-shift searches and missed a cheaper fare.
+
+
 Kiwi.com remains the primary connector. The project-scoped `skyscanner` MCP is
 the mandatory independent cross-check described in the routine prompt. It is
 configured in `.mcp.json` and started by `tools/start_skyscanner_mcp.sh`.
@@ -178,4 +191,5 @@ Full write-up for the record.
 | Skyscanner "connection timed out after 30000ms" at session start | first launch built its Python environment with pip (~30s), right at Claude Code's 30s MCP start limit | fixed 25 Sep: launcher uses `uv` (~2s) and `.claude/settings.json` sets `MCP_TIMEOUT` to 120s |
 | Skyscanner returns `BannedWithCaptcha` (used to show as `KeyError: 'redirect_to'`) | Skyscanner's bot protection blocks the cloud machine's IP with a captcha; confirmed 25 Sep with plain curl too | not fixable from our side; retry once only, then use Kiwi + web and note it in Nerd Notes |
 | Email looks too wide / fine on "phone" preview | headless Chromium can't open a window under 500px, so a `--window-size=390` screenshot is really a cropped 500px page | preview phone width with Playwright's mobile viewport (`is_mobile=True`, 390 wide) and check `scrollWidth` |
+| Required searches skipped; cheaper fare missed (29 Sep) | run only re-priced yesterday's trip | `search_checklist.py` + `search-log.csv`; `render_email.py` stops until every search is logged |
 | Email wider than a phone screen | six-column options table | options are stacked cards (`options_rows()`); don't go back to a wide table |

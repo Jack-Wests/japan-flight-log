@@ -1,0 +1,30 @@
+date,id,status,result
+2026-09-29,kiwi-bne-cts,done,"1–3 Feb: cheapest SQ via Singapore + Peach Osaka→Sapporo $712.38pp, lands Tue 2 Feb 2:30pm; Cathay via HK $841.75"
+2026-09-29,kiwi-bne-kix,done,SQ266/SQ618 via Singapore $577.75pp lands 8:35am 2 Feb; Jetstar direct $585 lands 7:45pm (forced night)
+2026-09-29,kiwi-tyo-bne,done,16–17 Feb: Parata Air + Jetstar via Seoul $722.50pp; 14–15 Feb: Cebu Pacific via Manila/Bali $765; Air Niugini 17 Feb $795.75
+2026-09-29,kiwi-qf107,done,"QF107 Sydney→Sapporo $1,742.25pp one way (1, 3, 4 Feb), before Brisbane–Sydney"
+2026-09-29,kiwi-bne-tyo-return,done,"Jetstar BNE→NRT 2 Feb + Seoul home 16 Feb $1,410.50pp return; with Hokkaido flights ~$1,626 — dearer"
+2026-09-29,kiwi-tyo-cts,done,2 Feb 8:30pm Skymark HND→CTS $85.25; 3 Feb 6:50am Peach NRT→CTS $113.40
+2026-09-29,kiwi-cts-tyo,done,14 Feb JAL $138.25 on Kiwi (Skymark $116 via Google); 13 Feb Air Do $130.25
+2026-09-29,kiwi-shift-out,done,29–31 Jan: cheapest SQ+ANA via Osaka $705.50pp to Sapporo — dearer than 1 Feb
+2026-09-29,kiwi-shift-home,done,18–20 Feb: Seoul option $747.75pp (18 Feb) — dearer than 16 Feb
+2026-09-29,kiwi-singapore,done,SQ out $577.75 to Osaka; SQ home $933.50 same-day / $877 with 20h Singapore stop; Scoot: no BNE→Japan results
+2026-09-29,kiwi-china,done,"China Southern BNE→HND $979pp one way; home $1,078+ — far dearer"
+2026-09-29,kiwi-cns-ool,done,"Cairns→Osaka Jetstar $401.75, Gold Coast→Cairns→Osaka $508.50; both land 7pm = forced Osaka night; OOL total $1,496 any-routing"
+2026-09-29,sky-bne-cts,blocked,"BannedWithCaptcha, twice"
+2026-09-29,sky-nrt-bne,blocked,BannedWithCaptcha
+2026-09-29,sky-hnd-bne,blocked,BannedWithCaptcha
+2026-09-29,sky-bne-nrt-return,blocked,BannedWithCaptcha
+2026-09-29,sky-bne-hnd-return,blocked,BannedWithCaptcha
+2026-09-29,sky-tyo-cts,blocked,BannedWithCaptcha (NRT→CTS 3 Feb)
+2026-09-29,sky-cts-tyo,blocked,BannedWithCaptcha (CTS→HND 14 Feb)
+2026-09-29,serpapi,done,"4 flights: UKB→CTS Skymark $83, CTS→HND Skymark $116, BNE→KIX Jetstar $499 no bag, NRT→BNE Jin Air+Jetstar $691 no bag / SQ $886"
+2026-09-29,web-jetstar,done,No Feb 2027 sale fare found; Jetstar from 2 Feb 2027 includes underseat bag only
+2026-09-29,web-scoot,done,No Scoot Brisbane→Tokyo fare found for Feb 2027
+2026-09-29,web-airasia,done,No AirAsia Brisbane→Tokyo fare for Feb 2027
+2026-09-29,web-china-southern,done,"OzBargain $907 BNE–Tokyo return (13 Sep, ends 14 Oct) covers 20–28 Feb departures only"
+2026-09-29,sale-ozb-jetstar,done,"Newest Jetstar OzBargain post 28 Sep is a round-the-world fare; Japan Dec–Mar post 18 Sep, >7 days old"
+2026-09-29,sale-ozb-qantas,done,Only the Qantas Asia sale that ended 21 Sep
+2026-09-29,sale-ozb-general,done,Old JAL/ANA/Fiji/AirAsia posts; nothing new covering Feb 2027 from Brisbane
+2026-09-29,sale-jetstar,done,Network sale articles are old; no live Japan sale covering Feb 2027
+2026-09-29,sale-qantas,done,Qantas Asia sale ended 21 Sep 2026; nothing live

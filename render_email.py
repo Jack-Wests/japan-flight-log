@@ -551,6 +551,10 @@ def build_text():
     return "\n".join(L)
 
 
+# No email until every required search is logged for today (search_checklist.py).
+import search_checklist
+search_checklist.require(RUN["date_iso"])
+
 html = open(TEMPLATE).read()
 # Drop the template's own documentation comments — they're for whoever edits the
 # template, not for the inbox, and they'd otherwise ship in every email.
