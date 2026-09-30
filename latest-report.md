@@ -63,4 +63,4 @@ Best value is the same trip without the ferry (Osaka→Sapporo 12:35pm, lands 2:
 - Budget carriers: no Jetstar, Scoot, AirAsia or China Southern web fare under $500 one way for our dates; Jetstar from 2 Feb 2027 includes only an underseat bag, so every Jetstar price here includes a checked bag.
 - Sales: no verified live sale. Qantas Tokyo sale ended 3 Aug, Asia sale 21 Sep; OzBargain Jetstar/China Southern posts are old.
 - Kobe ferry (~$19) and K-ETA (~$12) added manually. Forced Osaka night costed at ~$60pp.
-- CSV, charts and this report committed and pushed to the working branch before the email was sent.
+- CSV, charts and this report committed and pushed to the working branch before the email was sent. Email sent via Resend (id 01a0f038-ab58-7884-99be-2880a80fa094); the plain-text part lists only the last 10 price-log rows rather than all 70.
