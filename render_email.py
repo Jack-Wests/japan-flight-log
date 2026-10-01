@@ -30,25 +30,27 @@ def cpp(row):
 # EDIT THIS BLOCK EACH RUN
 # ─────────────────────────────────────────────────────────────────────────────
 RUN = {
-    "date_iso": "2026-09-30",
-    "date_human": "Wed 30 Sep 2026",
+    "date_iso": "2026-10-01",
+    "date_human": "Thu 1 Oct 2026",
     "verdict_headline": "🟡 WATCH — normal range, a dip might come",
-    "best_pp": "$1,536",
-    "best_all4": "$6,145",
-    "target_distance": "$36 above",
+    "best_pp": "$1,542",
+    "best_all4": "$6,168",
+    "target_distance": "$42 above",
     "snapshot": [
-        "The cheapest comfortable trip today is <b>$1,536 per person: $6,145 for all four, "
-        "or $4,609 for three</b> if Hugh buys separately (four seats booked together, 20kg bag each way). "
+        "The cheapest comfortable trip today is <b>$1,542 per person: $6,168 for all four, "
+        "or $4,626 for three</b> if Hugh buys separately (four seats booked together, 20kg bag each way). "
         "Same trip as the last week: Singapore Airlines to Osaka, a day there, a 30-minute ferry to "
         "Kobe and Skymark up to Sapporo. After the ski you hop back to Tokyo, then fly home via <b>Seoul</b> "
         "(Parata Air to Seoul, then Jetstar overnight to Brisbane).",
-        "That's <b>WATCH</b>, <b>$36 above the $1,500 buy price</b>, and $6 dearer than yesterday "
-        "($1,530). The flight home went up $5; the other legs moved by a dollar or so. The price has now sat "
-        "between $1,530 and $1,536 for five days, so nothing is really moving. The catch with Seoul is "
-        "still two separate tickets: you collect your bags, go through Korean border control and check "
-        "in again, with 5 hours to do it (~$12pp Korean entry permit included).",
-        "⏳ About 4 months (125 days) until departure. <b>About 2 weeks to the mid-October "
-        "deadline</b>. After that, book the first comfortable day under $1,600; today's $1,536 would "
+        "That's <b>WATCH</b>, <b>$42 above the $1,500 buy price</b>, and $6 dearer than yesterday "
+        "($1,536). The Singapore Airlines flight over went up $3 and the flight home $3.50. It's the "
+        "third small rise in a row, but the price has stayed between $1,530 and $1,542 for six days, "
+        "so it's creeping, not jumping. (The ↓ $60 \"since a week back\" compares with 24 Sep, which "
+        "was a one-seat price, so it isn't a real drop.) The catch with Seoul is still two separate tickets: you collect "
+        "your bags, go through Korean border control and check in again, with 5 hours to do it "
+        "(~$12pp Korean entry permit included).",
+        "⏳ About 4 months (124 days) until departure. <b>About 2 weeks to the mid-October "
+        "deadline</b>. After that, book the first comfortable day under $1,600; today's $1,542 would "
         "already qualify. No airline sale is live for our dates.",
     ],
     "options": [
@@ -59,7 +61,7 @@ RUN = {
          "🛫 Sapporo (CTS) Sun 14 Feb 8:10am → Tokyo (HND) 9:55am <i>(Skymark)</i>, then Dep Tokyo (NRT) "
          "Tue 16 Feb 1:25pm → 🛬 lands Brisbane (BNE) Wed 17 Feb 8:00am <i>(Parata Air to Seoul, "
          "Jetstar overnight to Brisbane)</i>",
-         "$1,536", "$6,145<br><span style=\"color:#8a94a6;\">3 of you: $4,609</span>",
+         "$1,542", "$6,168<br><span style=\"color:#8a94a6;\">3 of you: $4,626</span>",
          "26h over (9h daytime stop in Osaka, 30-min ferry ~$19 included) · 17.5h home with a 5h "
          "Seoul change on two tickets: collect bags and check in again (K-ETA ~$12 included)"),
         ("Best value",
@@ -67,15 +69,15 @@ RUN = {
          "<i>(Singapore Airlines via Singapore to Osaka (KIX), Peach to Sapporo, one Kiwi booking)</i>",
          "Same as Cheapest: Sapporo → Tokyo Sun 14 Feb, then Tokyo (NRT) Tue 16 Feb 1:25pm → "
          "lands Brisbane Wed 17 Feb 8:00am via Seoul",
-         "$1,568", "$6,273<br><span style=\"color:#8a94a6;\">3 of you: $4,705</span>",
-         "$32pp more, no ferry: in Sapporo nearly 5 hours sooner (21h over)"),
+         "$1,576", "$6,303<br><span style=\"color:#8a94a6;\">3 of you: $4,727</span>",
+         "$34pp more, no ferry: in Sapporo nearly 5 hours sooner (21h over)"),
         ("Fastest sensible",
          "🛫 Dep Brisbane (BNE) Tue 2 Feb 12:50am (Mon night) → 🛬 lands Sapporo (CTS) Tue 2 Feb "
-         "2:50pm <i>(Cathay Pacific via Hong Kong)</i>",
+         "5:50pm <i>(Cathay Pacific via Hong Kong)</i>",
          "🛫 Sapporo (CTS) Sun 14 Feb 8:10am → Tokyo (HND) 9:55am, then Dep Tokyo (NRT) Wed 17 Feb "
          "9:40pm → 🛬 lands Brisbane (BNE) Thu 18 Feb 9:40am <i>(Air Niugini via Port Moresby, 1h change)</i>",
-         "$1,758", "$7,030<br><span style=\"color:#8a94a6;\">3 of you: $5,273</span>",
-         "15h over, one short Hong Kong change · 11h home, one ticket. $222pp more than the cheapest"),
+         "$1,768", "$7,072<br><span style=\"color:#8a94a6;\">3 of you: $5,304</span>",
+         "18h over, one Hong Kong change · 11h home, one ticket. $226pp more than the cheapest"),
     ],
     # Each flight in each option, for the "check it yourself" links:
     # (from, to, "YYYY-MM-DD"), one per separate flight/ticket, in order.
@@ -91,15 +93,16 @@ RUN = {
         "Prices are per person for four seats booked together, all-in, with a 20kg checked bag each "
         "way and the $117 Skymark Sapporo→Tokyo hop on 14 Feb. "
         "<b>Rather not change tickets in Seoul?</b> Singapore Airlines home on one ticket (Narita Tue 16 Feb "
-        "6:50pm → Brisbane Wed 17 Feb 4:55pm) is $1,748, $212pp more. "
+        "6:50pm → Brisbane Wed 17 Feb 4:55pm) is $1,744, $202pp more. "
         "<b>Singapore overnight on the way over</b> (12:05–8:25am in Singapore, Isaac sees his partner, "
-        "free stay; lands Osaka 3:30pm, then Peach to Sapporo landing 7:40pm Tue 2 Feb) is ~$1,610, $74 "
+        "free stay; lands Osaka 3:30pm, then Peach to Sapporo landing 7:40pm Tue 2 Feb) is $1,617, $75 "
         "more, past the ~$50 extra we'd pay for a Singapore stop. "
-        "<b>Cheapest if you'd overnight at Osaka airport:</b> $1,492 (Jetstar from the Gold Coast via "
-        "Cairns, lands Osaka 7pm, Peach to Sapporo next morning). Not recommended: the real cost is "
-        "~$1,552 after a hotel, plus getting to the Gold Coast. "
+        "<b>Cheapest if you'd overnight in Tokyo:</b> $1,492 (Jetstar from the Gold Coast via "
+        "Cairns, lands Narita 6:10pm, Skymark to Sapporo from Haneda next morning). Not recommended: the "
+        "real cost is ~$1,570 after a hotel and the airport transfer, plus getting to the Gold Coast. "
         "<b>Qantas QF107 Sydney–Sapporo direct:</b> $1,742pp one way from Sydney, before the "
         "Brisbane–Sydney flight. That's just to get there. "
+        "<b>Brisbane ⇄ Tokyo return plus the Hokkaido flights</b> is ~$1,638pp plus a night in Tokyo. "
         "No date shift saved $100+pp.",
     # Door-to-door timeline per table row, drawn as bars in the email.
     # Each leg is (departure in Brisbane time/AEST "YYYY-MM-DD HH:MM", segments);
@@ -129,8 +132,8 @@ RUN = {
         }),
         ("Fastest sensible", {
             "there": ("2027-02-02 00:50", [
-                ("fly", 510, "Brisbane → Hong Kong"), ("wait", 110, "Hong Kong"),
-                ("fly", 280, "Hong Kong → Sapporo")]),
+                ("fly", 510, "Brisbane → Hong Kong"), ("wait", 300, "Hong Kong"),
+                ("fly", 270, "Hong Kong → Sapporo")]),
             "home": ("2027-02-17 22:40", [
                 ("fly", 410, "Tokyo → Port Moresby"), ("wait", 60, "Port Moresby, 5:30–6:30am"),
                 ("fly", 190, "Port Moresby → Brisbane")]),
@@ -160,12 +163,12 @@ RUN = {
     "itin_footnote":
         "<b>Best value</b> is the same trip, but you skip the ferry and fly Osaka→Sapporo at 12:35pm, "
         "landing 2:30pm Tue 2 Feb. "
-        "<b>Fastest sensible</b> leaves just after midnight Mon night and lands in Sapporo at 2:50pm Tue 2 Feb. "
+        "<b>Fastest sensible</b> leaves just after midnight Mon night and lands in Sapporo at 5:50pm Tue 2 Feb. "
         "It gets an extra Tokyo day and flies home from Narita at 9:40pm Wed 17 Feb, landing Brisbane "
         "9:40am Thu 18 Feb. The Seoul flight home leaves 2 days in Tokyo (Sun 14 and Mon 15 Feb) plus Tue "
         "morning.",
     "price_log_footnote":
-        "Showing the last 10 checks; the chart above has all 70. Since 23 Sep the line tracks the "
+        "Showing the last 10 checks; the chart above has all 71. Since 23 Sep the line tracks the "
         "cheapest <i>comfortable</i> price (no hidden forced overnights). Earlier days logged the "
         "cheapest price with any routing. Up to 25 Sep (evening) every day was a one-seat price; since "
         "then it's the price for four seats booked together. Comfortable range so far: $1,333–$1,709.",
