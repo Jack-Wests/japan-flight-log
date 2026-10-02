@@ -63,4 +63,4 @@ Best value is the same trip without the ferry (Osaka→Sapporo 12:35pm, lands 2:
 - Budget carriers: Google shows Jetstar BNE→Osaka at $499 one way without a bag ($591.75 with one on Kiwi), but it lands 7:45pm and forces an Osaka night. It's the forced-overnight line above. No Scoot, AirAsia or China Southern fare under $500 one way for our dates.
 - Sales: no verified live sale. OzBargain Jetstar/Qantas/China Southern posts are all old. "Qantas Japan" news is only the Jetstar Japan stake sale.
 - Kobe ferry (~$19) and K-ETA (~$12) were added manually. Forced Osaka night costed at ~$45pp for an airport hotel; forced Tokyo night at ~$60 hotel + ~$20 Narita→Haneda.
-- The CSV, charts and this report were committed and pushed to the working branch before the email was sent.
+- The CSV, charts and this report were committed and pushed to the working branch before the email was sent. Email sent via Resend (id 01a0fa73-96e4-779b-840e-e591f25fa3e5). The plain-text part was shortened by hand: no check-it-yourself links, and only the last 10 price-log rows. The HTML part is exactly what render_email.py produced.
