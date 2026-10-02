@@ -86,3 +86,32 @@ date,id,status,result
 2026-10-01,sale-ozb-general,done,No new OzBargain Japan airfare post covering Feb 2027 from Brisbane in last 72h
 2026-10-01,sale-jetstar,done,Latest Jetstar sale articles are old (All Abroad closed 24 Jul); no live Japan sale covering Feb 2027
 2026-10-01,sale-qantas,done,No Qantas Japan sale; results are Jetstar Japan stake-sale news (rebrand to be announced Oct 2026)
+2026-10-02,kiwi-bne-cts,done,1–4 Feb (2nd try; 1st proxy error): Jetstar BNE→KIX + Peach next morning $730.46pp (forced Osaka night); SQ+Peach via Osaka $762.71 lands 2:30pm 2 Feb; Cathay via HK $853.25 (2 Feb 12:50am)
+2026-10-02,kiwi-bne-kix,done,SQ266/SQ618 $626pp (up from $579.75) lands 8:35am 2 Feb; Jetstar JQ23 direct $591.75 lands 7:45pm 1 Feb (forced night); SQ via Singapore overnight (SQ620) $681
+2026-10-02,kiwi-tyo-bne,done,16 Feb Parata Air + Jetstar via Seoul $658pp (down from $731.25); ZIPAIR+JQ $693.67; Air Niugini 17 Feb $804
+2026-10-02,kiwi-qf107,done,"QF107 Sydney→Sapporo $1,742.25pp one way (1, 3, 4 Feb), before Brisbane–Sydney"
+2026-10-02,kiwi-bne-tyo-return,done,"Cairns/Jetstar to Narita 1 Feb + Seoul home 16 Feb $1,311.75pp; + HND→CTS next morning $84.25 + CTS→HND $121 + K-ETA = $1,529 bare, forced Tokyo night (~$1,609 real)"
+2026-10-02,kiwi-tyo-cts,done,2 Feb Skymark HND→CTS $84.25 (6:45am/4:55pm/6:40pm/8:30pm); 3 Feb $93.75 (2nd try; 1st proxy error)
+2026-10-02,kiwi-cts-tyo,done,14 Feb Skymark 8:10am $125.50; Air Do 8:00am $136.25 (Google $121); 13 Feb Air Do 9:45pm $132
+2026-10-02,kiwi-shift-out,done,"29–31 Jan: SQ via Fukuoka + Jetstar Japan/Peach $720.85–727.71pp to Sapporo — only ~$35 under 1 Feb, not worth it"
+2026-10-02,kiwi-shift-home,done,"19–21 Feb: Cebu via Manila/Bali 20 Feb $781, Air Niugini 20 Feb $803 — dearer than 16 Feb Seoul $658"
+2026-10-02,kiwi-singapore,done,"SQ out $626 to Osaka (1:30am connection) or 14h Singapore day stop SQ622 $626 landing Osaka 9:25pm (forced Osaka night); overnight SQ620 $681; SQ home from Fukuoka/Nagoya $726–764 (needs positioning), KIX $800+; Scoot: only one SQ+TR combo $1,110"
+2026-10-02,kiwi-china,done,"China Southern/Eastern return $2,311pp cheapest (MU via Shanghai) — far dearer"
+2026-10-02,kiwi-cns-ool,done,"Cairns→Osaka Jetstar $408.75, Cairns→Narita $430.25, Gold Coast→Cairns→Osaka $522.25 (all forced Japan night + positioning) — no better than Brisbane options"
+2026-10-02,sky-bne-cts,blocked,"BannedWithCaptcha (BNE→CTS tried twice, every other route once; cloud IP blocked)"
+2026-10-02,sky-nrt-bne,blocked,"BannedWithCaptcha (BNE→CTS tried twice, every other route once; cloud IP blocked)"
+2026-10-02,sky-hnd-bne,blocked,"BannedWithCaptcha (BNE→CTS tried twice, every other route once; cloud IP blocked)"
+2026-10-02,sky-bne-nrt-return,blocked,"BannedWithCaptcha (BNE→CTS tried twice, every other route once; cloud IP blocked)"
+2026-10-02,sky-bne-hnd-return,blocked,"BannedWithCaptcha (BNE→CTS tried twice, every other route once; cloud IP blocked)"
+2026-10-02,sky-tyo-cts,blocked,"BannedWithCaptcha (BNE→CTS tried twice, every other route once; cloud IP blocked)"
+2026-10-02,sky-cts-tyo,blocked,"BannedWithCaptcha (BNE→CTS tried twice, every other route once; cloud IP blocked)"
+2026-10-02,serpapi,done,4 flights: BNE→KIX SQ $584 one seat (Kiwi 4 seats $626) / Jetstar $499 no bag; UKB→CTS Skymark $83; CTS→HND Air Do $121; NRT→BNE Jin Air+Jetstar $715 no bag (Kiwi $658 bag incl). 4-seat Google re-check failed (401)
+2026-10-02,web-jetstar,done,"No live Feb 2027 sale; IWTF BNE–Narita return ~$984–1,013 (no bag); Google Jetstar BNE→KIX $499 one way no bag ($591.75 with bag, forced Osaka night)"
+2026-10-02,web-scoot,done,No Scoot Brisbane→Tokyo fare for Feb 2027 (Scoot sells Singapore–Tokyo only)
+2026-10-02,web-airasia,done,No AirAsia Brisbane→Tokyo fare for Feb 2027; only old OzBargain AirAsia posts
+2026-10-02,web-china-southern,done,"OzBargain $907 BNE–Tokyo return post (13 Sep, >7 days old) covers 10 Feb onward only; Kiwi $2,311 return for our dates"
+2026-10-02,sale-ozb-jetstar,done,Only old Jetstar Japan / Return-for-Free / ski-sale posts; nothing in last 72h
+2026-10-02,sale-ozb-qantas,done,Only old Qantas Osaka/Tokyo posts; nothing live
+2026-10-02,sale-ozb-general,done,No new OzBargain Japan airfare post covering Feb 2027 from Brisbane in last 72h
+2026-10-02,sale-jetstar,done,Jetstar All Abroad (Perth–Bali/Phuket) and old Black Friday articles; no live Japan sale covering Feb 2027
+2026-10-02,sale-qantas,done,No Qantas Japan sale; results are Jetstar Japan stake-sale/rebrand news
