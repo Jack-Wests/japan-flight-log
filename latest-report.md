@@ -65,4 +65,4 @@ All prices are per person, all-in, with a 20kg checked bag each way and the $121
 - Kobe ferry (~$19) added by hand.
 - Singapore: SQ overnight stop exists ($678.50 to Osaka), total $1,597, $79 over the cheapest. SQ/Scoot home from Tokyo: nothing under $900pp.
 - Sales: none live. Jetstar Get Onboard ended 24 Aug; OzBargain China Southern $907 post is from 13 Sep and only covers 10 Feb onward; nothing on AirAsia or Scoot from Brisbane.
-- CSV, charts and this report were committed and pushed to the working branch before the email was sent. Yesterday's run-branch tools (search checklist + log) were merged into this branch.
+- CSV, charts and this report were committed and pushed to the working branch before the email was sent. Email sent via Resend (id 01a0ffac-fda5-73e9-910c-e979169c6792); its plain-text part lists only the last 10 price-log days, matching the HTML. Yesterday's run-branch tools (search checklist + log) were merged into this branch.
