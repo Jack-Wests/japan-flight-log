@@ -537,7 +537,7 @@ def build_text():
     for date, loc, plan in RUN["itinerary"]:
         L.append(f'  {date:<12} {strip(loc):<20} {strip(plan)}')
     L += ["", strip(RUN["itin_footnote"]), "", "PRICE LOG", ""]
-    for r in csv.DictReader(open("prices.csv")):
+    for r in list(csv.DictReader(open("prices.csv")))[-10:]:   # last 10, same as the HTML
         d = datetime.strptime(r["date"], "%Y-%m-%d").strftime("%a %-d %b")
         L.append(f'  {d:<12} ${cpp(r):,.0f}')
     L += ["", strip(RUN["price_log_footnote"]), "", strip(RUN["footer"])]
