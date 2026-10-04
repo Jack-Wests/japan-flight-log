@@ -64,4 +64,4 @@ All prices are per person, all-in, with a 20kg checked bag each way and the $121
 - Singapore: SQ overnight stop (SQ620) $679.75 + Peach 5:45pm $125.61 → trip $1,603. SQ home from Tokyo $1,062 (Google, one seat) – $1,111 (Kiwi): far dearer.
 - Budget carriers: no Scoot or AirAsia Brisbane→Tokyo fares; China Southern/Eastern returns $1,582+ bare; Cairns/Gold Coast starts no better.
 - Sales: none live. OzBargain Japan airfare tag has nothing from Brisbane since 18 Sep (Xiamen 29 Sep is MEL/SYD only); Jetstar results are last year's Oct 2025 sale.
-- CSV, charts and this report committed and pushed to the working branch before the email was sent.
+- CSV, charts and this report committed and pushed to the working branch before the email was sent. Email sent via Resend (id 01a104d2-9a57-7336-9716-f6eb20ef8972). The plain-text part now lists only the last 10 price-log days, matching the HTML (render_email.py fixed today).
