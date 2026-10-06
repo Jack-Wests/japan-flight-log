@@ -64,4 +64,4 @@ All prices are per person, all-in, with a 20kg checked bag each way and the $120
 - The Kobe ferry (~$19) and Korea's K-ETA (~$12, exemption ends 31 Dec 2026) were added manually.
 - Port Moresby reference fare: Air Niugini return $1,237.50 + Haneda→Sapporo Thu 4 Feb $87.75 + Air Do $120; real cost estimated with ~$90pp Port Moresby hotel/transfers and ~$40pp Tokyo hotel.
 - Sales: no verified live sale. Qantas Red Tail post is from 28 Jul and Sydney-only; Jetstar's current sale has no Japan routes; nothing on Scoot, AirAsia or China Southern under $500 one way.
-- The CSV, charts and this report were committed and pushed to the working branch before the email was sent.
+- The CSV, charts and this report were committed and pushed to the working branch before the email was sent. Email sent via Resend (id 01a10f1f-aed3-7293-9123-ffdf82bbac47).
