@@ -63,4 +63,4 @@ All prices are per person, all-in, with a 20kg checked bag each way and the $120
 - Google's Jin Air + Jetstar home ($771) excludes the Jetstar bag, so it's not cheaper than Air Premia all-in.
 - Kobe ferry (~$19) and Korea's K-ETA (~$12, exemption ends 31 Dec 2026) added manually. Port Moresby reference: $1,277.50 return + $94.50 Haneda→Sapporo Thu 4 Feb + $120 Air Do; real cost adds ~$90 Port Moresby + ~$40 Tokyo.
 - Sales: none live for our dates. OzBargain China Southern $907 return from Brisbane (posted 13 Sep, ends 14 Oct) only covers travel 20 Feb–21 Mar 2027. Qantas Red Tail is Oct–Dec 2026 travel. Nothing on Jetstar, Scoot, AirAsia under $500 one way.
-- The CSV, charts and this report were committed and pushed to the working branch before the email was sent.
+- The CSV, charts and this report were committed and pushed to the working branch before the email was sent. Email sent via Resend (id 01a11446-bc43-793f-ad68-6f4f7b124e20).
