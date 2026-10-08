@@ -260,3 +260,32 @@ date,id,status,result
 2026-10-07,sale-ozb-general,done,No live Japan sale covering Feb 2027
 2026-10-07,sale-jetstar,done,All Abroad sale ended 24 Jul; no Japan
 2026-10-07,sale-qantas,done,No Qantas Japan sale live; news only about Jetstar Japan rebrand
+2026-10-08,kiwi-bne-cts,done,SQ+Peach via Osaka $760.50pp (Mon 1 Feb); Jetstar via Narita needs Tokyo night
+2026-10-08,kiwi-bne-kix,done,SQ BNE→KIX Mon 1 Feb $625pp bag incl (flat); Jetstar direct 3 Feb $638
+2026-10-08,kiwi-tyo-bne,done,Air Premia+Jetstar via Seoul Tue 16 Feb $785.64pp (up $6); Air Niugini 17 Feb $829.50
+2026-10-08,kiwi-qf107,done,"QF107 SYD→CTS $1,742.25pp one way (flat)"
+2026-10-08,kiwi-bne-tyo-return,done,"Jetstar out + Seoul home $1,476.80pp + Hokkaido hops/Tokyo night ≈ $1,750"
+2026-10-08,kiwi-tyo-cts,done,Skymark HND→CTS from $85.25pp (Tue 2 Feb eve)
+2026-10-08,kiwi-cts-tyo,done,JAL CTS→HND Sun 14 Feb 7:40am $139pp; Air Do 8:00 $142.25
+2026-10-08,kiwi-shift-out,done,"SQ via Fukuoka Fri 29 Jan $717.75pp — saves <$100, not used"
+2026-10-08,kiwi-shift-home,done,Air Niugini 20 Feb $830pp — dearer
+2026-10-08,kiwi-singapore,done,SQ BNE→KIX $625; SQ home via 22h Singapore overnight $936.50pp ($139 more than Seoul)
+2026-10-08,kiwi-china,done,"China Eastern return $1,582.75pp + domestic — dearer"
+2026-10-08,kiwi-cns-ool,done,Jetstar Cairns→Osaka $408.75pp but +$258 to reach Cairns + Osaka night — dearer
+2026-10-08,sky-bne-cts,failed,BannedWithCaptcha (4 adults)
+2026-10-08,sky-nrt-bne,failed,BannedWithCaptcha on retry (1 adult); no further Skyscanner searches
+2026-10-08,sky-hnd-bne,blocked,Skyscanner captcha-blocked this run after 1 search + 1 retry
+2026-10-08,sky-bne-nrt-return,blocked,Skyscanner captcha-blocked this run after 1 search + 1 retry
+2026-10-08,sky-bne-hnd-return,blocked,Skyscanner captcha-blocked this run after 1 search + 1 retry
+2026-10-08,sky-tyo-cts,blocked,Skyscanner captcha-blocked this run after 1 search + 1 retry
+2026-10-08,sky-cts-tyo,blocked,Skyscanner captcha-blocked this run after 1 search + 1 retry
+2026-10-08,web-jetstar,done,"Jetstar Return for FREE sale (7 Oct, ends 9 Oct) is May–Jul 2027 travel only; no Feb fare under $500"
+2026-10-08,web-scoot,done,No Scoot BNE–Tokyo fare found
+2026-10-08,web-airasia,done,No AirAsia BNE–Tokyo route found
+2026-10-08,web-china-southern,done,"IWTF $907 BNE–Tokyo return, but travel 20–28 Feb only; Kiwi China Eastern $1,583"
+2026-10-08,sale-ozb-jetstar,done,Only expired 2025 posts
+2026-10-08,sale-ozb-qantas,done,Only expired posts
+2026-10-08,sale-ozb-general,done,Nothing current for Feb 2027
+2026-10-08,sale-jetstar,done,"Return for FREE sale: May–Jul 2027 travel, doesn't cover our dates; jetstar.com deals page 503"
+2026-10-08,sale-qantas,done,No Qantas Japan sale live; news only about Jetstar Japan stake sale
+2026-10-08,serpapi,done,"Google: SQ BNE→KIX $584 (1 seat), Skymark UKB→CTS $83, Air Do CTS→HND $120, Jin Air+Jetstar home $775 excl bag"
