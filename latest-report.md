@@ -64,4 +64,4 @@ All prices are per person, all-in, with a 20kg checked bag each way and the $120
 - Kobe ferry (~$19) and Korea's K-ETA (~$12) added manually. Port Moresby reference: $1,281.25 return + $94.75 Haneda→Sapporo Thu 4 Feb + $120 Air Do; real cost adds ~$90 Port Moresby + ~$40 Tokyo.
 - Sales: Jetstar "Return for FREE" (reported 7 Oct, ends 9 Oct) is May–Jul 2027 travel only — not ours. Jetstar deals page returned 503. No Qantas sale. China Southern $907 BNE–Tokyo (IWTF, 13 Sep) is 20–28 Feb travel only. Nothing on Scoot or AirAsia.
 - Synced this branch up to the previous run's branch first so the search checklist and latest email fixes are in place; matplotlib/playwright installed for the run.
-- The CSV, charts and this report were committed and pushed to the working branch before the email was sent.
+- The CSV, charts and this report were committed and pushed to the working branch before the email was sent. Email sent via Resend (id 01a1196c-5aa2-7dfa-ace4-0eb90cbff8bb).
