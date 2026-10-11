@@ -347,3 +347,32 @@ date,id,status,result
 2026-10-10,sale-ozb-general,done,No current OzBargain Japan airfare deal covering Feb 2027
 2026-10-10,sale-jetstar,done,jetstar.com deals page 503; no live sale covering Feb 2027 Japan
 2026-10-10,sale-qantas,done,No Qantas Japan sale live; news only about Jetstar Japan rebrand
+2026-10-11,kiwi-bne-cts,done,SQ via SIN to Osaka + Peach to Sapporo Mon 1 Feb $748.14pp (one booking); Jetstar via Narita + Skymark $797.50
+2026-10-11,kiwi-bne-kix,done,"SQ BNE→KIX Mon 1 Feb $623.50pp (4 seats, bag incl.); Jetstar direct 3 Feb $638.25"
+2026-10-11,kiwi-tyo-bne,done,"Parata+Jetstar via Seoul Tue 16 Feb $773.59pp; Cebu via Manila+Bali $728.98 (3:45am Manila, 15 Feb); Air Niugini $825.25/$971.75"
+2026-10-11,kiwi-qf107,done,"QF107 SYD→CTS $1,742.25pp one way"
+2026-10-11,kiwi-bne-tyo-return,done,"China Airlines return via Taipei $1,420.50pp; Jetstar out + Seoul home $1,452.05"
+2026-10-11,kiwi-tyo-cts,done,Skymark HND→CTS 2 Feb eve $85pp; Air Do $94.25
+2026-10-11,kiwi-cts-tyo,done,Air Do CTS→HND Sun 14 Feb 8am $133.25pp
+2026-10-11,kiwi-shift-out,done,"SQ via Fukuoka Sat 30 Jan $718.34pp to Sapporo — saves <$100, not used"
+2026-10-11,kiwi-shift-home,done,"Nothing cheaper 19–21 Feb (Cebu $728.98, Seoul $921.84)"
+2026-10-11,kiwi-singapore,done,SQ BNE→KIX $623.50; SIN overnight (SQ620) $679; SQ home $942 (5h SIN stop)
+2026-10-11,kiwi-china,done,"China Eastern via Shanghai return $1,667.75pp; China Southern $2,237.75 — dearer"
+2026-10-11,kiwi-cns-ool,done,Gold Coast→Osaka Mon 1 Feb $522pp (forced Osaka night); Cairns→Osaka $449.25 (need to get to Cairns)
+2026-10-11,sky-bne-cts,blocked,BannedWithCaptcha on BNE→CTS (4 adults) and retry NRT→BNE (1 adult)
+2026-10-11,sky-nrt-bne,blocked,BannedWithCaptcha on BNE→CTS (4 adults) and retry NRT→BNE (1 adult)
+2026-10-11,sky-hnd-bne,blocked,BannedWithCaptcha on BNE→CTS (4 adults) and retry NRT→BNE (1 adult)
+2026-10-11,sky-bne-nrt-return,blocked,BannedWithCaptcha on BNE→CTS (4 adults) and retry NRT→BNE (1 adult)
+2026-10-11,sky-bne-hnd-return,blocked,BannedWithCaptcha on BNE→CTS (4 adults) and retry NRT→BNE (1 adult)
+2026-10-11,sky-tyo-cts,blocked,BannedWithCaptcha on BNE→CTS (4 adults) and retry NRT→BNE (1 adult)
+2026-10-11,sky-cts-tyo,blocked,BannedWithCaptcha on BNE→CTS (4 adults) and retry NRT→BNE (1 adult)
+2026-10-11,serpapi,done,"SQ $584 (1 seat), Air Do UKB→CTS 7pm $91, Air Do CTS→HND $119, Jin Air+Jetstar $769 ex-bag; 176 left before run"
+2026-10-11,web-jetstar,done,No Feb 2027 Japan fare/sale; Return for Free ended 9 Oct (May–Jul 2027)
+2026-10-11,web-scoot,done,No Scoot Brisbane–Tokyo route/fare found
+2026-10-11,web-airasia,done,No AirAsia Brisbane–Tokyo for Feb 2027
+2026-10-11,web-china-southern,done,Only the 13 Sep OzBargain $907 return post (old); Kiwi CZ dearer
+2026-10-11,sale-ozb-jetstar,done,No current OzBargain Jetstar Japan post
+2026-10-11,sale-ozb-qantas,done,"Qantas Red Tail Sale post expired, Oct–Dec 2026 travel only"
+2026-10-11,sale-ozb-general,done,Nothing current for Feb 2027
+2026-10-11,sale-jetstar,done,No live Jetstar sale; deals page HTTP 503
+2026-10-11,sale-qantas,done,No Qantas Japan sale (only Jetstar Japan stake news)
