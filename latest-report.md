@@ -67,4 +67,4 @@ All prices are per person for four seats booked together, all-in, with a 20kg ch
 - Kobe ferry (~$19) and Korea's K-ETA (~$12) added manually. Gold Coast any-routing: $522 + Peach $138.89 + Air Do $119 + Seoul home $773.59 + K-ETA $12; real cost adds ~$40 Osaka hotel + ~$15 to Gold Coast airport.
 - Kiwi's Cebu Pacific home via Manila + Bali ($728.98, leaves Narita Mon 15 Feb, 3:45am Manila connection) left out again: middle-of-the-night connection and only one Tokyo day.
 - Sales: no verified live sale. Jetstar "Return for Free" ended 9 Oct (May–Jul 2027 only); Jetstar deals page returned 503; Qantas Red Tail OzBargain post expired (Oct–Dec 2026 travel). Nothing on Scoot, AirAsia or China Southern (only the old 13 Sep $907 post).
-- Synced to the previous run's branch first (fast-forward); matplotlib installed for the run. CSV, charts and this report committed and pushed before the email was sent.
+- Synced to the previous run's branch first (fast-forward); matplotlib installed for the run. CSV, charts and this report committed and pushed before the email was sent; email sent via Resend (id 01a128e0-6178-71b9-8022-ca9a5fa5c035).
