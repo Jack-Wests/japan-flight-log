@@ -405,3 +405,32 @@ date,id,status,result
 2026-10-12,sale-ozb-general,done,Nothing current for Feb 2027
 2026-10-12,sale-jetstar,done,No live Jetstar sale found this week
 2026-10-12,sale-qantas,done,No live Qantas Japan sale covering Feb 2027
+2026-10-13,kiwi-bne-cts,done,"SQ via Singapore to Osaka + Peach KIX 13:55 to Sapporo, one Kiwi booking $748.40pp (Peach 12:35 $759.15)"
+2026-10-13,kiwi-bne-kix,done,SQ266+SQ618 BNE-KIX 1 Feb $623.75pp (was $625.75); Jetstar direct 3 Feb $638; Cebu via Cebu 3am $611
+2026-10-13,kiwi-tyo-bne,done,"Parata Air+Jetstar via Seoul Tue 16 Feb $802.32pp, Thu 18 Feb $798.32; Air Niugini 17 Feb daytime POM $826.50; SQ $938.75"
+2026-10-13,kiwi-qf107,done,"QF107 Sydney-Sapporo direct $1,742.25pp one way (1, 3, 4 Feb), before BNE-SYD"
+2026-10-13,kiwi-bne-tyo-return,done,"China Airlines via Taipei return, out 1 Feb, home Thu 18 Feb $1,424.25pp; Jetstar out + Seoul home $1,476.71"
+2026-10-13,kiwi-tyo-cts,done,Skymark Haneda-Sapporo Tue 2 Feb 6:40pm $83.75pp; Peach Narita 7am $105.50
+2026-10-13,kiwi-cts-tyo,done,Air Do Sapporo-Haneda Sun 14 Feb 8:00am $141.75pp; Air Do Sat 13 Feb 9:45pm $137
+2026-10-13,kiwi-shift-out,done,29-31 Jan: SQ via Nagoya + Skymark 29 Jan $739.25pp; nothing $100 cheaper
+2026-10-13,kiwi-shift-home,done,"19-21 Feb: Air Niugini 20 Feb $826.50, Asiana+Jetstar $902; nothing cheaper than Seoul 16 Feb"
+2026-10-13,kiwi-singapore,done,SQ Singapore overnight 00:05-14:25 then KIX 9:25pm $623.75pp (needs Osaka night + Peach 3 Feb $125.50 = ~$789); SQ620 8h20 stop $679.25+Peach $114.50 = $793.75; SQ home via SIN $938.75
+2026-10-13,kiwi-china,done,"China Eastern return via Shanghai $1,667.50pp (overnight Shanghai); China Southern combos $2,190+ - dearer"
+2026-10-13,kiwi-cns-ool,done,Jetstar Cairns-Osaka $449.25pp but BNE-CNS-KIX $685; Gold Coast-CNS-KIX $522; none beat SQ $623.75 all-in
+2026-10-13,sky-bne-cts,blocked,"BannedWithCaptcha (4 adults, BNE-CTS 1 Feb); retry NRT-BNE 1 adult also BannedWithCaptcha"
+2026-10-13,sky-nrt-bne,blocked,Skyscanner IP-banned with captcha this run (BannedWithCaptcha twice); not attempted further per one-retry rule
+2026-10-13,sky-hnd-bne,blocked,Skyscanner IP-banned with captcha this run (BannedWithCaptcha twice); not attempted further per one-retry rule
+2026-10-13,sky-bne-nrt-return,blocked,Skyscanner IP-banned with captcha this run (BannedWithCaptcha twice); not attempted further per one-retry rule
+2026-10-13,sky-bne-hnd-return,blocked,Skyscanner IP-banned with captcha this run (BannedWithCaptcha twice); not attempted further per one-retry rule
+2026-10-13,sky-tyo-cts,blocked,Skyscanner IP-banned with captcha this run (BannedWithCaptcha twice); not attempted further per one-retry rule
+2026-10-13,sky-cts-tyo,blocked,Skyscanner IP-banned with captcha this run (BannedWithCaptcha twice); not attempted further per one-retry rule
+2026-10-13,serpapi,done,"4 flights: SQ BNE-KIX $584 (1 seat, vs Kiwi $623.75 for 4); Peach KIX-CTS $83 excl bag; Air Do CTS-HND $120 incl 20kg (used, Kiwi $141.75); Jin Air+Jetstar home $730 excl Jetstar bag"
+2026-10-13,web-jetstar,done,No Jetstar Feb 2027 fare found on web; Kiwi Jetstar BNE-NRT $638-681 incl bag; Cairns-Osaka $449 but getting to Cairns kills it
+2026-10-13,web-scoot,done,No Scoot Brisbane-Tokyo route/fare for Feb 2027; sales are from Singapore/Malaysia only
+2026-10-13,web-airasia,done,No AirAsia Brisbane-Tokyo service found; only old OzBargain SYD/MEL sale (travel to Dec 2026)
+2026-10-13,web-china-southern,done,"Only old OzBargain post BNE-Tokyo $907 return; Kiwi China Southern combos $2,190+ with bags"
+2026-10-13,sale-ozb-jetstar,done,"No current OzBargain Jetstar Japan post; Return for Free sale ended 9 Oct, travel May-Jul 2027"
+2026-10-13,sale-ozb-qantas,done,Qantas Red Tail OzBargain post expired (Oct-Dec 2026 travel); nothing live for Feb 2027
+2026-10-13,sale-ozb-general,done,All OzBargain Japan airfare posts found are expired/old; nothing live covering Feb 2027
+2026-10-13,sale-jetstar,done,No live Jetstar sale covering Feb 2027 Japan; latest articles are past sales
+2026-10-13,sale-qantas,done,No Qantas Japan sale found; results only about Qantas selling Jetstar Japan stake
