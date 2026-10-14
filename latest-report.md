@@ -66,4 +66,4 @@ All prices are per person for four seats booked together, all-in, with a 20kg ch
 - New cheap home option: Cebu Pacific via Manila (3:45am change) and Bali to Jetstar, $775.73, but it's a self-transfer in Bali (visa on arrival) after a night in Manila airport; counted only in the any-routing figure.
 - Date shifts: nothing saves $100+ (31 Jan SQ+Peach $727; 19–21 Feb home no cheaper). SQ return via Fukuoka $1,373.50 but flies home from Fukuoka, not Tokyo.
 - Sales: no verified live sale. Jetstar "Return for Free" ended 9 Oct (May–Jul 2027 travel); Qantas Red Tail OzBargain post expired. Scoot/AirAsia have no Brisbane–Tokyo fares; China Southern only an old $907 OzBargain post.
-- Fast-forwarded to yesterday's branch first; matplotlib installed for the run. CSV, charts and this report committed and pushed before the email was sent.
+- Fast-forwarded to yesterday's branch first; matplotlib installed for the run. CSV, charts and this report committed and pushed before the email was sent; email sent via Resend (id 01a13852-9e0d-7bce-bf18-b449f943763a).
