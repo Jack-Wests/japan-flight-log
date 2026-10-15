@@ -67,4 +67,4 @@ All prices are per person for four seats booked together, all-in, with a 20kg ch
 - Any-routing: Gold Coast–Cairns–Osaka $522 + Peach 7:20am $125.92 + Air Do + Cebu Pacific via Manila/Bali $774 = $1,542; real cost ~$1,645 with an Osaka hotel and Bali visa on arrival.
 - Date shifts: nothing saves $100+ (31 Jan SQ+Peach $724.89; 19–21 Feb home no cheaper). China Southern/Eastern one way to Tokyo $1,170+ — dearer.
 - Sales: no verified live sale. Jetstar "Return for Free" ended 9 Oct (May–Jul 2027 travel); OzBargain Qantas/Japan posts all expired. Scoot/AirAsia have no Brisbane–Tokyo fares; China Southern only an old $907 OzBargain post.
-- Fast-forwarded to yesterday's branch first; matplotlib/playwright installed for the run. CSV, charts and this report committed and pushed before the email was sent.
+- Fast-forwarded to yesterday's branch first; matplotlib/playwright installed for the run. CSV, charts and this report committed and pushed before the email was sent; email sent via Resend (id 01a13d7a-d44c-788d-9a57-fac876e5bda7).
