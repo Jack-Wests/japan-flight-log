@@ -66,4 +66,4 @@ All prices are per person for four seats booked together, all-in, with a 20kg ch
 - Any-routing: SQ+Peach $714.08 + ANA $105 + Cebu Pacific via Manila/Bali $782.53 = $1,602; ~$1,650 with Bali visa on arrival.
 - Date shifts: nothing saves $100+ (31 Jan SQ+Peach $728.42; 19–21 Feb home no cheaper). China Southern/Eastern one way to Tokyo $1,163+; Cairns→Sapporo $579 before getting to Cairns — not competitive.
 - Sales: no verified live sale. Jetstar Return for Free ended 9 Oct (May–Jul 2027 travel); Qantas Red Tail OzBargain post expired. Scoot/AirAsia have no Brisbane–Tokyo fares; China Southern only an old $907 OzBargain post.
-- Fast-forwarded to yesterday's branch first; matplotlib installed for the run. CSV, charts and this report committed and pushed before the email was sent.
+- Fast-forwarded to yesterday's branch first; matplotlib installed for the run. CSV, charts and this report committed and pushed before the email was sent; email sent via Resend (id 01a1429e-f9fb-7756-8509-2f5ff554f211).
