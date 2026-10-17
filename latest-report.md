@@ -66,4 +66,4 @@ All prices are per person for four seats booked together, all-in, with a 20kg ch
 - New any-routing low: Air Niugini Brisbane ⇄ Tokyo return $1,380.50 + Skymark Tokyo→Sapporo 4 Feb $114.25 + ANA $104 = $1,599, but a forced ~20h Port Moresby overnight outbound. Cebu via Manila/Bali home now $1,607.
 - Date shifts: nothing saves $100+ (31 Jan SQ+Peach $728.77; 19–21 Feb home no cheaper). China Southern one way to Tokyo $727.50 + hop to Sapporo, dearer than SQ+Peach; Cairns→Osaka $449 before getting to Cairns — not competitive.
 - Sales: no verified live sale. Jetstar Return for Free ended 9 Oct; Qantas posts all expired; Scoot/AirAsia have no Brisbane–Tokyo fares. One "airlines slashing fares" article returned 403 and couldn't be dated — treated as unverified.
-- Fast-forwarded to yesterday's branch first; matplotlib installed for the run. CSV, charts and this report committed and pushed before the email was sent.
+- Fast-forwarded to yesterday's branch first; matplotlib installed for the run. CSV, charts and this report committed and pushed before the email was sent; email sent via Resend (id 01a147c5-9875-7c26-bd65-fe7f01c02b57).
