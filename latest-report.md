@@ -66,4 +66,4 @@ All prices are per person for four seats booked together, all-in, with a 20kg ch
 - The Osaka connection on the cheapest option is 2h15 on separate bookings. Peach 5:45pm is the last flight to Sapporo that evening.
 - Budget carriers: no Jetstar Feb 2027 fare found on the web, no Scoot or AirAsia Brisbane–Tokyo route, China Southern only an old $907 OzBargain post (Kiwi CZ one way $662 but forces a Guangzhou night).
 - Sales: no verified live sale. Jetstar's Return for Free ended 9 Oct (May–Jul 2027 travel). No Qantas Japan sale.
-- The CSV, charts and this report were committed and pushed to the working branch before the email was sent.
+- The CSV, charts and this report were committed and pushed to the working branch before the email was sent. Email sent via Resend (id 01a15738-51aa-7404-a94c-d0254699370d).
