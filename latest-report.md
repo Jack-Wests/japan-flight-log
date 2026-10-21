@@ -58,4 +58,4 @@
 - The Singapore overnight (SQ620) is the same $661 fare; not picked, per Isaac.
 - Sales: no current OzBargain Japan sale. The Jetstar Japan/Korea sale ended 9 Oct (May–Jul 2027 travel only).
 - The scheduled runs build on the previous run's branch, not main. This branch started from main, so render_email.py, search_checklist.py and search-log.csv were copied over from this morning's branch.
-- CSV, charts and this report were committed and pushed before the email was sent.
+- CSV, charts and this report were committed and pushed before the email was sent. Email sent via Resend (id 01a15dc8-a2ee-7e4a-b43e-a5e85788e40e); the plain-text part was a shortened copy of email.txt.
