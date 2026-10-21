@@ -66,4 +66,4 @@ All prices are per person for four seats booked together, all-in, with a 20kg ch
 - Google Flights (SerpApi, 4 searches, 136 left): Peach $82 excl. bag (Kiwi incl. bag used), Jin Air + Jetstar via Seoul home $723 excl. bags (about level with Kiwi once bags added), Jetstar BNE→KIX direct $540 excl. bag (lands 7:45pm, forced Osaka night).
 - Budget carriers: no Jetstar Feb 2027 fare on the web, no Scoot or AirAsia Brisbane–Tokyo route; China Southern via Guangzhou to Haneda $724.50 (no forced night today) + hop ~$93 = ~$817, dearer than SQ+Peach. Date shifts: China Airlines 31 Jan saves only $28.
 - Sales: no verified live sale. Jetstar's Return for Free ended 9 Oct (May–Jul 2027 travel). No Qantas Japan sale.
-- The CSV, charts and this report were committed and pushed to the working branch before the email was sent.
+- The CSV, charts and this report were committed and pushed to the working branch before the email was sent. Email sent via Resend (id 01a15c79-6dde-74fb-bb3b-fda29305d9ab); the plain-text part was a shortened copy of email.txt.
