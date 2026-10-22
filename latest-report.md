@@ -58,4 +58,5 @@
 - China Southern "Osaka from $722 return" deal (IWTF, 17 Oct, page 403): Kiwi prices CZ/MU Brisbane ⇄ Osaka at $1,878pp on our dates, so it doesn't reach Snow Festival week.
 - Budget carriers: Jetstar Cairns → Osaka $449 one way with bag but ~$630–700 from Brisbane with extra Osaka nights; no Scoot or AirAsia Brisbane–Tokyo route.
 - Sales: no current OzBargain Japan sale; Jetstar Return for Free ended 9 Oct (May–Jul 2027 travel).
-- CSV, charts and this report committed and pushed before the email was sent.
+- CSV, charts and this report committed and pushed before the email was sent. Email sent via Resend (id 01a16182-c337-7176-8796-2ffb3b513579); the plain-text part was a shortened copy of email.txt.
+- This branch started from main, so yesterday afternoon's branch (Osaka plan, search checklist, CLAUDE.md note) was fast-forwarded in first.
