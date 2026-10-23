@@ -60,4 +60,4 @@ Best value and Fastest sensible are the same until 16 Feb, then get an extra Tok
 - Budget carriers: Jetstar Cairns → Osaka $449 one way with bag, but ~$629 from Brisbane on 31 Jan and lands a day early; no Scoot or AirAsia Brisbane–Tokyo route.
 - Date shifts: nothing saves $100+pp (best is ~$33 via Cairns on 31 Jan).
 - Sales: no current OzBargain Japan sale; Jetstar Return for Free ended 9 Oct (May–Jul 2027 travel).
-- CSV, charts and this report committed and pushed before the email was sent.
+- CSV, charts and this report committed and pushed before the email was sent; email sent via Resend (one email, no follow-up).
