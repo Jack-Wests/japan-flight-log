@@ -30,79 +30,86 @@ def cpp(row):
 # EDIT THIS BLOCK EACH RUN
 # ─────────────────────────────────────────────────────────────────────────────
 RUN = {
-    "date_iso": "2026-10-23",
-    "date_human": "Fri 23 Oct 2026",
+    "date_iso": "2026-10-24",
+    "date_human": "Sat 24 Oct 2026",
     "verdict_headline": "🔴 HOLD — dear side, wait",
-    "best_pp": "$1,707",
-    "best_all4": "$6,828",
-    "target_distance": "$207 above",
+    "best_pp": "$1,748",
+    "best_all4": "$6,990",
+    "target_distance": "$248 above",
     "snapshot": [
-        "<b>Up $4 today.</b> Your plan (Singapore Airlines to Osaka with the short 1h25 change "
-        "in Singapore, a day and a half in Osaka, then ANA up to Sapporo on the evening of Wed 3 Feb) "
-        "is now <b>$1,707 per person: $6,828 for all four, or $5,121 for three</b> if Hugh buys "
-        "separately (four seats booked together, 20kg bag each way).",
-        "Singapore Airlines Brisbane → Osaka didn't move (<b>$662</b>). The small rise is spread "
-        "across the rest: ANA Itami → Sapporo $110 and ANA Sapporo → Tokyo on 14 Feb $110 (each up about $1), "
-        "and Air Premia to Seoul + Jetstar home on Tue 16 Feb $825 with the Korean entry permit (up $2).",
-        "That's <b>HOLD: $207 over the $1,500 buy price, and $107 over the $1,600 \"book after "
-        "mid-October\" line</b>. ⏳ About 3½ months (102 days) until departure. <b>We're past the "
+        "<b>Up $41 today, and it's the highest comfortable price in the whole log</b> (the old high "
+        "was $1,709 on 13 Sep). Your plan (Singapore Airlines to Osaka with the short 1h25 change in "
+        "Singapore, a day and a half in Osaka, then up to Sapporo on the evening of Wed 3 Feb) is now "
+        "<b>$1,748 per person: $6,990 for all four, or $5,243 for three</b> if Hugh buys separately "
+        "(four seats booked together, 20kg bag each way).",
+        "The rise is almost all the two short flights inside Japan. The cheap ANA seats for four have "
+        "gone on both: Osaka → Sapporo is now Peach from Kansai at <b>$125</b> (ANA went from $110 to "
+        "$133), and Sapporo → Tokyo on 14 Feb is now Air Do at <b>$137</b> (ANA went from $110 to $149). "
+        "Singapore Airlines Brisbane → Osaka is up $3 to $665, and Air Premia + Jetstar home via Seoul "
+        "is down $4 to $821 with the Korean entry permit.",
+        "That's <b>HOLD: $248 over the $1,500 buy price, and $148 over the $1,600 \"book after "
+        "mid-October\" line</b>. ⏳ About 3½ months (101 days) until departure. <b>We're past the "
         "mid-October deadline: book on the next comfortable day under $1,600.</b> From November "
-        "(9 days away), anything under $1,650 is a book. Nothing comfortable has been under $1,600 "
+        "(8 days away), anything under $1,650 is a book. Nothing comfortable has been under $1,600 "
         "since 5 Oct. No airline sale covers our dates.",
-        "<b>What to watch:</b> still the Singapore Airlines Brisbane → Osaka fare. It was $592 on "
-        "Monday; back near $600 and your plan drops under the November $1,650 line.",
+        "<b>Worth knowing:</b> the two Japan hops don't have to go through Kiwi. Google Flights shows "
+        "Air Do Sapporo → Tokyo 8:00am on 14 Feb at <b>$102</b> for one seat (Air Do includes a 20kg "
+        "bag), $35 under today's four-seat price. If the four of you book those hops on the airline's "
+        "own site, a couple of seats at a time, the plan could land nearer $1,715. The big fares "
+        "(Singapore Airlines over, Seoul home) are still the ones to watch.",
     ],
     "options": [
         # (label, getting there, getting home, pp, all4, worth knowing)
         ("Cheapest",
          "🛫 Dep Brisbane (BNE) Mon 1 Feb 6:10pm → 🛬 lands Osaka (KIX) Tue 2 Feb 8:35am "
-         "<i>(Singapore Airlines, 1h25 change in Singapore)</i>; then 🛫 Osaka (ITM) Wed 3 Feb "
-         "7:00pm → 🛬 lands Sapporo (CTS) 8:50pm <i>(ANA)</i>",
-         "🛫 Sapporo (CTS) Sun 14 Feb 8:30am → Tokyo (HND) 10:10am <i>(ANA)</i>; then 🛫 Dep "
+         "<i>(Singapore Airlines, 1h25 change in Singapore)</i>; then 🛫 Osaka (KIX) Wed 3 Feb "
+         "5:45pm → 🛬 lands Sapporo (CTS) 7:40pm <i>(Peach)</i>",
+         "🛫 Sapporo (CTS) Sun 14 Feb 8:00am → Tokyo (HND) 9:35am <i>(Air Do)</i>; then 🛫 Dep "
          "Tokyo (NRT) Tue 16 Feb 12:30pm → 🛬 lands Brisbane (BNE) Wed 17 Feb 8:00am "
          "<i>(Air Premia to Seoul, Jetstar overnight to Brisbane)</i>",
-         "$1,707", "$6,828<br><span style=\"color:#8a94a6;\">3 of you: $5,121</span>",
+         "$1,748", "$6,990<br><span style=\"color:#8a94a6;\">3 of you: $5,243</span>",
          "Your plan: sleep on both flights, a day and a half in Osaka. 15h25 to Osaka. 18h30 home on "
          "two tickets, so in Seoul you collect bags and check in again (6h10; K-ETA ~$12 included)"),
         ("Best value",
-         "Same as Cheapest: Singapore Airlines to Osaka, ANA to Sapporo Wed 3 Feb",
-         "🛫 Sapporo (CTS) Sun 14 Feb 8:30am → Tokyo (HND) 10:10am; then 🛫 Dep Tokyo (NRT) Wed 17 "
-         "Feb 9:30pm → 🛬 lands Brisbane (BNE) Thu 18 Feb 3:55pm <i>(Air Niugini via Port Moresby, "
-         "one ticket)</i>",
-         "$1,707", "$6,829<br><span style=\"color:#8a94a6;\">3 of you: $5,122</span>",
-         "Same price. One ticket home, so no bag re-check in Seoul, plus an extra Tokyo day (one more "
+         "Same as Cheapest: Singapore Airlines to Osaka, Peach to Sapporo Wed 3 Feb",
+         "🛫 Sapporo (CTS) Sun 14 Feb 8:00am → Tokyo (HND) 9:35am <i>(Air Do)</i>; then 🛫 Dep Tokyo "
+         "(NRT) Wed 17 Feb 9:30pm → 🛬 lands Brisbane (BNE) Thu 18 Feb 3:55pm <i>(Air Niugini via "
+         "Port Moresby, one ticket)</i>",
+         "$1,752", "$7,009<br><span style=\"color:#8a94a6;\">3 of you: $5,257</span>",
+         "$4pp more. One ticket home, so no bag re-check in Seoul, plus an extra Tokyo day (one more "
          "hotel night, ~$45pp). 17h25 home with a 7h daytime wait in Port Moresby"),
         ("Fastest sensible",
-         "Same as Cheapest: Singapore Airlines to Osaka, ANA to Sapporo Wed 3 Feb",
-         "🛫 Sapporo (CTS) Sun 14 Feb 8:30am → Tokyo (HND) 10:10am; then 🛫 Dep Tokyo (NRT) Wed 17 "
-         "Feb 9:30pm → 🛬 lands Brisbane (BNE) Thu 18 Feb 9:40am <i>(Air Niugini via Port Moresby, "
-         "1h change)</i>",
-         "$1,853", "$7,412<br><span style=\"color:#8a94a6;\">3 of you: $5,559</span>",
-         "11h10 home on one ticket (1h change in Port Moresby at 5:20am), extra Tokyo day. $146pp "
+         "Same as Cheapest: Singapore Airlines to Osaka, Peach to Sapporo Wed 3 Feb",
+         "🛫 Sapporo (CTS) Sun 14 Feb 8:00am → Tokyo (HND) 9:35am <i>(Air Do)</i>; then 🛫 Dep Tokyo "
+         "(NRT) Wed 17 Feb 9:30pm → 🛬 lands Brisbane (BNE) Thu 18 Feb 9:40am <i>(Air Niugini via "
+         "Port Moresby, 1h change)</i>",
+         "$1,899", "$7,596<br><span style=\"color:#8a94a6;\">3 of you: $5,697</span>",
+         "11h10 home on one ticket (1h change in Port Moresby at 5:20am), extra Tokyo day. $151pp "
          "more than the cheapest"),
     ],
     "check_links": {
-        "Cheapest": [("BNE", "KIX", "2027-02-01"), ("ITM", "CTS", "2027-02-03"),
+        "Cheapest": [("BNE", "KIX", "2027-02-01"), ("KIX", "CTS", "2027-02-03"),
                      ("CTS", "HND", "2027-02-14"), ("NRT", "BNE", "2027-02-16")],
-        "Best value": [("BNE", "KIX", "2027-02-01"), ("ITM", "CTS", "2027-02-03"),
+        "Best value": [("BNE", "KIX", "2027-02-01"), ("KIX", "CTS", "2027-02-03"),
                        ("CTS", "HND", "2027-02-14"), ("NRT", "BNE", "2027-02-17")],
-        "Fastest sensible": [("BNE", "KIX", "2027-02-01"), ("ITM", "CTS", "2027-02-03"),
+        "Fastest sensible": [("BNE", "KIX", "2027-02-01"), ("KIX", "CTS", "2027-02-03"),
                              ("CTS", "HND", "2027-02-14"), ("NRT", "BNE", "2027-02-17")],
     },
     "options_footnote":
         "Prices are per person for four seats booked together, all-in, with a 20kg checked bag each "
-        "way: Singapore Airlines to Osaka $662, ANA Osaka → Sapporo $110, ANA Sapporo → Tokyo $110. "
+        "way: Singapore Airlines to Osaka $665, Peach Osaka → Sapporo $125, Air Do Sapporo → Tokyo $137. "
         "Osaka's hotel night replaces a Sapporo one, so it adds nothing. "
-        "<b>Other ways to Osaka:</b> Jetstar direct Mon 1 Feb 11:40am, landing 7:45pm, is $681 with "
-        "the bag ($19 more, plus an extra Osaka night). Jetstar via Cairns Sun 31 Jan is $629, but "
-        "you land a day early and the extra hotel nights cancel the saving. "
+        "<b>Cheaper but shorter in Tokyo:</b> Peach Sapporo → Narita at 7:50pm on 14 Feb is $124, $13 "
+        "less, but you lose the first afternoon in Tokyo. "
+        "<b>China Airlines Brisbane ⇄ Tokyo via Taipei</b> (8½h daytime stop in Taipei on the way, "
+        "home Thu 18 Feb) plus the two Hokkaido hops is $1,724, but flying home two days later means "
+        "two more Tokyo hotel nights (~$90pp), so really ~$1,814, and it skips the Osaka stop. "
         "<b>Singapore Airlines home:</b> one ticket from Haneda Tue 16 Feb 8:30am with a 6½h daytime "
-        "stop in Singapore, landing 7:15am Wed 17 Feb, is now $935 (down from $1,099). That makes the "
-        "whole trip $1,817, $110pp more than your plan. "
-        "<b>Cheapest if you'd overnight in Port Moresby:</b> $1,616 (Air Niugini Brisbane ⇄ Tokyo "
-        "return, a forced night in Port Moresby on the way, then Peach Narita → Sapporo Thu 4 Feb). "
-        "Not recommended: real cost ~$1,740 after a Port Moresby hotel and a Tokyo night, and you'd "
-        "miss the first Snow Festival morning. "
+        "stop in Singapore, landing 7:15am Wed 17 Feb, is $933: $1,859 all up, $111pp more than your plan. "
+        "<b>Cheapest if you'd overnight in Port Moresby:</b> $1,639 (Air Niugini Brisbane ⇄ Tokyo "
+        "return with a forced night in Port Moresby on the way, then Skymark Tokyo → Sapporo Thu 4 Feb). "
+        "Not recommended: real cost ~$1,765 after a Port Moresby hotel and a Tokyo night, and you'd "
+        "miss the first Snow Festival day. "
         "<b>Qantas QF107 Sydney–Sapporo direct:</b> $1,742pp one way from Sydney, before the "
         "Brisbane–Sydney flight.",
     "journeys": [
@@ -136,7 +143,7 @@ RUN = {
     "itinerary": [
         ("Mon 1 Feb", "Brisbane → Singapore", "Fly out 6:10pm, sleep; land Singapore 12:05am, 1h25 change"),
         ("Tue 2 Feb", "→ Osaka", "Fly on 1:30am and sleep again; land Osaka 8:35am. Dotonbori, Kuromon Market, Shinsekai at night"),
-        ("Wed 3 Feb", "Osaka → Sapporo", "Osaka Castle, Umeda; ANA from Itami 7:00pm, land Sapporo 8:50pm, train into the city"),
+        ("Wed 3 Feb", "Osaka → Sapporo", "Osaka Castle in the morning; Peach from Kansai 5:45pm, land Sapporo 7:40pm, train into the city"),
         ("Thu 4 Feb", "Sapporo", "<b>Snow Festival day 1</b>: Odori Park on opening day"),
         ("Fri 5 Feb", "Sapporo", "<b>Snow Festival day 2</b>: Susukino ice sculptures + Tsudome; night out"),
         ("Sat 6 Feb", "→ Furano", "Pick up the car at Sapporo (CTS), drive ~2h to Furano, check into the lodge"),
@@ -147,23 +154,24 @@ RUN = {
         ("Thu 11 Feb", "Furano / Asahikawa", "Asahikawa Zoo penguin parade, or a chill lodge day"),
         ("Fri 12 Feb", "Furano", "<b>Ski day 4</b>, last night at the lodge"),
         ("Sat 13 Feb", "→ Jozankei → Otaru → Sapporo", "Day-use onsen at Jozankei, then the <b>Otaru Snow Light Path</b> on its last evening; sleep in Sapporo"),
-        ("Sun 14 Feb", "Sapporo → Tokyo", "Drop the car at Sapporo (CTS), fly 8:30am, land Haneda 10:10am; Shibuya"),
+        ("Sun 14 Feb", "Sapporo → Tokyo", "Drop the car at Sapporo (CTS), fly 8:00am, land Haneda 9:35am; Shibuya"),
         ("Mon 15 Feb", "Tokyo", "Asakusa, Akihabara, teamLab, Shinjuku at night"),
         ("Tue 16 Feb", "Tokyo → Seoul", "Early Harajuku walk, fly out of Narita 12:30pm; collect bags and check in again in Seoul, fly 9:30pm"),
         ("Wed 17 Feb", "→ Brisbane", "Land Brisbane 8:00am"),
     ],
     "itin_footnote":
         "Picking the car up on 6 Feb instead of when you land saves three days of hire while you're "
-        "in the city anyway. ANA also flies Itami → Sapporo at 2pm, 3pm and 4pm on 3 Feb for the same "
-        "price if you'd rather land earlier. <b>Best value</b> and <b>Fastest sensible</b> are the same "
-        "until 16 Feb, then get an extra Tokyo day (Harajuku, Meiji Shrine, Tokyo Tower) and fly out of "
-        "Narita 9:30pm Wed 17 Feb on Air Niugini: best value lands Brisbane 3:55pm Thu 18 Feb after a "
-        "daytime wait in Port Moresby, fastest lands 9:40am.",
+        "in the city anyway. Peach also flies Kansai → Sapporo at 2:20pm and 4:15pm on 3 Feb for the "
+        "same price if you'd rather land earlier; ANA from Itami (closer to the city) is $8pp more. "
+        "<b>Best value</b> and <b>Fastest sensible</b> are the same until 16 Feb, then get an extra "
+        "Tokyo day (Harajuku, Meiji Shrine, Tokyo Tower) and fly out of Narita 9:30pm Wed 17 Feb on "
+        "Air Niugini: best value lands Brisbane 3:55pm Thu 18 Feb after a daytime wait in Port "
+        "Moresby, fastest lands 9:40am.",
     "price_log_footnote":
-        "Showing the last 10 checks; the chart above has all 93. Since 21 Oct the line tracks your "
+        "Showing the last 10 checks; the chart above has all 94. Since 21 Oct the line tracks your "
         "Osaka plan. Since 23 Sep it's the cheapest <i>comfortable</i> price (no hidden forced "
         "overnights). Up to 25 Sep (evening) every day was a one-seat price; since then it's four "
-        "seats booked together. Comfortable range so far: $1,333–$1,709.",
+        "seats booked together. Comfortable range so far: $1,333–$1,748.",
     "footer":
         "Daily flight watch · prices from Kiwi.com, cross-checked on Google Flights (Skyscanner blocked "
         "today, captcha), 4 seats, AUD incl. 1 checked bag each way · no verified sale live today.",
