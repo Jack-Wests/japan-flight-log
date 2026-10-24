@@ -64,4 +64,4 @@ Best value and Fastest sensible are the same until 16 Feb, then get an extra Tok
 - Budget carriers: Jetstar Cairns → Osaka $449 one way with bag (Brisbane → Cairns extra); no Scoot or AirAsia Brisbane–Tokyo route; China Southern OzBargain $907 post is from 13 Sep and for late-Feb dates. Kiwi CZ/MU on our dates $1,579pp return.
 - Date shifts: nothing saves $100+pp.
 - Sales: no current OzBargain Japan sale; Jetstar Return for Free ended 9 Oct.
-- CSV, charts and this report committed and pushed before the email was sent.
+- CSV, charts and this report committed and pushed before the email was sent; email sent via Resend (one email, no follow-up).
