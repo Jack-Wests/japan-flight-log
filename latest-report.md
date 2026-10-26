@@ -67,4 +67,4 @@
 - Budget carriers: Jetstar Cairns → Osaka $449 one way with bag (Brisbane → Cairns extra). No Scoot or AirAsia Brisbane–Tokyo route. The IWantThatFlight China Southern "Osaka from $722" page returned 403. Kiwi China Southern to Osaka on our dates is $3,109+pp (2 bags), and China Southern/China Eastern to Tokyo is $1,576pp return.
 - Date shifts: nothing saves $100+ either way today.
 - Sales: no current OzBargain Japan sale. Jetstar's Japan/Seoul sale ended 9 Oct, and there's no Qantas Japan sale.
-- matplotlib was missing and Pillow was broken in the container; I reinstalled both and the chart rebuilt. CSV, charts and this report were committed and pushed before the email was sent.
+- matplotlib was missing and Pillow was broken in the container; I reinstalled both and the chart rebuilt. CSV, charts and this report were committed and pushed before the email was sent; email sent via Resend (one email, no follow-up).
