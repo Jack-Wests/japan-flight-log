@@ -2,7 +2,7 @@
 
 ### 📋 Today's snapshot
 
-🔴 **HOLD: dear side, wait.** Your plan came down $5 today, off yesterday's high. That's Singapore Airlines to Osaka with the short 1h25 change in Singapore, a day and a half in Osaka, then up to Sapporo on the evening of Wed 3 Feb. It now costs **$1,746 per person: $6,983 for all four, or $5,237 for three** (four seats booked together, 20kg bag each way). Here's what moved:
+🔴 **HOLD: dear side, wait.** Your plan is down $7 on yesterday's high. That's Singapore Airlines to Osaka with the short 1h25 change in Singapore, a day and a half in Osaka, then up to Sapporo on the evening of Wed 3 Feb. It now costs **$1,746 per person: $6,983 for all four, or $5,237 for three** (four seats booked together, 20kg bag each way). Here's what moved:
 - Air Do, Sapporo → Tokyo: down $6, to $131
 - Singapore Airlines to Osaka: up $1, to $664
 - Peach, Osaka → Sapporo: $126 (down 50c)
