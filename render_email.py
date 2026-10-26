@@ -33,24 +33,24 @@ RUN = {
     "date_iso": "2026-10-26",
     "date_human": "Mon 26 Oct 2026",
     "verdict_headline": "🔴 HOLD — dear side, wait",
-    "best_pp": "$1,748",
-    "best_all4": "$6,991",
-    "target_distance": "$248 above",
+    "best_pp": "$1,746",
+    "best_all4": "$6,983",
+    "target_distance": "$246 above",
     "snapshot": [
-        "<b>Down $5 today, off yesterday's high.</b> Your plan (Singapore Airlines to Osaka with the "
-        "short 1h25 change in Singapore, a day and a half in Osaka, then up to Sapporo on the evening "
-        "of Wed 3 Feb) is <b>$1,748 per person: $6,991 for all four, or $5,243 for three</b> if Hugh "
-        "buys separately (four seats booked together, 20kg bag each way). The saving is the Sapporo → "
-        "Tokyo hop: Air Do is down $6 to $131. Singapore Airlines to Osaka is up $1 to $664, Peach "
-        "Osaka → Sapporo is $126, and Air Premia + Jetstar home via Seoul is $827 with the Korean "
-        "entry permit.",
-        "<b>The skip-Osaka option is gone.</b> Yesterday Singapore Airlines to Nagoya then Skymark to "
-        "Sapporo saved $124pp. Today the cheapest day for it (Sat 30 Jan) is $1,693, only $55 less than "
-        "your plan for leaving two days early and losing Osaka, so it's no longer worth a row. "
-        "Singapore Airlines' own flight home also jumped $179 overnight, to $1,112.",
-        "That's <b>HOLD: $248 over the $1,500 buy price</b>. ⏳ About 3 months (99 days) until "
+        "<b>Re-checked at Isaac's request (9:15am Tue Brisbane time): $1,746, down $2 since this "
+        "morning's email.</b> Your plan (Singapore Airlines to Osaka with the short 1h25 change in "
+        "Singapore, a day and a half in Osaka, then up to Sapporo on the evening of Wed 3 Feb) is "
+        "<b>$1,746 per person: $6,983 for all four, or $5,237 for three</b> if Hugh buys separately "
+        "(four seats booked together, 20kg bag each way). That's $7 under yesterday's high. Singapore "
+        "Airlines to Osaka is $663 (down $1), Peach Osaka → Sapporo $126, Air Do Sapporo → Tokyo $131, "
+        "and Air Premia + Jetstar home via Seoul $826 with the Korean entry permit (down $1).",
+        "<b>Still no cheaper shortcut.</b> Skipping Osaka (Singapore Airlines to Nagoya, then Skymark "
+        "to Sapporo, leaving Sun 31 Jan) is $1,701, only $45 less: not worth leaving early and losing "
+        "Osaka. A new cheaper way home showed up (Cebu Pacific via Manila and Bali, $35 less), but it "
+        "has a 3:45am change in Manila on three separate tickets, so it's not in the table.",
+        "That's <b>HOLD: $246 over the $1,500 buy price</b>. ⏳ About 3 months (98 days) until "
         "departure. <b>We're past the mid-October deadline: book on the next comfortable day under "
-        "$1,600.</b> From November (6 days away), anything under $1,650 is a book. Your plan has been "
+        "$1,600.</b> From November (5 days away), anything under $1,650 is a book. Your plan has been "
         "over $1,700 for 7 straight checks. No airline sale covers our dates.",
     ],
     "options": [
@@ -62,7 +62,7 @@ RUN = {
          "🛫 Sapporo (CTS) Sun 14 Feb 8:00am → Tokyo (HND) 9:35am <i>(Air Do)</i>; then 🛫 Dep "
          "Tokyo (NRT) Tue 16 Feb 12:30pm → 🛬 lands Brisbane (BNE) Wed 17 Feb 8:00am "
          "<i>(Air Premia to Seoul, Jetstar overnight to Brisbane)</i>",
-         "$1,748", "$6,991<br><span style=\"color:#8a94a6;\">3 of you: $5,243</span>",
+         "$1,746", "$6,983<br><span style=\"color:#8a94a6;\">3 of you: $5,237</span>",
          "Your plan: sleep on both flights, a day and a half in Osaka. 15h25 to Osaka. 18h30 home on "
          "two tickets, so in Seoul you collect bags and check in again (6h10; K-ETA ~$12 included)"),
         ("Fastest sensible",
@@ -70,8 +70,8 @@ RUN = {
          "🛫 Sapporo (CTS) Sun 14 Feb 8:00am → Tokyo (HND) 9:35am <i>(Air Do)</i>; then 🛫 Dep Tokyo "
          "(NRT) Wed 17 Feb 9:30pm → 🛬 lands Brisbane (BNE) Thu 18 Feb 9:40am <i>(Air Niugini via "
          "Port Moresby, 1h change)</i>",
-         "$1,896", "$7,582<br><span style=\"color:#8a94a6;\">3 of you: $5,687</span>",
-         "11h10 home on one ticket (1h change in Port Moresby at 5:20am), extra Tokyo day. $148pp "
+         "$1,893", "$7,570<br><span style=\"color:#8a94a6;\">3 of you: $5,678</span>",
+         "11h10 home on one ticket (1h change in Port Moresby at 5:20am), extra Tokyo day. $147pp "
          "more than the cheapest"),
     ],
     "check_links": {
@@ -82,15 +82,15 @@ RUN = {
     },
     "options_footnote":
         "Prices are per person for four seats booked together, all-in, with a 20kg checked bag each "
-        "way: Singapore Airlines to Osaka $664, Peach Osaka → Sapporo $126, Air Do Sapporo → Tokyo $131, "
-        "Seoul home $827. Osaka's hotel night replaces a Sapporo one, so it adds nothing. "
+        "way: Singapore Airlines to Osaka $663, Peach Osaka → Sapporo $126, Air Do Sapporo → Tokyo $131, "
+        "Seoul home $826. Osaka's hotel night replaces a Sapporo one, so it adds nothing. "
         "<b>One ticket home instead of Seoul:</b> Air Niugini from Narita 9:30pm Wed 17 Feb, with a "
-        "7h daytime wait in Port Moresby, landing 3:55pm Thu 18 Feb, is $1,749, $1 more, and it adds a "
+        "7h daytime wait in Port Moresby, landing 3:55pm Thu 18 Feb, is $1,747, $1 more, and it adds a "
         "Tokyo hotel night (~$45pp). "
-        "<b>Skip Osaka:</b> Singapore Airlines to Nagoya, then Skymark to Sapporo, leaving Sat 30 Jan, "
-        "is $1,693, $55 less. That's under the $100 saving needed to move the dates. "
-        "<b>Singapore Airlines home:</b> one ticket from Haneda Tue 16 Feb 4:40pm with a 1½h change in "
-        "Singapore is now $1,112 (up $179): $2,033 all up. "
+        "<b>Skip Osaka:</b> Singapore Airlines to Nagoya, then Skymark to Sapporo, leaving Sun 31 Jan, "
+        "is $1,701, $45 less. That's under the $100 saving needed to move the dates. "
+        "<b>Cebu Pacific home via Manila and Bali</b> (Tue 16 Feb 7:00pm, lands 8:55pm Wed 17 Feb): "
+        "$1,711, $35 less, but a 3:45am change in Manila and three separate tickets. "
         "<b>Cheapest if you'd overnight in Port Moresby:</b> $1,635 (Air Niugini Brisbane ⇄ Tokyo "
         "with a forced night in Port Moresby on the way, then Skymark Tokyo → Sapporo Thu 4 Feb). "
         "Not recommended: real cost ~$1,763 after a Port Moresby hotel and a Tokyo night, and you'd "
