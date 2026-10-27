@@ -69,4 +69,4 @@ Skipping Osaka (Singapore Airlines to Nagoya, then Skymark to Sapporo, leaving S
 - Budget carriers: Jetstar Cairns → Osaka $449 one way with bag (Brisbane → Cairns extra). No Scoot or AirAsia Brisbane–Tokyo route. China Southern deal pages ($907 Tokyo / $722 Osaka return) unverified; Kiwi China Southern/China Eastern on our dates is $1,591pp return.
 - Date shifts: nothing saves $100+ either way today.
 - Sales: no current OzBargain Japan sale; Jetstar's Japan/Seoul sale ended 9 Oct; no Qantas Japan sale.
-- matplotlib was missing and Pillow broken again; reinstalled both and the chart rebuilt. CSV, charts and this report were committed and pushed before the email was sent.
+- matplotlib was missing and Pillow broken again; reinstalled both and the chart rebuilt. CSV, charts and this report were committed and pushed before the email was sent; email sent via Resend (one email, no follow-up).
