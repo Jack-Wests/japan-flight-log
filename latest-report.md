@@ -72,3 +72,4 @@ Rather keep your last Tokyo morning? Parata Air leaves Narita at 1:25pm and conn
 - Date shifts: nothing saves $100 or more either way. Kiwi's first Brisbane → Sapporo search returned "Service Unavailable" and the retry worked.
 - Sales: there's no current OzBargain Japan sale, Jetstar's Japan/Seoul sale ended 9 Oct, and there's no Qantas Japan sale.
 - matplotlib was missing and Pillow broken again, so I reinstalled both and the chart rebuilt. Today's run also brought in yesterday's branch (newer email script + search checklist), because the main branch is behind. The CSV, charts and this report were committed and pushed before the email was sent. Email sent via Resend (one email, no follow-up).
+- Isaac asked for a second email the same day: a one-off breakdown of extra Osaka days. Leaving Sun 31 Jan, Singapore Airlines is $589 vs $664, so the flights total $1,697; leaving Sat 30 Jan, they total $1,770. Sent at his request.
