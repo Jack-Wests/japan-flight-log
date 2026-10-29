@@ -56,6 +56,23 @@ fly home from TYO Feb 16–17. ~13 nights total.
   every-piece labels added at Isaac's request, 25 Sep evening.) Isaac rejected
   one-row-per-piece, numbered pieces, stacked labels and AEST timestamps. Don't
   redesign it unless he asks.
+- **The way over is settled (21 Oct 2026): short Singapore change, then Osaka.**
+  Isaac wants Singapore Airlines Brisbane → Singapore → Osaka (KIX) with a
+  *short* change in Singapore (~1–2h, e.g. 6:10pm → 12:05am, 1:30am → 8:35am)
+  so everyone sleeps on both flights. Then 1–2 days in Osaka, then a separately
+  booked Osaka (KIX/ITM/UKB) → Sapporo (CTS) flight on 3 Feb (4 Feb at the
+  latest), in time for Snow Festival days on 4–5 Feb. This **overrides** the
+  routine prompt's "prefer a Singapore overnight / long layover" rule: never
+  pick a Singapore overnight over a short change unless it's actually cheaper,
+  and don't sell it as a perk. Osaka hotel nights replace Sapporo nights, so add
+  nothing for them. This plan is the "Cheapest" row, the "There" journey bar
+  ends at Osaka, and its total is `best_comfortable_pp` and the verdict price.
+  Other routings can still fill the other rows. If this plan is **$1,633pp or
+  under** (Mon 19 Oct's price), open the email with "🚨 ACTION NEEDED TODAY:
+  back to $1,633 or under".
+- **Subject line is always `Japan trip <emoji> <date> — best $<X>pp`.** Isaac's
+  Gmail sorts on it. Two off-format emails on 21 Oct got sorted away and looked
+  like they never arrived.
 - **This repo is public.** Anything committed is readable by anyone, including
   every past version in the history.
 - **One email per run. Never a "corrected" follow-up.** Fix it before sending
