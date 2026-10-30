@@ -67,4 +67,4 @@ Flying up to Sapporo the same day you land (Peach 5:45pm Tue 2 Feb) is $20 cheap
 - Budget carriers: Jetstar Cairns → Osaka is $449 one way with a bag, plus the Brisbane → Cairns flight. There's no Scoot or AirAsia Brisbane–Tokyo route. China Southern's deal pages ($907 Tokyo / $722 Osaka return) are unverified, and Kiwi has China Southern/China Eastern at $1,593.75pp return for our dates.
 - Sales: there's no current OzBargain Japan sale, Jetstar's Japan/Seoul sale ended 9 Oct, and Qantas's Asia sale ended 21 Sep.
 - Pillow was broken again, so I reinstalled it and the chart rebuilt. This branch also brought in the 29 Oct branch's newer email script, search checklist, .gitignore and CLAUDE.md.
-- The CSV, charts and this report were committed and pushed before the email was sent. Email sent via Resend (one email, no follow-up).
+- The CSV, charts and this report were committed and pushed before the email was sent. Email sent via Resend (one email, no follow-up). The plain-text part leaves out the per-flight check links (they are in the HTML version).
